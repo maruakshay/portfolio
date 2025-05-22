@@ -37,7 +37,7 @@ export default function RootLayout({
         <header className="font-sans text-primary">
           <div className="flex justify-center items-center p-6 ">
             <Link href="/" className="text-2xl font-medium tracking-wide ">
-              Akshay <span className="text-secondary">Maru</span>
+              Akshay <span className="text-quaternary">Maru</span>
             </Link>
           </div>
         </header>

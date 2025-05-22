@@ -137,13 +137,24 @@ export default function Home() {
       <div className="space-y-6 container mx-auto px-4">
         {/* has the intro in this  */}
 
-        <section className="flex flex-col items-center justify-center min-h-svh w-full text-center">
-          <h1 className="md:text-4xl text-3xl font-medium mb-2">
-            Product Manager&nbsp;|&nbsp;Founder&nbsp;|&nbsp;Tech Enthusiast
-          </h1>
-          <h2 className="md:text-2xl text-xl text-quaternary">
-            Building lasting communities and making a mark in the market.
-          </h2>
+        <section className="flex flex-col items-center justify-center min-h-svh w-full text-center px-4">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="text-2xl md:text-4xl font-semibold tracking-tight"
+          >
+            Product Manager • Founder • Tech
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.6, ease: "easeOut" }}
+            className="text-base md:text-xl text-quaternary mt-2"
+          >
+            Building communities. Leaving impact.
+          </motion.p>
         </section>
 
         <FadeSection />
