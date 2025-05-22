@@ -2,8 +2,6 @@
 import { Phone, Mail, Linkedin } from "lucide-react";
 import { useRef, useEffect } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
-import { SmoothCursor } from "@/components/ui/smooth-cursor";
-import { WarpBackground } from "@/components/magicui/warp-background";
 
 export default function Home() {
   const data: any = [
