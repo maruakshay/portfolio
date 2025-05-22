@@ -20,9 +20,7 @@ export const metadata: Metadata = {
   description: "Product Manager | Founder | Developer",
   authors: [{ name: "Akshay Maru" }],
   keywords: "Product Manager, Founder, Developer, Akshay Maru, Portfolio",
-  openGraph: {
-    images: ["/src/opengraph-image.jpeg"],
-  },
+
   robots: "index, follow",
   viewport: "width=device-width, initial-scale=1.0",
 };
