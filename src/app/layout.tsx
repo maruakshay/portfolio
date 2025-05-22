@@ -15,6 +15,14 @@ const instrumentSerif = Instrument_Serif({
   display: "swap",
   weight: "400",
 });
+export const metadata: Metadata = {
+  title: "Akshay Maru",
+  description: "Product Manager | Founder | Developer",
+  authors: [{ name: "Akshay Maru" }],
+  keywords: "Product Manager, Founder, Developer, Akshay Maru, Portfolio",
+  robots: "index, follow",
+  viewport: "width=device-width, initial-scale=1.0",
+};
 export default function RootLayout({
   children,
 }: Readonly<{
