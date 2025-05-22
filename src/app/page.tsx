@@ -4,7 +4,7 @@ import { useRef, useEffect } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 
 export default function Home() {
-  const data: any = [
+  const data = [
     {
       number: "01",
       title: "Outward-Inward Strategy",
@@ -158,7 +158,7 @@ export default function Home() {
             reducing risk and maximizing market impact.
           </p>
           <div className="space-y-10 text-gray-800 text-base">
-            {data?.map((item: any) => (
+            {data?.map((item) => (
               <motion.div
                 key={item.number}
                 whileHover={{
