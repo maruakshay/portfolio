@@ -228,10 +228,10 @@ export default function Home() {
                 <StackingCardItem
                   key={index}
                   index={index}
-                  className="h-[200px]"
+                  className="h-[250px]"
                 >
                   <div
-                    className="border border-primary text-primary rounded-xl p-6 h-[200px]"
+                    className="border border-primary text-primary rounded-xl p-6 min-h-[200px]"
                     style={{ backgroundColor: color }}
                   >
                     <div className="flex-1 flex flex-col justify-center">
