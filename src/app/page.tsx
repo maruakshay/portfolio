@@ -1,6 +1,6 @@
 "use client";
 import { Phone, Mail, Linkedin } from "lucide-react";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect } from "react";
 import { LayoutGroup, motion, useAnimation, useInView } from "framer-motion";
 
 import StackingCards, {
