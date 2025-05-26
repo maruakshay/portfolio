@@ -82,34 +82,36 @@ export default function Home() {
         className="min-h-svh py-16 px-10 text-center flex justify-center flex-col bg-primary rounded-2xl"
       >
         <motion.p
-          className="font-serif md:text-4xl text-xl text-secondary"
+          className="md:text-2xl text-lg font-serif text-secondary font-medium"
           style={{ display: "inline-block", whiteSpace: "pre-wrap" }}
         >
           {"Building impactful products is my ikigai. I’m driven by the mission to create solutions that help people save both time and money. From the spark of an idea to the thrill of launching — I truly love every step of the product journey. Ideation, research, prototyping, iteration — it all brings me joy and keeps me inspired. For me, product management isn’t just a role; it’s a craft and a calling to make a meaningful mark on the world."
             .split(" ")
             .map((word, wi) => (
-              <motion.span
+              <span
                 key={wi}
-                initial={{
-                  fontWeight: 400,
-                  fontStyle: "normal",
-                  color: "text-secondary",
+                style={{
+                  display: "inline-block",
+                  marginRight: "0.5em",
+                  position: "relative",
                 }}
-                animate={{
-                  fontWeight: [400, 700, 400],
-                  fontStyle: ["normal", "italic", "normal"],
-                }}
-                transition={{
-                  repeat: Infinity,
-                  repeatType: "loop",
-                  duration: 2,
-                  delay: wi * 0.12,
-                  ease: "easeInOut",
-                }}
-                style={{ display: "inline-block", marginRight: "0.7em" }}
               >
-                {word}
-              </motion.span>
+                <span
+                  style={{
+                    position: "absolute",
+                    left: 0,
+                    bottom: 0,
+                    width: "100%",
+                    height: "40%",
+                    background: "#ff5941",
+                    opacity: 0.18,
+                    borderRadius: "0.2em",
+                    zIndex: 0,
+                    pointerEvents: "none",
+                  }}
+                />
+                <span style={{ position: "relative", zIndex: 1 }}>{word}</span>
+              </span>
             ))}
         </motion.p>
       </motion.section>

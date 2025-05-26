@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Instrument_Sans, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import { Analytics } from "@vercel/analytics/next";
 
 const instrumentSans = Instrument_Sans({
   subsets: ["latin"],
@@ -42,6 +43,7 @@ export default function RootLayout({
           </div>
         </header>
         <main>{children}</main>
+        <Analytics />
       </body>
     </html>
   );
