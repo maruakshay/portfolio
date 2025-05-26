@@ -227,9 +227,23 @@ export default function Home() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.6, ease: "easeOut" }}
-            className="text-base md:text-xl text-quaternary mt-2"
+            className="text-base relative md:text-xl text-quaternary mt-2"
           >
             Building communities. Making impact.
+            <span
+              style={{
+                position: "absolute",
+                left: 0,
+                bottom: 0,
+                width: "100%",
+                height: "40%",
+                background: "#ff5941",
+                opacity: 0.18,
+                borderRadius: "0.2em",
+                zIndex: 0,
+                pointerEvents: "none",
+              }}
+            />
           </motion.p>
         </section>
 
@@ -287,40 +301,44 @@ export default function Home() {
             deepened my understanding of building products that truly serve
             customers and create meaningful impact.
           </p>
-          {experiences.map((exp, idx) => (
-            <motion.div
-              key={idx}
-              className="border rounded-xl p-6 hover:shadow-lg transition-shadow duration-300 cursor-pointer"
-              whileHover={{
-                scale: 1.08,
-                zIndex: 10,
-                boxShadow: "0 12px 40px rgba(59,130,246,0.18)",
-                y: -10,
-              }}
-              whileTap={{ scale: 0.98 }}
-              transition={{ type: "spring", stiffness: 300, damping: 22 }}
-              style={{ position: "relative" }}
-            >
-              <h3 className="text-primary text-2xl font-semibold">
-                {exp.jobTitle}
-              </h3>
-              <p className="text-quaternary text-lg font-medium mb-3">
-                {exp.company}
-              </p>
-              <p className="text-quaternary mb-4">{exp.description}</p>
-
-              <div className="flex flex-wrap gap-2">
-                {exp.skillsAndMethodologies.map((skill, i) => (
-                  <span
-                    key={i}
-                    className="bg-blue-100 text-quaternary text-xs font-semibold px-3 py-1 rounded-full"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </motion.div>
-          ))}
+          <div className="grid grid-cols-1 md:grid-cols-6 gap-6">
+            {experiences.map((exp, idx) => (
+              <motion.div
+                key={idx}
+                className={`
+                  border rounded-2xl p-6 bg-white hover:shadow-2xl transition-shadow duration-300 cursor-pointer flex flex-col
+                  md:col-span-3
+                `}
+                whileHover={{
+                  scale: 1.04,
+                  zIndex: 10,
+                  boxShadow: "0 12px 40px rgba(59,130,246,0.18)",
+                  y: -6,
+                }}
+                whileTap={{ scale: 0.98 }}
+                transition={{ type: "spring", stiffness: 300, damping: 22 }}
+                style={{ position: "relative" }}
+              >
+                <h3 className="text-primary text-2xl font-semibold mb-1">
+                  {exp.jobTitle}
+                </h3>
+                <p className="text-quaternary text-lg font-medium mb-2">
+                  {exp.company}
+                </p>
+                <p className="text-quaternary mb-4">{exp.description}</p>
+                <div className="flex flex-wrap gap-2 mt-auto">
+                  {exp.skillsAndMethodologies.map((skill, i) => (
+                    <span
+                      key={i}
+                      className="bg-blue-100 text-quaternary text-xs font-semibold px-3 py-1 rounded-full"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </section>
         <div className="w-full flex justify-center my-10">
           <div className="h-1 w-32 bg-primary rounded-full opacity-60" />
