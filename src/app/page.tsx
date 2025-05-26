@@ -1,7 +1,13 @@
 "use client";
 import { Phone, Mail, Linkedin } from "lucide-react";
-import { useRef, useEffect } from "react";
-import { motion, useAnimation, useInView } from "framer-motion";
+import { useRef, useEffect, useState } from "react";
+import { LayoutGroup, motion, useAnimation, useInView } from "framer-motion";
+
+import StackingCards, {
+  StackingCardItem,
+} from "@/fancy/components/blocks/stacking-cards";
+import Gravity, { MatterBody } from "@/fancy/components/physics/gravity";
+import TextRotate from "@/fancy/components/text/text-rotate";
 
 export default function Home() {
   const data = [
@@ -9,31 +15,49 @@ export default function Home() {
       number: "01",
       title: "Outward-Inward Strategy",
       desc: "Begin with deep external insights—market trends, competitive landscape, and user behavior—then align internal teams to execute efficiently.",
+      color: "#FFF9E3", // pastel yellow
+      image:
+        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80", // strategy/landscape
     },
     {
       number: "02",
       title: "Market & Competitive Analysis",
       desc: "Systematically identify market gaps, emerging trends, and areas for differentiation to de-risk product decisions and sharpen positioning.",
+      color: "#E3FCEC", // pastel green
+      image:
+        "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80", // analysis/data
     },
     {
       number: "03",
       title: "Target & Niche Customer Understanding",
       desc: "Define key user personas and uncover their unmet needs through interviews, data, and behavioral patterns to tailor the product experience.",
+      color: "#E3F0FF", // pastel blue
+      image:
+        "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80", // people/customers
     },
     {
       number: "04",
       title: "Stakeholder Collaboration",
       desc: "Work closely with cross-functional teams—engineering, design, marketing, sales—to ensure alignment on goals, timelines, and value delivery.",
+      color: "#FFE3E9", // pastel red/pink
+      image:
+        "https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?auto=format&fit=crop&w=600&q=80", // collaboration/teamwork
     },
     {
       number: "05",
       title: "Value-Driven Feature Development",
       desc: "Turn customer pain points into clear value propositions and prioritize features that deliver measurable impact and user delight.",
+      color: "#FFF3E3", // pastel orange
+      image:
+        "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80", // product/feature
     },
     {
       number: "06",
       title: "Agile Execution",
       desc: "Deliver iteratively with agile methods—incorporating feedback, improving velocity, and adapting rapidly to user and market changes.",
+      color: "#E3F7FB", // pastel cyan
+      image:
+        "https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=600&q=80", // agile/process
     },
   ];
   const FadeSection = () => {
@@ -130,6 +154,7 @@ export default function Home() {
       ],
     },
   ];
+  const [container, setContainer] = useState<HTMLElement | null>(null);
 
   // Then use <FadeSection /> in place of the original section:
   return (
@@ -138,14 +163,41 @@ export default function Home() {
         {/* has the intro in this  */}
 
         <section className="flex flex-col items-center justify-center min-h-svh w-full text-center px-4">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            className="text-2xl md:text-4xl font-semibold tracking-tight"
-          >
-            Product Manager • Founder • Tech
-          </motion.h1>
+          <LayoutGroup>
+            <motion.h1
+              className="flex flex-wrap whitespace-pre text-center items-center justify-center"
+              layout
+            >
+              <motion.span
+                className="text-2xl md:text-4xl font-semibold tracking-tight"
+                layout
+                transition={{ type: "spring", damping: 30, stiffness: 400 }}
+              >
+                I’m a{" "}
+              </motion.span>
+              <TextRotate
+                texts={[
+                  "Product Manager",
+                  "Founder",
+                  "Techie",
+                  "Builder of cool stuff",
+                  "Strategy nerd",
+                  "Pixel pusher",
+                  "Coffee-powered",
+                  "Quirk enthusiast",
+                ]}
+                mainClassName="text-white text-2xl md:text-4xl font-semibold tracking-tight px-2 sm:px-2 md:px-3 bg-[#ff5941] overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
+                staggerFrom={"last"}
+                initial={{ y: "100%" }}
+                animate={{ y: 0 }}
+                exit={{ y: "-120%" }}
+                staggerDuration={0.025}
+                splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+                transition={{ type: "spring", damping: 30, stiffness: 400 }}
+                rotationInterval={3000}
+              />
+            </motion.h1>
+          </LayoutGroup>
 
           <motion.p
             initial={{ opacity: 0, y: 10 }}
@@ -169,24 +221,33 @@ export default function Home() {
             reducing risk and maximizing market impact.
           </p>
           <div className="space-y-10 text-gray-800 text-base">
-            {data?.map((item) => (
-              <motion.div
-                key={item.number}
-                whileHover={{
-                  scale: 1.05,
-                  boxShadow: "0 8px 24px rgba(0,0,0,0.12)",
-                }}
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                className="border border-primary text-primary rounded-xl p-6"
-                style={{ willChange: "transform" }}
-              >
-                <div className="font-semibold text-3xl">
-                  <span className="mr-6">{item.number}</span>
-                  {item.title}
-                </div>
-                <div className="mt-2 text-quaternary">{item.desc}</div>
-              </motion.div>
-            ))}
+            <StackingCards
+              totalCards={data.length}
+              scrollOptons={{ container: { current: container } }}
+            >
+              {data.map(({ number, title, desc, color }, index) => (
+                <StackingCardItem
+                  key={index}
+                  index={index}
+                  className="h-[200px]"
+                >
+                  <div
+                    className="border border-primary text-primary rounded-xl p-6 h-[200px]"
+                    style={{ backgroundColor: color }}
+                  >
+                    <div className="flex-1 flex flex-col justify-center">
+                      <h3 className="font-bold text-2xl mb-5 flex items-center">
+                        <span className="mr-6 text-primary text-3xl">
+                          {number}
+                        </span>
+                        {title}
+                      </h3>
+                      <p className="text-quaternary">{desc}</p>
+                    </div>
+                  </div>
+                </StackingCardItem>
+              ))}
+            </StackingCards>
           </div>
         </section>
         <div className="w-full flex justify-center my-10">
