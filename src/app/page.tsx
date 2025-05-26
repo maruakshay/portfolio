@@ -328,7 +328,7 @@ export default function Home() {
                   boxShadow: "0 8px 24px rgba(59,130,246,0.08)",
                 }}
                 transition={{ type: "spring", stiffness: 200, damping: 18 }}
-                className="border border-primary/30 p-6 rounded-2xl flex flex-col items-center gap-4 bg-white"
+                className="border border-primary/30 p-6 rounded-2xl flex flex-col items-center gap-4 "
               >
                 {item.icon}
                 <a
