@@ -227,7 +227,7 @@ export default function Home() {
             transition={{ delay: 0.3, duration: 0.6, ease: "easeOut" }}
             className="text-base md:text-xl text-quaternary mt-2"
           >
-            Building communities. Leaving impact.
+            Building communities. Making impact.
           </motion.p>
         </section>
 
@@ -242,7 +242,7 @@ export default function Home() {
             My approach balances outward strategy with internal collaboration,
             reducing risk and maximizing market impact.
           </p>
-          <div className="space-y-10 text-gray-800 text-base">
+          <div className="space-y-10 min-h-svh text-gray-800 text-base">
             <StackingCards
               totalCards={data.length}
               scrollOptons={{ container: { current: null } }}
