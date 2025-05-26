@@ -6,7 +6,7 @@ import { LayoutGroup, motion, useAnimation, useInView } from "framer-motion";
 import StackingCards, {
   StackingCardItem,
 } from "@/fancy/components/blocks/stacking-cards";
-import Gravity, { MatterBody } from "@/fancy/components/physics/gravity";
+
 import TextRotate from "@/fancy/components/text/text-rotate";
 
 export default function Home() {
@@ -154,7 +154,6 @@ export default function Home() {
       ],
     },
   ];
-  const [container, setContainer] = useState<HTMLElement | null>(null);
 
   // Then use <FadeSection /> in place of the original section:
   return (
@@ -223,7 +222,7 @@ export default function Home() {
           <div className="space-y-10 text-gray-800 text-base">
             <StackingCards
               totalCards={data.length}
-              scrollOptons={{ container: { current: container } }}
+              scrollOptons={{ container: { current: null } }}
             >
               {data.map(({ number, title, desc, color }, index) => (
                 <StackingCardItem
