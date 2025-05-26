@@ -333,45 +333,40 @@ export default function Home() {
             away!
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
             {[
               {
-                icon: <Phone className="text-secondary w-8 h-8 mb-2" />,
+                icon: <Phone className="w-5 h-5 text-primary" />,
                 href: "tel:+917069275229",
                 label: "+91-7069275229",
               },
               {
-                icon: <Mail className="text-secondary w-8 h-8 mb-2" />,
+                icon: <Mail className="w-5 h-5 text-primary" />,
                 href: "mailto:maruakshay4@gmail.com",
                 label: "maruakshay4@gmail.com",
               },
               {
-                icon: <Linkedin className="text-secondary w-8 h-8 mb-2" />,
+                icon: <Linkedin className="w-5 h-5 text-primary" />,
                 href: "https://www.linkedin.com/in/akshaymaru61",
-                label: "www.linkedin.com/in/akshaymaru61",
+                label: "linkedin.com/in/akshaymaru61",
                 target: "_blank",
               },
             ].map((item, idx) => (
-              <motion.div
+              <motion.a
                 key={idx}
-                whileHover={{
-                  y: -6,
-                  scale: 1.03,
-                  boxShadow: "0 8px 24px rgba(59,130,246,0.08)",
-                }}
-                transition={{ type: "spring", stiffness: 200, damping: 18 }}
-                className="border border-primary/30 p-6 rounded-2xl flex flex-col items-center gap-4 "
+                href={item.href}
+                target={item.target || "_self"}
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 220, damping: 18 }}
+                className="flex items-center gap-2 border border-primary/10 rounded-lg py-2 px-4 bg-white hover:bg-primary/5 transition-colors duration-150"
+                style={{ textDecoration: "none" }}
               >
                 {item.icon}
-                <a
-                  href={item.href}
-                  target={item.target || "_self"}
-                  rel="noopener noreferrer"
-                  className="hover:underline text-quaternary text-lg font-medium text-center"
-                >
+                <span className="text-primary text-sm font-medium">
                   {item.label}
-                </a>
-              </motion.div>
+                </span>
+              </motion.a>
             ))}
           </div>
         </section>
