@@ -62,6 +62,7 @@ export default function Home() {
   ];
   const FadeSection = () => {
     const ref = useRef(null);
+
     const inView = useInView(ref, { amount: 0.5, once: false });
     const controls = useAnimation();
 
@@ -80,15 +81,37 @@ export default function Home() {
         animate={controls}
         className="min-h-svh py-16 px-10 text-center flex justify-center flex-col bg-primary rounded-2xl"
       >
-        <p className="font-serif md:text-4xl text-xl text-white">
-          Building impactful products is my ikigai. I’m driven by the mission to
-          create solutions that help people save both time and money. From the
-          spark of an idea to the thrill of launching — I truly love every step
-          of the product journey. Ideation, research, prototyping, iteration —
-          it all brings me joy and keeps me inspired. For me, product management
-          isn’t just a role; it’s a craft and a calling to make a meaningful
-          mark on the world.
-        </p>
+        <motion.p
+          className="font-serif md:text-4xl text-xl text-secondary"
+          style={{ display: "inline-block", whiteSpace: "pre-wrap" }}
+        >
+          {"Building impactful products is my ikigai. I’m driven by the mission to create solutions that help people save both time and money. From the spark of an idea to the thrill of launching — I truly love every step of the product journey. Ideation, research, prototyping, iteration — it all brings me joy and keeps me inspired. For me, product management isn’t just a role; it’s a craft and a calling to make a meaningful mark on the world."
+            .split(" ")
+            .map((word, wi) => (
+              <motion.span
+                key={wi}
+                initial={{
+                  fontWeight: 400,
+                  fontStyle: "normal",
+                  color: "text-secondary",
+                }}
+                animate={{
+                  fontWeight: [400, 700, 400],
+                  fontStyle: ["normal", "italic", "normal"],
+                }}
+                transition={{
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  duration: 2,
+                  delay: wi * 0.12,
+                  ease: "easeInOut",
+                }}
+                style={{ display: "inline-block", marginRight: "0.7em" }}
+              >
+                {word}
+              </motion.span>
+            ))}
+        </motion.p>
       </motion.section>
     );
   };
@@ -190,7 +213,7 @@ export default function Home() {
                 initial={{ y: "100%" }}
                 animate={{ y: 0 }}
                 exit={{ y: "-120%" }}
-                staggerDuration={0.025}
+                staggerDuration={0.01}
                 splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
                 transition={{ type: "spring", damping: 30, stiffness: 400 }}
                 rotationInterval={3000}
@@ -263,14 +286,23 @@ export default function Home() {
             customers and create meaningful impact.
           </p>
           {experiences.map((exp, idx) => (
-            <div
+            <motion.div
               key={idx}
-              className="border  rounded-xl p-6 hover:shadow-lg transition-shadow duration-300"
+              className="border rounded-xl p-6 hover:shadow-lg transition-shadow duration-300 cursor-pointer"
+              whileHover={{
+                scale: 1.08,
+                zIndex: 10,
+                boxShadow: "0 12px 40px rgba(59,130,246,0.18)",
+                y: -10,
+              }}
+              whileTap={{ scale: 0.98 }}
+              transition={{ type: "spring", stiffness: 300, damping: 22 }}
+              style={{ position: "relative" }}
             >
               <h3 className="text-primary text-2xl font-semibold">
                 {exp.jobTitle}
               </h3>
-              <p className="text-secondary text-lg font-medium mb-3">
+              <p className="text-quaternary text-lg font-medium mb-3">
                 {exp.company}
               </p>
               <p className="text-quaternary mb-4">{exp.description}</p>
@@ -285,7 +317,7 @@ export default function Home() {
                   </span>
                 ))}
               </div>
-            </div>
+            </motion.div>
           ))}
         </section>
         <div className="w-full flex justify-center my-10">
