@@ -1,5 +1,5 @@
 "use client";
-import { Phone, Mail, Linkedin } from "lucide-react";
+import { Phone, Mail, Linkedin, Sparkles } from "lucide-react";
 import { useRef, useEffect } from "react";
 import { LayoutGroup, motion, useAnimation, useInView } from "framer-motion";
 
@@ -179,7 +179,38 @@ export default function Home() {
       ],
     },
   ];
-
+  const cards = [
+    {
+      title: "First Principles Thinking",
+      description:
+        "I break down problems to their core — removing assumptions and rebuilding solutions from foundational truths.",
+    },
+    {
+      title: "Physics of Product",
+      description:
+        "Like physics, every product has forces, friction, and acceleration. Understanding these helps shape better decisions.",
+    },
+    {
+      title: "Eisenhower Matrix",
+      description:
+        "I map problems by urgency and importance to prioritize what truly matters — not just what’s loud.",
+    },
+    {
+      title: "History of the Problem",
+      description:
+        "I analyze the root causes and historical context. Often, past insights uncover future direction.",
+    },
+    {
+      title: "Communication & Frameworks",
+      description:
+        "Most problems need clarity, not just answers. I use lightweight frameworks and transparent communication to drive alignment.",
+    },
+    {
+      title: "Backlog = Problem Management",
+      description:
+        "Product management is essentially problem management — every backlog item is a symptom waiting to be addressed.",
+    },
+  ];
   // Then use <FadeSection /> in place of the original section:
   return (
     <>
@@ -252,7 +283,51 @@ export default function Home() {
           <div className="h-1 w-32 bg-primary rounded-full opacity-60" />
         </div>
         <section className="space-y-6">
-          <h2 className="text-lg">what to expect</h2>
+          <h2 className="text-lg">How I think</h2>
+          <p className="text-primary text-3xl mb-10">
+            I believe in a holistic approach to product management, where
+            strategy meets execution, and customer needs drive innovation.
+          </p>
+          <motion.div
+            className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.3 }}
+            variants={{
+              hidden: { opacity: 0, y: 40 },
+              visible: {
+                opacity: 1,
+                y: 0,
+                transition: { staggerChildren: 0.15 },
+              },
+            }}
+          >
+            {cards.map((card, idx) => (
+              <motion.div
+                key={idx}
+                variants={{
+                  hidden: { opacity: 0, y: 30 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+                transition={{ duration: 0.6 }}
+                className="p-6 rounded-2xl bg-gray-50 border-gray-200  shadow-sm hover:shadow-md transition-shadow"
+              >
+                <div className="flex items-center gap-2 text-primary  mb-2">
+                  <Sparkles className="w-5 h-5" />
+                  <h3 className="text-lg font-medium">{card.title}</h3>
+                </div>
+                <p className="text-quaternary dark:text-gray-300 text-sm">
+                  {card.description}
+                </p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </section>
+        <div className="w-full flex justify-center my-10">
+          <div className="h-1 w-32 bg-primary rounded-full opacity-60" />
+        </div>
+        <section className="space-y-6">
+          <h2 className="text-lg">What to expect</h2>
 
           <p className="text-primary text-3xl mb-10">
             My approach balances outward strategy with internal collaboration,
@@ -379,7 +454,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 220, damping: 18 }}
-                className="flex items-center gap-2 border border-primary/10 rounded-lg py-2 px-4 bg-white hover:bg-primary/5 transition-colors duration-150"
+                className="flex items-center gap-2 border border-primary/10 rounded-lg py-2 px-4 bg-white  transition-colors duration-150"
                 style={{ textDecoration: "none" }}
               >
                 {item.icon}
