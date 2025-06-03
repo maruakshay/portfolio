@@ -82,19 +82,22 @@ export default function Home() {
         className="min-h-svh py-16 px-10 text-center flex justify-center flex-col bg-primary rounded-2xl"
       >
         <motion.p
-          className="md:text-2xl text-lg font-serif text-secondary font-medium"
-          style={{ display: "inline-block", whiteSpace: "pre-wrap" }}
+          className="md:text-2xl text-lg font-serif text-secondary font-medium flex flex-wrap justify-center"
+          style={{ whiteSpace: "pre-wrap" }}
         >
-          {"Building impactful products is my ikigai. I’m driven by the mission to create solutions that help people save both time and money. From the spark of an idea to the thrill of launching — I truly love every step of the product journey. Ideation, research, prototyping, iteration — it all brings me joy and keeps me inspired. For me, product management isn’t just a role; it’s a craft and a calling to make a meaningful mark on the world."
+          {`I believe in the power of first principles thinking. No problem is too complex when you break it down to its fundamentals and address the root cause. I constantly ask "why" to uncover deeper insights and use imagination and visualization to craft effective solutions. With over 5 years of experience building products, I’ve learned the importance of truly understanding problems at their core. My journey spans startups and established companies, where I’ve contributed across the entire product development lifecycle—from ideation to launch.`
             .split(" ")
-            .map((word, wi) => (
-              <span
-                key={wi}
-                style={{
-                  display: "inline-block",
-                  marginRight: "0.5em",
-                  position: "relative",
+            .map((word, idx) => (
+              <motion.span
+                key={idx}
+                className="relative"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{
+                  delay: 0.15 * idx,
+                  duration: 0.5,
                 }}
+                style={{ marginRight: "0.25em" }}
               >
                 <span
                   style={{
@@ -110,8 +113,8 @@ export default function Home() {
                     pointerEvents: "none",
                   }}
                 />
-                <span style={{ position: "relative", zIndex: 1 }}>{word}</span>
-              </span>
+                {word}
+              </motion.span>
             ))}
         </motion.p>
       </motion.section>

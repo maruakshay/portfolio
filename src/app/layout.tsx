@@ -17,11 +17,12 @@ const instrumentSerif = Instrument_Serif({
   weight: "400",
 });
 export const metadata: Metadata = {
-  title: "Akshay Maru",
-  description: "Product Manager | Founder | Developer",
+  title: "Akshay Maru | Product Manager Portfolio | SaaS, AI, Startup Expert",
+  description:
+    "Akshay Maru is a top Product Manager, SaaS Founder, and AI Product Leader. Explore his portfolio, case studies, resume, and expertise in product management, startups, SaaS, and AI. Hire a proven product manager for your next project.",
   authors: [{ name: "Akshay Maru" }],
-  keywords: "Product Manager, Founder, Developer, Akshay Maru, Portfolio",
-
+  keywords:
+    "Product Manager, Product Management, SaaS, AI, Artificial Intelligence, Startup, Product Leader, Product Portfolio, Resume, Case Studies, Product Owner, Agile, UX, UI, Roadmap, Product Strategy, Product Design, MVP, User Research, Product Development, Product Marketing, Growth, Akshay Maru, Hire Product Manager, Top Product Manager, Product Manager Portfolio, Product Manager Resume, Product Manager Case Studies, Product Management Expert, Product Management Consultant",
   robots: "index, follow",
   viewport: "width=device-width, initial-scale=1.0",
 };
