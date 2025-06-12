@@ -1,5 +1,5 @@
 "use client";
-import { Phone, Mail, Linkedin, Sparkles } from "lucide-react";
+import { Phone, Mail, Linkedin, Sparkles, ExternalLink } from "lucide-react";
 import { useRef, useEffect } from "react";
 import { LayoutGroup, motion, useAnimation, useInView } from "framer-motion";
 
@@ -13,51 +13,59 @@ export default function Home() {
   const data = [
     {
       number: "01",
-      title: "Outward-Inward Strategy",
-      desc: "Begin with deep external insights—market trends, competitive landscape, and user behavior—then align internal teams to execute efficiently.",
+      title: "Problem Discovery",
+      desc: "Identify and validate real user problems through research, interviews, and data analysis to ensure the product addresses genuine needs.",
       color: "#FFF9E3", // pastel yellow
       image:
-        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80", // strategy/landscape
+        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80", // discovery
     },
     {
       number: "02",
-      title: "Market & Competitive Analysis",
-      desc: "Systematically identify market gaps, emerging trends, and areas for differentiation to de-risk product decisions and sharpen positioning.",
+      title: "Vision & Strategy",
+      desc: "Define a clear product vision and strategic roadmap that aligns with business goals and market opportunities.",
       color: "#E3FCEC", // pastel green
       image:
-        "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80", // analysis/data
+        "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80", // strategy
     },
     {
       number: "03",
-      title: "Target & Niche Customer Understanding",
-      desc: "Define key user personas and uncover their unmet needs through interviews, data, and behavioral patterns to tailor the product experience.",
+      title: "Prioritization & Planning",
+      desc: "Use frameworks like RICE or MoSCoW to prioritize features and plan releases, balancing user value, effort, and business impact.",
       color: "#E3F0FF", // pastel blue
       image:
-        "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80", // people/customers
+        "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80", // planning
     },
     {
       number: "04",
-      title: "Stakeholder Collaboration",
-      desc: "Work closely with cross-functional teams—engineering, design, marketing, sales—to ensure alignment on goals, timelines, and value delivery.",
-      color: "#FFE3E9", // pastel red/pink
+      title: "Product Building & Iteration",
+      desc: "Build the product end-to-end with full stack development, iterating from MVP to beta to launch. Rapidly prototype, gather feedback, and continuously improve to deliver real value.",
+      color: "#F3E3FF", // pastel purple
       image:
-        "https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?auto=format&fit=crop&w=600&q=80", // collaboration/teamwork
+        "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80", // product building
     },
     {
       number: "05",
-      title: "Value-Driven Feature Development",
-      desc: "Turn customer pain points into clear value propositions and prioritize features that deliver measurable impact and user delight.",
-      color: "#FFF3E3", // pastel orange
+      title: "Cross-functional Collaboration",
+      desc: "Work closely with engineering, design, and stakeholders to ensure alignment, clear requirements, and shared ownership.",
+      color: "#FFE3E9", // pastel red/pink
       image:
-        "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80", // product/feature
+        "https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?auto=format&fit=crop&w=600&q=80", // collaboration
     },
     {
       number: "06",
-      title: "Agile Execution",
-      desc: "Deliver iteratively with agile methods—incorporating feedback, improving velocity, and adapting rapidly to user and market changes.",
+      title: "Execution & Delivery",
+      desc: "Drive agile development, manage sprints, and ensure timely delivery of high-quality features that solve user problems.",
+      color: "#FFF3E3", // pastel orange
+      image:
+        "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80", // execution
+    },
+    {
+      number: "07",
+      title: "Measurement & Iteration",
+      desc: "Track product metrics, gather feedback, and iterate rapidly to improve the product and achieve desired outcomes.",
       color: "#E3F7FB", // pastel cyan
       image:
-        "https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=600&q=80", // agile/process
+        "https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=600&q=80", // iteration
     },
   ];
   const FadeSection = () => {
@@ -85,7 +93,7 @@ export default function Home() {
           className="md:text-2xl text-lg font-serif text-secondary font-medium flex flex-wrap justify-center"
           style={{ whiteSpace: "pre-wrap" }}
         >
-          {`I believe in the power of first principles thinking. No problem is too complex when you break it down to its fundamentals and address the root cause. I constantly ask "why" to uncover deeper insights and use imagination and visualization to craft effective solutions. With over 5 years of experience building products, I’ve learned the importance of truly understanding problems at their core. My journey spans startups and established companies, where I’ve contributed across the entire product development lifecycle—from ideation to launch.`
+          {`I believe in the power of first principles thinking. No problem is too complex when you break it down to its fundamentals and address the root cause. I constantly ask "why" to uncover deeper insights and use imagination and visualization to craft effective solutions. With over 6 years of experience building products, I’ve learned the importance of truly understanding problems at their core. My journey spans startups and established companies, where I’ve contributed across the entire product development lifecycle—from ideation to launch.`
             .split(" ")
             .map((word, idx) => (
               <motion.span
@@ -124,18 +132,21 @@ export default function Home() {
     {
       company: "Remote Leaps",
       description:
-        "AI career transformation platform that helps job seekers get hired. Handled as Founder & Product Owner from ideation to market analysis, targeting customers, coding, and launch. Led a team of 5.",
+        "AI career transformation platform that gives job seekers a roadmap to get hired faster. Founded and built the platform from ideation to launch, iteratively managing sales, market, product development, and management. Handled as Founder & Product Owner from ideation to market analysis, targeting customers, coding, and launch. Led a team of 5.",
       jobTitle: "Founder & Product Owner",
       skillsAndMethodologies: [
-        "Product Ideation",
-        "Market Analysis",
-        "Customer Segmentation",
-        "Team Leadership",
-        "Agile Development",
-        "Full-stack Coding",
-        "Go-to-Market Strategy",
-        "Cross-functional Team Management",
+        "AI Product Strategy",
+        "Roadmap Design",
+        "Startup Leadership",
+        "Sales Enablement",
+        "Market Research",
+        "Full-stack Development",
+        "Product Iteration",
+        "Growth Hacking",
+        "Team Building",
+        "Customer Discovery",
       ],
+      link: "www.remoteleaps.com",
     },
     {
       company: "Virtual Internships",
@@ -143,14 +154,16 @@ export default function Home() {
         "Platform offering internships worldwide. Managed as Senior Software Engineer from concept to product launch, handled bug fixes and customer issue resolution with rapid turnaround.",
       jobTitle: "Senior Software Engineer",
       skillsAndMethodologies: [
-        "Product Development Lifecycle",
-        "Bug Tracking & Resolution",
-        "Customer Support & Issue Management",
-        "Agile Methodology",
-        "Collaboration with Cross-functional Teams",
-        "Rapid Problem Solving",
-        "Continuous Deployment",
+        "End-to-End Product Delivery",
+        "Rapid Prototyping",
+        "Issue Triage",
+        "Customer Success",
+        "Agile Sprints",
+        "API Integration",
+        "Mentoring Developers",
+        "Continuous Integration",
       ],
+      link: "www.virtualinternships.com",
     },
     {
       company: "Rapid Innovation",
@@ -158,14 +171,16 @@ export default function Home() {
         "Service-based blockchain company. Worked as a Tech Lead managing a team of 10, building blockchain-based products, and independently creating NFT-related Instagram content.",
       jobTitle: "Tech Lead",
       skillsAndMethodologies: [
-        "Team Leadership",
-        "Blockchain Architecture",
-        "Smart Contract Development",
-        "NFT Design & Integration",
-        "Solidity",
-        "Agile Execution",
-        "Content Creation",
+        "Blockchain Solutions",
+        "Smart Contract Engineering",
+        "Team Mentorship",
+        "NFT Product Design",
+        "Solidity & Web3",
+        "Agile Leadership",
+        "Content Strategy",
+        "Stakeholder Communication",
       ],
+      link: "https://www.rapidinnovation.io",
     },
     {
       company: "KGN Technologies",
@@ -173,13 +188,15 @@ export default function Home() {
         "Web and mobile app development company. Contributed primarily to frontend development, improving UI/UX and implementing responsive designs.",
       jobTitle: "Frontend Developer (Contributor)",
       skillsAndMethodologies: [
-        "HTML/CSS/JavaScript",
-        "React.js",
+        "React Ecosystem",
+        "UI/UX Enhancement",
         "Tailwind CSS",
-        "Responsive Design",
-        "Cross-browser Compatibility",
-        "Frontend Optimization",
+        "Mobile-first Design",
+        "Performance Optimization",
+        "Accessibility",
+        "Component-driven Development",
       ],
+      link: "https://kgntechnologies.com/",
     },
   ];
   const cards = [
@@ -235,7 +252,7 @@ export default function Home() {
               </motion.span>
               <TextRotate
                 texts={[
-                  "Product Manager",
+                  "Product Developer",
                   "Founder",
                   "Techie",
                   "Builder of cool stuff",
@@ -400,9 +417,22 @@ export default function Home() {
                 <h3 className="text-primary text-2xl font-semibold mb-1">
                   {exp.jobTitle}
                 </h3>
-                <p className="text-quaternary text-lg font-medium mb-2">
-                  {exp.company}
-                </p>
+                <div className="flex items-center gap-2 mb-2">
+                  <p className="text-quaternary text-lg font-medium">
+                    {exp.company}
+                  </p>
+                  {exp.link && (
+                    <a
+                      href={exp.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-primary  transition-colors"
+                      aria-label={`Visit ${exp.company} website`}
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                    </a>
+                  )}
+                </div>
                 <p className="text-quaternary mb-4">{exp.description}</p>
                 <div className="flex flex-wrap gap-2 mt-auto">
                   {exp.skillsAndMethodologies.map((skill, i) => (
