@@ -8,14 +8,14 @@ import {
 } from "@/data/portfolio-data";
 
 export const metadata: Metadata = {
-  title: "Akshay Maru | Product Manager & AI Product Leader",
+  title: "Akshay Maru | Product Developer & AI Product Leader",
   description:
-    "Akshay Maru is a top Product Manager, SaaS Founder, and AI Product Leader. Explore his portfolio, case studies, and expertise in product management, startups, and AI.",
+    "Akshay Maru is a top Product Developer, SaaS Founder, and AI Product Leader. Explore his portfolio, case studies, and expertise in product development, startups, and AI.",
   openGraph: {
-    title: "Akshay Maru | Product Manager & AI Product Leader",
+    title: "Akshay Maru | Product Developer & AI Product Leader",
     description:
-      "Akshay Maru is a top Product Manager, SaaS Founder, and AI Product Leader. Explore his portfolio, case studies, and expertise in product management, startups, and AI.",
-    url: "https://akshaymaru.com", // Replace with actual domain
+      "Akshay Maru is a top Product Developer, SaaS Founder, and AI Product Leader. Explore his portfolio, case studies, and expertise in product development, startups, and AI.",
+    url: "https://akshay-portfolio-zeta.vercel.app/", // Replace with actual domain
     siteName: "Akshay Maru Portfolio",
     images: [
       {
@@ -30,9 +30,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Akshay Maru | Product Manager & AI Product Leader",
+    title: "Akshay Maru | Product Developer & AI Product Leader",
     description:
-      "Akshay Maru is a top Product Manager, SaaS Founder, and AI Product Leader.",
+      "Akshay Maru is a top Product Developer, SaaS Founder, and AI Product Leader.",
     images: ["/opengraph-image.jpeg"],
   },
   alternates: {
@@ -45,13 +45,13 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Akshay Maru",
-    url: "https://akshaymaru.com",
+    url: "https://akshay-portfolio-zeta.vercel.app/",
     image: "https://akshaymaru.com/opengraph-image.jpeg",
     sameAs: [
       "https://www.linkedin.com/in/akshaymaru61",
       "https://twitter.com/akshaymaru", // Add if available
     ],
-    jobTitle: "Product Manager & AI Product Leader",
+    jobTitle: "Product Developer & AI Product Leader",
     worksFor: {
       "@type": "Organization",
       name: "Smart Working (Client: JupiterOne)",
