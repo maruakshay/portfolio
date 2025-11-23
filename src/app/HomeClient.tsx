@@ -125,6 +125,28 @@ export default function HomeClient({
 
     return (
         <>
+            <motion.a
+                href="/files/akshay_maru_resume.pdf" // Replace with actual resume path
+                target="_blank"
+                download
+                rel="noopener noreferrer"
+                className="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-primary text-white px-4 py-2 rounded-full shadow-lg hover:shadow-xl transition-shadow"
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1, duration: 0.5 }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+            >
+                <span className="font-medium text-sm">Resume</span>
+                <motion.div
+                    initial={{ opacity: 0, x: -5 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 1.2, duration: 0.5 }}
+                >
+                    <ExternalLink className="w-4 h-4" />
+                </motion.div>
+            </motion.a>
+
             <div className="space-y-6 container mx-auto px-4">
                 {/* has the intro in this  */}
 
