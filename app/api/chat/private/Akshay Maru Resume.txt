@@ -1,0 +1,139 @@
+﻿
+
+AKSHAY MARU
+Senior Software Engineer | Engineering Lead | AI Developer
+
+LinkedIn: linkedin.com/in/akshaymaru61
+Phone: +91 7069275229
+Email: [maruakshay4@gmail.com](mailto:maruakshay4@gmail.com)
+
+---
+
+OBJECTIVE
+
+Senior Software Engineer, Engineering Lead, and AI Developer with 6+ years of experience building AI-first products, LLM-powered systems, and scalable web platforms from 0→1 and scale. Deep expertise in LLM application development including RAG architectures, vector databases, contextual memory, agentic workflows, and prompt engineering.
+
+Sole architect and developer of “Juno AI,” JupiterOne’s in-app AI security assistant, enabling users to ask natural-language cybersecurity questions and receive real-time, context-aware answers grounded in enterprise security data. Strong understanding of AI system design, trust and safety boundaries, secure context injection, and production-grade AI observability.
+
+Founder and Tech Lead who previously scaled an AI job-tech platform (Remote Leaps) to 25K+ users with end-to-end ownership across architecture, AI strategy, performance, and delivery. Passionate about building reliable, explainable, and high-impact AI systems that combine deep engineering rigor with strong product thinking in fast-growing, product-led environments.
+
+---
+
+WORK EXPERIENCE
+
+JUPITERONE (Smartworking Solutions) — Remote
+Senior Software Engineer / AI Engineer
+Aug 2025 – Present
+
+• Solely designed, developed, and launched “Juno AI,” JupiterOne’s in-app AI assistant that allows users to ask natural-language cybersecurity questions and receive context-aware answers directly from their JupiterOne environment.
+• Architected and implemented a production-grade RAG system, securely retrieving and grounding responses in internal security graphs, assets, and contextual enterprise data.
+• Designed multi-turn conversational memory, session persistence, and context management to support continuous, reliable AI interactions across sessions.
+• Built and orchestrated LLM workflows using Braintrust, AWS infrastructure, and Claude AI, ensuring observability, reliability, and safe AI behavior in an enterprise security domain.
+• Developed the complete frontend experience using Vite and React, including ChatHome, conversation flows, contextual side panels, and AI-driven UX patterns inspired by ChatGPT and Perplexity.
+• Implemented a micro-frontend architecture with shared SPAs, runtime modules, and internal npm packages, enabling Juno AI to scale independently while remaining tightly integrated with JupiterOne’s core platform.
+• Built secure AI APIs and custom MCP integrations, enabling real-time contextual responses while enforcing strict data access controls, permissions, and privacy boundaries.
+• Implemented frontend security validations and backend chat persistence aligned with JupiterOne’s data protection and compliance standards.
+• Collaborated closely with Security Intelligence, Platform, and Product teams to ensure AI outputs were accurate, explainable, and aligned with real-world security workflows.
+• Owned the full AI product lifecycle end-to-end, from ideation and UX design to implementation, testing, and internal rollout.
+• Reduced security support query resolution time by 35% by enabling self-serve AI insights within the product.
+• Improved AI interaction performance and frontend load times by ~25–40% through refactoring, caching strategies, and architectural optimizations.
+• Established internal standards for LLM usage, prompt management, AI observability, and safe deployment, laying the foundation for future AI initiatives at JupiterOne.
+
+---
+
+REMOTE LEAPS — Remote
+Senior Software Engineer | Tech Lead | Founder
+Dec 2023 – Aug 2025
+
+• Built and scaled an AI-powered job-tech platform from 0 to 25K+ users with deep ownership across product, AI systems, architecture, and delivery.
+• Designed and implemented AI-driven resume generation using OpenAI GPT models, embeddings, and contextual prompts, increasing user conversion by 35%.
+• Built AI workflows for job analysis, resume optimization, and interview preparation using embeddings, vector similarity, and contextual data pipelines.
+• Implemented performance-critical backend systems using Node.js, PostgreSQL, Prisma, Redis, and queue workers, reducing load times by 60%.
+• Led and mentored a 4-member cross-functional team, shipping weekly OKR-aligned sprints and introducing structured prioritization frameworks.
+• Owned full-stack development using Next.js, TypeScript, and modern frontend tooling with strong focus on performance and UX.
+• Established CI/CD pipelines using Docker and GitHub Actions, maintaining 99.9% uptime across environments.
+• Drove engineering standards, code reviews, testing strategy, and production reliability.
+• Led sales, marketing, campus partnerships, and investor discussions while maintaining profitability and product velocity.
+• Took the platform to campuses including IITs, NITs, and private universities, scaling adoption organically.
+
+---
+
+VIRTUAL INTERNSHIPS — London, UK
+Senior Software Engineer
+Jan 2023 – Dec 2023
+
+• Modernized three major platforms (job seeker, admin, host) by migrating legacy JavaScript to TypeScript, doubling developer velocity.
+• Led UI and performance improvements across large-scale web products.
+• Introduced structured bug triage, RCA processes, and testing standards, eliminating 50+ critical issues and reducing production incidents by 40%.
+• Delivered V2 of the internship discovery and matching system, improving user retention by 25%.
+• Acted as technical lead for frontend architecture, performance, and code quality.
+
+---
+
+RAPID INNOVATION — Noida, India
+Software Developer
+Aug 2021 – Jan 2023
+
+• Built full-stack Web3 features including NFT minting and marketplace functionality using Solidity, MetaMask, React, and Ethereum tooling.
+• Optimized smart contracts to reduce gas fees by 15% through batched calls and contract refactoring.
+• Led crypto onboarding flows and UX improvements, increasing user adoption by 22%.
+• Mentored junior engineers and reviewed APIs, contracts, and frontend integrations.
+• Supported backend development using Express, PostgreSQL, and GraphQL.
+
+---
+
+KGN TECHNOLOGIES — Ahmedabad, India
+Software Developer
+Mar 2021 – Aug 2021
+
+• Built accessible, secure, and performant React applications for a California state platform.
+• Ensured WCAG compliance and OWASP-aligned authentication flows.
+• Delivered pixel-perfect UI modules and collaborated with QA and DevOps teams to improve frontend security and stability.
+
+---
+
+TOPDOC AI — Ahmedabad, India
+UI Developer
+Dec 2020 – Mar 2021
+
+• Designed and implemented SaaS UI for a dental AI platform using Figma, HTML, CSS, and JavaScript.
+• Built interactive data visualizations and domain-specific UI components, improving daily engagement by 28%.
+• Delivered responsive, cross-device layouts and custom visual assets.
+
+---
+
+SKILLS
+
+Frontend: React.js, Next.js, TypeScript, Vite, TailwindCSS, Redux Toolkit, Zustand, Shadcn/UI, Material UI, Mantine
+Backend: Node.js, Express, TypeScript, Prisma, PostgreSQL, MongoDB, Redis, Firebase, Supabase
+AI & LLM Engineering: RAG Architectures, Vector Databases, Context Injection, Conversational Memory, Agentic Workflows, LangChain, Embeddings, Prompt Engineering, OpenAI GPT-4, Claude AI, Google Vertex AI, Braintrust Observability
+Web3: Solidity, MetaMask, Ethers.js, Web3.js
+DevOps & Infrastructure: Docker, GitHub Actions, CI/CD, AWS, Vercel, Netlify, Monitoring (Sentry, LogRocket)
+System Design: Scalable Architecture, REST & GraphQL APIs, Microservices, Performance Optimization, Security & Risk Management
+Leadership: Technical Team Management, Sprint Planning, OKRs, Mentorship, Hiring, Cross-Functional Collaboration
+Tools: Jira, Notion, Figma, Postman, Git, Slack, VS Code
+
+---
+
+EDUCATION
+
+Dhirubhai Ambani University
+B.Tech in Information Communication Technology
+
+---
+
+LINKS
+
+Remote Leaps
+[www.remoteleaps.com](http://www.remoteleaps.com)
+
+Virtual Internships
+[www.virtualinternships.com](http://www.virtualinternships.com)
+
+Product Portfolio
+[https://www.notion.so/Remote-Leaps-Product-Portfolio-1ce9e2431239803e9a57e80f300bd0c9](https://www.notion.so/Remote-Leaps-Product-Portfolio-1ce9e2431239803e9a57e80f300bd0c9)
+
+Personal Portfolio
+[https://akshay-portfolio-zeta.vercel.app/](https://akshay-portfolio-zeta.vercel.app/)
+
+---
