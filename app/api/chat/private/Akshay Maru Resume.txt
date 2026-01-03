@@ -3,7 +3,7 @@
 AKSHAY MARU
 Senior Software Engineer | Engineering Lead | AI Developer
 
-LinkedIn: linkedin.com/in/akshaymaru61
+LinkedIn: www.linkedin.com/in/akshaymaru61
 Phone: +91 7069275229
 Email: [maruakshay4@gmail.com](mailto:maruakshay4@gmail.com)
 
@@ -11,7 +11,7 @@ Email: [maruakshay4@gmail.com](mailto:maruakshay4@gmail.com)
 
 OBJECTIVE
 
-Senior Software Engineer, Engineering Lead, and AI Developer with 6+ years of experience building AI-first products, LLM-powered systems, and scalable web platforms from 0→1 and scale. Deep expertise in LLM application development including RAG architectures, vector databases, contextual memory, agentic workflows, and prompt engineering.
+Engineering Lead, and AI Developer with 6+ years of experience building AI-first products, LLM-powered systems, and scalable web platforms from 0→1 and scale. Deep expertise in LLM application development including RAG architectures, vector databases, contextual memory, agentic workflows, and prompt engineering.
 
 Sole architect and developer of “Juno AI,” JupiterOne’s in-app AI security assistant, enabling users to ask natural-language cybersecurity questions and receive real-time, context-aware answers grounded in enterprise security data. Strong understanding of AI system design, trust and safety boundaries, secure context injection, and production-grade AI observability.
 
