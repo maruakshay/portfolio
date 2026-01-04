@@ -104,7 +104,7 @@ export default function Chat() {
                                     className={`max-w-[80%] p-3 rounded-2xl backdrop-blur-md border border-white/20 ${
                                         message.role === "User"
                                             ? "bg-white/50 text-black/80  rounded-br-sm"
-                                            : "bg-white/20 text-muted-foreground font-medium rounded-bl-sm"
+                                            : "bg-white/30 text-black/65 font-medium rounded-bl-sm"
                                     }`}
                                 >
                                     
