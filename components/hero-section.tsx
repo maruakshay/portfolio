@@ -17,8 +17,8 @@ export const HeroSection = () => {
         }}
         className="relative h-svh flex flex-col gap-4 items-center justify-center px-4"
       >
-         <div className="text-4xl inline md:text-6xl font-bold text-black/75 text-center max-w-2xl">
-          <p className="text-black/70 md:text-4xl text-2xl">
+         <div className="text-4xl inline md:text-6xl font-bold text-black/65 text-center max-w-2xl">
+          <p className="text-black/40 md:text-4xl text-2xl">
             Know everything about{" "}
           </p>
           <Highlighter  action="underline" color="#ffd1dc" strokeWidth={4} animationDuration={1000} iterations={5} padding={2} multiline={true}>
