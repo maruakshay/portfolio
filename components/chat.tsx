@@ -113,8 +113,6 @@ export default function Chat() {
                                     ) : (
                                        <LoaderFive text="Generating chat response..." />
                                     )}
-                                   
-                                    
                                 </div>
                             </motion.div>
                         ))}
@@ -132,7 +130,7 @@ export default function Chat() {
                 </div>
             </div>
             
-            <div className="fixed bottom-3 w-full z-10">
+            <div className="fixed bottom-5 w-full z-10">
                 <div className="max-w-3xl md:mx-auto mx-3  bg-white relative">
                     <Textarea 
                         value={input || ""} 
@@ -154,6 +152,7 @@ export default function Chat() {
                         <ArrowUpIcon className="w-5 h-5" />
                     </Button>
                 </div>
+                <p className="text-center mt-2 text-xs text-muted-foreground">Built By Akshay Maru</p>
             </div>
         </div>
     )
