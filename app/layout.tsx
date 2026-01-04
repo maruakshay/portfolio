@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { AuroraBackground } from "@/components/ui/aurora-background";
-
+import { Analytics } from '@vercel/analytics/next';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -57,6 +57,7 @@ export default function RootLayout({
       >
         <AuroraBackground className="h-svh">
  {children}
+ <Analytics />
         <footer className=" md:block hidden text-xs text-muted-foreground fixed left-0 bottom-0.5 ml-3">
           <p>© {new Date().getFullYear()} Akshay Portfolio. All rights reserved.</p>
         </footer>

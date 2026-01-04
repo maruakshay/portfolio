@@ -19,7 +19,7 @@ export const HeroSection = () => {
       >
          <div className="text-3xl md:text-7xl font-bold dark:text-white text-center max-w-2xl">
           Know everything about{" "}
-          <Highlighter  action="underline" color="#ffd1dc" strokeWidth={4} animationDuration={600} iterations={2} padding={2} multiline={true} isView={false}>
+          <Highlighter  action="underline" color="#ffd1dc" strokeWidth={4} animationDuration={1000} iterations={5} padding={2} multiline={true} isView={false}>
             Akshay Maru
           </Highlighter>
         </div>
