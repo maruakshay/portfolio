@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { AuroraBackground } from "@/components/ui/aurora-background";
 
 
 const geistSans = Geist({
@@ -54,11 +55,14 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        
-        {children}
-        <footer className="text-center md:block hidden text-xs text-muted-foreground fixed bottom-0.5 ml-3">
+        <AuroraBackground className="h-svh">
+ {children}
+        <footer className=" md:block hidden text-xs text-muted-foreground fixed left-0 bottom-0.5 ml-3">
           <p>© {new Date().getFullYear()} Akshay Portfolio. All rights reserved.</p>
         </footer>
+        </AuroraBackground>
+        
+       
       </body>
     </html>
   );

@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { NoiseBackground } from "./ui/noise-background";
 import { useRouter } from "next/navigation";
+import { Highlighter } from "./ui/highlighter";
 
 export const HeroSection = () => {
     const router = useRouter()
@@ -17,7 +18,10 @@ export const HeroSection = () => {
         className="relative h-svh flex flex-col gap-4 items-center justify-center px-4"
       >
          <div className="text-3xl md:text-7xl font-bold dark:text-white text-center max-w-2xl">
-          Know everything about Akshay Maru
+          Know everything about{" "}
+          <Highlighter  action="underline" color="#ffd1dc" strokeWidth={4} animationDuration={600} iterations={2} padding={2} multiline={true} isView={false}>
+            Akshay Maru
+          </Highlighter>
         </div>
         
         <NoiseBackground

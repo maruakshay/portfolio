@@ -6,8 +6,8 @@ export default function ChatDemo() {
 
  
   return (
-    <AuroraBackground className="h-svh">
+   
       <Chat/>
-    </AuroraBackground>
+  
   )
 }
