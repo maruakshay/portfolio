@@ -26,18 +26,18 @@ Aug 2025 – Present
 
 - Sole architect and developer of “Juno AI,” JupiterOne’s in-app AI assistant, enabling customers to query complex cybersecurity environments using natural language and receive context-aware, security-grounded insights.
 - Designed and implemented a production-grade RAG architecture grounded in internal security graphs, asset inventories, and enterprise metadata while enforcing strict access controls and data isolation.
-- Built multi-turn conversational intelligence with session persistence, memory management, and context chaining to support reliable, continuous AI interactions across sessions.
-- Orchestrated LLM workflows using Braintrust, AWS, and Claude, implementing evaluation, observability, and guardrails to ensure safe, explainable, and auditable AI behavior in a regulated security domain.
+- Built multi-turn conversational intelligence, including session persistence, memory management, and context chaining, to support reliable, continuous AI interactions across user sessions.
+- Orchestrated LLM workflows using Braintrust, AWS, and Claude, implementing evaluation pipelines, observability, and guardrails to ensure safe, explainable, and auditable AI behavior in a regulated security domain.
 - Developed the complete AI-driven frontend experience using React and Vite, including ChatHome, conversational flows, contextual side panels, and retrieval-driven UI patterns inspired by ChatGPT and Perplexity.
-- Implemented a scalable micro-frontend architecture using shared SPAs, runtime modules, and internal npm packages, allowing independent evolution while remaining tightly integrated with the core platform.
-- Built secure AI APIs and custom MCP integrations to enable real-time contextual reasoning while strictly enforcing permissions, privacy, and enterprise security boundaries.
-- Implemented end-to-end security and compliance controls, including frontend validation, backend chat persistence, and policy-aligned data handling.
-- Partnered with Security Intelligence, Platform, and Product teams to ensure AI outputs aligned with real-world security workflows and enterprise trust requirements.
+- Owned and maintained a micro-frontend ecosystem, including multiple SPAs, runtime-loaded modules, and shared internal npm packages, enabling independent development, versioning, and deployment while remaining tightly integrated with JupiterOne’s core platform.
+- Designed and evolved micro-frontend architecture standards, defining contracts, shared UI primitives, state boundaries, and release processes to support long-term scalability and team autonomy.
+- Built secure AI APIs and custom MCP integrations, enabling real-time contextual reasoning while strictly enforcing permissions, privacy, and enterprise security boundaries.
+- Implemented end-to-end security and compliance controls, including frontend validation, backend chat persistence, and policy-aligned data handling aligned with JupiterOne’s security standards.
+- Partnered closely with Security Intelligence, Platform, and Product teams to ensure AI outputs aligned with real-world security workflows, accuracy requirements, and enterprise trust expectations.
 - Owned the full AI product lifecycle end-to-end, from ideation and UX design to architecture, implementation, testing, and internal rollout.
-- Reduced customer security support resolution time by ~35% through self-serve AI-powered insights.
-- Improved AI interaction latency and frontend performance by ~25–40% via architectural refactoring, caching strategies, and optimized retrieval pipelines.
-- Established internal best practices for LLM usage, prompt versioning, evaluation, observability, and safe deployment, forming the foundation for company-wide AI initiatives.
-
+- Reduced customer security support resolution time by approximately 35 percent by enabling self-erve, AI-powered insights directly within the product.
+- Improved AI interaction latency and frontend performance by approximately 25–40 percent through architectural refactoring, caching strategies, and optimized retrieval pipelines.
+- Established internal best practices for LLM usage, including prompt versioning, evaluation, observability, and safe deployment, laying the foundation for company-wide AI initiatives.
 ---------------------------------------------------------------------
 
 REMOTE LEAPS — Remote
