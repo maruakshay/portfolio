@@ -1,20 +1,69 @@
-Father - Dr Manoj maru
-- Retired Goverment doctor and the best father
-- Now has a showroom : Akshar eye Clinic and Optical House 
+-- MY STORY
+
+I grew up in a home where service, discipline, and consistency were everyday values.
+
+My father, Dr. Manoj Maru, spent his career as a government doctor serving patients long before healthcare became an industry. Watching him treat people with the same care regardless of status shaped how I think about responsibility and impact. Even after retirement, he continues that work through Akshar Eye Clinic & Optical House, not because he has to, but because helping people is who he is.
+
+My mother, Meena Maru, has been the steady force behind everything I’ve built. Her belief in me never depended on outcomes, and that gave me the confidence to take risks, fail, learn, and try again. My sister, Dimple, has always been my emotional anchor, offering constant support, encouragement, and trust.
+
+I didn’t grow up around startups or Silicon Valley stories.  
+I grew up around hard work, humility, and doing things properly.
+
+I started coding out of curiosity. At first, it was the joy of making something work—fixing broken logic, seeing ideas turn into interfaces, and understanding how systems behave. Over time, that curiosity turned into a deeper focus on how technology can reduce friction for real people.
+
+As I worked across frontend, backend, and full-stack engineering roles, I naturally gravitated toward ownership. I didn’t just want to ship features; I wanted to understand why they mattered, how they scaled, and what broke when systems grew.
+
+That mindset led me to build products from zero.
+
+When AI systems became practical rather than theoretical, I noticed a familiar gap. Many tools looked impressive but failed in real-world conditions. They lacked context, safety, and trust. That gap became my focus.
+
+At JupiterOne, I led the end-to-end development of Juno AI, an in-app AI assistant that allows users to ask natural-language questions about complex cybersecurity environments and receive context-aware, security-grounded answers. Building AI in an enterprise security domain required thinking beyond prompts—about data boundaries, explainability, observability, and reliability. It wasn’t about making AI impressive; it was about making it dependable.
+
+Alongside this, I founded Remote Leaps, an AI-driven job-tech platform that scaled to 40K+ users across 25+ countries. Building as a founder taught me how to ship fast, listen deeply to users, balance business constraints, and understand what truly creates value at scale.
+
+Across enterprise AI and founder-led AI, I learned the same lesson twice:
+
+Good AI is not about intelligence alone.
+It is about trust, context, and outcomes.
+
+Today, my work sits at the intersection of AI engineering, product thinking, and execution.
+
+I specialize in building production-grade LLM systems, including RAG architectures, vector search, agentic workflows, and multi-agent systems that are safe, observable, and aligned with real user workflows. I care deeply about performance, UX, and system clarity, because AI that users do not trust or understand eventually fails.
+
+Outside of work, I find balance in music, stand-up comedy, reading, and building side projects. Creativity keeps me grounded. Humor keeps me honest. Learning keeps me moving.
+
+I don’t chase trends.
+I build systems that last.
+
+Like my father’s approach to medicine, I believe the best technology is the kind that quietly helps people and works when it matters most.
 
 
-Mother - Meena maru
-- The one true mother. She is caring loving and supported akshay 
+-- CORE EXPERTISE & PERSONAL STRENGTHS
 
+AI & Applied LLM Engineering:
+Design and productionization of LLM-powered systems including RAG architectures, vector search, embeddings, conversational memory, agentic workflows, and multi-agent orchestration (MCP). Strong focus on safety, observability, evaluation, and enterprise-grade reliability.
 
-Sister - Dimple maru
-- She is the best sister and akshay is her charm and love of her life
+AI Platforms & Tooling:
+Hands-on experience with LangChain, OpenAI GPT-4, Claude, Google Vertex AI, Braintrust, and vector databases. Expertise in prompt versioning, context injection, retrieval tuning, and model orchestration in real-world production environments.
 
-Brother in law - Akash Tank
+Product & System Design:
+Ability to translate ambiguous problem statements into scalable AI products. Deep ownership of system architecture, performance optimization, security boundaries, and long-term maintainability across AI and non-AI systems.
 
-Hobbies 
-- playing music / keyboard 
-- stand up comedy 
-- Coding 
-- Reading Self help books
+Frontend Engineering:
+Expert in building high-performance, AI-driven user experiences using React, Next.js, TypeScript, Vite, and modern UI systems. Strong intuition for UX, latency-sensitive interfaces, and conversational UI patterns.
+
+Backend & Data Systems:
+Design and optimization of backend services using Node.js, Express, Prisma, PostgreSQL, MongoDB, Redis, Firebase, and Supabase. Experience with async workers, streaming pipelines, and performance-critical APIs.
+
+DevOps & Infrastructure:
+Experience deploying and operating production systems using Docker, CI/CD pipelines, AWS, Vercel, Netlify, and monitoring tools such as Sentry and LogRocket. Focus on uptime, observability, and operational excellence.
+
+Engineering Leadership:
+Proven track record of leading teams, mentoring engineers, defining technical standards, running OKR-driven execution, and collaborating cross-functionally with product, design, and security teams.
+
+Execution & Ownership:
+Founder mindset with end-to-end ownership — from ideation and architecture to delivery, iteration, and go-to-market. Comfortable operating in fast-moving, ambiguous environments while maintaining quality and reliability.
+
+Tools & Workflow:
+Git, GitHub, Jira, Notion, Figma, Postman, Slack, VS Code, Cursor, Google Antigravity.
 

@@ -5,6 +5,7 @@ import { ArrowUpIcon } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import ReactMarkdown from "react-markdown";
 import { LoaderFive } from "./ui/loader";
+import { markdownComponents } from "@/lib/utility";
 
 interface Message {
     role: "User" | "Assistant";
@@ -109,7 +110,7 @@ export default function Chat() {
                                 >
                                     
                                     {message.content ? (
-                                        <ReactMarkdown>{message.content}</ReactMarkdown>
+                                        <ReactMarkdown components={markdownComponents()}>{message.content}</ReactMarkdown>
                                     ) : (
                                        <LoaderFive text="Generating chat response..." />
                                     )}
@@ -130,7 +131,7 @@ export default function Chat() {
                 </div>
             </div>
             
-            <div className="fixed bottom-5 w-full z-10">
+            <div className="fixed bottom-0 left-0 w-full z-10 backdrop-blur-md bg-white/30 py-4">
                 <div className="max-w-3xl md:mx-auto mx-3  bg-white relative">
                     <Textarea 
                         value={input || ""} 

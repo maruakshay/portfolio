@@ -58,7 +58,7 @@ export default function RootLayout({
         <AuroraBackground className="h-svh">
  {children}
  <Analytics />
-        <footer className=" md:block hidden text-xs text-muted-foreground fixed left-0 bottom-0.5 ml-3">
+        <footer className=" md:block hidden text-xs text-muted-foreground z-20 fixed left-0 bottom-0.5 ml-3">
           <p>© {new Date().getFullYear()} Akshay Portfolio. All rights reserved.</p>
         </footer>
         </AuroraBackground>
