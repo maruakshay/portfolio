@@ -10,7 +10,7 @@ import { z } from "zod";
 export const maxDuration = 30;
 
 let contextCache: string | null = null;
-
+// why context -> vector caching 
 async function getContext() {
   if (contextCache) return contextCache;
 

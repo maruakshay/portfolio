@@ -1,148 +1,111 @@
 ﻿AKSHAY MARU
-AI Product Developer | AI Engineer | Engineering Lead
+Senior Product Engineer – AI Systems
+LLM Productization | Retrieval Architecture | Enterprise AI Platforms
+Ahmedabad, India (Open to US Remote)
+https://www.linkedin.com/in/akshaymaru61 | P: +91 7069275229 | maruakshay4@gmail.com
+OBJECTIVE
 
-LinkedIn: https://www.linkedin.com/in/akshaymaru61
-Email: maruakshay4@gmail.com
-Phone: +91 7069275229
-Location: Rajkot, Gujarat, India
 
----------------------------------------------------------------------
 
-SUMMARY
 
-AI Product Developer and Engineering Lead with 6+ years of experience building 0–1 AI-native products, leading distributed teams, and shipping production-grade LLM systems at scale. Sole architect behind “Juno AI,” JupiterOne’s in-app AI assistant, delivering ChatGPT-style contextual intelligence with security-aware, enterprise-grade reasoning across complex cybersecurity data environments.
+Senior AI Engineer and Founder with 6+ years of experience specializing in the 0-1 transition of production-grade LLM systems. Expert in mitigating Information Overload, Context Window saturation, and Retrieval Noise through advanced engineering including Hybrid BM25 search, Recursive Token Summarization, and Graph-RAG. Proven track record of scaling AI-native platforms to 40K+ users and delivering secure, enterprise-grade reasoning engines.
 
-Deep expertise in LLMs, RAG architectures, vector embeddings, vector databases, streaming pipelines, agentic models, and multi-agent workflows (MCP). Proven ability to translate ambiguous product vision into scalable, reliable AI systems with ownership across architecture, orchestration, performance, and safety.
 
-Founder of Remote Leaps, an AI-driven job-tech platform scaled to 40K+ users across 25+ countries. Passionate about building high-impact AI-first products that combine strong engineering fundamentals with measurable real-world outcomes.
+PRODUCT & AI SYSTEMS EXPERTISE
 
----------------------------------------------------------------------
 
-WORK EXPERIENCE
 
-JUPITERONE (Smartworking Solutions) — Remote
-Senior Software Engineer / AI Engineer
-Aug 2025 – Present
 
-- Sole architect and developer of “Juno AI,” JupiterOne’s in-app AI assistant, enabling customers to query complex cybersecurity environments using natural language and receive context-aware, security-grounded insights.
-- Designed and implemented a production-grade RAG architecture grounded in internal security graphs, asset inventories, and enterprise metadata while enforcing strict access controls and data isolation.
-- Built multi-turn conversational intelligence, including session persistence, memory management, and context chaining, to support reliable, continuous AI interactions across user sessions.
-- Orchestrated LLM workflows using Braintrust, AWS, and Claude, implementing evaluation pipelines, observability, and guardrails to ensure safe, explainable, and auditable AI behavior in a regulated security domain.
-- Developed the complete AI-driven frontend experience using React and Vite, including ChatHome, conversational flows, contextual side panels, and retrieval-driven UI patterns inspired by ChatGPT and Perplexity.
-- Owned and maintained a micro-frontend ecosystem, including multiple SPAs, runtime-loaded modules, and shared internal npm packages, enabling independent development, versioning, and deployment while remaining tightly integrated with JupiterOne’s core platform.
-- Designed and evolved micro-frontend architecture standards, defining contracts, shared UI primitives, state boundaries, and release processes to support long-term scalability and team autonomy.
-- Built secure AI APIs and custom MCP integrations, enabling real-time contextual reasoning while strictly enforcing permissions, privacy, and enterprise security boundaries.
-- Implemented end-to-end security and compliance controls, including frontend validation, backend chat persistence, and policy-aligned data handling aligned with JupiterOne’s security standards.
-- Partnered closely with Security Intelligence, Platform, and Product teams to ensure AI outputs aligned with real-world security workflows, accuracy requirements, and enterprise trust expectations.
-- Owned the full AI product lifecycle end-to-end, from ideation and UX design to architecture, implementation, testing, and internal rollout.
-- Reduced customer security support resolution time by approximately 35 percent by enabling self-erve, AI-powered insights directly within the product.
-- Improved AI interaction latency and frontend performance by approximately 25–40 percent through architectural refactoring, caching strategies, and optimized retrieval pipelines.
-- Established internal best practices for LLM usage, including prompt versioning, evaluation, observability, and safe deployment, laying the foundation for company-wide AI initiatives.
----------------------------------------------------------------------
+AI/ML Strategy: Hybrid RAG (Vector + BM25), Graph Tree Retrieval, Agentic Workflows (LangGraph/MCP), Context Injection.
+Mathematical Foundations: Linear Regression (Predictive Scoring), Supervised/Unsupervised Learning, Token Compression/Summarization.
+LLM Ops: Braintrust (Evaluation), Guardrails, Multi-turn Memory, Session Persistence.
+Engineering Stack: Python, Node.js, TypeScript, React, Next.js, PostgreSQL, Redis, MongoDB, REST / GraphQL APIs, OpenAI, Claude, LangChain, LangGraph, AWS, Docker, CI/CD
 
-REMOTE LEAPS — Remote
-Senior Software Engineer | Tech Lead | Founder
-Dec 2023 – Aug 2025
 
-- Founded and scaled an AI-powered job-tech platform from 0 to 25K+ active users with end-to-end ownership across product strategy, AI systems, architecture, and execution.
-- Designed and deployed AI-driven resume generation pipelines using LLMs (GPT), embeddings, and context-aware prompting, improving user activation and conversion by ~35%.
-- Built applied AI workflows for job analysis, resume optimization, and interview preparation using vector similarity search, semantic embeddings, and contextual data pipelines.
-- Architected and optimized high-performance backend systems using Node.js, PostgreSQL, Prisma, Redis, and async workers, reducing response times by ~60% under production load.
-- Owned the full-stack experience using Next.js, TypeScript, and modern frontend tooling with strong focus on performance, UX, and conversion.
-- Led and mentored a 4-member cross-functional team with OKR-driven weekly sprints and structured prioritization frameworks.
-- Established CI/CD pipelines using Docker and GitHub Actions, maintaining 99.9% uptime across environments.
-- Defined engineering standards for code quality, testing, observability, and production reliability.
-- Led go-to-market efforts including sales, marketing, campus partnerships, and early investor discussions while maintaining profitability.
-- Scaled adoption across IITs, NITs, and leading private universities through organic growth and on-campus partnerships.
+WORK EXPERIENCE        
 
----------------------------------------------------------------------
 
-VIRTUAL INTERNSHIPS — London, UK
-Senior Software Engineer
-Jan 2023 – Dec 2023
 
-- Modernized three core platforms (job seeker, admin, host) by leading a migration from legacy JavaScript to TypeScript, doubling developer velocity.
-- Owned frontend architecture, performance, and scalability across large-scale web applications.
-- Led UI and performance optimization initiatives using profiling, code-splitting, and rendering optimizations.
-- Introduced structured bug triage, root-cause analysis (RCA), and testing standards, resolving 50+ critical issues and reducing production incidents by ~40%.
-- Delivered V2 of the internship discovery and matching system, improving recommendation relevance and increasing user retention by ~25%.
-- Served as technical lead for frontend quality, code reviews, and long-term platform stability.
 
----------------------------------------------------------------------
+JUPITERONE (via SmartWorking)        Remote
+Senior Product Engineer (AI)        Aug 2025 – Present
+Problem: Customers relied on complex graph-query syntax to extract cybersecurity insights, leading to high support dependency and query inefficiency.
+Constraint: Security-critical environment requiring strict access control, precision, and low hallucination tolerance.
+Re-architected search experience into graph-grounded natural-language assistant (Juno), enabling NLP interaction over structured asset relationships.
+* Identified hallucination and irrelevant-context risk in embedding-only retrieval; replaced with hybrid RAG (dense embeddings + BM25 re-ranking) to improve precision in high-stakes queries.
+* Solved context window overflow in high-cardinality graph datasets by implementing hierarchical summarization and adaptive chunk pruning (~45% prompt reduction).
+* Reduced information overload and reasoning drift by introducing controlled context injection and retrieval scoring thresholds.
+* Designed evaluation pipeline (recall, faithfulness scoring, regression testing) to prevent silent model degradation in production.
+* Reduced enterprise support resolution time by 35% by enabling customers to self-serve complex security queries.
+* Improved inference latency 25–40% via batching, caching, and prompt restructuring.
 
-RAPID INNOVATION — Noida, India
-Software Developer
-Aug 2021 – Jan 2023
 
-- Built full-stack Web3 features including NFT minting and marketplace functionality using Solidity, MetaMask, React, and Ethereum tooling.
-- Optimized smart contracts to reduce gas fees by ~15% through batching and contract refactoring.
-- Led crypto onboarding flows and UX improvements, increasing user adoption by ~22%.
-- Mentored junior engineers and reviewed APIs, smart contracts, and frontend integrations.
-- Supported backend development using Express, PostgreSQL, and GraphQL.
+REMOTE LEAPS         Remote
+Founder & Senior Product Engineer        Dec 2023 – Aug 2025
+Problem: Early-career candidates were being rejected by ATS systems due to poor resume structure, inconsistent formatting, and AI-generated hallucinations.
+Constraint: Resume generation required factual accuracy, structured formatting, and token-efficient processing.
+* Designed structured resume-generation engine to ensure ATS compatibility and consistent output formatting.
+* Identified hallucination issues from full-context prompting; redesigned pipeline using section-based controlled generation and token-aware summarization.
+* Solved context-length inefficiencies by summarizing each section incrementally and updating retrieval pipeline dynamically.
+* Built hybrid job-matching system (vector similarity + BM25 re-ranking) to improve relevance between candidate profiles and job descriptions.
+* Applied regression analysis to identify resume-to-interview conversion drivers, increasing interview conversion rate by 35%.
+* Reduced backend latency by 60% through asynchronous processing and caching layers.
+* Scaled product to 40K+ users across 25+ countries with full roadmap and execution ownership (4-member team).
 
----------------------------------------------------------------------
 
-KGN TECHNOLOGIES — Ahmedabad, India
-Software Developer
-Mar 2021 – Aug 2021
+VIRTUAL INTERNSHIPS        London, UK
+Senior Software Developer        Jan 2023 – Dec 2023
+Problem: Legacy JS systems caused instability and slowed development velocity.
+* Modernized 3 major platforms (job seeker, admin, host) by migrating legacy JS to TypeScript, improving developer velocity by 2x.
+* Eliminated 50+ critical bugs by introducing structured triage and RCA processes, increasing platform stability.
+* Delivered V2 of the internship discovery system, driving a 25% boost in user retention and matching efficiency.
+* Defined and enforced linting/testing standards, reducing production incidents by 40%.
+* Acted as tech lead for UI and performance improvements across web products.
 
-- Built accessible, secure, and performant React applications for a California state platform.
-- Ensured WCAG compliance and OWASP-aligned authentication flows.
-- Delivered pixel-perfect UI modules and collaborated with QA and DevOps teams to improve frontend security and stability.
 
----------------------------------------------------------------------
+RAPID INNOVATION        Noida, India
+Software Developer        Aug 2021 – Jan 2023
+* Developed full-stack NFT module with MetaMask, Solidity, and React; launched on a live Instagram-NFT marketplace.
+* Reduced smart contract gas fees by 15% through optimization and batched function calls.
+* Increased crypto onboarding by 22% by leading wallet-linking flows and user education UX.
+* Mentored 5 junior engineers, reviewing APIs and establishing delivery goals.
+* Supported backend development with Express, PostgreSQL, and GraphQL.
 
-TOPDOC AI — Ahmedabad, India
-UI Developer
-Dec 2020 – Mar 2021
 
-- Designed and implemented SaaS UI for a dental AI platform using Figma, HTML, CSS, and JavaScript.
-- Built interactive data visualizations and domain-specific UI components, increasing daily engagement by ~28%.
-- Delivered responsive, cross-device layouts and custom visual assets.
+KGN TECHNOLOGIES        Ahmedabad, India
+Software Developer        Mar 2021 – Aug 2021
+* Built accessible, performant React apps for a California state platform, ensuring WCAG compliance and OWASP-secure login.
+* Developed pixel-perfect authentication modules, reducing bounce rate by 20%.
+* Collaborated with QA and DevOps to harden frontend security.
 
----------------------------------------------------------------------
 
-SKILLS
+TOPDOC AI        Ahmedabad, India
+UI Developer                Dec 2020 – Mar 2021
+* Designed and implemented dental SaaS UI using Figma, HTML, and JS—improving daily engagement by 28%.
+* Created interactive charting tools (e.g., tooth/cavity selectors), enhancing user workflows.
+* Delivered responsive, cross-device layouts and custom visual assets using Adobe Illustrator.
 
-AI & LLM Engineering:
-RAG Architectures, Vector Databases, Embeddings, Context Injection, Conversational Memory, Agentic Workflows, LangChain, Prompt Engineering, MCP, OpenAI GPT-4, Claude, Google Vertex AI, Braintrust
 
-Frontend:
-React, Next.js, TypeScript, Vite, TailwindCSS, Redux Toolkit, Zustand, Shadcn/UI, Material UI, Mantine
+EDUCATION        
 
-Backend:
-Node.js, Express, TypeScript, Prisma, PostgreSQL, MongoDB, Redis, Firebase, Supabase
 
-DevOps & Infrastructure:
-Docker, GitHub Actions, CI/CD, AWS, Vercel, Netlify, Monitoring (Sentry, LogRocket)
 
-System Design:
-Scalable Architecture, REST & GraphQL APIs, Microservices, Performance Optimization, Security & Risk Management
 
-Leadership:
-Technical Leadership, Sprint Planning, OKRs, Mentorship, Hiring, Cross-Functional Collaboration
+Dhirubhai Ambani University
+B.Tech in Information Communication Technology - 2019
 
-Tools:
-Jira, Notion, Figma, Postman, Git, Slack, VS Code
 
----------------------------------------------------------------------
+NOTABLE ACHIEVEMENTS
 
-EDUCATION
 
-Dhirubhai Ambani University, Gandhinagar, Gujarat
-B.Tech in Information and Communication Technology
 
----------------------------------------------------------------------
 
-LINKS
+Agentic Ecosystems: Early adopter and implementer of Model Context Protocol (MCP) for secure tool-calling.
+Strategic Leadership: Mentored 5+ engineers and managed cross-functional teams using OKR-driven prioritization.
 
-Remote Leaps: https://www.remoteleaps.com
-Virtual Internships: https://www.virtualinternships.com
-Product Portfolio: https://www.notion.so/Remote-Leaps-Product-Portfolio-1ce9e2431239803e9a57e80f300bd0c9
-Personal Portfolio: https://akshay-portfolio-zeta.vercel.app/
 
----------------------------------------------------------------------
+PORTFOLIO
 
-RESUME
 
-Resume link: https://docs.google.com/document/d/1_CcUyc3-QAS77It1ttnfuSSbDVObDvKKjtnvpkNVnwg/edit?usp=sharing
+Personal Portfolio                                                
+https://akshay-portfolio-zeta.vercel.app/
