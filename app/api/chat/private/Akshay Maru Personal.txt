@@ -67,3 +67,5 @@ Founder mindset with end-to-end ownership — from ideation and architecture to 
 Tools & Workflow:
 Git, GitHub, Jira, Notion, Figma, Postman, Slack, VS Code, Cursor, Google Antigravity.
 
+Resume link:
+https://docs.google.com/document/d/1_CcUyc3-QAS77It1ttnfuSSbDVObDvKKjtnvpkNVnwg/edit?usp=sharing

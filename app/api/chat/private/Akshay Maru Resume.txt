@@ -1,14 +1,8 @@
 ﻿AKSHAY MARU
-Senior Product Engineer – AI Systems
-LLM Productization | Retrieval Architecture | Enterprise AI Platforms
-Ahmedabad, India (Open to US Remote)
-https://www.linkedin.com/in/akshaymaru61 | P: +91 7069275229 | maruakshay4@gmail.com
-OBJECTIVE
-
-
-
-
-Senior AI Engineer and Founder with 6+ years of experience specializing in the 0-1 transition of production-grade LLM systems. Expert in mitigating Information Overload, Context Window saturation, and Retrieval Noise through advanced engineering including Hybrid BM25 search, Recursive Token Summarization, and Graph-RAG. Proven track record of scaling AI-native platforms to 40K+ users and delivering secure, enterprise-grade reasoning engines.
+Senior AI Product Engineer
+LLM Systems & Retrieval Architecture
+Rajkot, India (Open to Remote) | Phone: +91 7069275229 | maruakshay4@gmail.com
+https://www.linkedin.com/in/akshaymaru61 | https://akshay-portfolio-zeta.vercel.app
 
 
 PRODUCT & AI SYSTEMS EXPERTISE
@@ -16,10 +10,11 @@ PRODUCT & AI SYSTEMS EXPERTISE
 
 
 
-AI/ML Strategy: Hybrid RAG (Vector + BM25), Graph Tree Retrieval, Agentic Workflows (LangGraph/MCP), Context Injection.
-Mathematical Foundations: Linear Regression (Predictive Scoring), Supervised/Unsupervised Learning, Token Compression/Summarization.
-LLM Ops: Braintrust (Evaluation), Guardrails, Multi-turn Memory, Session Persistence.
-Engineering Stack: Python, Node.js, TypeScript, React, Next.js, PostgreSQL, Redis, MongoDB, REST / GraphQL APIs, OpenAI, Claude, LangChain, LangGraph, AWS, Docker, CI/CD
+LLM Architecture & Fine-Tuning: LoRA, QLoRA, PEFT optimization | Token compression & context windowing | Multi-turn memory & session persistence | Inference acceleration (quantization, batching, caching)
+Retrieval & Search: Hybrid RAG (dense vectors + BM25 re-ranking) | Embedding optimization & semantic search | Vector database scaling (Redis, Pinecone,Chroma) | Graph-based retrieval & tree traversal
+ML Foundations: Transformer attention mechanisms | Linear regression & predictive scoring | Supervised/unsupervised learning | Feature engineering & dimensionality reduction 
+Production AI Systems: Evaluation frameworks (Braintrust, RAGAS) | Hallucination mitigation & safety guardrails | Agentic workflows (LangGraph, MCP) | A/B testing & regression detection 
+Tech Stack: Python, TypeScript, Node.js, React, Next.js | PostgreSQL, Redis, MongoDB, ChromaDB | OpenAI, Claude API, LangChain, LangGraph | AWS, Docker, CI/CD 
 
 
 WORK EXPERIENCE        
@@ -27,63 +22,50 @@ WORK EXPERIENCE
 
 
 
-JUPITERONE (via SmartWorking)        Remote
+JUPITERONE (via SmartWorking)        London, UK (Remote)
 Senior Product Engineer (AI)        Aug 2025 – Present
-Problem: Customers relied on complex graph-query syntax to extract cybersecurity insights, leading to high support dependency and query inefficiency.
-Constraint: Security-critical environment requiring strict access control, precision, and low hallucination tolerance.
-Re-architected search experience into graph-grounded natural-language assistant (Juno), enabling NLP interaction over structured asset relationships.
-* Identified hallucination and irrelevant-context risk in embedding-only retrieval; replaced with hybrid RAG (dense embeddings + BM25 re-ranking) to improve precision in high-stakes queries.
-* Solved context window overflow in high-cardinality graph datasets by implementing hierarchical summarization and adaptive chunk pruning (~45% prompt reduction).
-* Reduced information overload and reasoning drift by introducing controlled context injection and retrieval scoring thresholds.
-* Designed evaluation pipeline (recall, faithfulness scoring, regression testing) to prevent silent model degradation in production.
-* Reduced enterprise support resolution time by 35% by enabling customers to self-serve complex security queries.
-* Improved inference latency 25–40% via batching, caching, and prompt restructuring.
+Challenge: Customers struggled with complex graph-query syntax for cybersecurity insights. High support dependency and inefficient queries in security-critical environments with zero-tolerance for hallucinations.
+Impact: 
+* Re-architected search from embedding-only to hybrid RAG (dense vectors + BM25 re-ranking), reducing hallucinations and improving precision in high-stakes security queries
+* Implemented hierarchical token-aware summarization & adaptive chunk pruning, reducing prompt size ~45% without information loss
+* Designed production evaluation pipeline (recall, faithfulness scoring, regression testing) to detect silent model degradation
+* Built natural-language query interface enabling non-technical users to extract complex cybersecurity insights from asset graphs
+* Achieved 35% reduction in enterprise support resolution time through customer self-service capabilities
+* Optimized inference latency 25–40% via batching, intelligent caching, and prompt compression
 
 
-REMOTE LEAPS         Remote
-Founder & Senior Product Engineer        Dec 2023 – Aug 2025
-Problem: Early-career candidates were being rejected by ATS systems due to poor resume structure, inconsistent formatting, and AI-generated hallucinations.
-Constraint: Resume generation required factual accuracy, structured formatting, and token-efficient processing.
-* Designed structured resume-generation engine to ensure ATS compatibility and consistent output formatting.
-* Identified hallucination issues from full-context prompting; redesigned pipeline using section-based controlled generation and token-aware summarization.
-* Solved context-length inefficiencies by summarizing each section incrementally and updating retrieval pipeline dynamically.
-* Built hybrid job-matching system (vector similarity + BM25 re-ranking) to improve relevance between candidate profiles and job descriptions.
-* Applied regression analysis to identify resume-to-interview conversion drivers, increasing interview conversion rate by 35%.
-* Reduced backend latency by 60% through asynchronous processing and caching layers.
-* Scaled product to 40K+ users across 25+ countries with full roadmap and execution ownership (4-member team).
+REMOTE LEAPS         India (Remote)
+Founder & Senior Product Engineer (Acquired / Exited)        Dec 2023 – Aug 2025
+Challenge: Early-career candidates rejected by ATS systems. Complex requirements: factual accuracy, ATS compatibility, token-efficient processing, and hallucination-free generation.
+Impact: 
+* Built structured resume-generation engine using controlled generation & token-aware summarization to guarantee factual accuracy at scale
+* Implemented hybrid job-matching system (vector embeddings + BM25 re-ranking) improving candidate-job relevance and conversion rates
+* Applied regression analysis & predictive scoring to identify resume-to-interview drivers, increasing interview rate by 35%
+* Reduced backend latency by 60% through asynchronous processing, intelligent caching, and batched API calls
+* Scaled platform to 40K+ users across 25+ countries with full product roadmap and team leadership (4-person engineering team)
+* Designed iterative A/B testing framework for evaluating model performance improvements
+* Fine-tuned LLM-based resume scoring using curriculum learning to prioritize high-impact sections
 
 
-VIRTUAL INTERNSHIPS        London, UK
+VIRTUAL INTERNSHIPS        London, UK (Remote)
 Senior Software Developer        Jan 2023 – Dec 2023
-Problem: Legacy JS systems caused instability and slowed development velocity.
-* Modernized 3 major platforms (job seeker, admin, host) by migrating legacy JS to TypeScript, improving developer velocity by 2x.
-* Eliminated 50+ critical bugs by introducing structured triage and RCA processes, increasing platform stability.
-* Delivered V2 of the internship discovery system, driving a 25% boost in user retention and matching efficiency.
-* Defined and enforced linting/testing standards, reducing production incidents by 40%.
-* Acted as tech lead for UI and performance improvements across web products.
+* Modernized 3 major platforms (job seeker, admin, host) by migrating legacy JavaScript to TypeScript, improving developer velocity by 2x
+* Established linting and testing standards across 20+ microservices, reducing production incidents by 40% and critical bugs by 50+
+* Delivered internship discovery system V2 using semantic search and recommendation algorithms, driving 25% boost in user retention
+* Implemented Redis caching layer and query optimization, reducing API response times by 35%
 
 
 RAPID INNOVATION        Noida, India
 Software Developer        Aug 2021 – Jan 2023
-* Developed full-stack NFT module with MetaMask, Solidity, and React; launched on a live Instagram-NFT marketplace.
-* Reduced smart contract gas fees by 15% through optimization and batched function calls.
-* Increased crypto onboarding by 22% by leading wallet-linking flows and user education UX.
-* Mentored 5 junior engineers, reviewing APIs and establishing delivery goals.
-* Supported backend development with Express, PostgreSQL, and GraphQL.
+* Developed full-stack NFT module (MetaMask integration, Solidity smart contracts) launching on Instagram-NFT marketplace
+* Optimized smart contract gas fees by 15% through algorithm refactoring and batched function calls
+* Increased crypto onboarding adoption by 22% by designing wallet-linking flows and improving UX
+* Mentored 5 junior engineers on API design principles, deployment strategies, and code quality best practices
 
 
-KGN TECHNOLOGIES        Ahmedabad, India
-Software Developer        Mar 2021 – Aug 2021
-* Built accessible, performant React apps for a California state platform, ensuring WCAG compliance and OWASP-secure login.
-* Developed pixel-perfect authentication modules, reducing bounce rate by 20%.
-* Collaborated with QA and DevOps to harden frontend security.
-
-
-TOPDOC AI        Ahmedabad, India
-UI Developer                Dec 2020 – Mar 2021
-* Designed and implemented dental SaaS UI using Figma, HTML, and JS—improving daily engagement by 28%.
-* Created interactive charting tools (e.g., tooth/cavity selectors), enhancing user workflows.
-* Delivered responsive, cross-device layouts and custom visual assets using Adobe Illustrator.
+ADDITIONAL EXPERIENCE
+Frontend Engineer, KGN Technologies (2021): Built accessible React applications for California state platform; reduced bounce rate by 20% through UX optimization
+UI Developer, TopDoc AI (2020–2021): Designed dental SaaS interface; increased daily user engagement by 28% through usability improvements and intuitive navigation
 
 
 EDUCATION        
@@ -95,17 +77,13 @@ Dhirubhai Ambani University
 B.Tech in Information Communication Technology - 2019
 
 
-NOTABLE ACHIEVEMENTS
+KEY STRENGTHS
 
 
 
 
-Agentic Ecosystems: Early adopter and implementer of Model Context Protocol (MCP) for secure tool-calling.
-Strategic Leadership: Mentored 5+ engineers and managed cross-functional teams using OKR-driven prioritization.
-
-
-PORTFOLIO
-
-
-Personal Portfolio                                                
-https://akshay-portfolio-zeta.vercel.app/
+* Production LLM Systems Expert: Deep expertise in evaluation frameworks, hallucination mitigation, safety guardrails, model fine-tuning (LoRA, PEFT), and scaling architectures for enterprise AI.
+* Advanced Retrieval Architecture: Specialist in hybrid RAG, embedding optimization, vector database scaling, and graph-based retrieval systems for complex domain knowledge.
+* ML Fundamentals & Transformers: Strong mathematical foundation in attention mechanisms, embeddings, matrix operations, and statistical learning theory.
+* Full-Stack Leadership: Proven track record mentoring engineers, building product-centric AI systems, and translating business requirements into technical architecture.
+* Model Context Protocol (MCP) Pioneer: Early adopter of MCP for secure, scalable tool-calling and agentic workflows in production systems.
