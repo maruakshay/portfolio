@@ -15,13 +15,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Akshay Maru | AI Full Stack Developer Portfolio",
-  description: "Explore the professional portfolio of Akshay Maru, featuring innovative web development projects, technical skills, and software engineering expertise.",
-  keywords: ["Akshay Maru", "Full Stack Developer", "Portfolio", "Software Engineer", "Web Development", "React", "Next.js"],
+  title: "Akshay Maru | Senior AI Product Engineer",
+  description: "Senior AI Product Engineer specializing in LLM Systems, RAG Architecture, and Production AI. Expert in hybrid retrieval, vector databases, agentic workflows, and full-stack AI development.",
+  keywords: ["Akshay Maru", "AI Product Engineer", "LLM Systems", "RAG Architecture", "Retrieval Augmented Generation", "Vector Databases", "LangChain", "LangGraph", "OpenAI", "Claude API", "Full Stack Developer", "React", "Next.js", "TypeScript", "Python"],
   authors: [{ name: "Akshay Maru" }],
   openGraph: {
-    title: "Akshay Maru | AI Full Stack Developer Portfolio",
-    description: "Personal portfolio of Akshay Maru, showcasing projects and skills.",
+    title: "Akshay Maru | Senior AI Product Engineer",
+    description: "Senior AI Product Engineer specializing in LLM Systems, RAG Architecture, and Production AI. Building scalable AI solutions with hybrid retrieval and agentic workflows.",
     url: "https://akshay-portfolio-zeta.vercel.app/",
     siteName: "Akshay Maru Portfolio",
     locale: "en_US",
@@ -29,8 +29,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Akshay Maru | AI Full Stack Developer Portfolio",
-    description: "Personal portfolio of Akshay Maru, showcasing projects and skills.",
+    title: "Akshay Maru | Senior AI Product Engineer",
+    description: "Senior AI Product Engineer specializing in LLM Systems, RAG Architecture, and Production AI.",
   },
   robots: {
     index: true,
