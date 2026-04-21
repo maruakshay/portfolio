@@ -116,7 +116,7 @@ See [Next.js deployment documentation](https://nextjs.org/docs/app/building-your
 
 ## 📄 License
 
-This project is private and maintained by Akshay Maru.
+This project maintained by Akshay Maru.
 
 ---
 
