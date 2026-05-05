@@ -1,89 +1,114 @@
 ﻿AKSHAY MARU
-Senior AI Product Engineer
-LLM Systems & Retrieval Architecture
-Rajkot, India (Open to Remote) | Phone: +91 7069275229 | maruakshay4@gmail.com
-https://www.linkedin.com/in/akshaymaru61 | https://akshay-portfolio-zeta.vercel.app
+Senior AI Engineer | LLM Security & RAG Systems | Ex-Founder (Exited)
+India (Open to Remote) | Ph: +91 7069275229 | maruakshay4@gmail.com
+linkedin.com/in/akshaymaru61 | akshay-portfolio-zeta.vercel.app
 
+TECHNICAL SUMMARY
+Senior AI engineer with 7+ years building production AI systems in high-stakes domains. Founded and exited AI SaaS (40K users, 25 countries). Specialized in RAG hardening, LLM security (OWASP LLM Top 10), fine-tuning (LoRA/QLoRA), and LLMOps pipeline design. Currently architecting secure AI for enterprise security teams at JupiterOne. Open to senior remote roles globally.
 
-PRODUCT & AI SYSTEMS EXPERTISE
+TECHNICAL SKILLS
+AI Security & Trust: OWASP LLM Top 10 mitigation, Prompt injection defense, Adversarial testing (Garak/PyRIT), PII/data leakage prevention in RAG, Model supply chain security, Audit logging & compliance-aware generation (SOC2/GDPR)
 
+Model Training & Fine-Tuning: Transformer architecture & attention, LoRA, QLoRA, PEFT, HuggingFace, Curriculum learning, Supervised fine-tuning, Domain adaptation
 
+Inference & Optimization: Quantization (int4/int8/fp16), KV-caching, Batching, Prompt compression, Context windowing, Ollama, vLLM-style serving
 
+RAG & Retrieval: Hybrid RAG (dense + BM25), Semantic search, Embedding optimization, Pinecone, Redis, ChromaDB, Hierarchical summarization, Chunk pruning
 
-LLM Architecture & Fine-Tuning: LoRA, QLoRA, PEFT optimization | Token compression & context windowing | Multi-turn memory & session persistence | Inference acceleration (quantization, batching, caching)
-Retrieval & Search: Hybrid RAG (dense vectors + BM25 re-ranking) | Embedding optimization & semantic search | Vector database scaling (Redis, Pinecone,Chroma) | Graph-based retrieval & tree traversal
-ML Foundations: Transformer attention mechanisms | Linear regression & predictive scoring | Supervised/unsupervised learning | Feature engineering & dimensionality reduction 
-Production AI Systems: Evaluation frameworks (Braintrust, RAGAS) | Hallucination mitigation & safety guardrails | Agentic workflows (LangGraph, MCP) | A/B testing & regression detection 
-Tech Stack: Python, TypeScript, Node.js, React, Next.js | PostgreSQL, Redis, MongoDB, ChromaDB | OpenAI, Claude API, LangChain, LangGraph | AWS, Docker, CI/CD 
+Agentic & LLMOps: LangGraph, LangChain, MCP (early adopter), Ollama, Hallucination mitigation, Braintrust, RAGAS, A/B testing, LLMOps pipeline design
 
+Stack: Python, TypeScript, Node.js, Next.js, React, PostgreSQL, MongoDB, OpenAI API, Claude API, AWS, Docker, CI/CD, REST
 
-WORK EXPERIENCE        
+WORK EXPERIENCE
 
+JUPITERONE (via SmartWorking), London, UK (Remote)
+Senior LLM Engineer / AI Systems Architect | Aug 2025 – Present
 
+Challenge: Non-technical security teams unable to extract insights from complex graph-query asset databases without high engineering support overhead — in a domain where a hallucinated finding could trigger a false security incident.
 
+Impact:
 
-JUPITERONE (via SmartWorking)        London, UK (Remote)
-Senior Product Engineer (AI)        Aug 2025 – Present
-Challenge: Customers struggled with complex graph-query syntax for cybersecurity insights. High support dependency and inefficient queries in security-critical environments with zero-tolerance for hallucinations.
-Impact: 
-* Re-architected search from embedding-only to hybrid RAG (dense vectors + BM25 re-ranking), reducing hallucinations and improving precision in high-stakes security queries
-* Implemented hierarchical token-aware summarization & adaptive chunk pruning, reducing prompt size ~45% without information loss
-* Designed production evaluation pipeline (recall, faithfulness scoring, regression testing) to detect silent model degradation
-* Built natural-language query interface enabling non-technical users to extract complex cybersecurity insights from asset graphs
-* Achieved 35% reduction in enterprise support resolution time through customer self-service capabilities
-* Optimized inference latency 25–40% via batching, intelligent caching, and prompt compression
+- Hardened hybrid RAG pipeline (dense + BM25 re-ranking) against prompt injection and data exfiltration; implemented semantic guardrails aligned with OWASP LLM Top 10 to prevent AI-generated false positives in security operations
 
+- Implemented hierarchical token-aware summarization and adaptive chunk pruning — cut prompt token load ~45% with no information loss
 
-REMOTE LEAPS         India (Remote)
-Founder & Senior Product Engineer (Acquired / Exited)        Dec 2023 – Aug 2025
+- Built production evaluation pipeline (recall, faithfulness, regression testing) to catch silent model degradation before it ships
+
+- Shipped NL query interface for non-technical security teams — 35% reduction in enterprise support resolution time; 25–40% inference latency improvement via batching and caching
+
+- Technical lead: architecture decisions, design reviews, and LLMOps mentoring across the engineering team
+
+REMOTE LEAPS, India (Remote)
+Founder & Senior AI Product Engineer (Acquired / Exited) | Dec 2023 – Aug 2025
+
 Challenge: Early-career candidates rejected by ATS systems. Complex requirements: factual accuracy, ATS compatibility, token-efficient processing, and hallucination-free generation.
-Impact: 
-* Built structured resume-generation engine using controlled generation & token-aware summarization to guarantee factual accuracy at scale
-* Implemented hybrid job-matching system (vector embeddings + BM25 re-ranking) improving candidate-job relevance and conversion rates
-* Applied regression analysis & predictive scoring to identify resume-to-interview drivers, increasing interview rate by 35%
-* Reduced backend latency by 60% through asynchronous processing, intelligent caching, and batched API calls
-* Scaled platform to 40K+ users across 25+ countries with full product roadmap and team leadership (4-person engineering team)
-* Designed iterative A/B testing framework for evaluating model performance improvements
-* Fine-tuned LLM-based resume scoring using curriculum learning to prioritize high-impact sections
 
+Impact:
 
-VIRTUAL INTERNSHIPS        London, UK (Remote)
-Senior Software Developer        Jan 2023 – Dec 2023
-* Modernized 3 major platforms (job seeker, admin, host) by migrating legacy JavaScript to TypeScript, improving developer velocity by 2x
-* Established linting and testing standards across 20+ microservices, reducing production incidents by 40% and critical bugs by 50+
-* Delivered internship discovery system V2 using semantic search and recommendation algorithms, driving 25% boost in user retention
-* Implemented Redis caching layer and query optimization, reducing API response times by 35%
+- Architected controlled-generation resume engine with token-aware summarization and constrained decoding — met zero-hallucination requirement in production
 
+- Fine-tuned LLM resume scoring model using curriculum learning; built hybrid job-matching (embeddings + BM25) — 35% lift in interview conversion rate
 
-RAPID INNOVATION        Noida, India
-Software Developer        Aug 2021 – Jan 2023
-* Developed full-stack NFT module (MetaMask integration, Solidity smart contracts) launching on Instagram-NFT marketplace
-* Optimized smart contract gas fees by 15% through algorithm refactoring and batched function calls
-* Increased crypto onboarding adoption by 22% by designing wallet-linking flows and improving UX
-* Mentored 5 junior engineers on API design principles, deployment strategies, and code quality best practices
+- Reduced backend latency 60% via async processing, batched API calls, and intelligent caching
 
+- Scaled to 40K+ users across 25 countries; led 4-person engineering team with full ownership of architecture, roadmap, and hiring
+
+VIRTUAL INTERNSHIPS, London, UK (Remote)
+Senior Software Developer | Jan 2023 – Dec 2023
+
+- Built internship discovery V2 with semantic search — 25% user retention uplift; 40% fewer production incidents after TypeScript migration across 20+ microservices
+
+RAPID INNOVATION, Noida, India
+Software Developer | Aug 2021 – Jan 2023
+
+- Full-stack NFT marketplace (MetaMask + Solidity); 15% gas fee reduction; mentored 5 junior engineers on API design and deployment
 
 ADDITIONAL EXPERIENCE
-Frontend Engineer, KGN Technologies (2021): Built accessible React applications for California state platform; reduced bounce rate by 20% through UX optimization
-UI Developer, TopDoc AI (2020–2021): Designed dental SaaS interface; increased daily user engagement by 28% through usability improvements and intuitive navigation
 
+Frontend Engineer, KGN Technologies (2021)
 
-EDUCATION        
+- Built accessible React applications for California state platform; reduced bounce rate by 20% through UX optimization
 
+UI Developer, TopDoc AI (2020–2021)
 
+- Designed dental SaaS interface; increased daily user engagement by 28% through usability improvements and intuitive navigation
 
+OPEN SOURCE
+
+Miii | Privacy-First Local AI Assistant
+github.com/maruakshay/miii
+
+- Local-first AI chat system running entirely on-device via Ollama — pluggable skills architecture, semantic tool routing via LangGraph, live web search, streaming NDJSON responses
+
+- Demonstrates offline LLM serving, inference control, agentic orchestration, and custom tool injection — all publicly verifiable on GitHub
+
+AI Assistant Portfolio | Interactive AI-powered portfolio with real-time chat
+github.com/maruakshay/portfolio
+
+- Full-stack AI chat application integrating OpenAI API, LangGraph, and Vercel AI SDK with streaming responses and component-based architecture (Radix UI + Framer Motion)
+
+- Showcases frontend AI integration patterns: real-time streaming, dark mode, responsive design, and production-ready Next.js App Router API routes — deployed on Vercel
+
+Miii AI Security | Open-Source LLM Security Skills Framework
+github.com/maruakshay/mii-ai-security
+
+- Modular SKILL.md packs for securing LLM systems across prompt injection defense, RAG retrieval hardening, tool execution sandboxing, and data leakage prevention — structured around 5 threat pillars
+
+- Demonstrates adversarial threat modeling, input/context hardening, retrieval access control, least-privilege execution isolation, and continuous red-team governance — all publicly verifiable on GitHub
+
+EDUCATION
 
 Dhirubhai Ambani University
-B.Tech in Information Communication Technology - 2019
+B.Tech in Information Communication Technology, 2019
 
+KEY DIFFERENTIATORS
 
-KEY STRENGTHS
+- AI Security Focus: Building trustworthy, auditable AI systems for high-stakes domains — with defense-in-depth against prompt attacks, data leakage, and model manipulation
 
+- Model Depth + Product Ownership: Deep understanding of transformer internals, fine-tuning, and secure inference — not just API wrappers
 
+- Zero-Hallucination AI in Production: Shipped reliability-critical AI in cybersecurity environments — one of the highest-stakes AI contexts globally
 
+- Engineering Leadership: Hired, managed, and mentored a 4-person team; drove architecture, security reviews, and roadmap end-to-end
 
-* Production LLM Systems Expert: Deep expertise in evaluation frameworks, hallucination mitigation, safety guardrails, model fine-tuning (LoRA, PEFT), and scaling architectures for enterprise AI.
-* Advanced Retrieval Architecture: Specialist in hybrid RAG, embedding optimization, vector database scaling, and graph-based retrieval systems for complex domain knowledge.
-* ML Fundamentals & Transformers: Strong mathematical foundation in attention mechanisms, embeddings, matrix operations, and statistical learning theory.
-* Full-Stack Leadership: Proven track record mentoring engineers, building product-centric AI systems, and translating business requirements into technical architecture.
-* Model Context Protocol (MCP) Pioneer: Early adopter of MCP for secure, scalable tool-calling and agentic workflows in production systems.
+- Proven Builder: Founded, scaled, and exited a real AI product (40K+ users, 25 countries); active open-source contributor with publicly verifiable work

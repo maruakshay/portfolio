@@ -1,13 +1,10 @@
 "use client"
 import Chat from "@/components/chat"
-import { AuroraBackground } from "@/components/ui/aurora-background"
  
-export default function ChatDemo() {
-
- 
+export default function ChatPage() {
   return (
-   
-      <Chat/>
-  
+    <div className="w-full h-screen bg-[#f8fafc]">
+      <Chat />
+    </div>
   )
 }

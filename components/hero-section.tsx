@@ -1,88 +1,136 @@
 "use client";
 import { motion } from "framer-motion";
-import { NoiseBackground } from "./ui/noise-background";
 import { useRouter } from "next/navigation";
-import { Highlighter } from "./ui/highlighter";
+import { ArrowRight } from "lucide-react";
 
-const techStack = ["LangGraph", "RAG", "Claude", "ChromaDB"];
+const suggestedPrompts = [
+  "What has Akshay built?",
+  "Why hire Akshay as Engineering Manager?",
+  "Show technical depth",
+  "What makes Akshay different?",
+];
+
+const container = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.09, delayChildren: 0.05 },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0, y: 12 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.45, ease: [0.16, 1, 0.3, 1] },
+  },
+};
 
 export const HeroSection = () => {
   const router = useRouter();
+
   return (
     <motion.div
-      initial={{ opacity: 0.0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{
-        delay: 0.3,
-        duration: 0.8,
-        ease: "easeInOut",
-      }}
-      className="relative h-svh flex flex-col gap-6 items-center justify-center px-4"
+      variants={container}
+      initial="hidden"
+      animate="visible"
+      className="min-h-screen flex flex-col px-5 md:px-8 lg:px-12"
     >
-      <div className="text-center max-w-2xl space-y-2">
-        <p className="text-black/50 md:text-3xl text-xl font-medium tracking-tight">
-          Know everything about
-        </p>
-        <h1 className="text-4xl md:text-6xl font-bold text-black/70">
-          <Highlighter
-            action="underline"
-            color="#ffd1dc"
-            strokeWidth={4}
-            animationDuration={1000}
-            iterations={5}
-            padding={2}
-            multiline={true}
-          >
-            Akshay Maru
-          </Highlighter>
-        </h1>
-      </div>
-
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.7, duration: 0.6 }}
-        className="flex items-center gap-2 text-sm text-black/45"
+      {/* Site header */}
+      <motion.header
+        variants={item}
+        className="pt-8 md:pt-10 w-full max-w-5xl mx-auto flex items-center justify-between"
       >
-        <span className="tracking-wide">Powered by</span>
-        <div className="flex items-center gap-1.5">
-          {techStack.map((tech, index) => (
-            <span key={tech} className="flex items-center gap-1.5">
-              <span className="font-medium text-black/60">{tech}</span>
-              {index < techStack.length - 1 && (
-                <span className="text-black/30">·</span>
-              )}
-            </span>
-          ))}
-        </div>
-      </motion.div>
-
-      <NoiseBackground
-        containerClassName="w-fit p-2 rounded-full mx-auto mt-4"
-        gradientColors={[
-          "rgb(255, 100, 150)",
-          "rgb(100, 150, 255)",
-          "rgb(255, 200, 100)",
-        ]}
-      >
-        <button
-          onClick={() => router.push("/chat")}
-          className="group h-full w-full cursor-pointer rounded-full bg-linear-to-r from-neutral-100 via-neutral-100 to-white px-5 py-2.5 text-black shadow-[0px_2px_0px_0px_var(--color-neutral-50)_inset,0px_0.5px_1px_0px_var(--color-neutral-400)] transition-all duration-200 active:scale-98 dark:from-black dark:via-black dark:to-neutral-900 dark:text-white dark:shadow-[0px_1px_0px_0px_var(--color-neutral-950)_inset,0px_1px_0px_0px_var(--color-neutral-800)]"
+        <span
+          className="text-sm font-bold text-[#0f172a]"
+          style={{ letterSpacing: "-0.015em" }}
         >
-          <span className="flex items-center gap-2 font-medium">
-            Try the AI Assistant
-            <svg
-              className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
+          Akshay Maru
+        </span>
+        <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#eff6ff] border border-[#e2e8f0]">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#2563eb] shrink-0" />
+          <span className="text-xs font-medium text-[#1e40af] whitespace-nowrap">
+            Available for opportunities
           </span>
-        </button>
-      </NoiseBackground>
+        </div>
+      </motion.header>
+
+      {/* Main content — left-aligned within constrained column */}
+      <div className="flex-1 flex flex-col justify-center w-full max-w-5xl mx-auto pb-12 pt-16 md:pt-20">
+
+        {/* Headline */}
+        <motion.div variants={item}>
+          <h1
+            className="font-bold text-[#0f172a]"
+            style={{
+              fontSize: "clamp(3rem, 8vw, 5.5rem)",
+              letterSpacing: "-0.035em",
+              lineHeight: 1.02,
+            }}
+          >
+            Founder turned
+            <span className="block text-[#2563eb]">AI Product Builder</span>
+          </h1>
+        </motion.div>
+
+        {/* Subtitle */}
+        <motion.p
+          variants={item}
+          className="mt-6 md:mt-7 text-base md:text-lg text-[#475569] leading-relaxed"
+          style={{ maxWidth: "46ch" }}
+        >
+          Building secure, production-grade AI that doesn't break in the real world. Founded & exited an AI SaaS (40K users, 25 countries). Specialized in LLM security, RAG hardening & fine-tuning.
+        </motion.p>
+
+        {/* CTA */}
+        <motion.div variants={item} className="mt-9 md:mt-11">
+          <button
+            onClick={() => router.push("/chat")}
+            className="group inline-flex items-center gap-2 px-7 py-3 bg-[#2563eb] hover:bg-[#1d4ed8] text-white rounded-lg font-semibold text-sm transition-all duration-200 hover:-translate-y-px"
+            style={{
+              boxShadow:
+                "0 1px 3px rgba(37,99,235,0.18), 0 1px 2px rgba(37,99,235,0.12)",
+            }}
+            onMouseEnter={(e) => {
+              (e.currentTarget as HTMLButtonElement).style.boxShadow =
+                "0 8px 20px -4px rgba(37,99,235,0.40), 0 2px 6px rgba(37,99,235,0.20)";
+            }}
+            onMouseLeave={(e) => {
+              (e.currentTarget as HTMLButtonElement).style.boxShadow =
+                "0 1px 3px rgba(37,99,235,0.18), 0 1px 2px rgba(37,99,235,0.12)";
+            }}
+          >
+            Talk to My AI
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
+          </button>
+        </motion.div>
+
+        {/* Suggested prompts */}
+        <motion.div variants={item} className="mt-14 md:mt-16">
+          <p className="text-xs font-medium text-[#94a3b8] mb-3 uppercase tracking-wide"
+             style={{ letterSpacing: "0.06em" }}>
+            Try asking
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 max-w-lg">
+            {suggestedPrompts.map((prompt, idx) => (
+              <button
+                key={idx}
+                onClick={() =>
+                  router.push(`/chat?prompt=${encodeURIComponent(prompt)}`)
+                }
+                className="px-4 py-3 text-left text-sm rounded-xl bg-white border border-[#e2e8f0] hover:border-[#93c5fd] hover:bg-[#eff6ff] text-[#475569] hover:text-[#1d4ed8] transition-all duration-200"
+                style={{
+                  boxShadow:
+                    "0 1px 3px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.03)",
+                }}
+              >
+                {prompt}
+              </button>
+            ))}
+          </div>
+        </motion.div>
+      </div>
     </motion.div>
   );
 };
