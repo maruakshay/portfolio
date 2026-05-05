@@ -147,8 +147,8 @@ export default function Chat() {
                 <div
                   className={`max-w-xs md:max-w-md lg:max-w-lg px-4 py-3 text-sm leading-relaxed ${
                     message.role === "User"
-                      ? "bg-[#2563eb] text-white rounded-2xl rounded-br-[4px] [&_p]:text-white [&_li]:text-white [&_h1]:text-white [&_h2]:text-white [&_h3]:text-white [&_h4]:text-white"
-                      : "bg-white text-[#0f172a] border border-[#e2e8f0] rounded-2xl rounded-bl-[4px]"
+                      ? "bg-[#2563eb] text-white rounded-2xl rounded-br-lg [&_p]:text-white [&_li]:text-white [&_h1]:text-white [&_h2]:text-white [&_h3]:text-white [&_h4]:text-white"
+                      : "bg-white text-[#0f172a] border border-[#e2e8f0] rounded-2xl rounded-bl-lg"
                   }`}
                   style={{
                     boxShadow:
