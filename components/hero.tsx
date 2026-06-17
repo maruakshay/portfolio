@@ -1,15 +1,6 @@
 import { profile } from "@/lib/content";
 import { HeroVisual } from "./hero-visual";
 
-const MOBILE_STAGES = [
-  "INPUT",
-  "INTERFACE",
-  "GUARDRAILS",
-  "AGENT",
-  "RAG",
-  "MODEL",
-];
-
 export function Hero() {
   return (
     <section className="border-b border-rule">
@@ -52,44 +43,22 @@ export function Hero() {
         </p>
       </div>
 
-      {/* Pipeline — the focal proof block */}
+      {/* Interactive signal grid — the creative focal block */}
       <div className="mx-auto max-w-5xl px-5 pb-20 pt-14 md:px-8 md:pb-28 md:pt-16">
         <div className="border border-rule bg-ground shadow-[5px_5px_0_var(--color-rule)]">
           <div className="flex items-center justify-between border-b border-rule px-5 py-3 md:px-6">
             <span className="label flex items-center gap-2 text-paper-muted">
-              <span className="mark" aria-hidden />
-              Production inference pipeline
+              <span className="mark mark-blink" aria-hidden />
+              How I think
             </span>
-            <span className="label hidden text-paper-faint sm:block">
-              request → response
+            <span className="label hidden text-paper-faint md:block">
+              hover a node
+            </span>
+            <span className="label text-paper-faint md:hidden">
+              first principles
             </span>
           </div>
-
-          {/* Detailed diagram on desktop */}
-          <div className="hidden px-5 py-7 md:block md:px-8">
-            <HeroVisual />
-          </div>
-
-          {/* Compact, readable fallback on mobile */}
-          <div className="px-5 py-6 md:hidden">
-            <ol className="flex flex-col gap-px overflow-hidden border border-rule bg-rule">
-              {MOBILE_STAGES.map((s, i) => (
-                <li
-                  key={s}
-                  className="flex items-center gap-3 bg-surface px-4 py-3"
-                >
-                  <span className="label text-paper-faint">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <span className="mark shrink-0" aria-hidden />
-                  <span className="label text-paper">{s}</span>
-                </li>
-              ))}
-            </ol>
-            <p className="label mt-3 text-paper-faint">
-              tokens stream back to the interface
-            </p>
-          </div>
+          <HeroVisual />
         </div>
       </div>
     </section>

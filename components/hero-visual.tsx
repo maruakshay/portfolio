@@ -1,126 +1,169 @@
 "use client";
 
+import { useState } from "react";
 import { useReducedMotion } from "framer-motion";
 
-// A detailed read of the actual work: a production inference pipeline.
-// prompt -> streaming UI -> guardrails -> agent -> RAG -> model, then tokens
-// stream back. Real component names, an amber signal running the full loop.
+// How I think, as a signal network. Five first-principle nodes; an amber
+// signal tours them in reasoning order. Hover/click a node to read the
+// principle. Not decoration: the content is the point.
+type Node = { k: string; n: string; q: string; a: string; x: number; y: number };
 
-const STAGES = [
-  { l1: "INPUT", l2: "user prompt" },
-  { l1: "INTERFACE", l2: "React · streaming" },
-  { l1: "GUARDRAILS", l2: "injection defense" },
-  { l1: "AGENT", l2: "LangGraph · tools" },
-  { l1: "RETRIEVAL", l2: "hybrid RAG" },
-  { l1: "MODEL", l2: "Bedrock · local" },
+const NODES: Node[] = [
+  {
+    k: "WHY",
+    n: "01",
+    q: "Why build it",
+    a: "Most AI demos die in production. I build the ones that survive contact with real users.",
+    x: 130,
+    y: 84,
+  },
+  {
+    k: "WHAT",
+    n: "02",
+    q: "What to build",
+    a: "The whole AI product, the streaming interface and the model behind it. Nothing thrown over a wall.",
+    x: 446,
+    y: 66,
+  },
+  {
+    k: "WHO",
+    n: "03",
+    q: "Who it is for",
+    a: "The person actually using it, not the demo audience. Human over impressive.",
+    x: 766,
+    y: 110,
+  },
+  {
+    k: "HOW",
+    n: "04",
+    q: "How I work",
+    a: "Show, don't tell. Specific decisions, real tradeoffs, code you can read on GitHub.",
+    x: 250,
+    y: 256,
+  },
+  {
+    k: "WHEN",
+    n: "05",
+    q: "When to stop",
+    a: "Knowing when to stop is the signal. Subtract before adding.",
+    x: 668,
+    y: 270,
+  },
 ];
 
-const X0 = 20;
-const STEP = 166;
-const BW = 130;
-const BY = 64;
-const BH = 96;
-const MID = BY + BH / 2; // 112
-const cx = (i: number) => X0 + i * STEP + BW / 2;
+const EDGES: [number, number][] = [
+  [0, 1],
+  [1, 2],
+  [0, 3],
+  [1, 4],
+  [2, 4],
+  [3, 4],
+];
 
-// dot route: forward midline, then the visible return arc, back into INTERFACE
-const DOT_PATH = `M${cx(0)},${MID} L${cx(5)},${MID} L${cx(5)},${BY + BH} C1010,${BY + BH} 1010,250 ${cx(5)},250 L${cx(1)},250 C190,250 190,${BY + BH} ${cx(1)},${BY + BH} L${cx(1)},${MID}`;
-const ARC_PATH = `M${cx(5)},${BY + BH} C1010,${BY + BH} 1010,250 ${cx(5)},250 L${cx(1)},250 C190,250 190,${BY + BH} ${cx(1)},${BY + BH}`;
+const TOUR = "M130,84 L446,66 L766,110 L668,270 L250,256 Z";
 
 export function HeroVisual() {
   const reduce = useReducedMotion();
+  const [active, setActive] = useState(0);
 
   return (
-    <svg
-      viewBox="0 0 1000 300"
-      className="h-auto w-full"
-      role="img"
-      aria-label="Akshay's production inference pipeline: a user prompt enters a React streaming interface, passes prompt-injection guardrails, a LangGraph agent, hybrid RAG retrieval, and the model (Bedrock or local), then tokens stream back to the interface. He builds AI products end to end."
-    >
-      {/* forward rail (behind boxes) */}
-      <line x1={cx(0)} y1={MID} x2={cx(5)} y2={MID} stroke="var(--color-rule)" />
-
-      {/* return arc */}
-      <path d={ARC_PATH} fill="none" stroke="var(--color-rule)" strokeDasharray="3 4" />
-      <text
-        x={(cx(1) + cx(5)) / 2}
-        y={268}
-        textAnchor="middle"
-        fill="var(--color-paper-faint)"
-        style={{ font: "500 11px var(--font-mono)", letterSpacing: "0.08em" }}
-      >
-        STREAM TOKENS BACK
-      </text>
-
-      {/* tokens streaming back along the arc */}
-      {!reduce &&
-        [720, 540, 360].map((x, i) => (
-          <rect key={x} x={x} y={246} width={8} height={8} fill="var(--color-amber)">
-            <animate
-              attributeName="opacity"
-              values="0;1;0"
-              dur="1.6s"
-              begin={`${i * 0.45}s`}
-              repeatCount="indefinite"
+    <div>
+      {/* Desktop: interactive constellation */}
+      <div className="hidden md:block">
+        <svg viewBox="0 0 900 340" className="h-auto w-full">
+          {EDGES.map(([a, b], i) => (
+            <line
+              key={i}
+              x1={NODES[a].x}
+              y1={NODES[a].y}
+              x2={NODES[b].x}
+              y2={NODES[b].y}
+              stroke="var(--color-rule)"
+              strokeDasharray={active === a || active === b ? "0" : "3 5"}
             />
-          </rect>
+          ))}
+
+          {/* touring signal */}
+          {!reduce && (
+            <circle r={5} fill="var(--color-amber)">
+              <animateMotion path={TOUR} dur="11s" repeatCount="indefinite" />
+            </circle>
+          )}
+
+          {NODES.map((node, i) => {
+            const on = active === i;
+            return (
+              <g
+                key={node.k}
+                role="button"
+                tabIndex={0}
+                aria-label={`${node.k}: ${node.a}`}
+                onPointerEnter={() => setActive(i)}
+                onClick={() => setActive(i)}
+                onFocus={() => setActive(i)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") setActive(i);
+                }}
+                className="cursor-pointer focus:outline-none"
+              >
+                <rect x={node.x - 16} y={node.y - 16} width={120} height={32} fill="transparent" />
+                <rect
+                  x={node.x - 6}
+                  y={node.y - 6}
+                  width={12}
+                  height={12}
+                  fill={on ? "var(--color-amber)" : "var(--color-surface)"}
+                  stroke="var(--color-amber)"
+                />
+                <text
+                  x={node.x + 16}
+                  y={node.y - 4}
+                  fill="var(--color-paper-faint)"
+                  style={{ font: "500 10px var(--font-mono)", letterSpacing: "0.08em" }}
+                >
+                  {node.n}
+                </text>
+                <text
+                  x={node.x + 16}
+                  y={node.y + 10}
+                  fill={on ? "var(--color-amber)" : "var(--color-paper)"}
+                  style={{ font: "500 15px var(--font-mono)", letterSpacing: "0.04em" }}
+                >
+                  {node.k}
+                </text>
+              </g>
+            );
+          })}
+        </svg>
+
+        <div
+          aria-live="polite"
+          className="border-t border-rule px-6 py-5"
+        >
+          <p className="label text-amber">
+            {NODES[active].n} / {NODES[active].k}
+            <span className="text-paper-faint"> — {NODES[active].q}</span>
+          </p>
+          <p className="prose-mono mt-2 text-[0.9375rem] leading-[1.6] text-paper">
+            {NODES[active].a}
+          </p>
+        </div>
+      </div>
+
+      {/* Mobile: stacked principles, all visible */}
+      <ol className="md:hidden">
+        {NODES.map((node) => (
+          <li key={node.k} className="border-t border-rule px-5 py-4 first:border-t-0">
+            <p className="label text-amber">
+              {node.n} / {node.k}
+              <span className="text-paper-faint"> — {node.q}</span>
+            </p>
+            <p className="prose-mono mt-1.5 text-[0.875rem] leading-[1.6] text-paper-muted">
+              {node.a}
+            </p>
+          </li>
         ))}
-
-      {/* stage nodes */}
-      {STAGES.map((s, i) => {
-        const x = X0 + i * STEP;
-        const isModel = i === 5;
-        return (
-          <g key={s.l1}>
-            <rect
-              x={x}
-              y={BY}
-              width={BW}
-              height={BH}
-              fill="var(--color-surface)"
-              stroke={isModel ? "var(--color-amber)" : "var(--color-rule)"}
-            />
-            <rect x={x + 12} y={BY + 16} width={6} height={6} fill="var(--color-amber)" />
-            {isModel && !reduce && (
-              <rect x={x + 12} y={BY + 16} width={6} height={6} fill="var(--color-amber)">
-                <animate attributeName="opacity" values="1;0.15;1" dur="1.8s" repeatCount="indefinite" />
-              </rect>
-            )}
-            <text
-              x={x + 12}
-              y={BY + 50}
-              fill="var(--color-paper)"
-              style={{ font: "500 13px var(--font-mono)", letterSpacing: "0.04em" }}
-            >
-              {s.l1}
-            </text>
-            <text
-              x={x + 12}
-              y={BY + 70}
-              fill="var(--color-paper-faint)"
-              style={{ font: "400 10.5px var(--font-mono)" }}
-            >
-              {s.l2}
-            </text>
-            <text
-              x={x + BW - 12}
-              y={BY + 22}
-              textAnchor="end"
-              fill="var(--color-paper-faint)"
-              style={{ font: "500 10px var(--font-mono)" }}
-            >
-              {String(i + 1).padStart(2, "0")}
-            </text>
-          </g>
-        );
-      })}
-
-      {/* amber signal running the full request/response loop */}
-      <circle r={5} fill="var(--color-amber)" cx={reduce ? cx(3) : 0} cy={reduce ? MID : 0}>
-        {!reduce && (
-          <animateMotion path={DOT_PATH} dur="5.2s" repeatCount="indefinite" rotate="0" />
-        )}
-      </circle>
-    </svg>
+      </ol>
+    </div>
   );
 }
