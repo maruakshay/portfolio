@@ -105,7 +105,9 @@ export function ChatLauncher() {
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
         aria-label={open ? "Close chat" : "Ask the AI about Akshay"}
-        className="fixed bottom-5 right-5 z-50 inline-flex items-center gap-2.5 border border-rule bg-surface px-4 py-3 text-xs font-medium uppercase tracking-[0.08em] text-paper transition-colors hover:border-amber md:bottom-6 md:right-6"
+        className={`fixed bottom-5 right-5 z-50 items-center gap-2.5 border border-rule bg-surface px-4 py-3 text-xs font-medium uppercase tracking-[0.08em] text-paper transition-colors hover:border-amber md:bottom-6 md:right-6 md:inline-flex ${
+          open ? "hidden" : "inline-flex"
+        }`}
       >
         <span className={`mark ${open ? "" : "mark-blink"}`} aria-hidden />
         {open ? "Close" : "Ask the AI"}
@@ -121,7 +123,7 @@ export function ChatLauncher() {
             animate={{ opacity: 1, y: 0 }}
             exit={reduce ? { opacity: 0 } : { opacity: 0, y: 12 }}
             transition={{ duration: 0.24, ease: [0.25, 1, 0.5, 1] }}
-            className="fixed bottom-20 right-5 z-50 flex h-[min(560px,70vh)] w-[min(384px,calc(100vw-2.5rem))] flex-col border border-rule bg-surface md:bottom-24 md:right-6"
+            className="fixed inset-x-3 bottom-3 top-16 z-50 flex flex-col border border-rule bg-surface md:inset-x-auto md:top-auto md:bottom-24 md:right-6 md:h-140 md:w-96"
           >
             {/* Header */}
             <div className="flex shrink-0 items-center justify-between border-b border-rule px-4 py-3">
