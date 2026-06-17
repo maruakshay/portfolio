@@ -138,12 +138,16 @@ export function HeroVisual() {
         const s = on || hv ? 7 : 6;
         ctx!.beginPath(); ctx!.rect(p.x - s, p.y - s, s * 2, s * 2); ctx!.fill(); ctx!.stroke();
         ctx!.textBaseline = "middle";
+        const right = p.x < w * 0.62;
+        ctx!.textAlign = right ? "left" : "right";
+        const lx = right ? p.x + 14 : p.x - 14;
         ctx!.fillStyle = C.faint;
         ctx!.font = "500 10px ui-monospace, monospace";
-        ctx!.fillText(NODES[i].n, p.x + 14, p.y - 6);
+        ctx!.fillText(NODES[i].n, lx, p.y - 6);
         ctx!.fillStyle = on ? C.amber : C.paper;
         ctx!.font = "600 14px ui-monospace, monospace";
-        ctx!.fillText(NODES[i].k, p.x + 14, p.y + 7);
+        ctx!.fillText(NODES[i].k, lx, p.y + 7);
+        ctx!.textAlign = "left";
       });
     }
 
@@ -203,35 +207,18 @@ export function HeroVisual() {
 
   return (
     <div>
-      <div className="hidden md:block">
-        <div ref={wrapRef} className="h-85 w-full">
-          <canvas ref={canvasRef} className="block touch-none" />
-        </div>
-        <div aria-live="polite" className="border-t border-rule px-6 py-5">
-          <p className="label text-amber">
-            {NODES[active].n} / {NODES[active].k}
-            <span className="text-paper-faint"> — {NODES[active].q}</span>
-          </p>
-          <p className="prose-mono mt-2 text-[0.9375rem] leading-[1.6] text-paper">
-            {NODES[active].a}
-          </p>
-        </div>
+      <div ref={wrapRef} className="h-72 w-full md:h-85">
+        <canvas ref={canvasRef} className="block" style={{ touchAction: "pan-y" }} />
       </div>
-
-      {/* Mobile: stacked principles */}
-      <ol className="md:hidden">
-        {NODES.map((node) => (
-          <li key={node.k} className="border-t border-rule px-5 py-4 first:border-t-0">
-            <p className="label text-amber">
-              {node.n} / {node.k}
-              <span className="text-paper-faint"> — {node.q}</span>
-            </p>
-            <p className="prose-mono mt-1.5 text-[0.875rem] leading-[1.6] text-paper-muted">
-              {node.a}
-            </p>
-          </li>
-        ))}
-      </ol>
+      <div aria-live="polite" className="border-t border-rule px-5 py-5 md:px-6">
+        <p className="label text-amber">
+          {NODES[active].n} / {NODES[active].k}
+          <span className="text-paper-faint"> — {NODES[active].q}</span>
+        </p>
+        <p className="prose-mono mt-2 text-[0.9375rem] leading-[1.6] text-paper">
+          {NODES[active].a}
+        </p>
+      </div>
     </div>
   );
 }

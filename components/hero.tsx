@@ -51,12 +51,7 @@ export function Hero() {
               <span className="mark mark-blink" aria-hidden />
               How I think
             </span>
-            <span className="label hidden text-paper-faint md:block">
-              hover a node
-            </span>
-            <span className="label text-paper-faint md:hidden">
-              first principles
-            </span>
+            <span className="label text-paper-faint">drag · tap to read</span>
           </div>
           <HeroVisual />
         </div>
