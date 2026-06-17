@@ -1,10 +1,19 @@
-"use client";
-import { HeroSection } from "@/components/hero-section";
+import { SiteHeader } from "@/components/site-header";
+import { Hero } from "@/components/hero";
+import { WorkBento } from "@/components/work-bento";
+import { SiteFooter } from "@/components/site-footer";
+import { ChatLauncher } from "@/components/chat-launcher";
 
 export default function Home() {
   return (
-    <main className="w-full min-h-screen bg-[#f8fafc]">
-      <HeroSection />
-    </main>
+    <>
+      <SiteHeader />
+      <main>
+        <Hero />
+        <WorkBento />
+      </main>
+      <SiteFooter />
+      <ChatLauncher />
+    </>
   );
 }

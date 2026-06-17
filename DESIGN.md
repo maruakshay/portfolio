@@ -1,239 +1,228 @@
 ---
 name: Akshay Maru Portfolio
-description: Personal portfolio for a Senior AI Product Engineer. Curious, human, warm.
+description: Brutalist-editorial portfolio for an AI Product Engineer. Warm voice, raw structure, terminal-dark.
 colors:
-  primary: "#2563eb"
-  secondary: "#7c3aed"
-  bg: "#f8fafc"
-  surface: "#ffffff"
-  surface-alt: "#f1f5f9"
-  text-primary: "#0f172a"
-  text-secondary: "#475569"
-  border: "#e2e8f0"
-  signal-tint: "#eff6ff"
-  destructive: "#dc2626"
+  signal-amber: "oklch(0.76 0.16 65)"
+  signal-amber-deep: "oklch(0.70 0.16 60)"
+  signal-tint: "oklch(0.30 0.05 65)"
+  ink-ground: "oklch(0.17 0.008 65)"
+  ink-surface: "oklch(0.21 0.008 65)"
+  ink-surface-alt: "oklch(0.25 0.008 65)"
+  rule-line: "oklch(0.33 0.008 65)"
+  paper: "oklch(0.95 0.01 80)"
+  paper-muted: "oklch(0.74 0.012 75)"
+  paper-faint: "oklch(0.56 0.01 70)"
+  destructive: "oklch(0.64 0.19 28)"
 typography:
   display:
-    fontFamily: "Geist Sans, system-ui, sans-serif"
-    fontSize: "clamp(2rem, 5vw, 3.75rem)"
-    fontWeight: 700
-    lineHeight: 1.1
-    letterSpacing: "-0.03em"
-  headline:
-    fontFamily: "Geist Sans, system-ui, sans-serif"
-    fontSize: "clamp(1.5rem, 4vw, 2.25rem)"
-    fontWeight: 700
-    lineHeight: 1.2
+    fontFamily: "Fraunces, Georgia, serif"
+    fontSize: "clamp(2.75rem, 8vw, 6rem)"
+    fontWeight: 400
+    lineHeight: 0.98
     letterSpacing: "-0.02em"
+  headline:
+    fontFamily: "Fraunces, Georgia, serif"
+    fontSize: "clamp(1.75rem, 4.5vw, 3rem)"
+    fontWeight: 500
+    lineHeight: 1.08
+    letterSpacing: "-0.015em"
   title:
-    fontFamily: "Geist Sans, system-ui, sans-serif"
+    fontFamily: "Fraunces, Georgia, serif"
     fontSize: "1.5rem"
-    fontWeight: 700
-    lineHeight: 1.3
+    fontWeight: 500
+    lineHeight: 1.2
     letterSpacing: "-0.01em"
   body:
-    fontFamily: "Geist Sans, system-ui, sans-serif"
-    fontSize: "1rem"
+    fontFamily: "Geist Mono, ui-monospace, monospace"
+    fontSize: "0.9375rem"
     fontWeight: 400
-    lineHeight: 1.625
+    lineHeight: 1.7
+    letterSpacing: "0"
   label:
-    fontFamily: "Geist Sans, system-ui, sans-serif"
-    fontSize: "0.875rem"
+    fontFamily: "Geist Mono, ui-monospace, monospace"
+    fontSize: "0.75rem"
     fontWeight: 500
     lineHeight: 1.4
+    letterSpacing: "0.08em"
 rounded:
-  sm: "6px"
-  md: "8px"
-  lg: "12px"
-  xl: "16px"
-  full: "9999px"
+  none: "0px"
+  sm: "2px"
+  md: "4px"
 spacing:
+  xs: "4px"
   sm: "8px"
   md: "16px"
-  lg: "24px"
-  xl: "32px"
+  lg: "32px"
+  xl: "64px"
 components:
   button-primary:
-    backgroundColor: "{colors.primary}"
-    textColor: "{colors.surface}"
-    rounded: "{rounded.md}"
-    padding: "10px 16px"
+    backgroundColor: "{colors.signal-amber}"
+    textColor: "{colors.ink-ground}"
+    rounded: "{rounded.none}"
+    padding: "12px 24px"
   button-primary-hover:
-    backgroundColor: "#1d4ed8"
-    textColor: "{colors.surface}"
-    rounded: "{rounded.md}"
-    padding: "10px 16px"
-  button-secondary:
-    backgroundColor: "{colors.secondary}"
-    textColor: "{colors.surface}"
-    rounded: "{rounded.md}"
-    padding: "10px 16px"
+    backgroundColor: "{colors.signal-amber-deep}"
+    textColor: "{colors.ink-ground}"
+    rounded: "{rounded.none}"
+    padding: "12px 24px"
   button-outline:
-    backgroundColor: "{colors.surface}"
-    textColor: "{colors.text-primary}"
-    rounded: "{rounded.md}"
-    padding: "10px 16px"
+    backgroundColor: "transparent"
+    textColor: "{colors.paper}"
+    rounded: "{rounded.none}"
+    padding: "12px 24px"
   button-ghost:
     backgroundColor: "transparent"
-    textColor: "{colors.text-primary}"
-    rounded: "{rounded.md}"
-    padding: "10px 16px"
+    textColor: "{colors.paper-muted}"
+    rounded: "{rounded.none}"
+    padding: "8px 12px"
   badge:
     backgroundColor: "{colors.signal-tint}"
-    textColor: "#1e40af"
-    rounded: "{rounded.full}"
-    padding: "6px 12px"
-  prompt-chip:
-    backgroundColor: "{colors.surface}"
-    textColor: "{colors.text-secondary}"
-    rounded: "{rounded.lg}"
-    padding: "12px"
-  chat-bubble-user:
-    backgroundColor: "{colors.primary}"
-    textColor: "{colors.surface}"
-    rounded: "{rounded.xl}"
+    textColor: "{colors.signal-amber}"
+    rounded: "{rounded.none}"
+    padding: "4px 10px"
+  input-field:
+    backgroundColor: "{colors.ink-surface}"
+    textColor: "{colors.paper}"
+    rounded: "{rounded.none}"
     padding: "12px 16px"
-  chat-bubble-assistant:
-    backgroundColor: "{colors.surface}"
-    textColor: "{colors.text-primary}"
-    rounded: "{rounded.xl}"
-    padding: "12px 16px"
+  demo-surface:
+    backgroundColor: "{colors.ink-surface}"
+    textColor: "{colors.paper}"
+    rounded: "{rounded.none}"
+    padding: "32px"
 ---
 
 # Design System: Akshay Maru Portfolio
 
 ## 1. Overview
 
-**Creative North Star: "The Open Notebook"**
+**Creative North Star: "The Lit Terminal"**
 
-A designer's personal journal: ordered but not rigid, annotated with intention, visible thinking made real. This system does not perform confidence — it demonstrates it through care. Every element earns its presence. The palette is quiet; the structure is deliberate; the warmth comes from specificity, not decoration.
+A warm machine in a dark room. Structure is exposed, like a well-set page proof with the grid lines left visible: rules, columns, and ledger meta on display rather than hidden behind soft cards. The ground is a warm near-black, never navy, never pure `#000`. Type does the heavy lifting, an editorial serif for voice and a monospace for everything procedural. One amber signal is the only color, used like a cursor blink: rare, deliberate, alive. The brutalist shell is the discipline; the warmth in the serif and the amber is the human. That tension is the whole point.
 
-The physical scene: a hiring manager at an AI company, evaluating candidates on a MacBook in a bright open-plan office. Light mode is correct here, not a default. The design should read cleanly under daylight and hold up in a tab next to a dozen other portfolios that all look the same.
-
-This system explicitly rejects: glassmorphism used decoratively, particle backgrounds, excessive choreography, gradient text, the hero-metric template (big number / small label / gradient accent), generic SaaS portfolio energy (dark navy + neon grid cards), and identical card grids.
+This system explicitly rejects: glassmorphism and blur used decoratively, particle backgrounds, aurora gradients, gradient text, the hero-metric template (big number / small label / gradient accent), generic SaaS portfolio energy (dark navy + neon grid cards), identical icon-grid card walls, and cold brutalism (edge for its own sake, raw at the cost of legibility). It also rejects the previous version's centerpiece entirely: no chat UI, no message bubbles, no "ask me anything" pattern.
 
 **Key Characteristics:**
-- Whitespace functions as signal, not filler
-- Blue (#2563eb) is a voice, not wallpaper — it appears only when something requires action or attention
-- Surfaces are white and flat at rest; shadow responds to state
-- Typography tracks tight at large sizes, breathes at body scale
-- Motion is atmosphere only: subtle, purposeful, never load-bearing
+- Warm near-black ground (`oklch(0.17 0.008 65)`), never navy, never `#000`
+- Depth comes from 1px rule lines and surface lightness steps, not shadows
+- Hard corners (0 to 4px); pills are forbidden
+- Editorial serif (Fraunces) for voice, monospace (Geist Mono) for structure and meta
+- Amber appears on under 10% of any screen; its rarity is the signal
+- Motion is responsive feedback only: state transitions plus subtle entrance reveals, never choreography
 
-## 2. Colors: The Restrained Signal Palette
+## 2. Colors: The Single Signal Palette
 
-One accent does all the work. Everything else steps back.
+A warm grayscale carries the entire interface; one amber does all the talking.
 
 ### Primary
-- **Clear Confidence Blue** (#2563eb): Primary CTA buttons, interactive links, focus rings, active states, user chat bubbles. Appears on less than 10% of any screen. Its rarity is the point.
-
-### Secondary
-- **Considered Purple** (#7c3aed): Secondary action buttons and the accent complement. Used sparingly alongside blue when a second action hierarchy is needed; never both at once in the same view without clear purpose.
+- **Signal Amber** (`oklch(0.76 0.16 65)`): The only chromatic color. Primary CTAs, the live cursor/active state, focus rings, the one link or word per view that must be noticed, the AI demo's active affordance. Appears on under 10% of any screen.
+- **Signal Amber Deep** (`oklch(0.70 0.16 60)`): Hover and pressed state for amber surfaces only.
+- **Signal Tint** (`oklch(0.30 0.05 65)`): Amber pulled to near-zero chroma against the dark ground. Badge backgrounds, low-emphasis amber washes.
 
 ### Neutral
-- **Quiet Slate** (#f8fafc): Page background. The canvas. No pure white — this tint keeps it from feeling clinical.
-- **Open White** (#ffffff): Card surfaces, modals, input fields, chat bubbles. Sits above the page background.
-- **Lifted Slate** (#f1f5f9): Hover states on ghost elements, muted backgrounds, subtle alternating rows.
-- **Deep Ink** (#0f172a): All headings, high-emphasis text. Not pure black — has a slight blue tint that ties it to the accent family.
-- **Soft Graphite** (#475569): Body text, descriptions, supporting labels. The workhorse.
-- **Paper Edge** (#e2e8f0): All borders and dividers. One weight, one color, consistently applied.
-- **Signal Tint** (#eff6ff): Badge backgrounds and hover tints on interactive elements. The blue family at near-zero saturation.
+- **Ink Ground** (`oklch(0.17 0.008 65)`): Page background. Warm near-black. The dark room.
+- **Ink Surface** (`oklch(0.21 0.008 65)`): Raised surfaces, the AI demo container, input fields. One step up from ground.
+- **Ink Surface Alt** (`oklch(0.25 0.008 65)`): Hover surfaces, alternating rows, second-level raise.
+- **Rule Line** (`oklch(0.33 0.008 65)`): Every border, divider, and exposed grid line. One weight (1px), one color, used structurally.
+- **Paper** (`oklch(0.95 0.01 80)`): Headings and high-emphasis text. Warm paper-white, never pure `#fff`.
+- **Paper Muted** (`oklch(0.74 0.012 75)`): Body prose, descriptions. The workhorse.
+- **Paper Faint** (`oklch(0.56 0.01 70)`): Meta, timestamps, captions, disabled text.
+
+### Destructive
+- **Alert Red** (`oklch(0.64 0.19 28)`): Errors and destructive confirmation only. Never decorative.
 
 ### Named Rules
-**The One Voice Rule.** The primary accent (#2563eb) appears on no more than 10% of any given screen. If blue is everywhere, it says nothing. Reserve it for the one thing you most want someone to do or notice.
+**The One Voice Rule.** Signal Amber appears on no more than 10% of any given screen. If amber is everywhere, it says nothing. Reserve it for the single thing you most want someone to do or notice.
 
-**The No Gradient Text Rule.** Text is never rendered via `background-clip: text` with a gradient. Gradient text is decoration pretending to be meaning. Use weight or size for emphasis instead.
+**The No Navy Rule.** The dark ground is warm (hue 65), never blue. Navy-on-neon is the anti-reference; if the background reads cool, the chroma or hue is wrong.
+
+**The No Gradient Text Rule.** Text is never rendered with `background-clip: text` over a gradient. Emphasis comes from weight, size, or the amber, never from a gradient fill.
 
 ## 3. Typography
 
-**Display Font:** Geist Sans (system-ui, sans-serif fallback)
-**Body Font:** Geist Sans (same family, weight contrast carries the hierarchy)
-**Mono Font:** Geist Mono (code snippets, technical labels)
+**Display Font:** Fraunces (Georgia, serif fallback)
+**Body / Mono Font:** Geist Mono (ui-monospace fallback)
 
-**Character:** A single geometric sans with weight doing the heavy lifting. The hierarchy is scale + weight contrast, not typeface switching. Tight tracking at large sizes gives headings authority; normal tracking at body scale keeps reading comfortable.
+**Character:** A characterful editorial serif paired with a precise monospace. The serif carries the human voice (headlines, statements, the things a person says); the mono carries everything procedural (body copy, labels, meta, the AI demo's input and output). The contrast between the two IS the hierarchy. No third family.
 
 ### Hierarchy
-- **Display** (700, clamp(2rem, 5vw, 3.75rem), 1.1 line-height, -0.03em): Hero headline only. One per page.
-- **Headline** (700, clamp(1.5rem, 4vw, 2.25rem), 1.2, -0.02em): Section headings, major titles.
-- **Title** (700, 1.5rem, 1.3, -0.01em): Card headings, subsection labels.
-- **Body** (400, 1rem, 1.625): All prose. Cap line length at 65ch. Color is Soft Graphite (#475569), not Deep Ink.
-- **Label** (500, 0.875rem, 1.4): UI labels, badges, navigation items, timestamps, meta text.
-- **Caption** (400 or 500, 0.75rem): Footer notes, helper text, "Powered by" lines.
+- **Display** (Fraunces 400, `clamp(2.75rem, 8vw, 6rem)`, 0.98 line-height, -0.02em): Hero statement only. One per page. Big, tight, serif.
+- **Headline** (Fraunces 500, `clamp(1.75rem, 4.5vw, 3rem)`, 1.08, -0.015em): Section openers.
+- **Title** (Fraunces 500, 1.5rem, 1.2, -0.01em): Project and subsection headings.
+- **Body** (Geist Mono 400, 0.9375rem, 1.7): All prose. Cap line length at 70ch. Color is Paper Muted, not Paper.
+- **Label** (Geist Mono 500, 0.75rem, 0.08em, UPPERCASE): Nav, meta, section numbers, ledger labels, badges, timestamps. The terminal signal.
 
 ### Named Rules
-**The Weight Minimum Rule.** Never use 300 or lighter weight in this system. Geist at low weights reads as hesitant. 400 is the floor for body; 500 for labels; 700 for headings.
+**The Two Voices Rule.** Serif speaks, mono operates. Never set body prose in the serif, never set a hero statement in mono. The split is load-bearing.
+
+**The Weight Floor Rule.** Never use a weight below 400. Fraunces below 400 reads as decorative; Geist Mono below 400 reads as faint. 400 is the floor for prose, 500 for labels and headings.
 
 ## 4. Elevation
 
-Ambient layering: surfaces are never completely flat. A constant, subtle shadow distinguishes cards and interactive elements from the page background at rest, without drama.
+This system is flat by structure. There are no decorative drop shadows. Depth is conveyed by 1px Rule Lines and by stepping surface lightness (Ground to Surface to Surface Alt). The exposed grid is the brutalist signal: structure is shown, not blurred away.
 
 ### Shadow Vocabulary
-- **Ambient** (`box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04)`): Default state for cards, assistant chat bubbles, textarea containers. Always present; barely visible.
-- **Resting** (`box-shadow: 0 4px 6px -1px rgba(0,0,0,0.08), 0 2px 4px -1px rgba(0,0,0,0.04)`): Default for primary input containers and floating elements.
-- **Elevated** (`box-shadow: 0 10px 15px -3px rgba(0,0,0,0.10), 0 4px 6px -2px rgba(0,0,0,0.05)`): Hover state on buttons and interactive cards. Appears only as a response to state.
+- **Hard Offset** (`box-shadow: 4px 4px 0 oklch(0.33 0.008 65)`): The single permitted shadow, used only on the signature AI demo container and only as a deliberate brutalist gesture. A solid, unblurred offset block in the rule-line color. No soft shadows anywhere else.
 
 ### Named Rules
-**The State-Response Rule.** Shadows increase only in response to user interaction (hover, focus, active). No component goes from ambient to elevated without a triggering state change.
+**The Rule Line Rule.** Separation and depth come from 1px borders in Rule Line color and from surface lightness steps, never from soft shadows. If you reach for a blurred shadow to separate two elements, use a border or a lightness step instead.
+
+**The State-Response Rule.** Surfaces are flat at rest. The only motion of depth is a border shifting to amber, or a surface stepping one level lighter, in response to hover or focus.
 
 ## 5. Components
 
 ### Buttons
-Shape: gently rounded (8px). The corner is inviting without being childish.
+- **Shape:** Hard corners (0px). No rounding, no pills, ever.
+- **Primary:** Signal Amber fill, Ink Ground text (dark text on amber for contrast), Label typography (uppercase mono), 12px/24px padding. Hover: fill shifts to Amber Deep. Transition 180ms ease-out.
+- **Outline:** Transparent fill, 1px Rule Line border, Paper text, uppercase mono. Hover: border shifts to Signal Amber, text shifts to Paper. No background fill on hover.
+- **Ghost:** No border, no fill, Paper Muted text. Hover: text shifts to Paper, optional Ink Surface Alt background. For nav and low-emphasis controls.
+- **Focus:** 2px Signal Amber outline, 2px offset. Never a soft ring.
 
-- **Primary:** Clear Confidence Blue (#2563eb) fill, white text, 10px/16px padding, height 40px. Hover: lifts 2px (`translateY(-2px)`) and adds Elevated shadow. Transition: 200ms all.
-- **Primary Hover:** Background shifts to #1d4ed8, shadow escalates to Elevated level.
-- **Secondary:** Considered Purple (#7c3aed) fill, white text. Same geometry as primary. Used when a second action exists alongside a primary.
-- **Outline:** White background, Paper Edge border (#e2e8f0), Deep Ink text. Hover: background lifts to Lifted Slate, border steps to #cbd5e1. Adds mild Resting shadow on hover.
-- **Ghost:** No background, no border. Hover: Lifted Slate (#f1f5f9) background appears. Text stays Deep Ink. For navigation and icon-adjacent controls.
-- **Icon:** 40x40px square, rounded-lg (8px), same fill logic as primary or ghost. Never round (pill) for icon-only actions — that reads as floating action button.
+### Badges / Status
+- **Style:** Hard corners (0px), Signal Tint background, Signal Amber text, Label typography. A 6px amber square (not a dot, not a pill) may precede status text. Used for status only ("AVAILABLE FOR WORK"), never for navigation or tags.
 
-**Focus:** All buttons show a 2px offset focus outline in #2563eb for keyboard navigation. No ring-style focus; outline-offset-2 is cleaner.
-
-### Badges / Status Chips
-- **Style:** Rounded pill (9999px), Signal Tint background (#eff6ff), #1e40af text, Paper Edge border (#e2e8f0). Small dot indicator (6x6px, #2563eb filled) precedes status text.
-- **Typography:** 0.75rem, 500 weight.
-- **Use:** Status indicators only ("Available for opportunities"). Not for navigation or filtering.
-
-### Prompt Chips
-- **Style:** Open White background, Paper Edge border, Soft Graphite text, rounded-lg (12px), 12px internal padding.
-- **Hover:** Border shifts to #93c5fd (blue-300), background shifts to Signal Tint (#eff6ff), text shifts to #1d4ed8.
-- **Typography:** 0.875rem body weight. Left-aligned text. No icon.
-- **Use:** Suggested chat prompts on the hero. Not a general-purpose card pattern.
-
-### Chat Bubbles
-The primary interactive component. Two distinct voices.
-
-- **User bubble:** Clear Confidence Blue (#2563eb) fill, white text, rounded-2xl (16px) with the bottom-right corner flattened (`border-bottom-right-radius: 4px`). max-width 42ch on desktop. Shadow-md.
-- **Assistant bubble:** Open White fill, Paper Edge border, Deep Ink text, rounded-2xl (16px) with the bottom-left corner flattened (`border-bottom-left-radius: 4px`). Ambient shadow.
-- **Loading state:** Assistant bubble shell renders immediately with a pulsing indicator. No layout shift when content arrives.
-
-### Textarea / Chat Input
-- **Style:** Open White background, Paper Edge border (#e2e8f0), rounded-xl (12px), Ambient shadow. When inside a chat input container, the outer container takes rounded-2xl (16px) and Resting shadow; the textarea itself has no border.
-- **Focus:** Border steps to #60a5fa (blue-400), adds `ring: 2px solid #bfdbfe` (blue-100). The outer container's shadow steps to Elevated.
-- **Placeholder:** Soft Graphite, 0.875rem.
-- **Send button:** Nested absolutely, rounded-full, primary fill, 40x40px. Disabled state: 50% opacity, no hover effect.
+### Inputs / Fields
+- **Style:** Ink Surface background, 1px Rule Line border, hard corners, Paper text, mono body typography. Placeholder in Paper Faint.
+- **Focus:** Border shifts to Signal Amber, plus a 1px amber inset (no blur, no glow). The cursor caret is amber.
+- **Error:** Border shifts to Alert Red, message in Alert Red below the field.
 
 ### Navigation / Header
-- **Style:** Open White background, Paper Edge bottom border. No shadow — the border alone separates header from content.
-- **Title:** 1.125rem, 700 weight, Deep Ink. Subtitle at 0.75rem, Soft Graphite.
-- **Controls:** Ghost button pattern (icon only) for close/back actions.
+- **Style:** Ink Ground background, 1px Rule Line bottom border. No shadow; the rule line alone separates header from content.
+- **Type:** Wordmark in Fraunces; nav items in uppercase mono Label. Active item carries an amber underline (1px) or amber text. Hover: Paper Muted to Paper.
+
+### Project Entry (signature component)
+The portfolio leads with the work, so the project entry carries the system's character. One per open-source project or role: miii-cli, miii, mii-ai-security, copytap, react-jsx-skills-framework, plus the JupiterOne and Remote Leaps roles.
+- **Style:** No card. Entries sit on the Ink Ground, separated by 1px Rule Lines (a ledger, not a card wall). Vary density between entries; never an identical grid.
+- **Structure:** A mono uppercase Label row for meta (language, stars, status), a Fraunces Title for the name, mono body for the one specific sentence that earns it. The repo link is the one amber affordance per entry, on hover.
+- **Reveal:** Subtle eased entrance on scroll (the responsive-feedback motion), staggered per row, never choreographed.
+
+### AI Chat (small supporting component)
+Demoted from centerpiece to a quiet, well-built touch. It must never dominate a viewport or open first.
+- **Style:** Ink Surface background, 1px Rule Line border, hard corners. The Hard Offset shadow (the only shadow in the system) is reserved for the single most important focal block; use it here only if the chat is genuinely the page's focal point, otherwise a plain rule-line border.
+- **Header:** A mono uppercase Label row reading like a terminal prompt (a leading amber block plus a short name).
+- **Input:** Field component as above; the submit affordance is the only persistent amber in the resting view.
+- **Output:** Mono body, brief eased entrance, no typewriter gimmick, never a spinner-only dead state.
+- **Empty / loading / error states are mandatory**, each specific and in-voice.
 
 ## 6. Do's and Don'ts
 
 ### Do:
-- **Do** use #2563eb for exactly one action per primary viewport — the most important thing you want the user to do.
-- **Do** track headings tight: -0.02em on headlines, -0.03em on display. Never apply loose tracking to large type.
-- **Do** cap body prose at 65ch. Anything wider breaks comfortable reading.
-- **Do** start with Ambient shadow on resting cards and step up to Elevated only on hover or activation.
-- **Do** use rounded-full (9999px) only for pill badges and the chat send button. All other interactive elements use md (8px) or lg (12px).
-- **Do** flatten the directional corner on chat bubbles (bottom-right for user, bottom-left for assistant). It signals conversation origin without icons.
-- **Do** keep animation duration under 300ms and use ease-out curves. Motion is feedback, not performance.
+- **Do** use Signal Amber for exactly one action or focal point per viewport. Its rarity is the signal.
+- **Do** keep the ground warm (hue 65) and near-black (`oklch(0.17 ...)`). Never navy, never `#000`.
+- **Do** convey depth with 1px Rule Lines and surface lightness steps, not soft shadows.
+- **Do** keep corners hard (0 to 4px). Reserve the single Hard Offset shadow for the AI demo only.
+- **Do** split the type: Fraunces serif speaks, Geist Mono operates. Cap body prose at 70ch.
+- **Do** write specific, in-voice empty, loading, and error states for the AI demo. The demo is the argument.
+- **Do** keep motion to responsive feedback: state transitions and subtle entrance reveals under 300ms, ease-out.
 
 ### Don't:
-- **Don't** use gradient text (`background-clip: text` with a gradient fill). This is an absolute ban. The current hero headline uses this pattern — it should be replaced with a single solid color, with weight or size providing emphasis.
-- **Don't** use the hero-metric template: large number, small label, supporting stats row with gradient accents. This is a SaaS cliché. The current metrics row (5K+, 25+, 3, 0→1) is this pattern. Replace with specific, earned claims in prose or remove.
-- **Don't** use glassmorphism (`backdrop-filter: blur`) for decoration. If a blurred overlay exists, it must serve a functional purpose (modal scrim, focused overlay). Never as aesthetic texture.
-- **Don't** use particle backgrounds, aurora animations driving primary visual interest, or scroll-driven choreography. Motion is atmosphere; it never carries meaning.
-- **Don't** use `border-left` or `border-right` greater than 1px as a colored accent stripe on any card, list item, or callout. Use background tint or full borders instead.
-- **Don't** build identical card grids (same-size card, icon + heading + body text, repeated). If a grid is needed, vary density, not decoration.
-- **Don't** use dark navy backgrounds with neon or gradient accents. That is the anti-reference: generic AI/SaaS portfolio energy.
-- **Don't** use purple (#7c3aed) as a decorative gradient companion to blue. Secondary means secondary: it appears when a second action exists, not for visual texture.
+- **Don't** use gradient text (`background-clip: text` over a gradient). Absolute ban. Emphasis comes from weight, size, or amber.
+- **Don't** use the hero-metric template (large number, small label, supporting stats row, gradient accent). SaaS cliché. Use specific, earned claims in prose.
+- **Don't** use glassmorphism or decorative `backdrop-filter: blur`. Rare and functional (a true overlay scrim) or nothing.
+- **Don't** use particle backgrounds, aurora animations, or scroll-driven choreography. Motion is atmosphere; it never carries meaning.
+- **Don't** use `border-left` or `border-right` greater than 1px as a colored accent stripe on any card, list item, or callout. Use full Rule Line borders or a Signal Tint background.
+- **Don't** build identical icon-grid card walls. Vary density and structure; let the grid lines, not repeated cards, carry the layout.
+- **Don't** use dark navy with neon or gradient accents. That is the named anti-reference: generic AI/SaaS portfolio energy.
+- **Don't** fall into cold brutalism: raw structure that sacrifices legibility. The grid is opinionated; contrast and line length stay comfortable.
+- **Don't** reintroduce any chat or message-bubble UI. The centerpiece is the focused AI demo, not a chatbot.
+- **Don't** use pills (`rounded-full`) on any element. Hard corners only.

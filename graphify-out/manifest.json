@@ -1,0 +1,94 @@
+{
+  "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/postcss.config.mjs": {
+    "mtime": 1776687711.700263,
+    "hash": "239f3ebf717465dc636818a1a619398d"
+  },
+  "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/next-env.d.ts": {
+    "mtime": 1781701315.0655468,
+    "hash": "2a74d3909800ca5467fa83b0ab4a4890"
+  },
+  "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/eslint.config.mjs": {
+    "mtime": 1776687711.6996865,
+    "hash": "dfa1f5f6a7037bf39dc510f30b180002"
+  },
+  "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/next.config.ts": {
+    "mtime": 1776687711.6998348,
+    "hash": "9b77af189a21a7a64e4bd7a426f64176"
+  },
+  "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/app/layout.tsx": {
+    "mtime": 1781700524.5261757,
+    "hash": "26fe4280ee1cf4dfef7964ff0788a76b"
+  },
+  "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/app/page.tsx": {
+    "mtime": 1781701292.742609,
+    "hash": "a2bc634431530fd692297dab8ea232d6"
+  },
+  "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/app/not-found.tsx": {
+    "mtime": 1781700537.5982914,
+    "hash": "0b9fd76e0baacc31df87bf716ba04da0"
+  },
+  "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/app/work/[slug]/page.tsx": {
+    "mtime": 1781700415.387321,
+    "hash": "d363e78de4aae930cedf0ba2ba8d5ea3"
+  },
+  "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/app/api/chat/route.ts": {
+    "mtime": 1777958612.8929043,
+    "hash": "91a7040742f4ca7f75ad6e1e6d9bd242"
+  },
+  "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/components/hero.tsx": {
+    "mtime": 1781700320.357571,
+    "hash": "8a456c5008c0dfbf0739c3ab0762b4e5"
+  },
+  "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/components/work-bento.tsx": {
+    "mtime": 1781701280.035394,
+    "hash": "7eb5ffc0b507236d39b813bd4b265bc5"
+  },
+  "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/components/site-header.tsx": {
+    "mtime": 1781701521.0824115,
+    "hash": "7be7fa6f3a762c3de3c6355b2b99471b"
+  },
+  "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/components/site-footer.tsx": {
+    "mtime": 1781700347.871737,
+    "hash": "54858cce076b83e011bb955549118afb"
+  },
+  "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/components/chat-launcher.tsx": {
+    "mtime": 1781701545.45075,
+    "hash": "664d0445ab10860156ce33ed97d0e9c3"
+  },
+  "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/components/reveal.tsx": {
+    "mtime": 1781700293.3063886,
+    "hash": "959ac323141d246d71ffe9a55027d05d"
+  },
+  "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/lib/content.ts": {
+    "mtime": 1781701055.4779878,
+    "hash": "cf0ea3c6cc9126e30ea3dea7c063ba77"
+  },
+  "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/PRODUCT.md": {
+    "mtime": 1781699644.1790977,
+    "hash": "809fbedd2ffd570152e467ab5df2c09d"
+  },
+  "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/README.md": {
+    "mtime": 1776749473.0921369,
+    "hash": "fe36462293408a86a1b168367c5aedc9"
+  },
+  "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/DESIGN.md": {
+    "mtime": 1781699660.6522017,
+    "hash": "10deb55bf7abb1c64dccf2f7d1403854"
+  },
+  "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/CLAUDE.md": {
+    "mtime": 1777957241.0681865,
+    "hash": "bbe2887f9ef5b96416ca018175af82c5"
+  },
+  "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/app/api/chat/private/Akshay Maru Personal.txt": {
+    "mtime": 1776687711.698494,
+    "hash": "421f8f9d23ef9d6f537d7df366923ded"
+  },
+  "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/app/api/chat/private/Akshay Maru Resume.txt": {
+    "mtime": 1781699311.899865,
+    "hash": "bfae6db5c4ac2b873e1021d2112faa89"
+  },
+  "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/app/opengraph-image.png": {
+    "mtime": 1776687711.69906,
+    "hash": "927e4d2fad77da19c986cccdfb98d887"
+  }
+}

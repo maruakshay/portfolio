@@ -1,35 +1,55 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Fraunces, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Analytics } from '@vercel/analytics/next';
+import { Analytics } from "@vercel/analytics/next";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const fraunces = Fraunces({
+  variable: "--font-display",
   subsets: ["latin"],
+  axes: ["SOFT", "WONK", "opsz"],
+  display: "swap",
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+  variable: "--font-mono",
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Akshay Maru | Senior AI Product Engineer",
-  description: "Founder turned Product Builder creating AI products users love. Built products across resumes, hiring, growth, automation, and AI experiences.",
-  keywords: ["Akshay Maru", "AI Product Engineer", "LLM Systems", "RAG Architecture", "Retrieval Augmented Generation", "Vector Databases", "LangChain", "LangGraph", "OpenAI", "Claude API", "Full Stack Developer", "React", "Next.js", "TypeScript", "Python"],
+  metadataBase: new URL("https://akshay-portfolio-zeta.vercel.app"),
+  title: "Akshay Maru — AI Product Engineer",
+  description:
+    "Senior AI product engineer. Leads the frontend of an enterprise AI assistant on AWS Bedrock, founded and exited an AI SaaS (40K+ users), ships local-first AI tooling and LLM security as open source.",
+  keywords: [
+    "Akshay Maru",
+    "AI Product Engineer",
+    "LLM Engineer",
+    "Local-first AI",
+    "Ollama",
+    "RAG",
+    "LangGraph",
+    "AI Security",
+    "OWASP LLM Top 10",
+    "React",
+    "Next.js",
+    "TypeScript",
+  ],
   authors: [{ name: "Akshay Maru" }],
   openGraph: {
-    title: "Akshay Maru | Founder turned Product Builder",
-    description: "Senior AI Product Engineer creating AI products users love.",
+    title: "Akshay Maru — AI Product Engineer",
+    description:
+      "Ships real AI products. Enterprise AI assistant on Bedrock, an exited AI SaaS, and a maintained open-source ecosystem of local-first AI tooling and LLM security.",
     url: "https://akshay-portfolio-zeta.vercel.app/",
-    siteName: "Akshay Maru Portfolio",
+    siteName: "Akshay Maru",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Akshay Maru | Founder turned Product Builder",
-    description: "Senior AI Product Engineer creating AI products users love.",
+    title: "Akshay Maru — AI Product Engineer",
+    description:
+      "Ships real AI products. Enterprise AI on Bedrock, an exited AI SaaS, and open-source local-first AI tooling.",
   },
   robots: {
     index: true,
@@ -37,9 +57,9 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
 };
@@ -51,16 +71,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-50`}
-      >
-        <div className="min-h-screen flex flex-col">
-          {children}
-        </div>
+      <body className={`${fraunces.variable} ${geistMono.variable} antialiased`}>
+        {children}
         <Analytics />
-        <footer className="hidden md:block text-xs text-slate-500 z-20 fixed left-0 bottom-0.5 ml-4">
-          <p>© {new Date().getFullYear()} Akshay Maru. All rights reserved.</p>
-        </footer>
       </body>
     </html>
   );

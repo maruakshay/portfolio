@@ -69,7 +69,7 @@
       "source_file": "postcss.config.mjs",
       "source_location": "L1",
       "id": "postcss_config_mjs",
-      "community": 11,
+      "community": 15,
       "norm_label": "postcss.config.mjs"
     },
     {
@@ -78,7 +78,7 @@
       "source_file": "next-env.d.ts",
       "source_location": "L1",
       "id": "next_env_d_ts",
-      "community": 12,
+      "community": 16,
       "norm_label": "next-env.d.ts"
     },
     {
@@ -87,7 +87,7 @@
       "source_file": "eslint.config.mjs",
       "source_location": "L1",
       "id": "eslint_config_mjs",
-      "community": 13,
+      "community": 17,
       "norm_label": "eslint.config.mjs"
     },
     {
@@ -96,7 +96,7 @@
       "source_file": "next.config.ts",
       "source_location": "L1",
       "id": "next_config_ts",
-      "community": 14,
+      "community": 18,
       "norm_label": "next.config.ts"
     },
     {
@@ -105,16 +105,16 @@
       "source_file": "app/layout.tsx",
       "source_location": "L1",
       "id": "app_layout_tsx",
-      "community": 8,
+      "community": 11,
       "norm_label": "layout.tsx"
     },
     {
       "label": "RootLayout()",
       "file_type": "code",
       "source_file": "app/layout.tsx",
-      "source_location": "L48",
+      "source_location": "L67",
       "id": "app_layout_rootlayout",
-      "community": 8,
+      "community": 11,
       "norm_label": "rootlayout()"
     },
     {
@@ -123,53 +123,62 @@
       "source_file": "app/page.tsx",
       "source_location": "L1",
       "id": "app_page_tsx",
-      "community": 5,
+      "community": 1,
       "norm_label": "page.tsx"
     },
     {
       "label": "Home()",
       "file_type": "code",
       "source_file": "app/page.tsx",
-      "source_location": "L5",
+      "source_location": "L7",
       "id": "app_page_home",
-      "community": 5,
+      "community": 1,
       "norm_label": "home()"
     },
     {
-      "label": "layout.tsx",
+      "label": "not-found.tsx",
       "file_type": "code",
-      "source_file": "app/chat/layout.tsx",
+      "source_file": "app/not-found.tsx",
       "source_location": "L1",
-      "id": "app_chat_layout_tsx",
-      "community": 9,
-      "norm_label": "layout.tsx"
+      "id": "app_not_found_tsx",
+      "community": 12,
+      "norm_label": "not-found.tsx"
     },
     {
-      "label": "ChatLayout()",
+      "label": "NotFound()",
       "file_type": "code",
-      "source_file": "app/chat/layout.tsx",
+      "source_file": "app/not-found.tsx",
       "source_location": "L3",
-      "id": "chat_layout_chatlayout",
-      "community": 9,
-      "norm_label": "chatlayout()"
+      "id": "app_not_found_notfound",
+      "community": 12,
+      "norm_label": "notfound()"
     },
     {
       "label": "page.tsx",
       "file_type": "code",
-      "source_file": "app/chat/page.tsx",
+      "source_file": "app/work/[slug]/page.tsx",
       "source_location": "L1",
-      "id": "app_chat_page_tsx",
-      "community": 10,
+      "id": "app_work_slug_page_tsx",
+      "community": 1,
       "norm_label": "page.tsx"
     },
     {
-      "label": "ChatDemo()",
+      "label": "generateStaticParams()",
       "file_type": "code",
-      "source_file": "app/chat/page.tsx",
-      "source_location": "L5",
-      "id": "chat_page_chatdemo",
-      "community": 10,
-      "norm_label": "chatdemo()"
+      "source_file": "app/work/[slug]/page.tsx",
+      "source_location": "L10",
+      "id": "slug_page_generatestaticparams",
+      "community": 1,
+      "norm_label": "generatestaticparams()"
+    },
+    {
+      "label": "generateMetadata()",
+      "file_type": "code",
+      "source_file": "app/work/[slug]/page.tsx",
+      "source_location": "L14",
+      "id": "slug_page_generatemetadata",
+      "community": 1,
+      "norm_label": "generatemetadata()"
     },
     {
       "label": "route.ts",
@@ -184,235 +193,406 @@
       "label": "getContext()",
       "file_type": "code",
       "source_file": "app/api/chat/route.ts",
-      "source_location": "L14",
+      "source_location": "L15",
       "id": "chat_route_getcontext",
       "community": 6,
       "norm_label": "getcontext()"
+    },
+    {
+      "label": "POST()",
+      "file_type": "code",
+      "source_file": "app/api/chat/route.ts",
+      "source_location": "L58",
+      "id": "chat_route_post",
+      "community": 6,
+      "norm_label": "post()"
+    },
+    {
+      "label": "hero.tsx",
+      "file_type": "code",
+      "source_file": "components/hero.tsx",
+      "source_location": "L1",
+      "id": "components_hero_tsx",
+      "community": 1,
+      "norm_label": "hero.tsx"
+    },
+    {
+      "label": "Hero()",
+      "file_type": "code",
+      "source_file": "components/hero.tsx",
+      "source_location": "L3",
+      "id": "components_hero_hero",
+      "community": 1,
+      "norm_label": "hero()"
+    },
+    {
+      "label": "work-bento.tsx",
+      "file_type": "code",
+      "source_file": "components/work-bento.tsx",
+      "source_location": "L1",
+      "id": "components_work_bento_tsx",
+      "community": 7,
+      "norm_label": "work-bento.tsx"
+    },
+    {
+      "label": "Cell()",
+      "file_type": "code",
+      "source_file": "components/work-bento.tsx",
+      "source_location": "L17",
+      "id": "components_work_bento_cell",
+      "community": 7,
+      "norm_label": "cell()"
+    },
+    {
+      "label": "site-header.tsx",
+      "file_type": "code",
+      "source_file": "components/site-header.tsx",
+      "source_location": "L1",
+      "id": "components_site_header_tsx",
+      "community": 1,
+      "norm_label": "site-header.tsx"
+    },
+    {
+      "label": "SiteHeader()",
+      "file_type": "code",
+      "source_file": "components/site-header.tsx",
+      "source_location": "L4",
+      "id": "components_site_header_siteheader",
+      "community": 1,
+      "norm_label": "siteheader()"
+    },
+    {
+      "label": "site-footer.tsx",
+      "file_type": "code",
+      "source_file": "components/site-footer.tsx",
+      "source_location": "L1",
+      "id": "components_site_footer_tsx",
+      "community": 1,
+      "norm_label": "site-footer.tsx"
+    },
+    {
+      "label": "SiteFooter()",
+      "file_type": "code",
+      "source_file": "components/site-footer.tsx",
+      "source_location": "L3",
+      "id": "components_site_footer_sitefooter",
+      "community": 1,
+      "norm_label": "sitefooter()"
+    },
+    {
+      "label": "chat-launcher.tsx",
+      "file_type": "code",
+      "source_file": "components/chat-launcher.tsx",
+      "source_location": "L1",
+      "id": "components_chat_launcher_tsx",
+      "community": 9,
+      "norm_label": "chat-launcher.tsx"
+    },
+    {
+      "label": "onKey()",
+      "file_type": "code",
+      "source_file": "components/chat-launcher.tsx",
+      "source_location": "L48",
+      "id": "components_chat_launcher_onkey",
+      "community": 9,
+      "norm_label": "onkey()"
+    },
+    {
+      "label": "onKeyDown()",
+      "file_type": "code",
+      "source_file": "components/chat-launcher.tsx",
+      "source_location": "L94",
+      "id": "components_chat_launcher_onkeydown",
+      "community": 9,
+      "norm_label": "onkeydown()"
+    },
+    {
+      "label": "reveal.tsx",
+      "file_type": "code",
+      "source_file": "components/reveal.tsx",
+      "source_location": "L1",
+      "id": "components_reveal_tsx",
+      "community": 7,
+      "norm_label": "reveal.tsx"
+    },
+    {
+      "label": "Reveal()",
+      "file_type": "code",
+      "source_file": "components/reveal.tsx",
+      "source_location": "L13",
+      "id": "components_reveal_reveal",
+      "community": 7,
+      "norm_label": "reveal()"
+    },
+    {
+      "label": "content.ts",
+      "file_type": "code",
+      "source_file": "lib/content.ts",
+      "source_location": "L1",
+      "id": "lib_content_ts",
+      "community": 1,
+      "norm_label": "content.ts"
+    },
+    {
+      "label": "getDeepDive()",
+      "file_type": "code",
+      "source_file": "lib/content.ts",
+      "source_location": "L209",
+      "id": "lib_content_getdeepdive",
+      "community": 1,
+      "norm_label": "getdeepdive()"
+    },
+    {
+      "label": "layout.tsx",
+      "file_type": "code",
+      "source_file": "app/chat/layout.tsx",
+      "source_location": "L1",
+      "community": 13,
+      "norm_label": "layout.tsx",
+      "id": "app_chat_layout_tsx"
+    },
+    {
+      "label": "ChatLayout()",
+      "file_type": "code",
+      "source_file": "app/chat/layout.tsx",
+      "source_location": "L3",
+      "community": 13,
+      "norm_label": "chatlayout()",
+      "id": "chat_layout_chatlayout"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "app/chat/page.tsx",
+      "source_location": "L1",
+      "community": 14,
+      "norm_label": "page.tsx",
+      "id": "app_chat_page_tsx"
+    },
+    {
+      "label": "ChatDemo()",
+      "file_type": "code",
+      "source_file": "app/chat/page.tsx",
+      "source_location": "L5",
+      "community": 14,
+      "norm_label": "chatdemo()",
+      "id": "chat_page_chatdemo"
     },
     {
       "label": "shouldContinue()",
       "file_type": "code",
       "source_file": "app/api/chat/route.ts",
       "source_location": "L51",
-      "id": "chat_route_shouldcontinue",
       "community": 6,
-      "norm_label": "shouldcontinue()"
+      "norm_label": "shouldcontinue()",
+      "id": "chat_route_shouldcontinue"
     },
     {
       "label": "callModel()",
       "file_type": "code",
       "source_file": "app/api/chat/route.ts",
       "source_location": "L61",
-      "id": "chat_route_callmodel",
       "community": 6,
-      "norm_label": "callmodel()"
-    },
-    {
-      "label": "POST()",
-      "file_type": "code",
-      "source_file": "app/api/chat/route.ts",
-      "source_location": "L77",
-      "id": "chat_route_post",
-      "community": 6,
-      "norm_label": "post()"
+      "norm_label": "callmodel()",
+      "id": "chat_route_callmodel"
     },
     {
       "label": "hero-section.tsx",
       "file_type": "code",
       "source_file": "components/hero-section.tsx",
       "source_location": "L1",
-      "id": "components_hero_section_tsx",
-      "community": 5,
-      "norm_label": "hero-section.tsx"
+      "community": 8,
+      "norm_label": "hero-section.tsx",
+      "id": "components_hero_section_tsx"
     },
     {
       "label": "HeroSection()",
       "file_type": "code",
       "source_file": "components/hero-section.tsx",
       "source_location": "L9",
-      "id": "components_hero_section_herosection",
-      "community": 5,
-      "norm_label": "herosection()"
+      "community": 8,
+      "norm_label": "herosection()",
+      "id": "components_hero_section_herosection"
     },
     {
       "label": "chat.tsx",
       "file_type": "code",
       "source_file": "components/chat.tsx",
       "source_location": "L1",
-      "id": "components_chat_tsx",
-      "community": 4,
-      "norm_label": "chat.tsx"
+      "community": 5,
+      "norm_label": "chat.tsx",
+      "id": "components_chat_tsx"
     },
     {
       "label": "scrollToBottom()",
       "file_type": "code",
       "source_file": "components/chat.tsx",
       "source_location": "L27",
-      "id": "components_chat_scrolltobottom",
-      "community": 4,
-      "norm_label": "scrolltobottom()"
+      "community": 5,
+      "norm_label": "scrolltobottom()",
+      "id": "components_chat_scrolltobottom"
     },
     {
       "label": "handleInputChange()",
       "file_type": "code",
       "source_file": "components/chat.tsx",
       "source_location": "L35",
-      "id": "components_chat_handleinputchange",
-      "community": 4,
-      "norm_label": "handleinputchange()"
+      "community": 5,
+      "norm_label": "handleinputchange()",
+      "id": "components_chat_handleinputchange"
     },
     {
       "label": "handleSubmit()",
       "file_type": "code",
       "source_file": "components/chat.tsx",
       "source_location": "L39",
-      "id": "components_chat_handlesubmit",
-      "community": 4,
-      "norm_label": "handlesubmit()"
+      "community": 5,
+      "norm_label": "handlesubmit()",
+      "id": "components_chat_handlesubmit"
     },
     {
       "label": "handleKeyDown()",
       "file_type": "code",
       "source_file": "components/chat.tsx",
       "source_location": "L87",
-      "id": "components_chat_handlekeydown",
-      "community": 4,
-      "norm_label": "handlekeydown()"
+      "community": 5,
+      "norm_label": "handlekeydown()",
+      "id": "components_chat_handlekeydown"
     },
     {
       "label": "loader.tsx",
       "file_type": "code",
       "source_file": "components/ui/loader.tsx",
       "source_location": "L1",
-      "id": "components_ui_loader_tsx",
-      "community": 4,
-      "norm_label": "loader.tsx"
+      "community": 5,
+      "norm_label": "loader.tsx",
+      "id": "components_ui_loader_tsx"
     },
     {
       "label": "LoaderFive()",
       "file_type": "code",
       "source_file": "components/ui/loader.tsx",
       "source_location": "L4",
-      "id": "ui_loader_loaderfive",
-      "community": 4,
-      "norm_label": "loaderfive()"
+      "community": 5,
+      "norm_label": "loaderfive()",
+      "id": "ui_loader_loaderfive"
     },
     {
       "label": "noise-background.tsx",
       "file_type": "code",
       "source_file": "components/ui/noise-background.tsx",
       "source_location": "L1",
-      "id": "components_ui_noise_background_tsx",
-      "community": 2,
-      "norm_label": "noise-background.tsx"
+      "community": 3,
+      "norm_label": "noise-background.tsx",
+      "id": "components_ui_noise_background_tsx"
     },
     {
       "label": "GradientLayer()",
       "file_type": "code",
       "source_file": "components/ui/noise-background.tsx",
       "source_location": "L16",
-      "id": "ui_noise_background_gradientlayer",
-      "community": 2,
-      "norm_label": "gradientlayer()"
+      "community": 3,
+      "norm_label": "gradientlayer()",
+      "id": "ui_noise_background_gradientlayer"
     },
     {
       "label": "aurora-background.tsx",
       "file_type": "code",
       "source_file": "components/ui/aurora-background.tsx",
       "source_location": "L1",
-      "id": "components_ui_aurora_background_tsx",
-      "community": 2,
-      "norm_label": "aurora-background.tsx"
+      "community": 3,
+      "norm_label": "aurora-background.tsx",
+      "id": "components_ui_aurora_background_tsx"
     },
     {
       "label": "cn()",
       "file_type": "code",
       "source_file": "components/ui/aurora-background.tsx",
       "source_location": "L49",
-      "id": "ui_aurora_background_cn",
-      "community": 2,
-      "norm_label": "cn()"
+      "community": 3,
+      "norm_label": "cn()",
+      "id": "ui_aurora_background_cn"
     },
     {
       "label": "button.tsx",
       "file_type": "code",
       "source_file": "components/ui/button.tsx",
       "source_location": "L1",
-      "id": "components_ui_button_tsx",
-      "community": 2,
-      "norm_label": "button.tsx"
+      "community": 3,
+      "norm_label": "button.tsx",
+      "id": "components_ui_button_tsx"
     },
     {
       "label": "cn()",
       "file_type": "code",
       "source_file": "components/ui/button.tsx",
       "source_location": "L56",
-      "id": "ui_button_cn",
-      "community": 2,
-      "norm_label": "cn()"
+      "community": 3,
+      "norm_label": "cn()",
+      "id": "ui_button_cn"
     },
     {
       "label": "highlighter.tsx",
       "file_type": "code",
       "source_file": "components/ui/highlighter.tsx",
       "source_location": "L1",
-      "id": "components_ui_highlighter_tsx",
-      "community": 5,
-      "norm_label": "highlighter.tsx"
+      "community": 8,
+      "norm_label": "highlighter.tsx",
+      "id": "components_ui_highlighter_tsx"
     },
     {
       "label": "Highlighter()",
       "file_type": "code",
       "source_file": "components/ui/highlighter.tsx",
       "source_location": "L30",
-      "id": "ui_highlighter_highlighter",
-      "community": 5,
-      "norm_label": "highlighter()"
+      "community": 8,
+      "norm_label": "highlighter()",
+      "id": "ui_highlighter_highlighter"
     },
     {
       "label": "textarea.tsx",
       "file_type": "code",
       "source_file": "components/ui/textarea.tsx",
       "source_location": "L1",
-      "id": "components_ui_textarea_tsx",
-      "community": 2,
-      "norm_label": "textarea.tsx"
+      "community": 3,
+      "norm_label": "textarea.tsx",
+      "id": "components_ui_textarea_tsx"
     },
     {
       "label": "cn()",
       "file_type": "code",
       "source_file": "components/ui/textarea.tsx",
       "source_location": "L9",
-      "id": "ui_textarea_cn",
-      "community": 2,
-      "norm_label": "cn()"
+      "community": 3,
+      "norm_label": "cn()",
+      "id": "ui_textarea_cn"
     },
     {
       "label": "utility.tsx",
       "file_type": "code",
       "source_file": "lib/utility.tsx",
       "source_location": "L1",
-      "id": "lib_utility_tsx",
-      "community": 2,
-      "norm_label": "utility.tsx"
+      "community": 3,
+      "norm_label": "utility.tsx",
+      "id": "lib_utility_tsx"
     },
     {
       "label": "utils.ts",
       "file_type": "code",
       "source_file": "lib/utils.ts",
       "source_location": "L1",
-      "id": "lib_utils_ts",
-      "community": 2,
-      "norm_label": "utils.ts"
+      "community": 3,
+      "norm_label": "utils.ts",
+      "id": "lib_utils_ts"
     },
     {
       "label": "cn()",
       "file_type": "code",
       "source_file": "lib/utils.ts",
       "source_location": "L4",
-      "id": "lib_utils_cn",
-      "community": 2,
-      "norm_label": "cn()"
+      "community": 3,
+      "norm_label": "cn()",
+      "id": "lib_utils_cn"
     },
     {
       "label": "AI Assistant Portfolio",
@@ -423,9 +603,9 @@
       "captured_at": null,
       "author": "Akshay Maru",
       "contributor": null,
-      "id": "readme_portfolio",
-      "community": 1,
-      "norm_label": "ai assistant portfolio"
+      "community": 2,
+      "norm_label": "ai assistant portfolio",
+      "id": "readme_portfolio"
     },
     {
       "label": "Next.js Framework",
@@ -436,9 +616,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "readme_nextjs",
-      "community": 1,
-      "norm_label": "next.js framework"
+      "community": 2,
+      "norm_label": "next.js framework",
+      "id": "readme_nextjs"
     },
     {
       "label": "Vercel AI SDK",
@@ -449,9 +629,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "readme_vercel_ai_sdk",
-      "community": 1,
-      "norm_label": "vercel ai sdk"
+      "community": 2,
+      "norm_label": "vercel ai sdk",
+      "id": "readme_vercel_ai_sdk"
     },
     {
       "label": "OpenAI Integration",
@@ -462,9 +642,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "readme_openai",
-      "community": 1,
-      "norm_label": "openai integration"
+      "community": 2,
+      "norm_label": "openai integration",
+      "id": "readme_openai"
     },
     {
       "label": "LangChain",
@@ -475,9 +655,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "readme_langchain",
-      "community": 1,
-      "norm_label": "langchain"
+      "community": 2,
+      "norm_label": "langchain",
+      "id": "readme_langchain"
     },
     {
       "label": "Tailwind CSS",
@@ -488,9 +668,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "readme_tailwindcss",
-      "community": 1,
-      "norm_label": "tailwind css"
+      "community": 2,
+      "norm_label": "tailwind css",
+      "id": "readme_tailwindcss"
     },
     {
       "label": "Framer Motion",
@@ -501,9 +681,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "readme_framer_motion",
-      "community": 1,
-      "norm_label": "framer motion"
+      "community": 2,
+      "norm_label": "framer motion",
+      "id": "readme_framer_motion"
     },
     {
       "label": "Radix UI",
@@ -514,9 +694,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "readme_radix_ui",
-      "community": 1,
-      "norm_label": "radix ui"
+      "community": 2,
+      "norm_label": "radix ui",
+      "id": "readme_radix_ui"
     },
     {
       "label": "AI Chat API Endpoint",
@@ -527,9 +707,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "readme_chat_api",
-      "community": 1,
-      "norm_label": "ai chat api endpoint"
+      "community": 2,
+      "norm_label": "ai chat api endpoint",
+      "id": "readme_chat_api"
     },
     {
       "label": "Chat Component",
@@ -540,9 +720,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "readme_chat_component",
-      "community": 1,
-      "norm_label": "chat component"
+      "community": 2,
+      "norm_label": "chat component",
+      "id": "readme_chat_component"
     },
     {
       "label": "Hero Section Component",
@@ -553,9 +733,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "readme_hero_section",
-      "community": 1,
-      "norm_label": "hero section component"
+      "community": 2,
+      "norm_label": "hero section component",
+      "id": "readme_hero_section"
     },
     {
       "label": "Vercel Deployment Platform",
@@ -566,9 +746,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "readme_vercel_deploy",
-      "community": 1,
-      "norm_label": "vercel deployment platform"
+      "community": 2,
+      "norm_label": "vercel deployment platform",
+      "id": "readme_vercel_deploy"
     },
     {
       "label": "Akshay Maru",
@@ -579,9 +759,9 @@
       "captured_at": null,
       "author": "Akshay Maru",
       "contributor": null,
-      "id": "personal_akshay_maru",
       "community": 0,
-      "norm_label": "akshay maru"
+      "norm_label": "akshay maru",
+      "id": "personal_akshay_maru"
     },
     {
       "label": "Juno AI",
@@ -592,9 +772,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "personal_juno_ai",
-      "community": 3,
-      "norm_label": "juno ai"
+      "community": 4,
+      "norm_label": "juno ai",
+      "id": "personal_juno_ai"
     },
     {
       "label": "JupiterOne",
@@ -605,9 +785,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "personal_jupiterone",
-      "community": 3,
-      "norm_label": "jupiterone"
+      "community": 4,
+      "norm_label": "jupiterone",
+      "id": "personal_jupiterone"
     },
     {
       "label": "Remote Leaps",
@@ -618,9 +798,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "personal_remote_leaps",
       "community": 0,
-      "norm_label": "remote leaps"
+      "norm_label": "remote leaps",
+      "id": "personal_remote_leaps"
     },
     {
       "label": "RAG Architecture",
@@ -632,9 +812,9 @@
       "author": null,
       "contributor": null,
       "rationale": "Chosen for production-grade LLM systems to enable context-aware, security-grounded answers with data boundaries, explainability, and reliability rather than raw intelligence alone",
-      "id": "personal_rag_architecture",
       "community": 0,
-      "norm_label": "rag architecture"
+      "norm_label": "rag architecture",
+      "id": "personal_rag_architecture"
     },
     {
       "label": "AI Trust and Outcomes Philosophy",
@@ -646,9 +826,9 @@
       "author": null,
       "contributor": null,
       "rationale": "Core belief that good AI is about trust, context, and outcomes rather than intelligence alone - shaped by observing gap between impressive demos and real-world reliability",
-      "id": "personal_ai_trust_philosophy",
-      "community": 3,
-      "norm_label": "ai trust and outcomes philosophy"
+      "community": 4,
+      "norm_label": "ai trust and outcomes philosophy",
+      "id": "personal_ai_trust_philosophy"
     },
     {
       "label": "Vector Search",
@@ -659,9 +839,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "personal_vector_search",
       "community": 0,
-      "norm_label": "vector search"
+      "norm_label": "vector search",
+      "id": "personal_vector_search"
     },
     {
       "label": "Agentic Workflows",
@@ -672,9 +852,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "personal_agentic_workflows",
       "community": 0,
-      "norm_label": "agentic workflows"
+      "norm_label": "agentic workflows",
+      "id": "personal_agentic_workflows"
     },
     {
       "label": "Multi-Agent Systems",
@@ -685,9 +865,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "personal_multi_agent_systems",
       "community": 0,
-      "norm_label": "multi-agent systems"
+      "norm_label": "multi-agent systems",
+      "id": "personal_multi_agent_systems"
     },
     {
       "label": "Dr. Manoj Maru",
@@ -698,9 +878,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "personal_manoj_maru",
       "community": 0,
-      "norm_label": "dr. manoj maru"
+      "norm_label": "dr. manoj maru",
+      "id": "personal_manoj_maru"
     },
     {
       "label": "Akshar Eye Clinic & Optical House",
@@ -711,9 +891,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "personal_akshar_eye_clinic",
       "community": 0,
-      "norm_label": "akshar eye clinic & optical house"
+      "norm_label": "akshar eye clinic & optical house",
+      "id": "personal_akshar_eye_clinic"
     },
     {
       "label": "Akshay Maru Resume",
@@ -724,9 +904,9 @@
       "captured_at": null,
       "author": "Akshay Maru",
       "contributor": null,
-      "id": "resume_akshay_maru",
       "community": 0,
-      "norm_label": "akshay maru resume"
+      "norm_label": "akshay maru resume",
+      "id": "resume_akshay_maru"
     },
     {
       "label": "Hybrid RAG System",
@@ -738,9 +918,9 @@
       "author": null,
       "contributor": null,
       "rationale": "Dense vectors combined with BM25 re-ranking chosen to reduce hallucinations and improve precision in high-stakes security queries where embedding-only search was insufficient",
-      "id": "resume_hybrid_rag",
-      "community": 3,
-      "norm_label": "hybrid rag system"
+      "community": 4,
+      "norm_label": "hybrid rag system",
+      "id": "resume_hybrid_rag"
     },
     {
       "label": "JupiterOne Senior Product Engineer (AI)",
@@ -751,9 +931,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "resume_jupiterone_role",
-      "community": 3,
-      "norm_label": "jupiterone senior product engineer (ai)"
+      "community": 4,
+      "norm_label": "jupiterone senior product engineer (ai)",
+      "id": "resume_jupiterone_role"
     },
     {
       "label": "Remote Leaps Founder & Senior Product Engineer",
@@ -764,9 +944,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "resume_remote_leaps_role",
       "community": 0,
-      "norm_label": "remote leaps founder & senior product engineer"
+      "norm_label": "remote leaps founder & senior product engineer",
+      "id": "resume_remote_leaps_role"
     },
     {
       "label": "Virtual Internships Senior Software Developer",
@@ -777,9 +957,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "resume_virtual_internships_role",
       "community": 0,
-      "norm_label": "virtual internships senior software developer"
+      "norm_label": "virtual internships senior software developer",
+      "id": "resume_virtual_internships_role"
     },
     {
       "label": "Rapid Innovation Software Developer",
@@ -790,9 +970,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "resume_rapid_innovation_role",
       "community": 0,
-      "norm_label": "rapid innovation software developer"
+      "norm_label": "rapid innovation software developer",
+      "id": "resume_rapid_innovation_role"
     },
     {
       "label": "Braintrust Evaluation Framework",
@@ -803,9 +983,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "resume_braintrust",
-      "community": 3,
-      "norm_label": "braintrust evaluation framework"
+      "community": 4,
+      "norm_label": "braintrust evaluation framework",
+      "id": "resume_braintrust"
     },
     {
       "label": "LangGraph",
@@ -816,9 +996,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "resume_langgraph",
       "community": 0,
-      "norm_label": "langgraph"
+      "norm_label": "langgraph",
+      "id": "resume_langgraph"
     },
     {
       "label": "Model Context Protocol (MCP)",
@@ -830,9 +1010,9 @@
       "author": null,
       "contributor": null,
       "rationale": "Early adoption of MCP for secure, scalable tool-calling and agentic workflows in production systems",
-      "id": "resume_mcp",
       "community": 0,
-      "norm_label": "model context protocol (mcp)"
+      "norm_label": "model context protocol (mcp)",
+      "id": "resume_mcp"
     },
     {
       "label": "LoRA/PEFT Fine-Tuning",
@@ -843,9 +1023,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "resume_lora_peft",
       "community": 0,
-      "norm_label": "lora/peft fine-tuning"
+      "norm_label": "lora/peft fine-tuning",
+      "id": "resume_lora_peft"
     },
     {
       "label": "Hallucination Mitigation",
@@ -856,9 +1036,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "resume_hallucination_mitigation",
-      "community": 3,
-      "norm_label": "hallucination mitigation"
+      "community": 4,
+      "norm_label": "hallucination mitigation",
+      "id": "resume_hallucination_mitigation"
     },
     {
       "label": "Dhirubhai Ambani University",
@@ -869,9 +1049,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "resume_dau",
       "community": 0,
-      "norm_label": "dhirubhai ambani university"
+      "norm_label": "dhirubhai ambani university",
+      "id": "resume_dau"
     },
     {
       "label": "NFT Module with MetaMask & Solidity",
@@ -882,9 +1062,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "resume_nft_module",
       "community": 0,
-      "norm_label": "nft module with metamask & solidity"
+      "norm_label": "nft module with metamask & solidity",
+      "id": "resume_nft_module"
     },
     {
       "label": "Hierarchical Token-Aware Summarization",
@@ -896,9 +1076,9 @@
       "author": null,
       "contributor": null,
       "rationale": "Reduces prompt size ~45% without information loss, enabling cost-efficient and low-latency inference in production LLM systems",
-      "id": "resume_token_aware_summarization",
-      "community": 3,
-      "norm_label": "hierarchical token-aware summarization"
+      "community": 4,
+      "norm_label": "hierarchical token-aware summarization",
+      "id": "resume_token_aware_summarization"
     },
     {
       "label": "Portfolio Owner (Person in Photo)",
@@ -909,9 +1089,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "opengraph_image_portfolio_owner",
-      "community": 7,
-      "norm_label": "portfolio owner (person in photo)"
+      "community": 10,
+      "norm_label": "portfolio owner (person in photo)",
+      "id": "opengraph_image_portfolio_owner"
     },
     {
       "label": "OpenGraph Social Share Image",
@@ -922,9 +1102,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "opengraph_image_photo",
-      "community": 7,
-      "norm_label": "opengraph social share image"
+      "community": 10,
+      "norm_label": "opengraph social share image",
+      "id": "opengraph_image_photo"
     },
     {
       "label": "Indoor Decorative Setting",
@@ -935,9 +1115,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "opengraph_image_indoor_setting",
-      "community": 7,
-      "norm_label": "indoor decorative setting"
+      "community": 10,
+      "norm_label": "indoor decorative setting",
+      "id": "opengraph_image_indoor_setting"
     }
   ],
   "links": [
@@ -947,8 +1127,19 @@
       "source_file": "app/layout.tsx",
       "source_location": "L48",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_layout_tsx",
-      "target": "app_layout_rootlayout",
+      "target": "app_layout_rootlayout"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/page.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "app_page_tsx",
+      "target": "components_site_header_siteheader",
       "confidence_score": 1.0
     },
     {
@@ -956,10 +1147,21 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "app/page.tsx",
-      "source_location": "L3",
+      "source_location": "L2",
       "weight": 1.0,
       "source": "app_page_tsx",
-      "target": "components_hero_section_herosection",
+      "target": "components_hero_hero",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "app_page_tsx",
+      "target": "components_site_footer_sitefooter",
       "confidence_score": 1.0
     },
     {
@@ -968,8 +1170,224 @@
       "source_file": "app/page.tsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_page_tsx",
-      "target": "app_page_home",
+      "target": "app_page_home"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/page.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "app_page_tsx",
+      "target": "components_hero_section_herosection"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/not-found.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "app_not_found_tsx",
+      "target": "app_not_found_notfound",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/work/[slug]/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "app_work_slug_page_tsx",
+      "target": "lib_content_getdeepdive",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/work/[slug]/page.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "app_work_slug_page_tsx",
+      "target": "components_site_header_siteheader",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/work/[slug]/page.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "app_work_slug_page_tsx",
+      "target": "components_site_footer_sitefooter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/work/[slug]/page.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "app_work_slug_page_tsx",
+      "target": "slug_page_generatestaticparams",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/work/[slug]/page.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "app_work_slug_page_tsx",
+      "target": "slug_page_generatemetadata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/work/[slug]/page.tsx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "slug_page_generatemetadata",
+      "target": "lib_content_getdeepdive"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/chat/route.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "app_api_chat_route_ts",
+      "target": "chat_route_getcontext"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/chat/route.ts",
+      "source_location": "L77",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "app_api_chat_route_ts",
+      "target": "chat_route_post"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/chat/route.ts",
+      "source_location": "L51",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "app_api_chat_route_ts",
+      "target": "chat_route_shouldcontinue"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/chat/route.ts",
+      "source_location": "L61",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "app_api_chat_route_ts",
+      "target": "chat_route_callmodel"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/hero.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "components_hero_tsx",
+      "target": "components_hero_hero",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "components/work-bento.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "components_work_bento_tsx",
+      "target": "components_reveal_reveal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/work-bento.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "components_work_bento_tsx",
+      "target": "components_work_bento_cell",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/site-header.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "components_site_header_tsx",
+      "target": "components_site_header_siteheader",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/site-footer.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "components_site_footer_tsx",
+      "target": "components_site_footer_sitefooter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/chat-launcher.tsx",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "components_chat_launcher_tsx",
+      "target": "components_chat_launcher_onkey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/chat-launcher.tsx",
+      "source_location": "L94",
+      "weight": 1.0,
+      "source": "components_chat_launcher_tsx",
+      "target": "components_chat_launcher_onkeydown",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/reveal.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "components_reveal_tsx",
+      "target": "components_reveal_reveal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/content.ts",
+      "source_location": "L209",
+      "weight": 1.0,
+      "source": "lib_content_ts",
+      "target": "lib_content_getdeepdive",
       "confidence_score": 1.0
     },
     {
@@ -978,9 +1396,9 @@
       "source_file": "app/chat/layout.tsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_chat_layout_tsx",
-      "target": "chat_layout_chatlayout",
-      "confidence_score": 1.0
+      "target": "chat_layout_chatlayout"
     },
     {
       "relation": "contains",
@@ -988,49 +1406,9 @@
       "source_file": "app/chat/page.tsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_chat_page_tsx",
-      "target": "chat_page_chatdemo",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "app/api/chat/route.ts",
-      "source_location": "L14",
-      "weight": 1.0,
-      "source": "app_api_chat_route_ts",
-      "target": "chat_route_getcontext",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "app/api/chat/route.ts",
-      "source_location": "L51",
-      "weight": 1.0,
-      "source": "app_api_chat_route_ts",
-      "target": "chat_route_shouldcontinue",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "app/api/chat/route.ts",
-      "source_location": "L61",
-      "weight": 1.0,
-      "source": "app_api_chat_route_ts",
-      "target": "chat_route_callmodel",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "app/api/chat/route.ts",
-      "source_location": "L77",
-      "weight": 1.0,
-      "source": "app_api_chat_route_ts",
-      "target": "chat_route_post",
-      "confidence_score": 1.0
+      "target": "chat_page_chatdemo"
     },
     {
       "relation": "imports",
@@ -1039,9 +1417,9 @@
       "source_file": "components/hero-section.tsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_hero_section_tsx",
-      "target": "ui_highlighter_highlighter",
-      "confidence_score": 1.0
+      "target": "ui_highlighter_highlighter"
     },
     {
       "relation": "contains",
@@ -1049,9 +1427,9 @@
       "source_file": "components/hero-section.tsx",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_hero_section_tsx",
-      "target": "components_hero_section_herosection",
-      "confidence_score": 1.0
+      "target": "components_hero_section_herosection"
     },
     {
       "relation": "imports",
@@ -1060,9 +1438,9 @@
       "source_file": "components/chat.tsx",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_chat_tsx",
-      "target": "ui_loader_loaderfive",
-      "confidence_score": 1.0
+      "target": "ui_loader_loaderfive"
     },
     {
       "relation": "contains",
@@ -1070,9 +1448,9 @@
       "source_file": "components/chat.tsx",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_chat_tsx",
-      "target": "components_chat_scrolltobottom",
-      "confidence_score": 1.0
+      "target": "components_chat_scrolltobottom"
     },
     {
       "relation": "contains",
@@ -1080,9 +1458,9 @@
       "source_file": "components/chat.tsx",
       "source_location": "L35",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_chat_tsx",
-      "target": "components_chat_handleinputchange",
-      "confidence_score": 1.0
+      "target": "components_chat_handleinputchange"
     },
     {
       "relation": "contains",
@@ -1090,9 +1468,9 @@
       "source_file": "components/chat.tsx",
       "source_location": "L39",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_chat_tsx",
-      "target": "components_chat_handlesubmit",
-      "confidence_score": 1.0
+      "target": "components_chat_handlesubmit"
     },
     {
       "relation": "contains",
@@ -1100,9 +1478,9 @@
       "source_file": "components/chat.tsx",
       "source_location": "L87",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_chat_tsx",
-      "target": "components_chat_handlekeydown",
-      "confidence_score": 1.0
+      "target": "components_chat_handlekeydown"
     },
     {
       "relation": "calls",
@@ -1111,9 +1489,9 @@
       "source_file": "components/chat.tsx",
       "source_location": "L90",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_chat_handlekeydown",
-      "target": "components_chat_handlesubmit",
-      "confidence_score": 1.0
+      "target": "components_chat_handlesubmit"
     },
     {
       "relation": "contains",
@@ -1121,9 +1499,9 @@
       "source_file": "components/ui/loader.tsx",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_ui_loader_tsx",
-      "target": "ui_loader_loaderfive",
-      "confidence_score": 1.0
+      "target": "ui_loader_loaderfive"
     },
     {
       "relation": "imports",
@@ -1132,9 +1510,9 @@
       "source_file": "components/ui/noise-background.tsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_ui_noise_background_tsx",
-      "target": "lib_utils_cn",
-      "confidence_score": 1.0
+      "target": "lib_utils_cn"
     },
     {
       "relation": "contains",
@@ -1142,9 +1520,9 @@
       "source_file": "components/ui/noise-background.tsx",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_ui_noise_background_tsx",
-      "target": "ui_noise_background_gradientlayer",
-      "confidence_score": 1.0
+      "target": "ui_noise_background_gradientlayer"
     },
     {
       "relation": "imports",
@@ -1153,9 +1531,9 @@
       "source_file": "components/ui/aurora-background.tsx",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_ui_aurora_background_tsx",
-      "target": "lib_utils_cn",
-      "confidence_score": 1.0
+      "target": "lib_utils_cn"
     },
     {
       "relation": "contains",
@@ -1163,9 +1541,9 @@
       "source_file": "components/ui/aurora-background.tsx",
       "source_location": "L49",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_ui_aurora_background_tsx",
-      "target": "ui_aurora_background_cn",
-      "confidence_score": 1.0
+      "target": "ui_aurora_background_cn"
     },
     {
       "relation": "imports",
@@ -1174,9 +1552,9 @@
       "source_file": "components/ui/button.tsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_ui_button_tsx",
-      "target": "lib_utils_cn",
-      "confidence_score": 1.0
+      "target": "lib_utils_cn"
     },
     {
       "relation": "contains",
@@ -1184,9 +1562,9 @@
       "source_file": "components/ui/button.tsx",
       "source_location": "L56",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_ui_button_tsx",
-      "target": "ui_button_cn",
-      "confidence_score": 1.0
+      "target": "ui_button_cn"
     },
     {
       "relation": "contains",
@@ -1194,9 +1572,9 @@
       "source_file": "components/ui/highlighter.tsx",
       "source_location": "L30",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_ui_highlighter_tsx",
-      "target": "ui_highlighter_highlighter",
-      "confidence_score": 1.0
+      "target": "ui_highlighter_highlighter"
     },
     {
       "relation": "imports",
@@ -1205,9 +1583,9 @@
       "source_file": "components/ui/textarea.tsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_ui_textarea_tsx",
-      "target": "lib_utils_cn",
-      "confidence_score": 1.0
+      "target": "lib_utils_cn"
     },
     {
       "relation": "contains",
@@ -1215,9 +1593,9 @@
       "source_file": "components/ui/textarea.tsx",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_ui_textarea_tsx",
-      "target": "ui_textarea_cn",
-      "confidence_score": 1.0
+      "target": "ui_textarea_cn"
     },
     {
       "relation": "imports",
@@ -1226,9 +1604,9 @@
       "source_file": "lib/utility.tsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lib_utility_tsx",
-      "target": "lib_utils_cn",
-      "confidence_score": 1.0
+      "target": "lib_utils_cn"
     },
     {
       "relation": "contains",
@@ -1236,9 +1614,9 @@
       "source_file": "lib/utils.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lib_utils_ts",
-      "target": "lib_utils_cn",
-      "confidence_score": 1.0
+      "target": "lib_utils_cn"
     },
     {
       "relation": "references",
@@ -1790,5 +2168,5 @@
       "source_file": "app/opengraph-image.png"
     }
   ],
-  "built_at_commit": "254a599b8acb1e3bdaf0b71f11012ed3fe173c88"
+  "built_at_commit": "2ec9a22cb7097a0a360bc181b7161610b6997eb2"
 }

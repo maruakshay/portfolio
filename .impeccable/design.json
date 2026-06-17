@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-06-17T00:00:00Z",
+  "title": "Design System: Akshay Maru Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "signal-amber": { "role": "primary", "displayName": "Signal Amber", "canonical": "oklch(0.76 0.16 65)", "tonalRamp": ["oklch(0.22 0.04 65)", "oklch(0.32 0.07 65)", "oklch(0.43 0.10 65)", "oklch(0.54 0.13 65)", "oklch(0.65 0.15 65)", "oklch(0.76 0.16 65)", "oklch(0.85 0.13 75)", "oklch(0.93 0.07 80)"] },
+      "ink-ground": { "role": "neutral", "displayName": "Ink Ground", "canonical": "oklch(0.17 0.008 65)", "tonalRamp": ["oklch(0.17 0.008 65)", "oklch(0.21 0.008 65)", "oklch(0.25 0.008 65)", "oklch(0.33 0.008 65)", "oklch(0.45 0.01 70)", "oklch(0.56 0.01 70)", "oklch(0.74 0.012 75)", "oklch(0.95 0.01 80)"] },
+      "paper": { "role": "neutral", "displayName": "Paper", "canonical": "oklch(0.95 0.01 80)", "tonalRamp": ["oklch(0.56 0.01 70)", "oklch(0.66 0.011 72)", "oklch(0.74 0.012 75)", "oklch(0.82 0.011 78)", "oklch(0.88 0.01 80)", "oklch(0.92 0.01 80)", "oklch(0.95 0.01 80)", "oklch(0.98 0.006 80)"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero statement only, one per page. Fraunces serif, big and tight." },
+      "headline": { "displayName": "Headline", "purpose": "Section openers. Fraunces serif." },
+      "title": { "displayName": "Title", "purpose": "Project and subsection headings. Fraunces serif." },
+      "body": { "displayName": "Body", "purpose": "All prose. Geist Mono, capped at 70ch, Paper Muted." },
+      "label": { "displayName": "Label", "purpose": "Nav, meta, section numbers, badges. Geist Mono uppercase, 0.08em." }
+    },
+    "shadows": [
+      { "name": "hard-offset", "value": "4px 4px 0 oklch(0.33 0.008 65)", "purpose": "The only shadow in the system. Brutalist offset block on the AI demo container only." }
+    ],
+    "motion": [
+      { "name": "ease-out-quart", "value": "cubic-bezier(0.25, 1, 0.5, 1)", "purpose": "Default easing for state transitions and entrance reveals." },
+      { "name": "duration-state", "value": "180ms", "purpose": "Hover, focus, and small state changes." },
+      { "name": "duration-reveal", "value": "280ms", "purpose": "Subtle entrance reveals on scroll." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The single high-emphasis action per view. Dark text on amber, hard corners, uppercase mono.",
+      "html": "<button class=\"ds-btn-primary\">SEE THE DEMO</button>",
+      "css": ".ds-btn-primary { background: oklch(0.76 0.16 65); color: oklch(0.17 0.008 65); font-family: 'Geist Mono', ui-monospace, monospace; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 12px 24px; border: none; border-radius: 0; cursor: pointer; transition: background 180ms cubic-bezier(0.25,1,0.5,1); } .ds-btn-primary:hover { background: oklch(0.70 0.16 60); } .ds-btn-primary:focus-visible { outline: 2px solid oklch(0.76 0.16 65); outline-offset: 2px; }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary action. Rule-line border that shifts to amber on hover.",
+      "html": "<button class=\"ds-btn-outline\">READ THE WRITEUP</button>",
+      "css": ".ds-btn-outline { background: transparent; color: oklch(0.95 0.01 80); font-family: 'Geist Mono', ui-monospace, monospace; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 12px 24px; border: 1px solid oklch(0.33 0.008 65); border-radius: 0; cursor: pointer; transition: border-color 180ms cubic-bezier(0.25,1,0.5,1); } .ds-btn-outline:hover { border-color: oklch(0.76 0.16 65); } .ds-btn-outline:focus-visible { outline: 2px solid oklch(0.76 0.16 65); outline-offset: 2px; }"
+    },
+    {
+      "name": "Status Badge",
+      "kind": "chip",
+      "refersTo": "badge",
+      "description": "Status only. Amber square plus uppercase mono on a tinted ground. Hard corners.",
+      "html": "<span class=\"ds-badge\"><span class=\"ds-badge-mark\"></span>AVAILABLE FOR WORK</span>",
+      "css": ".ds-badge { display: inline-flex; align-items: center; gap: 8px; background: oklch(0.30 0.05 65); color: oklch(0.76 0.16 65); font-family: 'Geist Mono', ui-monospace, monospace; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 10px; border-radius: 0; } .ds-badge-mark { width: 6px; height: 6px; background: oklch(0.76 0.16 65); display: inline-block; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "Surface input. Border shifts to amber on focus with an amber caret. No glow.",
+      "html": "<input class=\"ds-input\" type=\"text\" placeholder=\"Paste text to transform\" />",
+      "css": ".ds-input { background: oklch(0.21 0.008 65); color: oklch(0.95 0.01 80); caret-color: oklch(0.76 0.16 65); font-family: 'Geist Mono', ui-monospace, monospace; font-size: 0.9375rem; line-height: 1.7; padding: 12px 16px; border: 1px solid oklch(0.33 0.008 65); border-radius: 0; width: 100%; transition: border-color 180ms cubic-bezier(0.25,1,0.5,1); } .ds-input::placeholder { color: oklch(0.56 0.01 70); } .ds-input:focus { outline: none; border-color: oklch(0.76 0.16 65); box-shadow: inset 0 0 0 1px oklch(0.76 0.16 65); }"
+    },
+    {
+      "name": "AI Demo Container",
+      "kind": "custom",
+      "refersTo": "demo-surface",
+      "description": "Signature component. The proof of product sense. Carries the only shadow in the system.",
+      "html": "<section class=\"ds-demo\"><header class=\"ds-demo-head\"><span class=\"ds-demo-mark\"></span>LIVE DEMO / TONE SHIFTER</header><div class=\"ds-demo-body\">Output renders here in mono, with a brief eased reveal.</div></section>",
+      "css": ".ds-demo { background: oklch(0.21 0.008 65); color: oklch(0.95 0.01 80); border: 1px solid oklch(0.33 0.008 65); border-radius: 0; box-shadow: 4px 4px 0 oklch(0.33 0.008 65); padding: 32px; } .ds-demo-head { display: flex; align-items: center; gap: 8px; font-family: 'Geist Mono', ui-monospace, monospace; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.74 0.012 75); padding-bottom: 16px; border-bottom: 1px solid oklch(0.33 0.008 65); } .ds-demo-mark { width: 6px; height: 6px; background: oklch(0.76 0.16 65); display: inline-block; } .ds-demo-body { font-family: 'Geist Mono', ui-monospace, monospace; font-size: 0.9375rem; line-height: 1.7; color: oklch(0.74 0.012 75); padding-top: 16px; }"
+    },
+    {
+      "name": "Nav Item",
+      "kind": "nav",
+      "refersTo": "button-ghost",
+      "description": "Header navigation. Uppercase mono, amber underline on active.",
+      "html": "<a class=\"ds-nav-item ds-nav-item--active\" href=\"#\">WORK</a>",
+      "css": ".ds-nav-item { font-family: 'Geist Mono', ui-monospace, monospace; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.74 0.012 75); text-decoration: none; padding: 8px 4px; border-bottom: 1px solid transparent; transition: color 180ms cubic-bezier(0.25,1,0.5,1), border-color 180ms cubic-bezier(0.25,1,0.5,1); } .ds-nav-item:hover { color: oklch(0.95 0.01 80); } .ds-nav-item--active { color: oklch(0.95 0.01 80); border-bottom-color: oklch(0.76 0.16 65); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Lit Terminal",
+    "overview": "A warm machine in a dark room. Structure is exposed, like a well-set page proof with the grid lines left visible. The ground is a warm near-black, never navy, never pure black. Type does the heavy lifting: an editorial serif for voice and a monospace for everything procedural. One amber signal is the only color, used like a cursor blink: rare, deliberate, alive. The brutalist shell is the discipline; the warmth in the serif and the amber is the human.",
+    "keyCharacteristics": [
+      "Warm near-black ground (oklch(0.17 0.008 65)), never navy, never #000",
+      "Depth from 1px rule lines and surface lightness steps, not shadows",
+      "Hard corners (0 to 4px); pills are forbidden",
+      "Fraunces serif for voice, Geist Mono for structure and meta",
+      "Amber on under 10% of any screen; its rarity is the signal",
+      "Motion is responsive feedback only: state transitions and subtle entrance reveals"
+    ],
+    "rules": [
+      { "name": "The One Voice Rule", "body": "Signal Amber appears on no more than 10% of any given screen. Reserve it for the single thing you most want someone to do or notice.", "section": "colors" },
+      { "name": "The No Navy Rule", "body": "The dark ground is warm (hue 65), never blue. If the background reads cool, the chroma or hue is wrong.", "section": "colors" },
+      { "name": "The No Gradient Text Rule", "body": "Text is never rendered with background-clip: text over a gradient. Emphasis comes from weight, size, or the amber.", "section": "colors" },
+      { "name": "The Two Voices Rule", "body": "Serif speaks, mono operates. Never set body prose in the serif, never set a hero statement in mono.", "section": "typography" },
+      { "name": "The Weight Floor Rule", "body": "Never use a weight below 400. 400 is the floor for prose, 500 for labels and headings.", "section": "typography" },
+      { "name": "The Rule Line Rule", "body": "Separation and depth come from 1px borders and surface lightness steps, never soft shadows.", "section": "elevation" },
+      { "name": "The State-Response Rule", "body": "Surfaces are flat at rest. Depth moves only as a border shift to amber or a one-step lighter surface, on hover or focus.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do use Signal Amber for exactly one action or focal point per viewport.",
+      "Do keep the ground warm (hue 65) and near-black; never navy, never #000.",
+      "Do convey depth with 1px Rule Lines and surface lightness steps, not soft shadows.",
+      "Do keep corners hard (0 to 4px); reserve the single Hard Offset shadow for the AI demo only.",
+      "Do split the type: Fraunces serif speaks, Geist Mono operates. Cap body prose at 70ch.",
+      "Do write specific, in-voice empty, loading, and error states for the AI demo.",
+      "Do keep motion to responsive feedback under 300ms, ease-out."
+    ],
+    "donts": [
+      "Don't use gradient text (background-clip: text over a gradient).",
+      "Don't use the hero-metric template (big number, small label, supporting stats, gradient accent).",
+      "Don't use glassmorphism or decorative backdrop-filter: blur.",
+      "Don't use particle backgrounds, aurora animations, or scroll-driven choreography.",
+      "Don't use border-left or border-right greater than 1px as a colored accent stripe.",
+      "Don't build identical icon-grid card walls.",
+      "Don't use dark navy with neon or gradient accents.",
+      "Don't fall into cold brutalism: raw structure that sacrifices legibility.",
+      "Don't reintroduce any chat or message-bubble UI.",
+      "Don't use pills (rounded-full) on any element."
+    ]
+  }
+}
