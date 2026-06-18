@@ -5,7 +5,6 @@ import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { deepDives, getDeepDive, profile } from "@/lib/content";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import { ChatLauncher } from "@/components/chat-launcher";
 
 export function generateStaticParams() {
   return deepDives.map((d) => ({ slug: d.slug }));
@@ -131,7 +130,6 @@ export default async function WorkPage({
         </article>
       </main>
       <SiteFooter />
-      <ChatLauncher />
     </>
   );
 }

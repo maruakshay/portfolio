@@ -13,11 +13,18 @@ export function SiteHeader() {
         </Link>
 
         <nav className="flex items-center gap-5">
+          <Link
+            href="/chat"
+            className="inline-flex items-center gap-2 border border-amber/40 px-3 py-1.5 text-xs font-medium uppercase tracking-[0.08em] text-amber transition-colors hover:border-amber hover:bg-tint"
+          >
+            <span className="mark mark-blink" aria-hidden />
+            Ask AI
+          </Link>
           <a
             href={profile.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="label transition-colors hover:text-paper"
+            className="label hidden transition-colors hover:text-paper sm:inline"
           >
             GitHub
           </a>
