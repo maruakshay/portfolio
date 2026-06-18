@@ -128,7 +128,7 @@ export const deepDives: DeepDive[] = [
     meta: [
       { label: "Stack", value: "TypeScript · Node ≥18 · Ink · Ollama" },
       { label: "Status", value: "Actively maintained · 21★ · 11 releases" },
-      { label: "Install", value: "npm i -g miii-cli" },
+      { label: "Install", value: "npm i -g miii-agent" },
     ],
     links: [
       { label: "GitHub", href: "https://github.com/maruakshay/miii-cli" },
