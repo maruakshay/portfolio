@@ -8,7 +8,7 @@ export const profile = {
   statementRest:
     "End to end: the streaming interface and the model behind it. Right now, an enterprise AI assistant on AWS Bedrock at JupiterOne. Before it, an AI SaaS I founded, grew past 40,000 users, and sold. Alongside it, local-first AI tooling I maintain in the open.",
   location: "India",
-  availability: "Open to US remote / relocation · H-1B sponsorship",
+  availability: "Open to US / UK / Canada · remote or relocation · needs visa sponsorship",
   email: "maruakshay4@gmail.com",
   github: "https://github.com/maruakshay",
   linkedin: "https://linkedin.com/in/akshaymaru61",

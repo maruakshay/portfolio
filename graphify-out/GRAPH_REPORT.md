@@ -1,16 +1,16 @@
-# Graph Report - portfolio  (2026-06-17)
+# Graph Report - portfolio  (2026-06-18)
 
 ## Corpus Check
-- 16 files · ~10,265 words
+- 19 files · ~12,152 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 99 nodes · 97 edges · 9 communities detected
+- 105 nodes · 103 edges · 9 communities detected
 - Extraction: 90% EXTRACTED · 10% INFERRED · 0% AMBIGUOUS · INFERRED: 10 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `2ec9a22c`
+- Built from commit: `2775b82a`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -32,10 +32,10 @@
 4. `cn()` - 6 edges
 5. `JupiterOne Senior Product Engineer (AI)` - 6 edges
 6. `Hybrid RAG System` - 5 edges
-7. `SiteHeader()` - 3 edges
+7. `SiteHeader()` - 4 edges
 8. `SiteFooter()` - 3 edges
-9. `getDeepDive()` - 3 edges
-10. `Juno AI` - 3 edges
+9. `Reveal()` - 3 edges
+10. `getDeepDive()` - 3 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `AI Assistant Portfolio` --references--> `Akshay Maru`  [INFERRED]
@@ -58,12 +58,12 @@
 ## Communities (19 total, 3 thin omitted)
 
 ### Community 0 - "Community 0"
-Cohesion: 0.14
-Nodes (17): Agentic Workflows, Akshar Eye Clinic & Optical House, Akshay Maru, Dr. Manoj Maru, Multi-Agent Systems, RAG Architecture, Remote Leaps, Vector Search (+9 more)
+Cohesion: 0.12
+Nodes (6): Hero(), HeroVisual(), SiteFooter(), SiteHeader(), getDeepDive(), generateMetadata()
 
 ### Community 1 - "Community 1"
-Cohesion: 0.18
-Nodes (5): Hero(), SiteFooter(), SiteHeader(), getDeepDive(), generateMetadata()
+Cohesion: 0.14
+Nodes (17): Agentic Workflows, Akshar Eye Clinic & Optical House, Akshay Maru, Dr. Manoj Maru, Multi-Agent Systems, RAG Architecture, Remote Leaps, Vector Search (+9 more)
 
 ### Community 2 - "Community 2"
 Cohesion: 0.17
@@ -89,13 +89,15 @@ Nodes (3): Indoor Decorative Setting, OpenGraph Social Share Image, Portfolio Ow
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Akshay Maru` connect `Community 0` to `Community 2`, `Community 4`?**
-  _High betweenness centrality (0.088) - this node is a cross-community bridge._
-- **Why does `AI Assistant Portfolio` connect `Community 2` to `Community 0`?**
-  _High betweenness centrality (0.069) - this node is a cross-community bridge._
-- **Why does `Akshay Maru Resume` connect `Community 0` to `Community 4`?**
-  _High betweenness centrality (0.051) - this node is a cross-community bridge._
+- **Why does `Akshay Maru` connect `Community 1` to `Community 2`, `Community 4`?**
+  _High betweenness centrality (0.078) - this node is a cross-community bridge._
+- **Why does `AI Assistant Portfolio` connect `Community 2` to `Community 1`?**
+  _High betweenness centrality (0.062) - this node is a cross-community bridge._
+- **Why does `Akshay Maru Resume` connect `Community 1` to `Community 4`?**
+  _High betweenness centrality (0.045) - this node is a cross-community bridge._
 - **What connects `Next.js Framework`, `Vercel AI SDK`, `OpenAI Integration` to the rest of the system?**
   _18 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
+  _Cohesion score 0.12 - nodes in this community are weakly interconnected._
+- **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.14 - nodes in this community are weakly interconnected._

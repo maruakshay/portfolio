@@ -4,7 +4,7 @@
     "hash": "239f3ebf717465dc636818a1a619398d"
   },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/next-env.d.ts": {
-    "mtime": 1781701315.0655468,
+    "mtime": 1781704094.6198137,
     "hash": "2a74d3909800ca5467fa83b0ab4a4890"
   },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/eslint.config.mjs": {
@@ -20,48 +20,60 @@
     "hash": "26fe4280ee1cf4dfef7964ff0788a76b"
   },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/app/page.tsx": {
-    "mtime": 1781701292.742609,
-    "hash": "a2bc634431530fd692297dab8ea232d6"
+    "mtime": 1781764190.9462008,
+    "hash": "61d3bfacec8b08fac500d15bddbcdd62"
   },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/app/not-found.tsx": {
     "mtime": 1781700537.5982914,
     "hash": "0b9fd76e0baacc31df87bf716ba04da0"
   },
+  "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/app/chat/page.tsx": {
+    "mtime": 1781759674.466043,
+    "hash": "f9e62cd3b471e3ea0898e58ae60fe5df"
+  },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/app/work/[slug]/page.tsx": {
-    "mtime": 1781700415.387321,
-    "hash": "d363e78de4aae930cedf0ba2ba8d5ea3"
+    "mtime": 1781759779.3729022,
+    "hash": "a0f65c659d29cf2e0277ee18bd712c16"
   },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/app/api/chat/route.ts": {
     "mtime": 1777958612.8929043,
     "hash": "91a7040742f4ca7f75ad6e1e6d9bd242"
   },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/components/hero.tsx": {
-    "mtime": 1781700320.357571,
-    "hash": "8a456c5008c0dfbf0739c3ab0762b4e5"
+    "mtime": 1781704436.7819443,
+    "hash": "7a620c70c07a765d146a71bb2e3021fd"
+  },
+  "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/components/chat-full.tsx": {
+    "mtime": 1781759665.5529044,
+    "hash": "1e7f39b2c52c698a82078cfd342ace8e"
   },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/components/work-bento.tsx": {
-    "mtime": 1781701280.035394,
-    "hash": "7eb5ffc0b507236d39b813bd4b265bc5"
+    "mtime": 1781702408.713884,
+    "hash": "b7124d559aa698d4b3ef1f4f9c678dea"
+  },
+  "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/components/hero-visual.tsx": {
+    "mtime": 1781704428.4002726,
+    "hash": "5be0fe411562bf3db5ea36a5788b2a51"
+  },
+  "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/components/capabilities.tsx": {
+    "mtime": 1781764175.471276,
+    "hash": "3bbbf89774fa249f24cb2ca02a957389"
   },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/components/site-header.tsx": {
-    "mtime": 1781701521.0824115,
-    "hash": "7be7fa6f3a762c3de3c6355b2b99471b"
+    "mtime": 1781764171.1858327,
+    "hash": "aa3b70aef716c2b6ab5bca244f14cc40"
   },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/components/site-footer.tsx": {
-    "mtime": 1781700347.871737,
-    "hash": "54858cce076b83e011bb955549118afb"
-  },
-  "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/components/chat-launcher.tsx": {
-    "mtime": 1781701545.45075,
-    "hash": "664d0445ab10860156ce33ed97d0e9c3"
+    "mtime": 1781764200.7617402,
+    "hash": "4d694bda1fd553fb13a1b626326234f7"
   },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/components/reveal.tsx": {
     "mtime": 1781700293.3063886,
     "hash": "959ac323141d246d71ffe9a55027d05d"
   },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/lib/content.ts": {
-    "mtime": 1781701055.4779878,
-    "hash": "cf0ea3c6cc9126e30ea3dea7c063ba77"
+    "mtime": 1781763996.6047745,
+    "hash": "5bbb63e669a3d004c4aecb92bd46d182"
   },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/PRODUCT.md": {
     "mtime": 1781699644.1790977,

@@ -123,7 +123,7 @@
       "source_file": "app/page.tsx",
       "source_location": "L1",
       "id": "app_page_tsx",
-      "community": 1,
+      "community": 0,
       "norm_label": "page.tsx"
     },
     {
@@ -132,7 +132,7 @@
       "source_file": "app/page.tsx",
       "source_location": "L7",
       "id": "app_page_home",
-      "community": 1,
+      "community": 0,
       "norm_label": "home()"
     },
     {
@@ -156,28 +156,46 @@
     {
       "label": "page.tsx",
       "file_type": "code",
+      "source_file": "app/chat/page.tsx",
+      "source_location": "L1",
+      "id": "app_chat_page_tsx",
+      "community": 0,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "ChatPage()",
+      "file_type": "code",
+      "source_file": "app/chat/page.tsx",
+      "source_location": "L11",
+      "id": "chat_page_chatpage",
+      "community": 0,
+      "norm_label": "chatpage()"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
       "source_file": "app/work/[slug]/page.tsx",
       "source_location": "L1",
       "id": "app_work_slug_page_tsx",
-      "community": 1,
+      "community": 0,
       "norm_label": "page.tsx"
     },
     {
       "label": "generateStaticParams()",
       "file_type": "code",
       "source_file": "app/work/[slug]/page.tsx",
-      "source_location": "L10",
+      "source_location": "L9",
       "id": "slug_page_generatestaticparams",
-      "community": 1,
+      "community": 0,
       "norm_label": "generatestaticparams()"
     },
     {
       "label": "generateMetadata()",
       "file_type": "code",
       "source_file": "app/work/[slug]/page.tsx",
-      "source_location": "L14",
+      "source_location": "L13",
       "id": "slug_page_generatemetadata",
-      "community": 1,
+      "community": 0,
       "norm_label": "generatemetadata()"
     },
     {
@@ -213,17 +231,35 @@
       "source_file": "components/hero.tsx",
       "source_location": "L1",
       "id": "components_hero_tsx",
-      "community": 1,
+      "community": 0,
       "norm_label": "hero.tsx"
     },
     {
       "label": "Hero()",
       "file_type": "code",
       "source_file": "components/hero.tsx",
-      "source_location": "L3",
+      "source_location": "L4",
       "id": "components_hero_hero",
-      "community": 1,
+      "community": 0,
       "norm_label": "hero()"
+    },
+    {
+      "label": "chat-full.tsx",
+      "file_type": "code",
+      "source_file": "components/chat-full.tsx",
+      "source_location": "L1",
+      "id": "components_chat_full_tsx",
+      "community": 13,
+      "norm_label": "chat-full.tsx"
+    },
+    {
+      "label": "onKeyDown()",
+      "file_type": "code",
+      "source_file": "components/chat-full.tsx",
+      "source_location": "L86",
+      "id": "components_chat_full_onkeydown",
+      "community": 13,
+      "norm_label": "onkeydown()"
     },
     {
       "label": "work-bento.tsx",
@@ -238,10 +274,37 @@
       "label": "Cell()",
       "file_type": "code",
       "source_file": "components/work-bento.tsx",
-      "source_location": "L17",
+      "source_location": "L38",
       "id": "components_work_bento_cell",
       "community": 7,
       "norm_label": "cell()"
+    },
+    {
+      "label": "hero-visual.tsx",
+      "file_type": "code",
+      "source_file": "components/hero-visual.tsx",
+      "source_location": "L1",
+      "id": "components_hero_visual_tsx",
+      "community": 0,
+      "norm_label": "hero-visual.tsx"
+    },
+    {
+      "label": "HeroVisual()",
+      "file_type": "code",
+      "source_file": "components/hero-visual.tsx",
+      "source_location": "L28",
+      "id": "components_hero_visual_herovisual",
+      "community": 0,
+      "norm_label": "herovisual()"
+    },
+    {
+      "label": "capabilities.tsx",
+      "file_type": "code",
+      "source_file": "components/capabilities.tsx",
+      "source_location": "L1",
+      "id": "components_capabilities_tsx",
+      "community": 7,
+      "norm_label": "capabilities.tsx"
     },
     {
       "label": "site-header.tsx",
@@ -249,7 +312,7 @@
       "source_file": "components/site-header.tsx",
       "source_location": "L1",
       "id": "components_site_header_tsx",
-      "community": 1,
+      "community": 0,
       "norm_label": "site-header.tsx"
     },
     {
@@ -258,7 +321,7 @@
       "source_file": "components/site-header.tsx",
       "source_location": "L4",
       "id": "components_site_header_siteheader",
-      "community": 1,
+      "community": 0,
       "norm_label": "siteheader()"
     },
     {
@@ -267,44 +330,17 @@
       "source_file": "components/site-footer.tsx",
       "source_location": "L1",
       "id": "components_site_footer_tsx",
-      "community": 1,
+      "community": 0,
       "norm_label": "site-footer.tsx"
     },
     {
       "label": "SiteFooter()",
       "file_type": "code",
       "source_file": "components/site-footer.tsx",
-      "source_location": "L3",
+      "source_location": "L4",
       "id": "components_site_footer_sitefooter",
-      "community": 1,
+      "community": 0,
       "norm_label": "sitefooter()"
-    },
-    {
-      "label": "chat-launcher.tsx",
-      "file_type": "code",
-      "source_file": "components/chat-launcher.tsx",
-      "source_location": "L1",
-      "id": "components_chat_launcher_tsx",
-      "community": 9,
-      "norm_label": "chat-launcher.tsx"
-    },
-    {
-      "label": "onKey()",
-      "file_type": "code",
-      "source_file": "components/chat-launcher.tsx",
-      "source_location": "L48",
-      "id": "components_chat_launcher_onkey",
-      "community": 9,
-      "norm_label": "onkey()"
-    },
-    {
-      "label": "onKeyDown()",
-      "file_type": "code",
-      "source_file": "components/chat-launcher.tsx",
-      "source_location": "L94",
-      "id": "components_chat_launcher_onkeydown",
-      "community": 9,
-      "norm_label": "onkeydown()"
     },
     {
       "label": "reveal.tsx",
@@ -330,7 +366,7 @@
       "source_file": "lib/content.ts",
       "source_location": "L1",
       "id": "lib_content_ts",
-      "community": 1,
+      "community": 0,
       "norm_label": "content.ts"
     },
     {
@@ -339,15 +375,42 @@
       "source_file": "lib/content.ts",
       "source_location": "L209",
       "id": "lib_content_getdeepdive",
-      "community": 1,
+      "community": 0,
       "norm_label": "getdeepdive()"
+    },
+    {
+      "label": "chat-launcher.tsx",
+      "file_type": "code",
+      "source_file": "components/chat-launcher.tsx",
+      "source_location": "L1",
+      "community": 9,
+      "norm_label": "chat-launcher.tsx",
+      "id": "components_chat_launcher_tsx"
+    },
+    {
+      "label": "onKey()",
+      "file_type": "code",
+      "source_file": "components/chat-launcher.tsx",
+      "source_location": "L48",
+      "community": 9,
+      "norm_label": "onkey()",
+      "id": "components_chat_launcher_onkey"
+    },
+    {
+      "label": "onKeyDown()",
+      "file_type": "code",
+      "source_file": "components/chat-launcher.tsx",
+      "source_location": "L94",
+      "community": 9,
+      "norm_label": "onkeydown()",
+      "id": "components_chat_launcher_onkeydown"
     },
     {
       "label": "layout.tsx",
       "file_type": "code",
       "source_file": "app/chat/layout.tsx",
       "source_location": "L1",
-      "community": 13,
+      "community": 14,
       "norm_label": "layout.tsx",
       "id": "app_chat_layout_tsx"
     },
@@ -356,25 +419,16 @@
       "file_type": "code",
       "source_file": "app/chat/layout.tsx",
       "source_location": "L3",
-      "community": 13,
+      "community": 14,
       "norm_label": "chatlayout()",
       "id": "chat_layout_chatlayout"
-    },
-    {
-      "label": "page.tsx",
-      "file_type": "code",
-      "source_file": "app/chat/page.tsx",
-      "source_location": "L1",
-      "community": 14,
-      "norm_label": "page.tsx",
-      "id": "app_chat_page_tsx"
     },
     {
       "label": "ChatDemo()",
       "file_type": "code",
       "source_file": "app/chat/page.tsx",
       "source_location": "L5",
-      "community": 14,
+      "community": 0,
       "norm_label": "chatdemo()",
       "id": "chat_page_chatdemo"
     },
@@ -759,7 +813,7 @@
       "captured_at": null,
       "author": "Akshay Maru",
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "akshay maru",
       "id": "personal_akshay_maru"
     },
@@ -798,7 +852,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "remote leaps",
       "id": "personal_remote_leaps"
     },
@@ -812,7 +866,7 @@
       "author": null,
       "contributor": null,
       "rationale": "Chosen for production-grade LLM systems to enable context-aware, security-grounded answers with data boundaries, explainability, and reliability rather than raw intelligence alone",
-      "community": 0,
+      "community": 1,
       "norm_label": "rag architecture",
       "id": "personal_rag_architecture"
     },
@@ -839,7 +893,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "vector search",
       "id": "personal_vector_search"
     },
@@ -852,7 +906,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "agentic workflows",
       "id": "personal_agentic_workflows"
     },
@@ -865,7 +919,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "multi-agent systems",
       "id": "personal_multi_agent_systems"
     },
@@ -878,7 +932,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "dr. manoj maru",
       "id": "personal_manoj_maru"
     },
@@ -891,7 +945,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "akshar eye clinic & optical house",
       "id": "personal_akshar_eye_clinic"
     },
@@ -904,7 +958,7 @@
       "captured_at": null,
       "author": "Akshay Maru",
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "akshay maru resume",
       "id": "resume_akshay_maru"
     },
@@ -944,7 +998,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "remote leaps founder & senior product engineer",
       "id": "resume_remote_leaps_role"
     },
@@ -957,7 +1011,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "virtual internships senior software developer",
       "id": "resume_virtual_internships_role"
     },
@@ -970,7 +1024,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "rapid innovation software developer",
       "id": "resume_rapid_innovation_role"
     },
@@ -996,7 +1050,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "langgraph",
       "id": "resume_langgraph"
     },
@@ -1010,7 +1064,7 @@
       "author": null,
       "contributor": null,
       "rationale": "Early adoption of MCP for secure, scalable tool-calling and agentic workflows in production systems",
-      "community": 0,
+      "community": 1,
       "norm_label": "model context protocol (mcp)",
       "id": "resume_mcp"
     },
@@ -1023,7 +1077,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "lora/peft fine-tuning",
       "id": "resume_lora_peft"
     },
@@ -1049,7 +1103,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "dhirubhai ambani university",
       "id": "resume_dau"
     },
@@ -1062,7 +1116,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "nft module with metamask & solidity",
       "id": "resume_nft_module"
     },
@@ -1138,9 +1192,9 @@
       "source_file": "app/page.tsx",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_page_tsx",
-      "target": "components_site_header_siteheader",
-      "confidence_score": 1.0
+      "target": "components_site_header_siteheader"
     },
     {
       "relation": "imports",
@@ -1149,9 +1203,9 @@
       "source_file": "app/page.tsx",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_page_tsx",
-      "target": "components_hero_hero",
-      "confidence_score": 1.0
+      "target": "components_hero_hero"
     },
     {
       "relation": "imports",
@@ -1160,9 +1214,9 @@
       "source_file": "app/page.tsx",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_page_tsx",
-      "target": "components_site_footer_sitefooter",
-      "confidence_score": 1.0
+      "target": "components_site_footer_sitefooter"
     },
     {
       "relation": "contains",
@@ -1191,9 +1245,40 @@
       "source_file": "app/not-found.tsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_not_found_tsx",
-      "target": "app_not_found_notfound",
+      "target": "app_not_found_notfound"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/chat/page.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "app_chat_page_tsx",
+      "target": "components_site_header_siteheader",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/chat/page.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "app_chat_page_tsx",
+      "target": "chat_page_chatpage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/chat/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "app_chat_page_tsx",
+      "target": "chat_page_chatdemo"
     },
     {
       "relation": "imports",
@@ -1202,9 +1287,9 @@
       "source_file": "app/work/[slug]/page.tsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_work_slug_page_tsx",
-      "target": "lib_content_getdeepdive",
-      "confidence_score": 1.0
+      "target": "lib_content_getdeepdive"
     },
     {
       "relation": "imports",
@@ -1213,9 +1298,9 @@
       "source_file": "app/work/[slug]/page.tsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_work_slug_page_tsx",
-      "target": "components_site_header_siteheader",
-      "confidence_score": 1.0
+      "target": "components_site_header_siteheader"
     },
     {
       "relation": "imports",
@@ -1224,9 +1309,9 @@
       "source_file": "app/work/[slug]/page.tsx",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_work_slug_page_tsx",
-      "target": "components_site_footer_sitefooter",
-      "confidence_score": 1.0
+      "target": "components_site_footer_sitefooter"
     },
     {
       "relation": "contains",
@@ -1234,9 +1319,9 @@
       "source_file": "app/work/[slug]/page.tsx",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_work_slug_page_tsx",
-      "target": "slug_page_generatestaticparams",
-      "confidence_score": 1.0
+      "target": "slug_page_generatestaticparams"
     },
     {
       "relation": "contains",
@@ -1244,9 +1329,9 @@
       "source_file": "app/work/[slug]/page.tsx",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_work_slug_page_tsx",
-      "target": "slug_page_generatemetadata",
-      "confidence_score": 1.0
+      "target": "slug_page_generatemetadata"
     },
     {
       "relation": "calls",
@@ -1300,13 +1385,34 @@
       "target": "chat_route_callmodel"
     },
     {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "components/hero.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "components_hero_tsx",
+      "target": "components_hero_visual_herovisual",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "components/hero.tsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_hero_tsx",
-      "target": "components_hero_hero",
+      "target": "components_hero_hero"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/chat-full.tsx",
+      "source_location": "L86",
+      "weight": 1.0,
+      "source": "components_chat_full_tsx",
+      "target": "components_chat_full_onkeydown",
       "confidence_score": 1.0
     },
     {
@@ -1316,9 +1422,9 @@
       "source_file": "components/work-bento.tsx",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_work_bento_tsx",
-      "target": "components_reveal_reveal",
-      "confidence_score": 1.0
+      "target": "components_reveal_reveal"
     },
     {
       "relation": "contains",
@@ -1326,8 +1432,29 @@
       "source_file": "components/work-bento.tsx",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_work_bento_tsx",
-      "target": "components_work_bento_cell",
+      "target": "components_work_bento_cell"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/hero-visual.tsx",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "components_hero_visual_tsx",
+      "target": "components_hero_visual_herovisual",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "components/capabilities.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "components_capabilities_tsx",
+      "target": "components_reveal_reveal",
       "confidence_score": 1.0
     },
     {
@@ -1336,9 +1463,9 @@
       "source_file": "components/site-header.tsx",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_site_header_tsx",
-      "target": "components_site_header_siteheader",
-      "confidence_score": 1.0
+      "target": "components_site_header_siteheader"
     },
     {
       "relation": "contains",
@@ -1346,29 +1473,9 @@
       "source_file": "components/site-footer.tsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_site_footer_tsx",
-      "target": "components_site_footer_sitefooter",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "components/chat-launcher.tsx",
-      "source_location": "L48",
-      "weight": 1.0,
-      "source": "components_chat_launcher_tsx",
-      "target": "components_chat_launcher_onkey",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "components/chat-launcher.tsx",
-      "source_location": "L94",
-      "weight": 1.0,
-      "source": "components_chat_launcher_tsx",
-      "target": "components_chat_launcher_onkeydown",
-      "confidence_score": 1.0
+      "target": "components_site_footer_sitefooter"
     },
     {
       "relation": "contains",
@@ -1376,9 +1483,9 @@
       "source_file": "components/reveal.tsx",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_reveal_tsx",
-      "target": "components_reveal_reveal",
-      "confidence_score": 1.0
+      "target": "components_reveal_reveal"
     },
     {
       "relation": "contains",
@@ -1386,9 +1493,29 @@
       "source_file": "lib/content.ts",
       "source_location": "L209",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lib_content_ts",
-      "target": "lib_content_getdeepdive",
-      "confidence_score": 1.0
+      "target": "lib_content_getdeepdive"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/chat-launcher.tsx",
+      "source_location": "L48",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "components_chat_launcher_tsx",
+      "target": "components_chat_launcher_onkey"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/chat-launcher.tsx",
+      "source_location": "L94",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "components_chat_launcher_tsx",
+      "target": "components_chat_launcher_onkeydown"
     },
     {
       "relation": "contains",
@@ -1399,16 +1526,6 @@
       "confidence_score": 1.0,
       "source": "app_chat_layout_tsx",
       "target": "chat_layout_chatlayout"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "app/chat/page.tsx",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "app_chat_page_tsx",
-      "target": "chat_page_chatdemo"
     },
     {
       "relation": "imports",
@@ -2168,5 +2285,5 @@
       "source_file": "app/opengraph-image.png"
     }
   ],
-  "built_at_commit": "2ec9a22cb7097a0a360bc181b7161610b6997eb2"
+  "built_at_commit": "2775b82a39e0755b440859d56db33094cdda07f0"
 }

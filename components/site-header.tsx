@@ -36,12 +36,6 @@ export function SiteHeader() {
           >
             Résumé
           </a>
-          <a
-            href={`mailto:${profile.email}`}
-            className="hidden border border-rule px-3 py-1.5 text-xs font-medium uppercase tracking-[0.08em] text-paper transition-colors hover:border-amber sm:inline-block"
-          >
-            Get in touch
-          </a>
         </nav>
       </div>
     </header>

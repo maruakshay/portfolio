@@ -6,8 +6,8 @@ export function SiteFooter() {
     <footer className="border-t border-rule">
       <div className="mx-auto max-w-5xl px-5 py-16 md:px-8 md:py-24">
         <p className="label mb-4">Let&apos;s talk</p>
-        <h2 className="max-w-[16ch] font-display text-[clamp(1.75rem,4.5vw,3rem)] font-medium leading-[1.08] tracking-[-0.015em] text-paper">
-          If any of this is the kind of work your team is doing, reach out.
+        <h2 className="max-w-[18ch] font-display text-[clamp(1.75rem,4.5vw,3rem)] font-medium leading-[1.08] tracking-[-0.015em] text-paper">
+          You were going to hire for three roles. Talk to me first.
         </h2>
 
         <div className="mt-10 grid grid-cols-1 gap-x-8 gap-y-8 border-t border-rule pt-8 sm:grid-cols-3">
