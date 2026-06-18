@@ -14,7 +14,8 @@ export function Hero() {
         </p>
 
         <h1 className="max-w-[20ch] font-display text-[clamp(2.5rem,6.5vw,5rem)] font-normal leading-[1.02] tracking-[-0.02em] text-paper">
-          {profile.statementLead}
+          Most AI demos die in <em className="italic text-amber">production</em>. I
+          build the ones that don&apos;t.
         </h1>
         <p className="prose-mono mt-7 text-base leading-[1.7] text-paper-muted">
           {profile.statementRest}

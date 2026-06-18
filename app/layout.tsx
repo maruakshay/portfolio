@@ -7,6 +7,7 @@ const fraunces = Fraunces({
   variable: "--font-display",
   subsets: ["latin"],
   axes: ["SOFT", "WONK", "opsz"],
+  style: ["normal", "italic"],
   display: "swap",
 });
 
@@ -71,7 +72,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${fraunces.variable} ${geistMono.variable} antialiased`}>
+      <body
+        className={`${fraunces.variable} ${geistMono.variable} antialiased`}
+      >
         {children}
         <Analytics />
       </body>
