@@ -3,12 +3,14 @@
 
 export const profile = {
   name: "Akshay Maru",
-  role: "AI Product Engineer",
-  statementLead: "Most AI demos die in production. I build the ones that don't.",
+  role: "Senior / Staff AI Engineer & Product Engineer",
+  statementLead:
+    "Most AI demos die in production. I build the ones that don't.",
   statementRest:
     "End to end: the streaming interface and the model behind it. Right now, an enterprise AI assistant on AWS Bedrock at JupiterOne. Before it, an AI SaaS I founded, grew past 40,000 users, and sold. Alongside it, local-first AI tooling I maintain in the open.",
   location: "India",
-  availability: "Open to US / UK / Canada · remote or relocation · needs visa sponsorship",
+  availability:
+    "Open to US / UK / Canada · remote or relocation · needs visa sponsorship",
   email: "maruakshay4@gmail.com",
   github: "https://github.com/maruakshay",
   linkedin: "https://linkedin.com/in/akshaymaru61",
@@ -44,7 +46,7 @@ export const ledger: LedgerEntry[] = [
   {
     kind: "oss",
     slug: "miii-cli",
-    meta: "TS · 21★",
+    meta: "TS · 29★",
     title: "miii-cli",
     sub: "Local-first AI coding agent in your terminal",
     blurb:
@@ -155,9 +157,13 @@ export const deepDives: DeepDive[] = [
   {
     slug: "miii",
     name: "miii",
-    tagline: "A privacy-first local AI assistant with two front ends and one memory.",
+    tagline:
+      "A privacy-first local AI assistant with two front ends and one memory.",
     meta: [
-      { label: "Stack", value: "Next.js · React 19 · Tailwind 4 · Ink · LangGraph · Ollama" },
+      {
+        label: "Stack",
+        value: "Next.js · React 19 · Tailwind 4 · Ink · LangGraph · Ollama",
+      },
       { label: "Status", value: "Actively maintained · 8★" },
       { label: "Surfaces", value: "Web UI + terminal TUI" },
     ],
@@ -187,7 +193,10 @@ export const deepDives: DeepDive[] = [
       { label: "Coverage", value: "58 skills · 12 domains" },
     ],
     links: [
-      { label: "GitHub", href: "https://github.com/maruakshay/mii-ai-security" },
+      {
+        label: "GitHub",
+        href: "https://github.com/maruakshay/mii-ai-security",
+      },
     ],
     sections: [
       {
