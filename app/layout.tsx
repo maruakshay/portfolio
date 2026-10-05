@@ -1,12 +1,22 @@
 import type { Metadata } from "next";
-import { Fraunces, Geist_Mono } from "next/font/google";
+import { Cormorant_Garamond, EB_Garamond, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
+import { CommandPalette } from "@/components/command-palette";
 
-const fraunces = Fraunces({
+// Classical display serif for headings, a Garamond book face for reading,
+// and a monospace for the engineer's annotations.
+const cormorant = Cormorant_Garamond({
   variable: "--font-display",
   subsets: ["latin"],
-  axes: ["SOFT", "WONK", "opsz"],
+  weight: ["400", "500", "600"],
+  style: ["normal", "italic"],
+  display: "swap",
+});
+
+const garamond = EB_Garamond({
+  variable: "--font-body",
+  subsets: ["latin"],
   style: ["normal", "italic"],
   display: "swap",
 });
@@ -21,7 +31,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://akshay-portfolio-zeta.vercel.app"),
   title: "Akshay Maru — AI Product Engineer",
   description:
-    "Senior AI product engineer. Leads the frontend of an enterprise AI assistant on AWS Bedrock, founded and exited an AI SaaS (40K+ users), ships local-first AI tooling and LLM security as open source.",
+    "Senior full-stack AI engineer at Commotion, securing SaaS products. Built an enterprise AI assistant on AWS Bedrock, founded and exited an AI SaaS (40K+ users), and ships open-source AI tooling like miii.",
   keywords: [
     "Akshay Maru",
     "AI Product Engineer",
@@ -73,9 +83,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${fraunces.variable} ${geistMono.variable} antialiased`}
+        className={`${cormorant.variable} ${garamond.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <CommandPalette />
         <Analytics />
       </body>
     </html>

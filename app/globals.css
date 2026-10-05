@@ -1,53 +1,39 @@
 @import "tailwindcss";
 
 /*
-  Design System: "The Lit Terminal"
-  Warm near-black ground, paper-white type, one amber signal.
+  Design System: "The Atelier Notebook"
+  A Renaissance sketchbook kept by an engineer. Canvas ground, sepia ink,
+  red-chalk (sanguine) accent, gilt hairlines, monospace annotations.
   Tokens mirror DESIGN.md. OKLCH throughout.
 */
 
 @theme {
-  /* Color — neutrals */
-  --color-ground: oklch(0.17 0.008 65);
-  --color-surface: oklch(0.21 0.008 65);
-  --color-surface-alt: oklch(0.25 0.008 65);
-  --color-rule: oklch(0.33 0.008 65);
-  --color-paper: oklch(0.95 0.01 80);
-  --color-paper-muted: oklch(0.74 0.012 75);
-  --color-paper-faint: oklch(0.67 0.012 72);
+  /* Color — canvas & ink */
+  --color-canvas: oklch(0.965 0.012 85);
+  --color-canvas-deep: oklch(0.935 0.018 82);
+  --color-canvas-shade: oklch(0.9 0.024 80);
+  --color-rule: oklch(0.82 0.025 75);
+  --color-ink: oklch(0.22 0.02 55);
+  --color-ink-muted: oklch(0.4 0.02 58);
+  --color-ink-faint: oklch(0.52 0.02 62);
 
-  /* Color — single signal */
-  --color-amber: oklch(0.76 0.16 65);
-  --color-amber-deep: oklch(0.7 0.16 60);
-  --color-tint: oklch(0.3 0.05 65);
-
-  /* Color — system */
-  --color-alert: oklch(0.64 0.19 28);
+  /* Color — pigments */
+  --color-sanguine: oklch(0.52 0.14 38);
+  --color-sanguine-deep: oklch(0.45 0.13 36);
+  --color-gilt: oklch(0.68 0.1 78);
+  --color-lapis: oklch(0.42 0.1 255);
 
   /* Type */
-  --font-display: var(--font-display), Georgia, serif;
+  --font-display: var(--font-display), Garamond, Georgia, serif;
+  --font-body: var(--font-body), Garamond, Georgia, serif;
   --font-mono: var(--font-mono), ui-monospace, "SFMono-Regular", monospace;
 
-  /* Radius — hard edges only */
+  /* Radius — hard edges, like a framed print */
   --radius-none: 0px;
   --radius-sm: 2px;
-  --radius-md: 4px;
 
   /* Motion */
   --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
-
-  --animate-reveal: reveal 280ms var(--ease-out-quart) both;
-
-  @keyframes reveal {
-    from {
-      opacity: 0;
-      transform: translateY(8px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
 
   @keyframes blink {
     0%,
@@ -66,13 +52,20 @@
   }
 
   body {
-    background-color: var(--color-ground);
-    color: var(--color-paper-muted);
-    font-family: var(--font-mono);
-    font-size: 0.9375rem;
-    line-height: 1.7;
+    background-color: var(--color-canvas);
+    /* Soft gallery light falling from the top left */
+    background-image: radial-gradient(
+      ellipse at 15% 0%,
+      oklch(0.99 0.008 88 / 0.9),
+      transparent 60%
+    );
+    background-attachment: fixed;
+    color: var(--color-ink-muted);
+    font-family: var(--font-body);
+    font-size: 1.125rem;
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
-    font-feature-settings: "calt" 1;
+    font-feature-settings: "liga" 1, "onum" 1;
   }
 
   h1,
@@ -80,20 +73,19 @@
   h3,
   h4 {
     font-family: var(--font-display);
-    color: var(--color-paper);
+    color: var(--color-ink);
     font-weight: 500;
     text-wrap: balance;
   }
 
   ::selection {
-    background-color: var(--color-amber);
-    color: var(--color-ground);
+    background-color: var(--color-sanguine);
+    color: var(--color-canvas);
   }
 
-  /* Focus: hard amber outline, never a soft ring */
   :focus-visible {
-    outline: 2px solid var(--color-amber);
-    outline-offset: 2px;
+    outline: 2px solid var(--color-sanguine);
+    outline-offset: 3px;
   }
 
   a {
@@ -103,68 +95,98 @@
 }
 
 @layer components {
-  /* Uppercase mono label — nav, meta, ledger keys */
+  /* Monospace annotation — nav, meta, figure captions */
   .label {
     font-family: var(--font-mono);
     font-size: 0.75rem;
     font-weight: 500;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: var(--color-paper-faint);
+    color: var(--color-ink-faint);
   }
 
-  /* The single amber square mark (cursor / status) */
+  /* The single sanguine mark (cursor / status) */
   .mark {
     display: inline-block;
     width: 6px;
     height: 6px;
-    background-color: var(--color-amber);
+    background-color: var(--color-sanguine);
   }
 
   .mark-blink {
     animation: blink 1.2s step-end infinite;
   }
 
-  .prose-mono {
-    max-width: 70ch;
+  /* Gilt passe-partout: a thin double frame, as around a framed drawing */
+  .frame {
+    border: 1px solid var(--color-gilt);
+    outline: 1px solid var(--color-rule);
+    outline-offset: 4px;
   }
-  .prose-mono p {
-    color: var(--color-paper-muted);
+
+  /* Faint drafting grid, like squared paper under a study */
+  .drafting {
+    --grid-line: color-mix(in oklch, var(--color-rule), transparent 55%);
+    background-image:
+      linear-gradient(var(--grid-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size: 32px 32px;
+    background-position: -1px -1px;
+    background-color: var(--color-canvas-deep);
   }
-  .prose-mono a {
-    color: var(--color-amber);
+
+  /* Large italic initial opening a passage */
+  .initial::first-letter {
+    float: left;
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 3.6em;
+    line-height: 0.85;
+    padding: 0.06em 0.1em 0 0;
+    color: var(--color-sanguine);
+  }
+
+  .prose-folio {
+    max-width: 66ch;
+  }
+  .prose-folio p {
+    color: var(--color-ink-muted);
+  }
+  .prose-folio a {
+    color: var(--color-sanguine);
     text-underline-offset: 3px;
     text-decoration: underline;
-    text-decoration-color: color-mix(in oklch, var(--color-amber), transparent 55%);
+    text-decoration-color: color-mix(in oklch, var(--color-sanguine), transparent 55%);
     transition: text-decoration-color 180ms var(--ease-out-quart);
   }
-  .prose-mono a:hover {
-    text-decoration-color: var(--color-amber);
+  .prose-folio a:hover {
+    text-decoration-color: var(--color-sanguine);
   }
-  .prose-mono code {
+  .prose-folio code {
     font-family: var(--font-mono);
-    font-size: 0.85em;
-    background-color: var(--color-surface);
+    font-size: 0.78em;
+    color: var(--color-lapis);
+    background-color: var(--color-canvas-deep);
     border: 1px solid var(--color-rule);
     padding: 0.1em 0.35em;
   }
-  .prose-mono ul {
+  .prose-folio ul {
     list-style: none;
     padding: 0;
   }
-  .prose-mono li {
+  .prose-folio li {
     position: relative;
     padding-left: 1.25rem;
-    color: var(--color-paper-muted);
+    color: var(--color-ink-muted);
   }
-  .prose-mono li::before {
+  .prose-folio li::before {
     content: "";
     position: absolute;
     left: 0;
-    top: 0.65em;
-    width: 5px;
-    height: 5px;
-    background-color: var(--color-amber);
+    top: 0.68em;
+    width: 8px;
+    height: 1px;
+    background-color: var(--color-sanguine);
   }
 }
 

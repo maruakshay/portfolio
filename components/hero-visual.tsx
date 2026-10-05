@@ -3,24 +3,24 @@
 import { useEffect, useRef, useState } from "react";
 import { useReducedMotion } from "framer-motion";
 
-// How I think, as a graph you can play with. Five first-principle nodes on
-// springy edges: drag and fling them, the network reacts to your cursor,
-// amber signals pulse through, and clicking a node opens its principle.
+// How I think, as a Renaissance-notebook study you can play with. Five
+// principles drawn as compass-ruled nodes on springy construction lines: drag
+// and fling them, red-chalk signals travel the lines, click to read one.
 type P = { k: string; n: string; q: string; a: string; x: number; y: number };
 
 const NODES: P[] = [
-  { k: "WHY", n: "01", q: "Why build it", a: "Most AI demos die in production. I build the ones that survive contact with real users.", x: 0.16, y: 0.26 },
-  { k: "WHAT", n: "02", q: "What to build", a: "The whole AI product, the streaming interface and the model behind it. Nothing thrown over a wall.", x: 0.5, y: 0.18 },
-  { k: "WHO", n: "03", q: "Who it is for", a: "The person actually using it, not the demo audience. Human over impressive.", x: 0.84, y: 0.32 },
-  { k: "HOW", n: "04", q: "How I work", a: "Show, don't tell. Specific decisions, real tradeoffs, code you can read on GitHub.", x: 0.3, y: 0.76 },
-  { k: "WHEN", n: "05", q: "When to stop", a: "Knowing when to stop is the signal. Subtract before adding.", x: 0.74, y: 0.78 },
+  { k: "Why", n: "I", q: "Why build it", a: "Most AI demos die in production. I build the ones that survive contact with real users.", x: 0.16, y: 0.26 },
+  { k: "What", n: "II", q: "What to build", a: "The whole AI product, the streaming interface and the model behind it. Nothing thrown over a wall.", x: 0.5, y: 0.18 },
+  { k: "Who", n: "III", q: "Who it is for", a: "The person actually using it, not the demo audience. Human over impressive.", x: 0.84, y: 0.32 },
+  { k: "How", n: "IV", q: "How I work", a: "Show, don't tell. Specific decisions, real tradeoffs, code you can read on GitHub.", x: 0.3, y: 0.76 },
+  { k: "When", n: "V", q: "When to stop", a: "Knowing when to stop is the signal. Subtract before adding.", x: 0.74, y: 0.78 },
 ];
 
 const EDGES: [number, number][] = [
   [0, 1], [1, 2], [0, 3], [1, 4], [2, 4], [3, 4], [0, 2],
 ];
 
-const C = { node: "#5c574f", edge: "#3a3631", amber: "#e7a23a", paper: "#efe9df", faint: "#a39d92", surface: "#2a2723" };
+const C = { edge: "#b8a98f", gilt: "#b8955a", sanguine: "#a5492c", ink: "#3a2c20", faint: "#7d6f60", fill: "#f4eee3" };
 
 type Pt = { x: number; y: number; vx: number; vy: number; hx: number; hy: number };
 type Sig = { a: number; b: number; t: number; sp: number };
@@ -40,6 +40,10 @@ export function HeroVisual() {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    // next/font hashes family names; read the real ones off the CSS variables.
+    const css = getComputedStyle(wrap);
+    const serif = css.getPropertyValue("--font-display").trim() || "Georgia, serif";
+    const mono = css.getPropertyValue("--font-mono").trim() || "ui-monospace, monospace";
 
     let w = 0, h = 0;
     let pts: Pt[] = [];
@@ -119,33 +123,44 @@ export function HeroVisual() {
         const on = act === a || act === b || hover === a || hover === b;
         ctx!.beginPath();
         ctx!.moveTo(pts[a].x, pts[a].y); ctx!.lineTo(pts[b].x, pts[b].y);
-        ctx!.strokeStyle = on ? C.amber : C.edge;
-        ctx!.globalAlpha = on ? 0.5 : 1; ctx!.lineWidth = 1; ctx!.stroke(); ctx!.globalAlpha = 1;
+        ctx!.strokeStyle = on ? C.sanguine : C.edge;
+        ctx!.setLineDash(on ? [] : [4, 4]);
+        ctx!.globalAlpha = on ? 0.7 : 1; ctx!.lineWidth = on ? 1.5 : 1; ctx!.stroke(); ctx!.globalAlpha = 1;
+        ctx!.setLineDash([]);
       });
       // signals
-      ctx!.shadowColor = C.amber; ctx!.shadowBlur = 10;
+      ctx!.shadowColor = C.sanguine; ctx!.shadowBlur = 6;
       for (const s of sigs) {
         const A = pts[s.a], B = pts[s.b];
         const x = A.x + (B.x - A.x) * s.t, y = A.y + (B.y - A.y) * s.t;
-        ctx!.beginPath(); ctx!.arc(x, y, 3, 0, 7); ctx!.fillStyle = C.amber; ctx!.fill();
+        ctx!.beginPath(); ctx!.arc(x, y, 3, 0, 7); ctx!.fillStyle = C.sanguine; ctx!.fill();
       }
       ctx!.shadowBlur = 0;
       // nodes
       pts.forEach((p, i) => {
         const on = act === i; const hv = hover === i;
-        ctx!.fillStyle = on ? C.amber : C.surface;
-        ctx!.strokeStyle = C.amber; ctx!.lineWidth = 1;
-        const s = on || hv ? 7 : 6;
-        ctx!.beginPath(); ctx!.rect(p.x - s, p.y - s, s * 2, s * 2); ctx!.fill(); ctx!.stroke();
+        // compass-drawn node with crosshair construction marks
+        const s = on || hv ? 10 : 8;
+        ctx!.beginPath(); ctx!.arc(p.x, p.y, s, 0, 7);
+        ctx!.fillStyle = on ? C.sanguine : C.fill; ctx!.fill();
+        ctx!.strokeStyle = on ? C.sanguine : C.ink; ctx!.lineWidth = 1; ctx!.stroke();
+        ctx!.beginPath(); ctx!.arc(p.x, p.y, s + 5, 0, 7);
+        ctx!.strokeStyle = C.gilt; ctx!.globalAlpha = on || hv ? 0.9 : 0.45; ctx!.stroke(); ctx!.globalAlpha = 1;
+        ctx!.beginPath();
+        ctx!.moveTo(p.x - s - 9, p.y); ctx!.lineTo(p.x - s - 3, p.y);
+        ctx!.moveTo(p.x + s + 3, p.y); ctx!.lineTo(p.x + s + 9, p.y);
+        ctx!.moveTo(p.x, p.y - s - 9); ctx!.lineTo(p.x, p.y - s - 3);
+        ctx!.moveTo(p.x, p.y + s + 3); ctx!.lineTo(p.x, p.y + s + 9);
+        ctx!.strokeStyle = C.edge; ctx!.stroke();
         ctx!.textBaseline = "middle";
         const right = p.x < w * 0.62;
         ctx!.textAlign = right ? "left" : "right";
-        const lx = right ? p.x + 14 : p.x - 14;
+        const lx = right ? p.x + 22 : p.x - 22;
         ctx!.fillStyle = C.faint;
-        ctx!.font = "500 10px ui-monospace, monospace";
+        ctx!.font = `500 10px ${mono}`;
         ctx!.fillText(NODES[i].n, lx, p.y - 6);
-        ctx!.fillStyle = on ? C.amber : C.paper;
-        ctx!.font = "600 14px ui-monospace, monospace";
+        ctx!.fillStyle = on ? C.sanguine : C.ink;
+        ctx!.font = `italic 500 20px ${serif}`;
         ctx!.fillText(NODES[i].k, lx, p.y + 7);
         ctx!.textAlign = "left";
       });
@@ -207,15 +222,15 @@ export function HeroVisual() {
 
   return (
     <div>
-      <div ref={wrapRef} className="h-72 w-full md:h-85">
+      <div ref={wrapRef} className="drafting h-72 w-full md:h-85">
         <canvas ref={canvasRef} className="block" style={{ touchAction: "pan-y" }} />
       </div>
       <div aria-live="polite" className="border-t border-rule px-5 py-5 md:px-6">
-        <p className="label text-amber">
+        <p className="label text-sanguine">
           {NODES[active].n} / {NODES[active].k}
-          <span className="text-paper-faint"> — {NODES[active].q}</span>
+          <span className="text-ink-faint"> — {NODES[active].q}</span>
         </p>
-        <p className="prose-mono mt-2 text-[0.9375rem] leading-[1.6] text-paper">
+        <p className="prose-folio mt-2 text-[1.125rem] leading-[1.55] text-ink">
           {NODES[active].a}
         </p>
       </div>

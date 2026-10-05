@@ -6,7 +6,7 @@ Location: India (Open to US Remote / Relocation) | Authorization: Requires Visa 
 SUMMARY
 
 
-Senior Frontend Engineer and AI product builder with 6+ years of experience owning the full stack of React/Next.js applications — from design systems and real-time streaming UIs to the LLM backends that power them. Currently leading the frontend of an enterprise AI assistant at a UK-based cybersecurity company (JupiterOne), shipping streaming chat interfaces, live data tables, and graph visualizations on top of AWS Bedrock. Previously founded and exited an AI SaaS platform (40K+ users, 25 countries). US remote experience across UK and US product teams. Hands-on expertise in Vercel AI SDK, SSE/WebSocket streaming, microfrontend architecture, and LLMOps — strong enough on the AI side to own the full product stack, strong enough on the frontend to lead a team.
+Senior Frontend Engineer and AI product builder with 6+ years of experience owning the full stack of React/Next.js applications — from design systems and real-time streaming UIs to the LLM backends that power them. Currently a Senior Full-Stack AI Engineer at Commotion (since Sep 2026), helping SaaS products strengthen their cybersecurity. Previously led the frontend of an enterprise AI assistant at a UK-based cybersecurity company (JupiterOne), shipping streaming chat interfaces, live data tables, and graph visualizations on top of AWS Bedrock. Previously founded and exited an AI SaaS platform (40K+ users, 25 countries). US remote experience across UK and US product teams. Hands-on expertise in Vercel AI SDK, SSE/WebSocket streaming, microfrontend architecture, and LLMOps — strong enough on the AI side to own the full product stack, strong enough on the frontend to lead a team.
 
 
 
@@ -14,8 +14,14 @@ Senior Frontend Engineer and AI product builder with 6+ years of experience owni
 PROFESSIONAL EXPERIENCE	
 
 
+COMMOTION	India (Remote)
+Senior Full-Stack AI Engineer	Sep 2026 – Present
+Helping SaaS products strengthen their cybersecurity.
+Revamped the app with graded, measurable performance improvements.
+Managed the multi-authentication overhaul and updated authorization for all sub-consumers of the app.
+
 JUPITERONE (via SmartWorking)	London, UK (Remote)
-Senior LLM Engineer / AI Systems Architect	Aug 2025 – Present
+Senior LLM Engineer / AI Systems Architect	Aug 2025 – 2026
 Designed and built Juno end-to-end — a React + TypeScript AI chat interface on AWS Bedrock; owns streaming token rendering (SSE), progressive disclosure UX, real-time asset data tables, and graph visualisation of vulnerability relationships; non-technical security teams can now self-serve the full asset graph independently.
 Architected the frontend streaming layer from scratch: SSE response handling, optimistic UI updates, skeleton loaders for LLM latency, and error-boundary recovery — zero prior AI UX patterns at JupiterOne.
 Led UI architecture decisions: component library standards, TypeScript strict mode enforcement, code-review culture, and LLMOps / frontend mentoring across the team.
@@ -59,8 +65,8 @@ Backend: Python, Node.js, PostgreSQL, MongoDB, Pinecone, Redis, NPM, Prisma, Chr
 OPEN SOURCES
 
 
-Miii CLI | Local-First AI Coding Terminal Assistant | github.com/maruakshay/miii-cli
-Terminal-native AI coding assistant via Ollama — repo-aware context building, diff-based edits, .gitignore-aware access, human-in-the-loop confirmations. Actively maintained open source.
+Miii CLI | The open-source alternative to Claude Code. Any model, free forever. | miii.in · github.com/maruakshay/miii-cli
+Coding agent for the terminal and browser (miii web) that plans, edits, runs and verifies its own work. 14+ model providers (Claude, GPT, Gemini, DeepSeek, Grok, Mistral, Kimi, GLM, Groq, OpenRouter, Cerebras) or 100% offline via Ollama, LM Studio, llama.cpp, vLLM. Fix-until-green with auto-rollback, rewind/checkpoints, miii doctor model grading, permission-gated edits, MCP, hooks, subagents. MIT, no account. Install: npm install -g miii-agent. v3.10.2, 49 releases, 38 GitHub stars.
 Miii | Privacy-First Local AI Assistant (web + terminal) | github.com/maruakshay/miii
 Local-first AI chat (web + terminal) via Ollama — LangGraph tool routing, live web search, streaming NDJSON. Actively maintained with public commit history.
 AI Assistant Portfolio | Interactive AI-powered portfolio with real-time chat | github.com/maruakshay/portfolio

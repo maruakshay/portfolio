@@ -7,7 +7,7 @@ export const profile = {
   statementLead:
     "Most AI demos die in production. I build the ones that don't.",
   statementRest:
-    "End to end: the streaming interface and the model behind it. Right now, an enterprise AI assistant on AWS Bedrock at JupiterOne. Before it, an AI SaaS I founded, grew past 40,000 users, and sold. Alongside it, local-first AI tooling I maintain in the open.",
+    "End to end: the streaming interface and the model behind it. Right now, full-stack AI and security for SaaS products at Commotion. Before that, an enterprise AI assistant on AWS Bedrock at JupiterOne, and an AI SaaS I founded, grew past 40,000 users, and sold. Alongside it, local-first AI tooling I maintain in the open.",
   location: "India",
   availability:
     "Open to US / UK / Canada · remote or relocation · needs visa sponsorship",
@@ -35,7 +35,17 @@ export interface LedgerEntry {
 export const ledger: LedgerEntry[] = [
   {
     kind: "role",
-    meta: "2025 — NOW",
+    meta: "2026 — NOW",
+    title: "Commotion",
+    sub: "Senior Full-Stack AI Engineer",
+    blurb:
+      "Helping SaaS products strengthen their cybersecurity. Revamped the app with graded, measurable performance improvements, and managed the multi-authentication overhaul with updated authorization for every sub-consumer of the platform.",
+    href: "https://gocommotion.com/",
+    hrefLabel: "gocommotion.com",
+  },
+  {
+    kind: "role",
+    meta: "2025 — 2026",
     title: "JupiterOne",
     sub: "Senior LLM Engineer / AI Systems Architect",
     blurb:
@@ -46,13 +56,13 @@ export const ledger: LedgerEntry[] = [
   {
     kind: "oss",
     slug: "miii-cli",
-    meta: "TS · 29★",
+    meta: "TS · 38★ · v3.10",
     title: "miii-cli",
-    sub: "Local-first AI coding agent in your terminal",
+    sub: "The open-source alternative to Claude Code. Any model, free forever.",
     blurb:
-      "A coding agent that reads code, writes features, runs tests, and fixes bugs entirely on your hardware via Ollama. No API keys, no cloud, no per-token billing. Permission-gated tools and path confinement keep it safe to point at a real repo.",
-    href: "https://github.com/maruakshay/miii-cli",
-    hrefLabel: "github.com/maruakshay/miii-cli",
+      "A coding agent for the terminal or browser that plans, edits, runs, and verifies its own work, with Claude, GPT, Gemini, DeepSeek, or a model running 100% on your own GPU. 14+ providers, fix-until-green with auto-rollback, MCP, hooks, subagents. MIT, no account.",
+    href: "https://miii.in/",
+    hrefLabel: "miii.in",
   },
   {
     kind: "role",
@@ -78,7 +88,7 @@ export const ledger: LedgerEntry[] = [
   {
     kind: "oss",
     slug: "miii",
-    meta: "TS · 8★",
+    meta: "TS · 9★",
     title: "miii",
     sub: "Privacy-first local AI assistant (web + terminal)",
     blurb:
@@ -126,31 +136,33 @@ export const deepDives: DeepDive[] = [
   {
     slug: "miii-cli",
     name: "miii-cli",
-    tagline: "A local-first AI coding agent that never leaves your disk.",
+    tagline:
+      "The open-source alternative to Claude Code. Any model, free forever.",
     meta: [
-      { label: "Stack", value: "TypeScript · Node ≥18 · Ink · Ollama" },
-      { label: "Status", value: "Actively maintained · 21★ · 11 releases" },
+      { label: "Stack", value: "TypeScript · Node ≥18 · Ink · 14+ providers" },
+      { label: "Status", value: "v3.10.2 · 38★ · 49 releases · MIT" },
       { label: "Install", value: "npm i -g miii-agent" },
     ],
     links: [
+      { label: "miii.in", href: "https://miii.in/" },
       { label: "GitHub", href: "https://github.com/maruakshay/miii-cli" },
     ],
     sections: [
       {
         heading: "The problem",
-        body: "Cloud coding agents are useful right up until you point them at proprietary code. Then you are shipping your source to a third party, managing API keys, and watching a per-token meter run. For a lot of teams that is a non-starter, not a preference.\n\nmiii-cli is the answer to a narrow question: can a genuinely capable coding agent run with nothing leaving the machine?",
+        body: "Cloud coding agents are useful right up until you point them at proprietary code, or the bill arrives. Then you are shipping your source to a third party, juggling an account per vendor, and watching a per-token meter run. And you are locked to whichever model that vendor sells.\n\nmiii-cli answers two questions at once: can a genuinely capable coding agent run with nothing leaving the machine, and can the same agent use any model you choose when you do want the cloud?",
       },
       {
         heading: "The decisions that mattered",
-        body: "- Local model execution through Ollama, so there is no internet dependency and no key management. The agent stays on your disk, period.\n- A permission system with persistent approval rules, because an agent that can run bash and edit files needs a real consent model, not a yes-to-everything prompt.\n- Path confinement that blocks directory traversal, so the agent cannot wander outside the repo you handed it.\n- Lossless output spill: truncated tool results page through instead of silently dropping data, which is the difference between trusting the output and double-checking everything by hand.",
+        body: "- Model-agnostic from the core. 14+ providers, Claude, GPT, Gemini, DeepSeek, Grok, Mistral, Kimi, GLM, Groq, OpenRouter, Cerebras, plus local runtimes (Ollama, LM Studio, llama.cpp, vLLM) for Qwen3 Coder, Devstral, gpt-oss and Llama. Bring your own key, or no key at all.\n- Fix-until-green with auto-rollback. The agent runs your tests, keeps iterating until they pass, and checkpoints so a bad turn can be rewound instead of hand-reverted.\n- `miii doctor` grades models on real agent tasks, so you pick a model by evidence, not by benchmark marketing.\n- Permission-gated edits and commands with persistent approval rules, because an agent that can run bash needs a real consent model, not a yes-to-everything prompt.\n- Path confinement and lossless output spill, so the agent stays inside the repo you handed it and never silently drops tool output.",
       },
       {
         heading: "What it does",
-        body: "It reads code, writes features, runs tests, and fixes bugs from an interactive terminal UI built with Ink. The tool suite covers file read/write, precise edits, glob and regex search, and bash execution. `miii doctor` validates your local model setup before you start, so failures are legible instead of mysterious.",
+        body: "It reads code, plans, writes features, runs tests, and verifies its own work, from an Ink terminal UI or a browser app (`miii web`). MCP servers, hooks, and subagents extend it the same way the commercial agents do. `miii provider add anthropic` wires up Claude in one line; skip it and everything runs 100% offline.\n\nApna code, apna model, apni marzi. Your code, your model, your choice.",
       },
       {
         heading: "Why it is on this page",
-        body: "It is the clearest statement of how I think about AI products: small surface, real safety model, no hand-waving about privacy. Five S's, on purpose, small, simple, smart, strategic, semantic.",
+        body: "It is the clearest statement of how I think about AI products: small surface, real safety model, no lock-in, no hand-waving about privacy. Forty-nine releases in, it is also proof I maintain what I ship.",
       },
     ],
   },
@@ -164,7 +176,7 @@ export const deepDives: DeepDive[] = [
         label: "Stack",
         value: "Next.js · React 19 · Tailwind 4 · Ink · LangGraph · Ollama",
       },
-      { label: "Status", value: "Actively maintained · 8★" },
+      { label: "Status", value: "Actively maintained · 9★" },
       { label: "Surfaces", value: "Web UI + terminal TUI" },
     ],
     links: [{ label: "GitHub", href: "https://github.com/maruakshay/miii" }],
@@ -218,3 +230,99 @@ export const deepDives: DeepDive[] = [
 export function getDeepDive(slug: string) {
   return deepDives.find((d) => d.slug === slug);
 }
+
+// Career, newest first. `lead` lines are the management signal, shown accented.
+export interface CareerEntry {
+  years: string;
+  org: string;
+  place: string;
+  title: string;
+  points: string[];
+  lead?: string;
+}
+
+export const career: CareerEntry[] = [
+  {
+    years: "Sep 2026 — now",
+    org: "Commotion",
+    place: "India · remote",
+    title: "Senior Full-Stack AI Engineer",
+    points: [
+      "Helping SaaS products strengthen their cybersecurity.",
+      "Revamped the app with graded, measurable performance improvements.",
+    ],
+    lead: "Managed the multi-authentication overhaul and updated authorization for every sub-consumer of the app.",
+  },
+  {
+    years: "2025 — 2026",
+    org: "JupiterOne",
+    place: "London, UK · remote",
+    title: "Senior LLM Engineer / AI Systems Architect",
+    points: [
+      "Built Juno end to end: React + TypeScript AI assistant on AWS Bedrock with SSE streaming and live asset-graph tables.",
+      "OWASP LLM Top 10 guardrails and RAG hardening in a SOC2 / GDPR production environment.",
+      "RAGAS + Braintrust eval pipeline; caching and token-aware summarisation cut prompt load ~45%.",
+    ],
+    lead: "Set UI architecture, TypeScript standards, and code-review culture; mentored the team on LLMOps and frontend.",
+  },
+  {
+    years: "2023 — 2025",
+    org: "Remote Leaps",
+    place: "India · remote",
+    title: "Founder & Senior AI Product Engineer · acquired",
+    points: [
+      "Grew an AI resume SaaS to 40K+ users across 25 countries, then sold it.",
+      "Zero-hallucination generation engine plus a fine-tuned scoring model: +35% interview conversion.",
+    ],
+    lead: "Led a 4-person engineering team with full ownership of roadmap, architecture, and hiring.",
+  },
+  {
+    years: "2023",
+    org: "Virtual Internships",
+    place: "London, UK · remote",
+    title: "Senior Software Developer",
+    points: [
+      "Semantic search for 25,000+ interns and 3,000+ companies: +25% retention.",
+      "RTK Query caching layer: 37% fewer redundant API calls.",
+    ],
+    lead: "Led a TypeScript migration across 20+ microservices: 40% fewer incidents, 2x developer velocity.",
+  },
+  {
+    years: "2021 — 2023",
+    org: "Rapid Innovation",
+    place: "Noida, India",
+    title: "Software Developer",
+    points: ["Full-stack NFT marketplace (MetaMask + Solidity); gas optimisations cut user cost ~15%."],
+    lead: "Mentored 5 junior engineers on API design, testing, and deployment.",
+  },
+  {
+    years: "2020 — 2021",
+    org: "KGN Technologies · TopDoc AI",
+    place: "India",
+    title: "Frontend Engineer · UI Developer",
+    points: ["WCAG / OWASP-compliant state platform features (−20% bounce); dental SaaS UI (+28% engagement)."],
+  },
+];
+
+// miii-cli, as published on miii.in.
+export const miii = {
+  version: "v3.10.2",
+  stars: 38,
+  releases: 49,
+  install: "npm install -g miii-agent",
+  site: "https://miii.in/",
+  repo: "https://github.com/maruakshay/miii-cli",
+  providers: [
+    "Claude", "GPT", "Gemini", "DeepSeek", "Grok", "Mistral", "Kimi", "GLM",
+    "Qwen3 Coder", "Devstral", "gpt-oss", "Llama", "Groq", "OpenRouter",
+    "Cerebras", "Ollama", "LM Studio", "llama.cpp", "vLLM",
+  ],
+  features: [
+    { k: "fix-until-green", v: "Runs your tests and keeps going until they pass, with auto-rollback." },
+    { k: "miii doctor", v: "Grades models on real agent tasks before you trust one." },
+    { k: "rewind", v: "Checkpoints every turn, so a bad edit is one step back." },
+    { k: "permissions", v: "Every edit and command is gated; approvals persist." },
+    { k: "extend", v: "MCP servers, hooks, and subagents." },
+    { k: "miii web", v: "The same agent in your browser." },
+  ],
+};

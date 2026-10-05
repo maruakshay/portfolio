@@ -16,13 +16,13 @@ type Status = "idle" | "streaming" | "error";
 const INITIAL: Message = {
   role: "Assistant",
   content:
-    "I'm Akshay's AI, grounded in his actual background. Ask about the JupiterOne work, the miii ecosystem, the AI security framework, or whether he'd fit your team.",
+    "I'm Akshay's AI, grounded in his actual background. Ask about Commotion, the JupiterOne work, miii, the AI security framework, how he leads teams, or whether he'd fit yours.",
 };
 
 const PROMPTS = [
-  "What is the miii ecosystem?",
+  "What is miii, the Claude Code alternative?",
   "Walk me through the JupiterOne work.",
-  "Tell me about the AI security framework.",
+  "How does Akshay lead engineering teams?",
   "Why should I hire Akshay?",
 ];
 
@@ -91,42 +91,46 @@ export function ChatFull() {
   }
 
   return (
-    <div className="flex h-[calc(100dvh-57px)] flex-col">
+    <div className="flex h-[calc(100dvh-58px)] flex-col">
       {/* Log */}
       <div className="flex-1 overflow-y-auto">
-        <div className="mx-auto max-w-2xl space-y-5 px-5 py-8 text-[0.875rem] leading-[1.7] md:px-8">
+        <div className="mx-auto max-w-2xl space-y-6 px-5 py-10 text-[1.0625rem] leading-[1.65] md:px-8">
+          <div className="text-center">
+            <p className="label text-sanguine">{"// "}ask_akshay.ai</p>
+            <p className="mt-1 font-display text-lg italic text-ink-faint">
+              A conversation with the portfolio
+            </p>
+          </div>
           {messages.map((m, i) =>
             m.role === "User" ? (
-              <p key={i} className="text-paper">
-                <span className="select-none text-amber" aria-hidden>
-                  {"> "}
-                </span>
+              <p key={i} className="border-l border-sanguine pl-4 text-ink">
+                <span className="label mb-1 block text-sanguine">You</span>
                 {m.content}
               </p>
             ) : m.content ? (
               <div
                 key={i}
-                className="prose-mono text-paper-muted [&_li]:mb-1 [&_p]:mb-3 [&_ul]:mb-3 [&_*:last-child]:mb-0"
+                className="prose-folio text-ink-muted [&_li]:mb-1 [&_p]:mb-3 [&_ul]:mb-3 [&_*:last-child]:mb-0"
               >
                 <ReactMarkdown remarkPlugins={[remarkGfm]}>{m.content}</ReactMarkdown>
               </div>
             ) : (
-              <span key={i} className="text-paper-faint">
-                <span className="mark mark-blink mr-1.5 align-middle" />
+              <span key={i} className="label normal-case tracking-normal">
+                <span className="mark mark-blink mr-2.5 align-middle" />
                 thinking
               </span>
             ),
           )}
 
           {streaming && messages[messages.length - 1]?.role === "User" && (
-            <span className="text-paper-faint">
-              <span className="mark mark-blink mr-1.5 align-middle" />
+            <span className="label normal-case tracking-normal">
+              <span className="mark mark-blink mr-2.5 align-middle" />
               thinking
             </span>
           )}
 
           {status === "error" && (
-            <p className="border border-alert/40 px-3 py-2 text-[oklch(0.72_0.15_28)]">
+            <p className="border border-sanguine/50 bg-sanguine/5 px-3 py-2 text-sanguine-deep">
               Something broke on my end. Try again, or just email me.
             </p>
           )}
@@ -137,7 +141,7 @@ export function ChatFull() {
                 <button
                   key={p}
                   onClick={() => send(p)}
-                  className="border border-rule px-3 py-2.5 text-left text-paper-muted transition-colors hover:border-amber hover:text-paper"
+                  className="border border-rule bg-canvas/60 px-3 py-2.5 text-left text-ink-muted transition-colors hover:border-sanguine hover:text-sanguine"
                 >
                   {p}
                 </button>
@@ -149,9 +153,9 @@ export function ChatFull() {
       </div>
 
       {/* Input */}
-      <div className="border-t border-rule">
+      <div className="border-t border-rule bg-canvas-deep/50">
         <div className="mx-auto max-w-2xl px-5 py-4 md:px-8">
-          <div className="flex items-end gap-1.5 border border-rule bg-ground transition-colors focus-within:border-amber">
+          <div className="flex items-end gap-1.5 border border-rule bg-canvas transition-colors focus-within:border-sanguine">
             <textarea
               ref={inputRef}
               value={input}
@@ -161,19 +165,19 @@ export function ChatFull() {
               placeholder="Ask about Akshay's work…"
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={onKeyDown}
-              className="min-h-11 flex-1 resize-none bg-transparent px-3.5 py-3 text-[0.875rem] text-paper placeholder:text-paper-faint focus:outline-none"
-              style={{ caretColor: "var(--color-amber)" }}
+              className="min-h-11 flex-1 resize-none bg-transparent px-3.5 py-3 text-[1.0625rem] text-ink placeholder:italic placeholder:text-ink-faint focus:outline-none"
+              style={{ caretColor: "var(--color-sanguine)" }}
             />
             <button
               onClick={() => send(input)}
               disabled={!input.trim() || streaming}
               aria-label="Send"
-              className="m-1.5 inline-flex size-9 shrink-0 items-center justify-center bg-amber text-ground transition-colors hover:bg-amber-deep disabled:cursor-not-allowed disabled:opacity-40"
+              className="m-1.5 inline-flex size-9 shrink-0 items-center justify-center bg-sanguine text-canvas transition-colors hover:bg-sanguine-deep disabled:cursor-not-allowed disabled:opacity-40"
             >
               <ArrowUp className="size-4" />
             </button>
           </div>
-          <p className="label mt-2.5 text-paper-faint">
+          <p className="label mt-2.5 text-ink-faint">
             grounded in Akshay&apos;s résumé · no fabrication
           </p>
         </div>
