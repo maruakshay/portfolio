@@ -1,126 +1,62 @@
 ---
 name: Akshay Maru Portfolio
-description: A Renaissance sketchbook kept by an engineer. Classical European art in the craft, code in the annotations, management in the structure. Plain English for a global audience.
+description: "Signal" — a dark, high-voltage stage for an engineer who ships fast. Every interaction pays out a small reward; every path ends at a call.
 colors:
-  canvas: "oklch(0.965 0.012 85)"
-  canvas-deep: "oklch(0.935 0.018 82)"
-  canvas-shade: "oklch(0.90 0.024 80)"
-  rule: "oklch(0.82 0.025 75)"
-  ink: "oklch(0.22 0.02 55)"
-  ink-muted: "oklch(0.40 0.02 58)"
-  ink-faint: "oklch(0.52 0.02 62)"
-  sanguine: "oklch(0.52 0.14 38)"
-  sanguine-deep: "oklch(0.45 0.13 36)"
-  gilt: "oklch(0.68 0.10 78)"
-  lapis: "oklch(0.42 0.10 255)"
+  canvas: "oklch(0.145 0.012 275)"
+  canvas-deep: "oklch(0.18 0.014 275)"
+  canvas-shade: "oklch(0.23 0.016 275)"
+  rule: "oklch(0.30 0.016 275)"
+  ink: "oklch(0.975 0.006 100)"
+  ink-muted: "oklch(0.80 0.012 275)"
+  ink-faint: "oklch(0.64 0.014 275)"
+  volt: "oklch(0.92 0.21 125)"
+  flare: "oklch(0.68 0.20 295)"
+  cyan: "oklch(0.82 0.12 210)"
+  hot: "oklch(0.70 0.20 25)"
 typography:
-  display:
-    fontFamily: "Cormorant Garamond, Garamond, Georgia, serif"
-    fontSize: "clamp(2.75rem, 7vw, 5.25rem)"
-    fontWeight: 400
-    lineHeight: 1
-    letterSpacing: "-0.01em"
-  headline:
-    fontFamily: "Cormorant Garamond, Garamond, Georgia, serif"
-    fontSize: "clamp(2rem, 4.5vw, 3.25rem)"
-    fontWeight: 400
-    lineHeight: 1.05
-  title:
-    fontFamily: "Cormorant Garamond, Garamond, Georgia, serif"
-    fontSize: "1.75rem"
-    fontWeight: 500
-    lineHeight: 1.05
-  body:
-    fontFamily: "EB Garamond, Garamond, Georgia, serif"
-    fontSize: "1.125rem"
-    fontWeight: 400
-    lineHeight: 1.6
-  label:
-    fontFamily: "Geist Mono, ui-monospace, monospace"
-    fontSize: "0.75rem"
-    fontWeight: 500
-    lineHeight: 1.4
-    letterSpacing: "0.06em"
-rounded:
-  none: "0px"
-  sm: "2px"
-components:
-  button-primary:
-    backgroundColor: "{colors.ink}"
-    textColor: "{colors.canvas}"
-    rounded: "{rounded.none}"
-    padding: "12px 24px"
-  button-primary-hover:
-    backgroundColor: "{colors.sanguine}"
-    textColor: "{colors.canvas}"
-  button-outline:
-    backgroundColor: "transparent"
-    textColor: "{colors.ink}"
-    rounded: "{rounded.none}"
-    padding: "12px 24px"
-  input-field:
-    backgroundColor: "{colors.canvas}"
-    textColor: "{colors.ink}"
-    rounded: "{rounded.none}"
-    padding: "12px 16px"
+  display: "Bricolage Grotesque, 700–800, tight tracking (-0.03 to -0.045em)"
+  serif: "Instrument Serif italic — the one human word per headline (h1/h2/h3 em)"
+  body: "Geist, 1.0625rem / 1.6"
+  label: "Geist Mono, 0.75rem, uppercase, 0.06em"
 ---
 
-# Design System: Akshay Maru Portfolio
+# Design System: "Signal"
 
-## 1. Overview
+## 1. North star
 
-**Creative North Star: "The Atelier Notebook"**
+The visitor should feel momentum within five seconds: this person is confident, fast, and thinks clearly.
+The site rewards attention (counters, achievements, games, confetti) and routes every reward toward one action: **book a 20-minute call**.
 
-Leonardo's notebooks were part art, part engineering spec, part project plan. This portfolio is built the same way. Classical European art gives it its feel: warm canvas, a Garamond book face, red-chalk accents, gilt hairlines, framed "figures" with gallery captions. Code shows up in the annotations: monospace labels, `// 01 — section` markers, dotted-key ledgers. Management shows up in the structure: clear sections, numbered figures, a leadership ledger, claims stated plainly.
+**Truth rule:** dopamine is allowed; fabrication is not. Every number, outcome, and game answer traces to the résumé, the deep-dives, or miii.in. No fake scarcity, fake viewers, or invented testimonials.
 
-**The art lives in form, never in wording.** All copy is plain, professional English that reads well in translation and in a second language. No archaic phrasing, no Latin, no costume.
+## 2. Colour
 
-This system rejects: literal medieval pastiche (blackletter, heraldry, "thou"), dark navy plus neon, glassmorphism, gradient text, the hero-metric template (big numbers with small labels), and identical icon-card walls.
+- **Volt** (acid lime) is the reward colour: primary CTAs, the emphasis word, unlocked states, scores. When volt appears, something good happened.
+- **Flare** (violet) is energy: open-source badges, game kickers, ambient glow.
+- **Hot** (coral) means wrong or danger: bugs, missed answers, the last 5 seconds.
+- **Cyan** is for code only.
+- Ambient glows (blurred volt/flare circles) are allowed behind the hero, arcade, and contact sections only.
 
-## 2. Colors
+## 3. Type
 
-- **Canvas / Canvas Deep / Canvas Shade**: the page and its raised surfaces. Warm and light, like primed linen under gallery light.
-- **Ink / Ink Muted / Ink Faint**: sepia-black for headings, body, and meta.
-- **Sanguine** (red chalk): the one accent. Primary hover, the italic emphasis word in a headline, the active state, section markers. Use it on less than 10% of any screen.
-- **Gilt**: hairlines only: frames, figure numbers, the monogram ring. Never fills or text blocks.
-- **Lapis**: code only: inline `code` and ledger keys.
+- Bricolage Grotesque, extra-bold, does the talking.
+- One Instrument Serif italic `<em>` per headline is the human counterweight. Never synthesize italics on the grotesk.
+- Geist Mono annotates: labels, buttons, meta, scores.
 
-## 3. Typography
+## 4. Brand mark
 
-- **Cormorant Garamond** speaks: headlines, figure captions, one italic emphasis word per headline.
-- **EB Garamond** reads: all body prose, capped at about 66ch.
-- **Geist Mono** annotates: nav, labels, meta, section markers, buttons, ledger keys.
-- The `.initial` class opens a key passage with a large italic sanguine initial. Use it at most once per view.
+`A_`: a rounded volt tile with a hand-cut A and a blinking terminal cursor ("A, shipping"). Source in `components/ornament.tsx` (`Monogram`), with matching copies in `app/icon.svg` and `lib/brand.tsx` (used by the OG and apple icons). Change all three together.
 
-## 4. Structure and ornament
+## 5. Page flow (home)
 
-- **SectionRule** (`// 01 — The case` plus a gilt hairline) opens every major section, so the page reads like a commented file.
-- **Frame** (`.frame`): a 1px gilt border with an offset outline, like a passe-partout. Use it for the featured work, the capability grid, and the hero study.
-- **Drafting grid** (`.drafting`): a faint squared-paper background, used only behind the interactive hero study.
-- **Figures**: work cards are numbered `Fig. II…` with mono medium lines (`role · 2025 — NOW`), like gallery placards.
-- **Monogram**: an italic "AM" in a gilt ring is the site mark.
-- No soft shadows. Depth comes from rules, frames, and canvas tone steps.
+Hero (claim, rotator, two CTAs, proof wall with count-up) → Marquee → **01 Shipped** (bento cards with cursor spotlight) → **02 Arcade** (3 games) → miii lab → **03 Track record** → **04 Your move** (call CTA plus letter composer). A floating "Book a 20-min call" pill appears after the hero and hides at the contact section.
 
-## 5. Layout and components
+## 6. Engagement systems
 
-Home page order: **Hero → Exhibition (01) → miii spotlight (02) → Career (03) → Method (04) → Contact (05)**. Each section opens with a `SectionRule`.
+- **Achievements** (`components/achievements.tsx`): 10 achievements with XP, a header meter, and a slide-over panel. Each unlock fires a toast and confetti. At 100%, the panel opens with a call CTA. Progress lives in localStorage only.
+- **Arcade** (`components/arcade/`): *Make the call* (real product decisions), *Bug Rush* (20-second reflex game with combos), *Spot the injection* (LLM guardrail quiz). Every result screen ends with "Talk to the real thing" and a pre-filled call request that includes the score.
+- **Booking:** set `profile.booking` in `lib/content.ts` to a Cal.com or Calendly URL. Until then, every call CTA opens a pre-written email.
 
-- **Hero**: split layout. The statement and CTAs sit on the left; the **Placard** on the right is a gallery wall label that doubles as a live status object (live IST clock, current role, what's being built, open-to).
-- **Exhibition**: replaces the card grid. An index wall of works (a vertical tablist with arrow, Home, and End keys; hover previews) next to one lit piece in a frame, with a faint roman-numeral watermark. On mobile, the index becomes a horizontal scroller.
-- **miii spotlight**: copy plus a copy-to-clipboard install command, an illustrative terminal session that types itself in when scrolled into view (shown whole under reduced motion), a feature ledger, and provider chips. Use only claims published on miii.in.
-- **Career ("Provenance")**: a sticky intro next to a gilt-line timeline. Each role's leadership line is called out in a sanguine-tinted box with a team icon. Every claim must trace to the résumé.
-- **Method**: the interactive principles sketch next to a numbered list of capabilities (a list, not a card wall).
-- **Contact**: an email composer. Pick a reason, add your name, company, and context, and it opens a pre-addressed email. Nothing is stored.
-- **Command palette**: ⌘K / Ctrl+K, or the header search button. Covers sections, deep-dives, copy actions, and external links.
-- **Side index**: a scroll-tracking margin table of contents, shown only at 2xl widths, where there is a real margin.
-- **Buttons**: hard corners, mono uppercase. Primary is an ink fill that turns sanguine on hover; outline is an ink hairline that turns sanguine.
-- **Chat**: canvas field, sanguine caret and send button, a 1px sanguine rule marking the user's turns.
+## 7. Motion
 
-## 6. Do's and Don'ts
-
-- **Do** keep copy plain, specific, and verifiable. A global reader should never need to decode a joke.
-- **Do** keep sanguine rare and gilt thin.
-- **Do** keep motion to feedback and subtle reveals under 300ms. Respect reduced-motion settings.
-- **Don't** use blackletter, heraldry, Latin, or archaic English.
-- **Don't** use gradient text, decorative blur, pills on buttons, or stat-wall hero metrics.
-- **Don't** use colored side stripes thicker than 1px.
+Spring for rewards (`--ease-spring`), quart for UI. Pops ≤ 420ms, shakes ≤ 300ms. Everything respects `prefers-reduced-motion`: confetti, count-ups, rotator, and marquee all stand still.

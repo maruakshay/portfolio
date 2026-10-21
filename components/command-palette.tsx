@@ -3,7 +3,8 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Search, CornerDownLeft } from "lucide-react";
-import { deepDives, miii, profile } from "@/lib/content";
+import { callHref, deepDives, miii, profile } from "@/lib/content";
+import { useAchievements } from "./achievements";
 
 type Item = { group: string; label: string; hint?: string; run: () => void };
 
@@ -12,6 +13,7 @@ export const OPEN_PALETTE = "open-command-palette";
 // ⌘K / Ctrl+K anywhere. Sections, deep-dives, links, and quick actions.
 export function CommandPalette() {
   const router = useRouter();
+  const { unlock, setOpen: openAchievements } = useAchievements();
   const [open, setOpen] = useState(false);
   const [q, setQ] = useState("");
   const [sel, setSel] = useState(0);
@@ -29,11 +31,21 @@ export function CommandPalette() {
     const go = (hash: string) => () => router.push(`/${hash}`);
     const ext = (url: string) => () => window.open(url, "_blank", "noopener,noreferrer");
     return [
-      { group: "Go to", label: "Selected work", hint: "01", run: go("#work") },
-      { group: "Go to", label: "miii, in the studio now", hint: "02", run: go("#miii") },
-      { group: "Go to", label: "Career", hint: "03", run: go("#career") },
-      { group: "Go to", label: "Method", hint: "04", run: go("#method") },
-      { group: "Go to", label: "Contact", hint: "05", run: go("#contact") },
+      {
+        group: "Go to",
+        label: "Book a 20-min call",
+        hint: "the fastest path",
+        run: () => {
+          unlock("contact");
+          window.location.href = callHref();
+        },
+      },
+      { group: "Go to", label: "Shipped work", hint: "01", run: go("#work") },
+      { group: "Go to", label: "The arcade: play 3 games", hint: "02", run: go("#arcade") },
+      { group: "Go to", label: "miii, in the lab now", run: go("#miii") },
+      { group: "Go to", label: "Track record", hint: "03", run: go("#career") },
+      { group: "Go to", label: "Contact", hint: "04", run: go("#contact") },
+      { group: "Go to", label: "My achievements", hint: "XP", run: () => openAchievements(true) },
       { group: "Go to", label: "Ask AI about Akshay", hint: "/chat", run: () => router.push("/chat") },
       ...deepDives.map((d) => ({
         group: "Deep-dives",
@@ -58,7 +70,7 @@ export function CommandPalette() {
       { group: "Links", label: "LinkedIn", run: ext(profile.linkedin) },
       { group: "Links", label: "miii.in", run: ext(miii.site) },
     ];
-  }, [router]);
+  }, [router, unlock, openAchievements]);
 
   const results = useMemo(() => {
     const t = q.trim().toLowerCase();
@@ -91,8 +103,10 @@ export function CommandPalette() {
   }, []);
 
   useEffect(() => {
-    if (open) requestAnimationFrame(() => inputRef.current?.focus());
-  }, [open]);
+    if (!open) return;
+    unlock("power-user");
+    requestAnimationFrame(() => inputRef.current?.focus());
+  }, [open, unlock]);
 
   if (!open) return null;
 
@@ -119,7 +133,7 @@ export function CommandPalette() {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-start justify-center bg-ink/40 px-4 pt-[12vh]"
+      className="fixed inset-0 z-50 flex items-start justify-center bg-canvas/70 px-4 pt-[12vh] backdrop-blur-sm"
       onMouseDown={(e) => e.target === e.currentTarget && close()}
     >
       <div
@@ -127,7 +141,7 @@ export function CommandPalette() {
         aria-modal="true"
         aria-label="Command palette"
         onKeyDown={onKeyDown}
-        className="frame w-full max-w-xl bg-canvas shadow-[8px_8px_0_var(--color-gilt)]"
+        className="frame w-full max-w-xl bg-canvas-deep shadow-[0_30px_80px_-20px_oklch(0.92_0.21_125/0.25)]"
       >
         <div className="flex items-center gap-3 border-b border-rule px-4">
           <Search className="size-4 shrink-0 text-ink-faint" aria-hidden />
@@ -143,9 +157,9 @@ export function CommandPalette() {
             aria-expanded="true"
             aria-controls="palette-list"
             aria-activedescendant={results[sel] ? `palette-${sel}` : undefined}
-            className="h-14 flex-1 bg-transparent text-lg text-ink placeholder:italic placeholder:text-ink-faint focus:outline-none"
+            className="h-14 flex-1 bg-transparent text-lg text-ink placeholder:text-ink-faint focus:outline-none"
           />
-          <kbd className="label border border-rule px-1.5 py-0.5">esc</kbd>
+          <kbd className="label rounded border border-rule px-1.5 py-0.5">esc</kbd>
         </div>
 
         <ul id="palette-list" role="listbox" className="max-h-[50vh] overflow-y-auto py-2">
@@ -166,7 +180,7 @@ export function CommandPalette() {
                   onMouseMove={() => setSel(idx)}
                   onClick={() => run(i)}
                   className={`mx-2 flex cursor-pointer items-center gap-3 px-3 py-2 ${
-                    on ? "bg-canvas-deep text-sanguine" : "text-ink"
+                    on ? "rounded-sm bg-canvas-shade text-volt" : "text-ink"
                   }`}
                 >
                   <span className="text-[1.0625rem]">{i.label}</span>
@@ -190,7 +204,7 @@ export function PaletteButton() {
     <button
       type="button"
       onClick={() => window.dispatchEvent(new Event(OPEN_PALETTE))}
-      className="label inline-flex items-center gap-2 border border-rule px-2.5 py-1.5 transition-colors hover:border-ink-faint hover:text-ink"
+      className="label inline-flex items-center gap-2 rounded-full border border-rule px-3 py-1.5 transition-colors hover:border-volt hover:text-volt"
       aria-label="Open command palette"
     >
       <Search className="size-3.5" strokeWidth={1.5} aria-hidden />

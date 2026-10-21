@@ -3,12 +3,14 @@
 import { useMemo, useState } from "react";
 import { Send } from "lucide-react";
 import { profile } from "@/lib/content";
+import { useAchievements } from "./achievements";
 
 // A letter you compose in place: pick a reason, add context, and it opens in
 // your own mail client, pre-addressed. No backend, nothing stored.
-const REASONS = ["A full-time role", "A contract", "miii / open source", "Just saying hello"];
+const REASONS = ["A 20-min call", "A full-time role", "A contract", "miii / open source"];
 
 export function Letter() {
+  const { unlock } = useAchievements();
   const [reason, setReason] = useState(REASONS[0]);
   const [name, setName] = useState("");
   const [company, setCompany] = useState("");
@@ -27,23 +29,23 @@ export function Letter() {
   }, [reason, name, company, note]);
 
   const field =
-    "w-full border-0 border-b border-rule bg-transparent px-0 py-2 text-[1.0625rem] text-ink placeholder:italic placeholder:text-ink-faint focus:border-sanguine focus:outline-none focus:ring-0";
+    "w-full border-0 border-b border-rule bg-transparent px-0 py-2 text-[1.0625rem] text-ink placeholder:text-ink-faint/70 focus:border-volt focus:outline-none focus:ring-0";
 
   return (
-    <div className="frame bg-canvas p-6 md:p-8">
-      <p className="label text-sanguine">
+    <div className="frame bg-canvas-deep/80 p-6 md:p-8">
+      <p className="label text-volt">
         <span className="text-ink-faint">{"// "}</span>compose
       </p>
 
       <fieldset className="mt-5">
-        <legend className="font-display text-xl italic text-ink">I&apos;m writing about…</legend>
+        <legend className="font-display text-xl font-bold text-ink">I&apos;m writing about…</legend>
         <div className="mt-3 flex flex-wrap gap-2">
           {REASONS.map((r) => (
             <label
               key={r}
-              className={`cursor-pointer border px-3 py-1.5 font-mono text-xs transition-colors has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-sanguine ${
+              className={`cursor-pointer rounded-full border px-3 py-1.5 font-mono text-xs transition-colors has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-volt ${
                 reason === r
-                  ? "border-sanguine bg-sanguine text-canvas"
+                  ? "border-volt bg-volt text-canvas"
                   : "border-rule text-ink-muted hover:border-ink-faint"
               }`}
             >
@@ -86,7 +88,8 @@ export function Letter() {
       <div className="mt-7 flex flex-wrap items-center justify-between gap-4">
         <a
           href={href}
-          className="inline-flex items-center gap-2 bg-ink px-6 py-3 font-mono text-xs font-medium uppercase tracking-[0.06em] text-canvas transition-colors hover:bg-sanguine"
+          onClick={() => unlock("contact")}
+          className="btn-primary"
         >
           <Send className="size-3.5" aria-hidden /> Open in my email
         </a>
