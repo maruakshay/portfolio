@@ -18,23 +18,19 @@ The AI chat is a small part, not the centerpiece. It is one quiet, well-built in
 
 ## Brand Personality
 
-Curious, human, warm, with confident restraint. Not a resume with animations. Not a tech showcase with a name attached. A person who builds things and cares about the people using them. The voice is direct and specific. The structure is opinionated and raw; the voice keeps it human. The tension is deliberate: a brutalist-editorial shell that still feels like a person, not a manifesto.
+Confident, fast, sharp, and fun to be around. The site should produce a feeling, not just a record: momentum ("this person ships"), clarity ("this person thinks well"), and a small hit of delight at every step that makes a visitor stay and then reach out.
 
-## Anti-references
+## Experience Goal (2026-10 revamp)
 
-- Over-designed and flashy: particle backgrounds, heavy glassmorphism, aurora gradients, excessive choreography. The signal is discomfort, not confidence.
-- Generic SaaS portfolios: dark navy + neon gradient hero, identical icon-grid cards, Vercel-template energy.
-- Cold brutalism: brutalist structure with no warmth, edge for its own sake, unreadable in the name of being raw. The grid is opinionated; the content stays legible and human.
-- Chatbot-as-centerpiece: the previous version leaned the whole portfolio on an AI chat. The revamp demotes it to a small supporting feature. The chat stays, but it never dominates a viewport, never opens as the first thing, and never reads as "ask me anything" gimmickry. The work leads; the chat supports.
+A deliberate experiment in engagement: rewards (count-ups, achievements, confetti, games) keep visitors on the page longer and build conviction. Every reward path ends at one conversion: a 20-minute call. The games are built from real decisions and real work, so playing them is evaluating Akshay.
 
-## Design Principles
+## Guardrails
 
-1. **The work is the argument.** Real shipped products and maintained open source carry the portfolio: JupiterOne, the exited AI SaaS, the miii ecosystem. Every supporting element, including the small AI chat, must hold up to the standard Akshay applies to what he builds, but the work leads.
-2. **Show, don't tell.** Concrete over vague. A specific thing built, a real decision made, a real tradeoff, not "results-driven" or "cross-functional." The design shows restraint rather than announcing it.
-3. **Human over impressive.** Warmth and curiosity beat polish and scale. A brutalist grid that still feels like a person is rarer than another clean SaaS template.
-4. **Confident restraint.** Knowing when to stop is the signal. Big type and exposed structure are not an excuse for noise. Subtract before adding.
-5. **Specificity is credibility.** Vague claims cost nothing and signal nothing. Every metric, project description, and heading should be specific enough that nobody could have written it without doing the work.
+- Truth over hype. Every metric and game outcome must trace to the résumé, the deep-dives, or miii.in. No fake urgency, fake visitor counts, or invented quotes.
+- Rewards never block content. The work stays readable without playing anything.
+- Reduced motion is honoured everywhere. The page still works with no JavaScript storage.
+- The AI chat stays a supporting feature (it awards an achievement but never dominates).
 
 ## Accessibility & Inclusion
 
-WCAG AA as a baseline. Brutalist-editorial type must stay legible: real contrast, real line-length limits, no decoration that costs readability. Minimal motion by default; keep animation subtle regardless of the user's `prefers-reduced-motion` setting. Motion is atmosphere only and never carries meaning.
+WCAG AA contrast on the dark canvas. Games are keyboard-operable (tabs with arrow keys, buttons for every action). Motion carries delight, never meaning.

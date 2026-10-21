@@ -5,6 +5,7 @@ import { useReducedMotion } from "framer-motion";
 import { ArrowUp } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import { useAchievements } from "./achievements";
 
 interface Message {
   role: "User" | "Assistant";
@@ -33,6 +34,7 @@ export function ChatFull() {
   const endRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const reduce = useReducedMotion();
+  const { unlock } = useAchievements();
 
   const streaming = status === "streaming";
 
@@ -53,6 +55,7 @@ export function ChatFull() {
       setMessages(next);
       setInput("");
       setStatus("streaming");
+      unlock("curious");
 
       try {
         const res = await fetch("/api/chat", {
@@ -80,7 +83,7 @@ export function ChatFull() {
         setStatus("error");
       }
     },
-    [messages, streaming],
+    [messages, streaming, unlock],
   );
 
   function onKeyDown(e: React.KeyboardEvent<HTMLTextAreaElement>) {
@@ -96,15 +99,15 @@ export function ChatFull() {
       <div className="flex-1 overflow-y-auto">
         <div className="mx-auto max-w-2xl space-y-6 px-5 py-10 text-[1.0625rem] leading-[1.65] md:px-8">
           <div className="text-center">
-            <p className="label text-sanguine">{"// "}ask_akshay.ai</p>
-            <p className="mt-1 font-display text-lg italic text-ink-faint">
+            <p className="label text-volt">{"// "}ask_akshay.ai</p>
+            <p className="mt-1 font-serif text-xl italic text-ink-muted">
               A conversation with the portfolio
             </p>
           </div>
           {messages.map((m, i) =>
             m.role === "User" ? (
-              <p key={i} className="border-l border-sanguine pl-4 text-ink">
-                <span className="label mb-1 block text-sanguine">You</span>
+              <p key={i} className="border-l-2 border-volt pl-4 text-ink">
+                <span className="label mb-1 block text-volt">You</span>
                 {m.content}
               </p>
             ) : m.content ? (
@@ -130,7 +133,7 @@ export function ChatFull() {
           )}
 
           {status === "error" && (
-            <p className="border border-sanguine/50 bg-sanguine/5 px-3 py-2 text-sanguine-deep">
+            <p className="border border-volt/50 bg-volt/5 px-3 py-2 text-volt-deep">
               Something broke on my end. Try again, or just email me.
             </p>
           )}
@@ -141,7 +144,7 @@ export function ChatFull() {
                 <button
                   key={p}
                   onClick={() => send(p)}
-                  className="border border-rule bg-canvas/60 px-3 py-2.5 text-left text-ink-muted transition-colors hover:border-sanguine hover:text-sanguine"
+                  className="rounded-sm border border-rule bg-canvas-deep/60 px-3 py-2.5 text-left text-ink-muted transition-colors hover:border-volt hover:text-volt"
                 >
                   {p}
                 </button>
@@ -155,7 +158,7 @@ export function ChatFull() {
       {/* Input */}
       <div className="border-t border-rule bg-canvas-deep/50">
         <div className="mx-auto max-w-2xl px-5 py-4 md:px-8">
-          <div className="flex items-end gap-1.5 border border-rule bg-canvas transition-colors focus-within:border-sanguine">
+          <div className="flex items-end gap-1.5 rounded-sm border border-rule bg-canvas transition-colors focus-within:border-volt">
             <textarea
               ref={inputRef}
               value={input}
@@ -165,14 +168,14 @@ export function ChatFull() {
               placeholder="Ask about Akshay's work…"
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={onKeyDown}
-              className="min-h-11 flex-1 resize-none bg-transparent px-3.5 py-3 text-[1.0625rem] text-ink placeholder:italic placeholder:text-ink-faint focus:outline-none"
-              style={{ caretColor: "var(--color-sanguine)" }}
+              className="min-h-11 flex-1 resize-none bg-transparent px-3.5 py-3 text-[1.0625rem] text-ink placeholder:text-ink-faint focus:outline-none"
+              style={{ caretColor: "var(--color-volt)" }}
             />
             <button
               onClick={() => send(input)}
               disabled={!input.trim() || streaming}
               aria-label="Send"
-              className="m-1.5 inline-flex size-9 shrink-0 items-center justify-center bg-sanguine text-canvas transition-colors hover:bg-sanguine-deep disabled:cursor-not-allowed disabled:opacity-40"
+              className="m-1.5 inline-flex size-9 shrink-0 items-center justify-center rounded-full bg-volt text-canvas transition-colors hover:bg-volt-deep disabled:cursor-not-allowed disabled:opacity-40"
             >
               <ArrowUp className="size-4" />
             </button>

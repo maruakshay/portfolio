@@ -1,6 +1,8 @@
 // Single source of truth for portfolio content.
 // Ledger entries (roles + open source, mixed by impact) and miii deep-dives.
 
+export const siteUrl = "https://akshay-portfolio-zeta.vercel.app";
+
 export const profile = {
   name: "Akshay Maru",
   role: "Senior / Staff AI Engineer & Product Engineer",
@@ -16,7 +18,35 @@ export const profile = {
   linkedin: "https://linkedin.com/in/akshaymaru61",
   resume:
     "https://docs.google.com/document/d/1_CcUyc3-QAS77It1ttnfuSSbDVObDvKKjtnvpkNVnwg/export?format=pdf",
+  // Paste a Cal.com / Calendly link here and every "Book a call" button
+  // switches from a pre-written email to the scheduler.
+  booking: "",
 };
+
+/** Every "Book a call" CTA points here: the scheduler if set, else a ready email. */
+export function callHref(context?: string) {
+  if (profile.booking) return profile.booking;
+  const subject = "20-minute call with Akshay";
+  const body = [
+    "Hi Akshay,",
+    "",
+    context ?? "I went through your portfolio and would like to set up a 20-minute call this week.",
+    "",
+    "Times that work for me:",
+    "",
+  ].join("\n");
+  return `mailto:${profile.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+
+// Real, sourced numbers only (résumé + miii.in). Shown as the hero proof wall.
+export const proof = [
+  { value: 40, suffix: "K+", label: "users on an AI SaaS I founded, then sold" },
+  { value: 25, suffix: "", label: "countries those users came from" },
+  { value: 35, suffix: "%", label: "faster enterprise support resolution with Juno" },
+  { value: 45, suffix: "%", label: "less prompt load via caching + summarisation" },
+  { value: 49, suffix: "", label: "releases of miii-cli, shipped in the open" },
+  { value: 40, suffix: "%", label: "fewer incidents after a 20-service TS migration" },
+];
 
 export type LedgerKind = "role" | "oss";
 
