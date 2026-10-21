@@ -50,15 +50,16 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1.5 sm:gap-2">
           <XpMeter />
           <PaletteButton />
           <Link
             href="/chat"
-            className="hidden items-center gap-1.5 rounded-full border border-rule px-3 py-1.5 font-mono text-xs text-ink transition-colors hover:border-volt hover:text-volt md:inline-flex"
+            aria-label="Ask AI about Akshay"
+            className="inline-flex items-center gap-1.5 rounded-full border border-rule px-2.5 py-1.5 font-mono text-xs text-ink transition-colors hover:border-volt hover:text-volt md:px-3"
           >
             <Sparkles className="size-3.5" strokeWidth={1.75} aria-hidden />
-            Ask AI
+            <span className="hidden md:inline">Ask AI</span>
           </Link>
           <a
             href={callHref()}
