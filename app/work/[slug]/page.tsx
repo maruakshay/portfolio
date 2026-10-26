@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { SectionRule } from "@/components/ornament";
-import { callHref, deepDives, getDeepDive } from "@/lib/content";
+import { callHref, deepDives, getDeepDive, profile } from "@/lib/content";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { Unlock } from "@/components/achievements";
@@ -116,9 +116,31 @@ export default async function WorkPage({
           </div>
         </section>
 
+        {/* In plain words + my part */}
+        <section className="mx-auto max-w-3xl px-5 pb-14 md:px-8">
+          <div className="frame bg-canvas-deep/60 p-6 md:p-7">
+            <p className="label text-volt">In plain words</p>
+            <p className="mt-3 text-[1.1875rem] leading-[1.6] text-ink">{dive.inShort}</p>
+          </div>
+          <dl className="mt-4 grid grid-cols-1 gap-px overflow-hidden rounded-sm border border-rule bg-rule sm:grid-cols-3">
+            {(
+              [
+                ["Think", dive.how.think],
+                ["Design", dive.how.design],
+                ["Build", dive.how.build],
+              ] as const
+            ).map(([k, v]) => (
+              <div key={k} className="bg-canvas-deep px-5 py-5">
+                <dt className="font-display text-xl font-extrabold text-ink">{k}</dt>
+                <dd className="mt-2 text-base leading-snug text-ink-muted">{v}</dd>
+              </div>
+            ))}
+          </dl>
+        </section>
+
         {/* Article */}
         <article className="mx-auto max-w-3xl px-5 pb-16 md:px-8 md:pb-20">
-          <SectionRule n="00" label="Notes" className="mb-12" />
+          <SectionRule n="00" label="The full story, for engineers" className="mb-12" />
           {dive.sections.map((s, i) => (
             <section key={s.heading} className="mb-14 last:mb-0">
               <p className="label mb-2 text-volt">§ {String(i + 1).padStart(2, "0")}</p>
@@ -135,7 +157,12 @@ export default async function WorkPage({
             <p className="font-display text-2xl font-bold text-ink">
               Want this kind of thinking on <em className="text-volt">your</em> product?
             </p>
-            <a href={callHref(`I read your ${dive.name} deep-dive and want to talk.`)} className="btn-primary mt-5">
+            <a
+              href={callHref(`I read your ${dive.name} deep-dive and want to talk.`)}
+              target={profile.booking ? "_blank" : undefined}
+              rel="noopener noreferrer"
+              className="btn-primary mt-5"
+            >
               Book a 20-min call
             </a>
           </div>

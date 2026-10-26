@@ -7,11 +7,11 @@ import { callHref, profile, proof } from "@/lib/content";
 import { useAchievements } from "./achievements";
 
 const ROTATE = [
-  "streaming AI interfaces",
-  "RAG that doesn't hallucinate",
-  "coding agents",
-  "LLM security",
-  "AI products, 0 → exit",
+  "AI assistants for big companies",
+  "AI that sticks to the facts",
+  "AI that writes and tests code",
+  "AI that can't be tricked",
+  "products from idea to acquisition",
 ];
 
 function Rotator() {
@@ -77,20 +77,20 @@ export function Hero() {
       <div className="relative mx-auto max-w-6xl px-4 pb-16 pt-14 md:px-8 md:pb-24 md:pt-24">
         <p className="inline-flex items-center gap-2.5 rounded-full border border-rule bg-canvas-deep/80 px-3.5 py-1.5 font-mono text-xs text-ink">
           <span className="live-dot" aria-hidden />
-          Open to work · US / UK / Canada · remote or relocation
+          Open to work · worldwide · remote or relocation
         </p>
 
         <h1 className="mt-8 max-w-[16ch] font-display text-[clamp(2.75rem,8vw,6.25rem)] font-extrabold leading-[0.92] tracking-[-0.045em] text-ink">
-          Most AI demos die in <em className="text-volt">production.</em>
-          <span className="block text-ink-faint">Mine ship.</span>
+          Most AI ideas never reach <em className="text-volt">real users.</em>
+          <span className="block text-ink-faint">Mine do.</span>
         </h1>
 
         <p className="mt-8 max-w-2xl text-[clamp(1.125rem,2vw,1.375rem)] leading-snug text-ink-muted">
-          I build
+          I&apos;m Akshay, an AI product engineer. I think through, design, and build
           <span className="my-1 block font-display text-[clamp(1.5rem,3.2vw,2.25rem)] font-bold tracking-tight">
             <Rotator />
           </span>
-          end to end: from the interface people touch to the model behind it. Fast, and built to stay up.
+          from the first sketch to the screen you use to the AI behind it, and I measure whether it worked.
         </p>
 
         <div className="mt-10 flex flex-wrap items-center gap-3">

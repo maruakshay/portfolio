@@ -5,7 +5,7 @@ import { Phone } from "lucide-react";
 import { callHref } from "@/lib/content";
 import { useAchievements } from "./achievements";
 
-const SECTIONS = ["work", "arcade", "miii", "career", "contact"];
+const SECTIONS = ["approach", "work", "arcade", "miii", "career", "contact"];
 
 /**
  * Tracks the visit through the home page: awards "Full tour" once every

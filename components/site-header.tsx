@@ -10,6 +10,7 @@ import { PaletteButton } from "./command-palette";
 import { XpMeter, useAchievements } from "./achievements";
 
 const NAV = [
+  { href: "/#approach", label: "How I work" },
   { href: "/#work", label: "Work" },
   { href: "/#arcade", label: "Arcade" },
   { href: "/#miii", label: "miii" },
