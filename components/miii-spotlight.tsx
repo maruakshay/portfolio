@@ -117,10 +117,11 @@ export function MiiiSpotlight() {
               <em className="text-volt">Any model, free forever.</em>
             </h2>
             <p className="prose-folio mt-6 text-[1.125rem] leading-[1.65] text-ink-muted">
-              A coding agent for your terminal or browser that plans, edits,
-              runs, and verifies its own work, with Claude, GPT, Gemini,
-              DeepSeek, or a model running entirely on your own GPU. No account,
-              no subscription.
+              In plain words: an AI helper for programmers. You describe a
+              change, and it writes the code, tests it, and fixes its own
+              mistakes. It works with Claude, GPT, Gemini, DeepSeek, or a model
+              running entirely on your own computer. No account, no
+              subscription.
             </p>
 
             <div className="mt-8 max-w-md">

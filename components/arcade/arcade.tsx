@@ -9,9 +9,9 @@ import { BugRush } from "./bug-rush";
 import { SpotInjection } from "./spot-injection";
 
 const GAMES: { id: string; title: string; blurb: string; time: string; icon: LucideIcon; award: AchievementId; Game: () => React.JSX.Element }[] = [
-  { id: "call", title: "Make the call", blurb: "Six real product decisions. Do you match his?", time: "90 sec", icon: Brain, award: "thinker", Game: MakeTheCall },
-  { id: "bugs", title: "Bug Rush", blurb: "20 seconds of production. How fast are you?", time: "20 sec", icon: Bug, award: "exterminator", Game: BugRush },
-  { id: "inject", title: "Spot the injection", blurb: "Be the guardrail on an LLM. Allow or block.", time: "60 sec", icon: ShieldAlert, award: "red-team", Game: SpotInjection },
+  { id: "call", title: "Make the call", blurb: "Six real product decisions I made. Would you choose the same?", time: "90 sec", icon: Brain, award: "thinker", Game: MakeTheCall },
+  { id: "bugs", title: "Bug Rush", blurb: "20 seconds of a live app breaking. How fast can you fix it?", time: "20 sec", icon: Bug, award: "exterminator", Game: BugRush },
+  { id: "inject", title: "Spot the injection", blurb: "Be the safety filter on an AI chatbot. Allow or block.", time: "60 sec", icon: ShieldAlert, award: "red-team", Game: SpotInjection },
 ];
 
 export function Arcade() {
@@ -33,13 +33,13 @@ export function Arcade() {
     <section id="arcade" className="relative scroll-mt-20 overflow-hidden border-y border-rule bg-canvas-deep/40">
       <div aria-hidden className="pointer-events-none absolute -right-40 top-20 h-[420px] w-[420px] rounded-full bg-flare/10 blur-[110px]" />
       <div className="relative mx-auto max-w-6xl px-4 py-20 md:px-8 md:py-28">
-        <SectionRule n="02" label="The arcade" />
+        <SectionRule n="03" label="The arcade" />
         <div className="flex flex-wrap items-end justify-between gap-4 pb-10 pt-8">
           <h2 className="max-w-[18ch] font-display text-[clamp(2.25rem,5.5vw,4rem)] font-extrabold leading-[0.95] text-ink">
             Don&apos;t take my word for it. <em className="text-volt">Play it.</em>
           </h2>
           <p className="max-w-xs text-sm text-ink-faint">
-            Three short games built from real work. Each one unlocks an achievement.
+            Three quick games, no tech knowledge needed, built from real decisions in my work. Each one unlocks an achievement.
           </p>
         </div>
 

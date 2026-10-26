@@ -9,7 +9,7 @@ export function Career() {
   return (
     <section id="career" className="scroll-mt-20">
       <div className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-24">
-        <SectionRule n="03" label="Track record" />
+        <SectionRule n="04" label="Track record" />
         <div className="grid grid-cols-1 gap-10 pt-8 lg:grid-cols-[1fr_2fr] lg:gap-16">
           <div className="lg:sticky lg:top-24 lg:self-start">
             <h2 className="font-display text-[clamp(2.25rem,5.5vw,4rem)] font-extrabold leading-[0.95] text-ink">

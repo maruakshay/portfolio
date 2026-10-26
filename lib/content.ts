@@ -5,14 +5,14 @@ export const siteUrl = "https://akshay-portfolio-zeta.vercel.app";
 
 export const profile = {
   name: "Akshay Maru",
-  role: "Senior / Staff AI Engineer & Product Engineer",
+  role: "Senior / Staff / Lead AI & Product Engineer",
   statementLead:
     "Most AI demos die in production. I build the ones that don't.",
   statementRest:
     "End to end: the streaming interface and the model behind it. Right now, full-stack AI and security for SaaS products at Commotion. Before that, an enterprise AI assistant on AWS Bedrock at JupiterOne, and an AI SaaS I founded, grew past 40,000 users, and sold. Alongside it, local-first AI tooling I maintain in the open.",
   location: "India",
   availability:
-    "Open to US / UK / Canada · remote or relocation · needs visa sponsorship",
+    "Open to roles worldwide · remote or relocation",
   email: "maruakshay4@gmail.com",
   github: "https://github.com/maruakshay",
   linkedin: "https://linkedin.com/in/akshaymaru61",
@@ -20,7 +20,7 @@ export const profile = {
     "https://docs.google.com/document/d/1_CcUyc3-QAS77It1ttnfuSSbDVObDvKKjtnvpkNVnwg/export?format=pdf",
   // Paste a Cal.com / Calendly link here and every "Book a call" button
   // switches from a pre-written email to the scheduler.
-  booking: "",
+  booking: "https://calendar.app.google/XVvjoayuq9H6iPxZA",
 };
 
 /** Every "Book a call" CTA points here: the scheduler if set, else a ready email. */
@@ -40,12 +40,48 @@ export function callHref(context?: string) {
 
 // Real, sourced numbers only (résumé + miii.in). Shown as the hero proof wall.
 export const proof = [
-  { value: 40, suffix: "K+", label: "users on an AI SaaS I founded, then sold" },
+  { value: 40, suffix: "K+", label: "people used the AI product I founded, then sold" },
   { value: 25, suffix: "", label: "countries those users came from" },
-  { value: 35, suffix: "%", label: "faster enterprise support resolution with Juno" },
-  { value: 45, suffix: "%", label: "less prompt load via caching + summarisation" },
-  { value: 49, suffix: "", label: "releases of miii-cli, shipped in the open" },
-  { value: 40, suffix: "%", label: "fewer incidents after a 20-service TS migration" },
+  { value: 35, suffix: "%", label: "faster customer support, with an AI assistant I built" },
+  { value: 45, suffix: "%", label: "less work for the AI on every question, cutting cost" },
+  { value: 56, suffix: "", label: "public releases of my free AI coding tool" },
+  { value: 40, suffix: "%", label: "fewer outages after a code overhaul I led" },
+];
+
+// The 30-second version, for anyone skimming (recruiters first).
+export const quickFacts = [
+  { k: "What I do", v: "Design and build AI products end to end: the idea, the screens, and the AI behind them." },
+  { k: "Experience", v: "7 years. Founded and sold an AI startup. Led and mentored teams of 4 to 5 engineers." },
+  { k: "Looking for", v: "Senior, Staff, or Lead AI / Product Engineer roles." },
+  { k: "Where", v: "Based in India. Open to roles anywhere in the world, remote or relocation." },
+];
+
+// How I work, each step proven by something real.
+export const process = [
+  {
+    step: "Think",
+    line: "Start with the problem, not the tech. Who is this for, what hurts, and what would success look like?",
+    proof: "Eye Atlas: patients can't picture their diagnosis, and 30 MB atlases won't load in a waiting room. That one insight shaped every decision.",
+    href: "/work/eye-anatomy",
+  },
+  {
+    step: "Design",
+    line: "Shape how it should feel before writing code: the flow, the screens, and what to leave out.",
+    proof: "Juno streams answers word by word with live tables, so security teams never sit staring at a spinner.",
+    href: "#work",
+  },
+  {
+    step: "Build",
+    line: "Build it end to end, from the screen you touch to the AI behind it, and make it safe to trust.",
+    proof: "miii-cli tests its own work until it passes, asks before every risky action, and rolls back what breaks.",
+    href: "/work/miii-cli",
+  },
+  {
+    step: "Measure",
+    line: "Ship it, watch what real people do, and improve. Numbers settle arguments, not opinions.",
+    proof: "Remote Leaps: 40,000+ users, 35% more interviews for them, and an acquisition at the end.",
+    href: "#career",
+  },
 ];
 
 export type LedgerKind = "role" | "oss";
@@ -59,9 +95,11 @@ export interface LedgerEntry {
   blurb: string; // the one earned sentence
   href: string; // external link (repo / live)
   hrefLabel: string;
+  stack?: string; // the technical line, for engineers; the copy above stays plain
 }
 
-// Ordered by impact, roles and OSS interleaved.
+// Ordered by impact, roles and OSS interleaved. `sub` and `blurb` are written
+// for anyone (recruiters included); `stack` carries the detail for engineers.
 export const ledger: LedgerEntry[] = [
   {
     kind: "role",
@@ -69,9 +107,10 @@ export const ledger: LedgerEntry[] = [
     title: "Commotion",
     sub: "Senior Full-Stack AI Engineer",
     blurb:
-      "Helping SaaS products strengthen their cybersecurity. Revamped the app with graded, measurable performance improvements, and managed the multi-authentication overhaul with updated authorization for every sub-consumer of the platform.",
+      "I help software companies keep their products and customers safe. I made the app measurably faster, and led the rebuild of how people sign in and what each kind of user is allowed to see.",
     href: "https://gocommotion.com/",
     hrefLabel: "gocommotion.com",
+    stack: "Full-stack · AI · authentication & authorization · performance",
   },
   {
     kind: "role",
@@ -79,20 +118,22 @@ export const ledger: LedgerEntry[] = [
     title: "JupiterOne",
     sub: "Senior LLM Engineer / AI Systems Architect",
     blurb:
-      "Built Juno end to end: a React + TypeScript AI assistant on AWS Bedrock with SSE token streaming, live asset-graph tables, and OWASP-aware RAG hardening. Cut enterprise support resolution time 35% and stood up the company's first production LLM monitoring.",
+      "I designed and built Juno, an AI assistant that answers big companies' questions about their own security, live, as they type. Support cases were solved 35% faster, and I set up the company's first checks on AI answers in production.",
     href: "https://www.jupiterone.com/",
     hrefLabel: "jupiterone.com",
+    stack: "React · TypeScript · AWS Bedrock · SSE streaming · RAG · OWASP LLM Top 10",
   },
   {
     kind: "oss",
     slug: "miii-cli",
-    meta: "TS · 38★ · v3.10",
+    meta: "42★ · 56 RELEASES",
     title: "miii-cli",
-    sub: "The open-source alternative to Claude Code. Any model, free forever.",
+    sub: "A free AI coding assistant, like Claude Code, that can run on your own computer.",
     blurb:
-      "A coding agent for the terminal or browser that plans, edits, runs, and verifies its own work, with Claude, GPT, Gemini, DeepSeek, or a model running 100% on your own GPU. 14+ providers, fix-until-green with auto-rollback, MCP, hooks, subagents. MIT, no account.",
+      "You describe a change; it plans it, writes the code, runs the tests and keeps going until they pass, undoing anything that breaks. It works with any AI model, including ones that never leave your machine. Free, no account.",
     href: "https://miii.in/",
     hrefLabel: "miii.in",
+    stack: "TypeScript · Node · Ink · 14+ model providers · MCP · subagents",
   },
   {
     kind: "role",
@@ -100,51 +141,80 @@ export const ledger: LedgerEntry[] = [
     title: "Remote Leaps",
     sub: "Founder & Senior AI Product Engineer · Acquired",
     blurb:
-      "Founded, built, and exited an AI resume SaaS that reached 40K+ users across 25 countries. Sole frontend architect plus a zero-hallucination generation engine using constrained decoding and a fine-tuned scoring model that lifted interview conversion 35%.",
+      "I started an AI résumé product, designed it, built it, and grew it to 40,000+ users in 25 countries before selling it. Its AI was built never to invent experience, and its scoring helped users land 35% more interviews.",
     href: "https://github.com/maruakshay",
     hrefLabel: "case study",
+    stack: "Next.js · constrained decoding · fine-tuned scoring model · led a team of 4",
   },
   {
     kind: "oss",
     slug: "mii-ai-security",
-    meta: "PY · npm",
+    meta: "OPEN SOURCE · npm",
     title: "mii-ai-security",
-    sub: "Open-source LLM security skills framework",
+    sub: "A security playbook for teams building with AI",
     blurb:
-      "58 structured security guides across 12 domains, mapped to OWASP LLM Top 10 and MITRE, with framework-native controls for LangChain, LlamaIndex, AutoGen and more. Think like an attacker, ship like a defender.",
+      "AI chatbots can be tricked into leaking data or doing things they shouldn't. These 58 practical guides show engineers how to stop that, organised the way security teams already work.",
     href: "https://github.com/maruakshay/mii-ai-security",
     hrefLabel: "github.com/maruakshay/mii-ai-security",
+    stack: "Python · OWASP LLM Top 10 · MITRE · LangChain, LlamaIndex, AutoGen",
+  },
+  {
+    kind: "oss",
+    slug: "neuroatlas",
+    meta: "LIVE · 3D",
+    title: "NeuroAtlas",
+    sub: "Explore the human brain in 3D, from whole lobes to single cells",
+    blurb:
+      "Zoom from the whole brain down to one nerve cell, then switch on a disease like Alzheimer's or stroke and see what it changes at every level. It shows what textbooks can only describe.",
+    href: "https://neuroatlas-topaz.vercel.app",
+    hrefLabel: "neuroatlas-topaz.vercel.app",
+    stack: "Next.js · React Three Fiber · three.js · Zustand · procedural geometry",
+  },
+  {
+    kind: "oss",
+    slug: "eye-anatomy",
+    meta: "LIVE · 3D",
+    title: "Eye Atlas",
+    sub: "A 3D eye that helps patients understand their diagnosis",
+    blurb:
+      "Turn, take apart and slice a medically accurate eye, follow how sight travels to the brain, and try simple vision checks. The whole app loads in about 248 KB, smaller than most photos.",
+    href: "https://eye-anatomy-delta.vercel.app",
+    hrefLabel: "eye-anatomy-delta.vercel.app",
+    stack: "React 19 · three.js · Vite · Tailwind v4 · runtime-generated geometry",
   },
   {
     kind: "oss",
     slug: "miii",
-    meta: "TS · 9★",
+    meta: "OPEN SOURCE · 9★",
     title: "miii",
-    sub: "Privacy-first local AI assistant (web + terminal)",
+    sub: "A private AI assistant that runs on your own computer",
     blurb:
-      "One local assistant, two front ends sharing memory: a Next.js web UI and an Ink TUI. LangGraph routes tools, Chroma grounds answers in your documents, Tavily adds optional live search. Runs 100% on your machine.",
+      "Chat in the browser or the terminal, and both remember the same conversation. It can read your documents and search the web when you allow it. Nothing leaves your machine.",
     href: "https://github.com/maruakshay/miii",
     hrefLabel: "github.com/maruakshay/miii",
+    stack: "Next.js · Ink · LangGraph · Chroma · Ollama",
   },
   {
     kind: "oss",
-    meta: "TS · MV3",
+    meta: "CHROME EXTENSION",
     title: "copytap",
-    sub: "Chrome text expander",
+    sub: "Type a shortcut, get the full text",
     blurb:
-      "Type :addr, get your full address, in any input on any site. A small, fast Manifest V3 extension that syncs snippets across signed-in browsers. Built for the friction of typing the same thing twice.",
+      "Type :addr and your full address appears, in any box on any website. A small Chrome extension for anything you type more than twice, synced across your browsers.",
     href: "https://github.com/maruakshay/copytap",
     hrefLabel: "github.com/maruakshay/copytap",
+    stack: "TypeScript · Chrome Manifest V3",
   },
   {
     kind: "oss",
     meta: "DOCS",
     title: "react-jsx-skills-framework",
-    sub: "Engineering implementation frameworks",
+    sub: "Clear rules so a whole team builds the same way",
     blurb:
-      "Style guides are abstract; this turns them into executable specs. Decision matrices and verification checklists for React/JSX, JavaScript, and CSS-in-JS that kill ambiguity before it becomes technical debt.",
+      "Style guides say what good code looks like, not how to decide. These step-by-step checklists for React, JavaScript and styling turn opinions into decisions a team can follow.",
     href: "https://github.com/maruakshay/react-jsx-skills-framework",
     hrefLabel: "github.com/maruakshay/react-jsx-skills-framework",
+    stack: "React · JavaScript · CSS-in-JS · decision matrices",
   },
 ];
 
@@ -159,6 +229,10 @@ export interface DeepDive {
   tagline: string;
   meta: { label: string; value: string }[];
   links: { label: string; href: string }[];
+  /** One plain-English paragraph anyone can follow. */
+  inShort: string;
+  /** My part, in three beats: the thinking, the design, the build. */
+  how: { think: string; design: string; build: string };
   sections: DeepDiveSection[];
 }
 
@@ -170,13 +244,20 @@ export const deepDives: DeepDive[] = [
       "The open-source alternative to Claude Code. Any model, free forever.",
     meta: [
       { label: "Stack", value: "TypeScript · Node ≥18 · Ink · 14+ providers" },
-      { label: "Status", value: "v3.10.2 · 38★ · 49 releases · MIT" },
+      { label: "Status", value: "v3.13.1 · 42★ · 56 releases · MIT" },
       { label: "Install", value: "npm i -g miii-agent" },
     ],
     links: [
       { label: "miii.in", href: "https://miii.in/" },
       { label: "GitHub", href: "https://github.com/maruakshay/miii-cli" },
     ],
+    inShort:
+      "A free AI helper for programmers. You tell it what to change; it writes the code, tests it, and fixes its own mistakes. It works with paid AI models, or with ones that run privately on your own computer.",
+    how: {
+      think: "Developers want AI help, but often can't send private code to a cloud company or pay by the word.",
+      design: "One small app for the terminal or browser, with a clear \"may I?\" before every risky step, so you stay in control.",
+      build: "14+ AI providers, test-until-green with automatic rollback, a checkpoint at every step, and 56 public releases.",
+    },
     sections: [
       {
         heading: "The problem",
@@ -192,7 +273,77 @@ export const deepDives: DeepDive[] = [
       },
       {
         heading: "Why it is on this page",
-        body: "It is the clearest statement of how I think about AI products: small surface, real safety model, no lock-in, no hand-waving about privacy. Forty-nine releases in, it is also proof I maintain what I ship.",
+        body: "It is the clearest statement of how I think about AI products: small surface, real safety model, no lock-in, no hand-waving about privacy. Fifty-six releases in, it is also proof I maintain what I ship.",
+      },
+    ],
+  },
+  {
+    slug: "neuroatlas",
+    name: "NeuroAtlas",
+    tagline: "Explore the brain in 3D from lobes to ion channels, and see what goes wrong in disease.",
+    meta: [
+      { label: "Stack", value: "Next.js · React Three Fiber · three.js · Zustand · shadcn" },
+      { label: "Scope", value: "5 scales · 70+ structures · 15 disorders" },
+      { label: "Status", value: "Live on Vercel" },
+    ],
+    links: [
+      { label: "Live", href: "https://neuroatlas-topaz.vercel.app" },
+      { label: "GitHub", href: "https://github.com/maruakshay/neuroatlas" },
+    ],
+    inShort:
+      "A 3D map of the human brain you explore in your browser, from whole lobes down to single nerve cells, and see how diseases like Alzheimer's or stroke change it.",
+    how: {
+      think: "Textbooks teach the brain one level at a time, but a disease hits every level at once.",
+      design: "One continuous zoom across five levels, with a disease switch that shows its effect wherever you are.",
+      build: "A brain shape generated in code, a working nerve-signal model, and one shared state keeping five 3D scenes in sync.",
+    },
+    sections: [
+      {
+        heading: "The problem",
+        body: "Neuroscience is taught one scale at a time: a lobe diagram in one chapter, a synapse cartoon in the next, an action-potential graph somewhere else. Disease cuts across all of them at once, and that connection is exactly what static figures cannot show.\n\nNeuroAtlas puts every scale into one navigable 3D space, from the whole brain down to tissue, neurons, synapses, and the ion channels in a single membrane, and lets you watch a disorder land on each of them.",
+      },
+      {
+        heading: "The decisions that mattered",
+        body: "- One typed data model for every scale. Structures, neurotransmitters and disorders live in plain TypeScript data, and each disorder declares its effects per scale (atrophy, demyelination, tangles, BBB leak, reactive astrocytes), so a new disease is data, not new scene code.\n- A procedural cortex. The brain surface is generated with noise, and every vertex is assigned to a lobe and functional area (Broca, Wernicke, motor, visual cortex) using the central and Sylvian fissures as boundaries. No multi-megabyte mesh to download, and every region is clickable.\n- A real action-potential model, not a looping animation. Membrane voltage is computed over time with separate modes for normal firing, persistent sodium current, and pump failure, and the channels on screen follow the same curve.\n- Zustand as the single source of state, so the sidebar, info panel, search (⌘K) and five WebGL scenes stay in sync without prop drilling.\n- Mobile and SEO treated as product features: a mobile guide, per-scale metadata, and generated Open Graph images.",
+      },
+      {
+        heading: "What it shows",
+        body: "Complex, data-heavy 3D UI, done with production discipline: a typed domain model, scene code that stays dumb, and state that stays in one place. The same skills that go into building an AI product's interface.",
+      },
+    ],
+  },
+  {
+    slug: "eye-anatomy",
+    name: "Eye Atlas",
+    tagline: "An interactive 3D atlas of the human eye, built for patient education.",
+    meta: [
+      { label: "Stack", value: "Vite · React 19 · Tailwind v4 · three.js" },
+      { label: "Payload", value: "~248 KB gzipped, Three.js included" },
+      { label: "Scope", value: "29 structures · ~231k triangles" },
+    ],
+    links: [
+      { label: "Live", href: "https://eye-anatomy-delta.vercel.app" },
+      { label: "GitHub", href: "https://github.com/maruakshay/eye-anatomy" },
+    ],
+    inShort:
+      "A 3D model of the human eye that patients can turn, take apart and explore, so they understand what their eye doctor is telling them.",
+    how: {
+      think: "Patients struggle to picture their diagnosis, and existing 3D atlases are too heavy for a phone or a clinic screen.",
+      design: "A few simple modes (the eye, how it sees, vision checks) with symptoms and red flags linked to each part.",
+      build: "29 structures computed from real measurements as the page loads, so the app is ~248 KB instead of 30 MB+.",
+    },
+    sections: [
+      {
+        heading: "The problem",
+        body: "When a doctor explains a diagnosis, patients nod along to a plastic model or a flat diagram and leave without really understanding it. Most 3D anatomy atlases are 30 MB+ downloads under restrictive share-alike licences, which rules them out for a clinic website or a phone in a waiting room.",
+      },
+      {
+        heading: "The decisions that mattered",
+        body: "- Generate the geometry, do not ship it. The eye is nearly spherical and radially symmetric, so all 29 structures are computed at runtime from measured anatomical dimensions. The derived axial length (23.88 mm) and lens thickness (3.53 mm) land on the clinical averages, and the whole app is ~248 KB gzipped.\n- Map vessels in clinical coordinates. Retinal arcades are drawn in fundus coordinates (mm from the fovea) and wrapped onto the sphere, across all five circulations, each selectable to explain a specific disease.\n- Teach the visual pathway by its failures. Eight lesion sites, from retina to occipital cortex, each paired with the visual-field defect it produces, colour-coded by hemifield.\n- Make the screening tests honest. Acuity, Amsler grid, contrast, colour and astigmatism tests are calibrated against a physical reference object, so the measurements mean something on any screen.\n- Tie anatomy to symptoms: a disease database and a red-flag system that tells patients when a symptom needs urgent care.",
+      },
+      {
+        heading: "What it shows",
+        body: "First-principles engineering instead of reaching for assets: solving the geometry turned a 30 MB problem into a 248 KB one. It is also a product built for a real audience, patients, with clinical accuracy as the requirement rather than a nice-to-have.",
       },
     ],
   },
@@ -210,6 +361,13 @@ export const deepDives: DeepDive[] = [
       { label: "Surfaces", value: "Web UI + terminal TUI" },
     ],
     links: [{ label: "GitHub", href: "https://github.com/maruakshay/miii" }],
+    inShort:
+      "A personal AI assistant, like ChatGPT, that runs entirely on your own computer, so your conversations stay private.",
+    how: {
+      think: "People shouldn't have to choose between a useful assistant and keeping their data to themselves.",
+      design: "Two ways to use it, a web app and a terminal app, sharing one memory, with web search off until you turn it on.",
+      build: "LangGraph picks the right tool, Chroma lets it answer from your documents, and Ollama runs the model locally.",
+    },
     sections: [
       {
         heading: "The problem",
@@ -240,6 +398,13 @@ export const deepDives: DeepDive[] = [
         href: "https://github.com/maruakshay/mii-ai-security",
       },
     ],
+    inShort:
+      "AI chatbots can be tricked into leaking data or misbehaving. This is a free, practical playbook that shows engineering teams how to prevent it.",
+    how: {
+      think: "Teams ship AI faster than their security habits mature, and most advice is too vague to act on.",
+      design: "58 short guides, each with how an attacker thinks, what to fix, and quick wins, written for the tools teams already use.",
+      build: "Mapped to OWASP LLM Top 10 and MITRE, with a machine-readable index, validation, and red-team test scripts.",
+    },
     sections: [
       {
         heading: "The problem",
@@ -289,11 +454,11 @@ export const career: CareerEntry[] = [
     place: "London, UK · remote",
     title: "Senior LLM Engineer / AI Systems Architect",
     points: [
-      "Built Juno end to end: React + TypeScript AI assistant on AWS Bedrock with SSE streaming and live asset-graph tables.",
-      "OWASP LLM Top 10 guardrails and RAG hardening in a SOC2 / GDPR production environment.",
-      "RAGAS + Braintrust eval pipeline; caching and token-aware summarisation cut prompt load ~45%.",
+      "Designed and built Juno end to end, an AI assistant for enterprise security teams: answers stream in word by word, with live tables of their systems (React, TypeScript, AWS Bedrock).",
+      "Added safety rules so the assistant can't be tricked into leaking data, in a SOC2 / GDPR regulated product (OWASP LLM Top 10, RAG hardening).",
+      "Set up automatic quality checks on AI answers, and cut the AI's workload ~45% with caching and summaries (RAGAS, Braintrust).",
     ],
-    lead: "Set UI architecture, TypeScript standards, and code-review culture; mentored the team on LLMOps and frontend.",
+    lead: "Set how the frontend is structured and reviewed, and mentored the team on running AI in production.",
   },
   {
     years: "2023 — 2025",
@@ -302,7 +467,7 @@ export const career: CareerEntry[] = [
     title: "Founder & Senior AI Product Engineer · acquired",
     points: [
       "Grew an AI resume SaaS to 40K+ users across 25 countries, then sold it.",
-      "Zero-hallucination generation engine plus a fine-tuned scoring model: +35% interview conversion.",
+      "Built AI writing that sticks to the user's real experience, plus a scoring model that lifted interview rates 35%.",
     ],
     lead: "Led a 4-person engineering team with full ownership of roadmap, architecture, and hiring.",
   },
@@ -312,17 +477,17 @@ export const career: CareerEntry[] = [
     place: "London, UK · remote",
     title: "Senior Software Developer",
     points: [
-      "Semantic search for 25,000+ interns and 3,000+ companies: +25% retention.",
-      "RTK Query caching layer: 37% fewer redundant API calls.",
+      "Smarter search matching 25,000+ interns with 3,000+ companies: 25% more of them stayed.",
+      "A caching layer that cut wasted server requests by 37% (RTK Query).",
     ],
-    lead: "Led a TypeScript migration across 20+ microservices: 40% fewer incidents, 2x developer velocity.",
+    lead: "Led a TypeScript migration across 20+ services: 40% fewer incidents, and the team shipped twice as fast.",
   },
   {
     years: "2021 — 2023",
     org: "Rapid Innovation",
     place: "Noida, India",
     title: "Software Developer",
-    points: ["Full-stack NFT marketplace (MetaMask + Solidity); gas optimisations cut user cost ~15%."],
+    points: ["Built a full NFT marketplace and cut users' transaction fees ~15% (MetaMask, Solidity)."],
     lead: "Mentored 5 junior engineers on API design, testing, and deployment.",
   },
   {
@@ -330,15 +495,15 @@ export const career: CareerEntry[] = [
     org: "KGN Technologies · TopDoc AI",
     place: "India",
     title: "Frontend Engineer · UI Developer",
-    points: ["WCAG / OWASP-compliant state platform features (−20% bounce); dental SaaS UI (+28% engagement)."],
+    points: ["Accessible, secure features for a state platform (20% fewer people leaving early) and a dental software UI (+28% engagement)."],
   },
 ];
 
 // miii-cli, as published on miii.in.
 export const miii = {
-  version: "v3.10.2",
-  stars: 38,
-  releases: 49,
+  version: "v3.13.1",
+  stars: 42,
+  releases: 56,
   install: "npm install -g miii-agent",
   site: "https://miii.in/",
   repo: "https://github.com/maruakshay/miii-cli",

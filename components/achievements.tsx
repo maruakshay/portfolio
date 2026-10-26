@@ -13,7 +13,7 @@ import {
 import { toast } from "sonner";
 import { Trophy, X, Lock, Phone } from "lucide-react";
 import { burst } from "@/lib/confetti";
-import { callHref } from "@/lib/content";
+import { callHref, profile } from "@/lib/content";
 
 // A light achievement layer across the whole site. Every unlock is a small
 // reward; the full set ends in one place: a call. Stored per browser only.
@@ -246,6 +246,8 @@ function AchievementsPanel() {
             </p>
             <a
               href={callHref("I hit 100% on your portfolio. Let's talk.")}
+              target={profile.booking ? "_blank" : undefined}
+              rel="noopener noreferrer"
               onClick={() => unlock("contact")}
               className="btn-primary mt-4"
             >

@@ -37,14 +37,16 @@ export function CommandPalette() {
         hint: "the fastest path",
         run: () => {
           unlock("contact");
-          window.location.href = callHref();
+          if (profile.booking) window.open(profile.booking, "_blank", "noopener");
+          else window.location.href = callHref();
         },
       },
-      { group: "Go to", label: "Shipped work", hint: "01", run: go("#work") },
-      { group: "Go to", label: "The arcade: play 3 games", hint: "02", run: go("#arcade") },
+      { group: "Go to", label: "How I work", hint: "01", run: go("#approach") },
+      { group: "Go to", label: "Shipped work", hint: "02", run: go("#work") },
+      { group: "Go to", label: "The arcade: play 3 games", hint: "03", run: go("#arcade") },
       { group: "Go to", label: "miii, in the lab now", run: go("#miii") },
-      { group: "Go to", label: "Track record", hint: "03", run: go("#career") },
-      { group: "Go to", label: "Contact", hint: "04", run: go("#contact") },
+      { group: "Go to", label: "Track record", hint: "04", run: go("#career") },
+      { group: "Go to", label: "Contact", hint: "05", run: go("#contact") },
       { group: "Go to", label: "My achievements", hint: "XP", run: () => openAchievements(true) },
       { group: "Go to", label: "Ask AI about Akshay", hint: "/chat", run: () => router.push("/chat") },
       ...deepDives.map((d) => ({

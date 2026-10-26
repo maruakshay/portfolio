@@ -28,7 +28,7 @@ export function SiteFooter({ withLetter = false }: { withLetter?: boolean }) {
       <div className="relative mx-auto max-w-6xl px-4 py-16 md:px-8 md:py-24">
         {withLetter && (
           <>
-            <SectionRule n="04" label="Your move" />
+            <SectionRule n="05" label="Your move" />
             <div className="grid grid-cols-1 gap-12 pb-16 pt-8 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
               <div>
                 <h2 className="font-display text-[clamp(2.5rem,6vw,4.5rem)] font-extrabold leading-[0.92] text-ink">

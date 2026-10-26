@@ -8,6 +8,8 @@ brand
 
 Hiring managers and engineering leaders at AI companies. They scan dozens of portfolios back-to-back, most of which look identical. They want to feel, within 10 seconds, that the person behind this has opinions and taste. They're not only checking work history; they're evaluating how Akshay thinks about products and whether they'd want to work with him. Context: usually a laptop, during a focused hiring review or a casual browse between meetings.
 
+The first reader is often a recruiter or HR screener, not an engineer. Every headline, card and summary must make sense to a non-technical reader in plain English; technical detail lives in small "Built with" lines and the deep-dives' "full story, for engineers". The site should also show that Akshay thinks, designs and measures, not only codes (see the How I work section).
+
 ## Product Purpose
 
 Akshay Maru's personal portfolio. It exists to get him hired at an AI company. Success means a hiring manager closes the tab thinking "I need to talk to this person", not because of the metrics listed, but because the portfolio itself reads like a product decision.

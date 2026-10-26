@@ -1,6 +1,6 @@
 ﻿AKSHAY MARU
 Lead Frontend Engineer · AI-Native Products · React / Next.js / TypeScript / LLM UX
-Location: India (Open to US Remote / Relocation) | Authorization: Requires Visa Sponsorship (H-1B eligible)
+Location: India (Open to roles worldwide: remote or relocation) | Authorization: Needs visa sponsorship where relocation requires it (H-1B eligible)
 +91-7069275229  •  maruakshay4@gmail.com  •  linkedin.com/in/akshaymaru61  •  akshay-portfolio-zeta.vercel.app
 
 SUMMARY
@@ -66,13 +66,17 @@ OPEN SOURCES
 
 
 Miii CLI | The open-source alternative to Claude Code. Any model, free forever. | miii.in · github.com/maruakshay/miii-cli
-Coding agent for the terminal and browser (miii web) that plans, edits, runs and verifies its own work. 14+ model providers (Claude, GPT, Gemini, DeepSeek, Grok, Mistral, Kimi, GLM, Groq, OpenRouter, Cerebras) or 100% offline via Ollama, LM Studio, llama.cpp, vLLM. Fix-until-green with auto-rollback, rewind/checkpoints, miii doctor model grading, permission-gated edits, MCP, hooks, subagents. MIT, no account. Install: npm install -g miii-agent. v3.10.2, 49 releases, 38 GitHub stars.
+Coding agent for the terminal and browser (miii web) that plans, edits, runs and verifies its own work. 14+ model providers (Claude, GPT, Gemini, DeepSeek, Grok, Mistral, Kimi, GLM, Groq, OpenRouter, Cerebras) or 100% offline via Ollama, LM Studio, llama.cpp, vLLM. Fix-until-green with auto-rollback, rewind/checkpoints, miii doctor model grading, permission-gated edits, MCP, hooks, subagents. MIT, no account. Install: npm install -g miii-agent. v3.13.1, 56 releases, 42 GitHub stars.
 Miii | Privacy-First Local AI Assistant (web + terminal) | github.com/maruakshay/miii
 Local-first AI chat (web + terminal) via Ollama — LangGraph tool routing, live web search, streaming NDJSON. Actively maintained with public commit history.
 AI Assistant Portfolio | Interactive AI-powered portfolio with real-time chat | github.com/maruakshay/portfolio
 Production-deployed Next.js App Router + OpenAI API + LangGraph + Vercel AI SDK — real-time streaming, Radix UI + Framer Motion. Live and viewable by any recruiter in one click.
 Miii AI Security Skills | Open-Source LLM Security Skills Framework | github.com/maruakshay/mii-ai-security
 Open-source modular framework across 5 threat pillars: prompt injection defense, RAG hardening, tool sandboxing, data leakage prevention, red-team governance — aligned to OWASP LLM Top 10.
+NeuroAtlas | Interactive 3D brain anatomy, from lobes to ion channels | neuroatlas-topaz.vercel.app · github.com/maruakshay/neuroatlas
+Next.js + React Three Fiber app spanning 5 scales (brain, tissue, neuron, synapse, membrane) with 70+ structures. Simulates 15 disorders (Alzheimer's, Parkinson's, stroke, MS, epilepsy, ALS, glioblastoma and more) and shows their effect at every scale. Procedurally generated cortex with per-vertex lobe/area mapping, a time-based action-potential model, Zustand state, command-palette search.
+Eye Atlas | Interactive 3D atlas of the human eye for patient education | eye-anatomy-delta.vercel.app · github.com/maruakshay/eye-anatomy
+Vite + React 19 + Tailwind v4 + Three.js. 29 structures generated at runtime from measured anatomical dimensions (~248 KB gzipped vs 30MB+ mesh-based atlases), five vascular circulations, visual pathway with eight lesion sites and their field defects, calibrated vision-screening suite (acuity, Amsler, contrast, colour, astigmatism), optics simulator, disease and red-flag database.
 
 
 EDUCATION	
