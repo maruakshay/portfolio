@@ -22,31 +22,30 @@ export function SectionRule({
 }
 
 /**
- * The mark: a hand-cut "A" whose apex is a chevron, followed by a terminal
- * cursor that keeps blinking. "A, shipping." The cursor stops under
- * reduced motion; on hover the mark tilts like a key being pressed.
+ * The mark: an "@" stroked with the brand gradient. Matching copies live in
+ * `app/icon.svg` and `lib/brand.tsx`; change all three together.
  */
-export function Monogram({ className = "", animated = true }: { className?: string; animated?: boolean }) {
+export function Monogram({ className = "" }: { className?: string; animated?: boolean }) {
   return (
-    <svg viewBox="0 0 32 32" className={className} aria-hidden fill="none">
-      <rect x="1" y="1" width="30" height="30" rx="9" fill="var(--color-volt)" />
-      <path
-        d="M6 23.5 12.1 8.5h1.3l6.1 15"
-        stroke="var(--color-canvas)"
-        strokeWidth="3.4"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path d="M8.9 18.4h7.6" stroke="var(--color-canvas)" strokeWidth="3" strokeLinecap="round" />
-      <rect
-        x="21.2"
-        y="21"
-        width="6.4"
-        height="2.8"
-        rx="1.2"
-        fill="var(--color-canvas)"
-        className={animated ? "mark-blink" : undefined}
-      />
+    <svg
+      viewBox="0 0 24 24"
+      className={className}
+      aria-hidden
+      fill="none"
+      stroke="url(#am-mark-grad)"
+      strokeWidth="2.4"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <defs>
+        <linearGradient id="am-mark-grad" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stopColor="#ffb347" />
+          <stop offset="0.45" stopColor="#ff8a3d" />
+          <stop offset="1" stopColor="#ff3d8b" />
+        </linearGradient>
+      </defs>
+      <circle cx="12" cy="12" r="4" />
+      <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8" />
     </svg>
   );
 }

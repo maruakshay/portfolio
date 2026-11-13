@@ -1,15 +1,19 @@
 import { ImageResponse } from "next/og";
 import { BRAND, MarkSvg } from "@/lib/brand";
 
-export const alt = "Akshay Maru, AI product engineer: most AI demos die in production. Mine ship.";
+export const alt = "Akshay Maru: freelance AI engineer and content creator. Open for freelance projects.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-const STATS = [
-  ["40K+", "users · founded & sold"],
-  ["35%", "faster support with Juno"],
-  ["49", "open-source releases"],
-];
+const GRAD = `linear-gradient(90deg, ${BRAND.amber}, ${BRAND.orange}, ${BRAND.coral}, ${BRAND.pink})`;
+
+function Boxed({ text }: { text: string }) {
+  return (
+    <div style={{ display: "flex", padding: 3, background: GRAD, alignSelf: "flex-start" }}>
+      <div style={{ display: "flex", background: BRAND.paper, padding: "4px 22px 10px" }}>{text}</div>
+    </div>
+  );
+}
 
 export default function OpengraphImage() {
   return new ImageResponse(
@@ -22,33 +26,31 @@ export default function OpengraphImage() {
           flexDirection: "column",
           justifyContent: "space-between",
           padding: 64,
-          background: BRAND.canvas,
-          backgroundImage: `radial-gradient(circle at 20% 0%, rgba(200,245,58,0.18), transparent 55%)`,
+          background: BRAND.paper,
+          backgroundImage:
+            "linear-gradient(90deg, transparent 203px, rgba(20,20,20,.09) 203px, rgba(20,20,20,.09) 204px, transparent 204px, transparent 995px, rgba(20,20,20,.09) 995px, rgba(20,20,20,.09) 996px, transparent 996px)",
           color: BRAND.ink,
           fontFamily: "sans-serif",
         }}
       >
-        <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
-          <MarkSvg size={64} />
-          <div style={{ display: "flex", flexDirection: "column" }}>
-            <span style={{ fontSize: 32, fontWeight: 700 }}>Akshay Maru</span>
-            <span style={{ fontSize: 20, color: BRAND.faint, letterSpacing: 3 }}>AI PRODUCT ENGINEER</span>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 18 }}>
+            <MarkSvg size={56} />
+            <span style={{ fontSize: 30, letterSpacing: 2 }}>AKSHAY MARU</span>
           </div>
+          <span style={{ fontSize: 22, letterSpacing: 3, border: `2px solid ${BRAND.ink}`, padding: "8px 18px" }}>
+            •• OPEN FOR FREELANCE
+          </span>
         </div>
 
-        <div style={{ display: "flex", flexDirection: "column", fontSize: 76, fontWeight: 800, lineHeight: 1.02, letterSpacing: -2 }}>
-          <span>Most AI demos die in</span>
-          <span style={{ color: BRAND.volt }}>production.</span>
-          <span style={{ color: BRAND.faint }}>Mine ship.</span>
+        <div style={{ display: "flex", flexDirection: "column", gap: 14, fontSize: 104, lineHeight: 1, letterSpacing: -3 }}>
+          <Boxed text="AI Engineer" />
+          <Boxed text="& Creator" />
         </div>
 
-        <div style={{ display: "flex", gap: 56 }}>
-          {STATS.map(([v, l]) => (
-            <div key={v} style={{ display: "flex", flexDirection: "column" }}>
-              <span style={{ fontSize: 48, fontWeight: 800, color: BRAND.volt }}>{v}</span>
-              <span style={{ fontSize: 22, color: BRAND.faint }}>{l}</span>
-            </div>
-          ))}
+        <div style={{ display: "flex", justifyContent: "space-between", fontSize: 24, color: BRAND.dim, letterSpacing: 2 }}>
+          <span>AI PRODUCTS · RAG & AGENTS · LLM SECURITY</span>
+          <span>@AKSHAAY.AI · @AKSHAAY.LIFTS</span>
         </div>
       </div>
     ),

@@ -1,14 +1,33 @@
 // The mark as plain JSX for next/og image routes (icons, social cards),
-// where CSS variables and classes aren't available.
-export const BRAND = { volt: "#C8F53A", canvas: "#121218", ink: "#F7F7F2", faint: "#8B8C9C" };
+// where CSS variables and classes aren't available. Mirrors components/ornament.tsx (the "@").
+export const BRAND = {
+  paper: "#efece6",
+  ink: "#141414",
+  dim: "#7a7873",
+  amber: "#ffb347",
+  orange: "#ff8a3d",
+  coral: "#ff5a5f",
+  pink: "#ff3d8b",
+};
 
 export function MarkSvg({ size }: { size: number }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 32 32" fill="none">
-      <rect x="1" y="1" width="30" height="30" rx="9" fill={BRAND.volt} />
-      <path d="M6 23.5 12.1 8.5h1.3l6.1 15" stroke={BRAND.canvas} strokeWidth="3.4" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M8.9 18.4h7.6" stroke={BRAND.canvas} strokeWidth="3" strokeLinecap="round" />
-      <rect x="21.2" y="21" width="6.4" height="2.8" rx="1.2" fill={BRAND.canvas} />
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
+      <defs>
+        <linearGradient id="g" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stopColor={BRAND.amber} />
+          <stop offset="0.45" stopColor={BRAND.orange} />
+          <stop offset="1" stopColor={BRAND.pink} />
+        </linearGradient>
+      </defs>
+      <circle cx="12" cy="12" r="4" stroke="url(#g)" strokeWidth="2.4" />
+      <path
+        d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8"
+        stroke="url(#g)"
+        strokeWidth="2.4"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 }

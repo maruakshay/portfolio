@@ -4,7 +4,7 @@
     "hash": "239f3ebf717465dc636818a1a619398d"
   },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/next-env.d.ts": {
-    "mtime": 1781704094.6198137,
+    "mtime": 1794599480.1471229,
     "hash": "2a74d3909800ca5467fa83b0ab4a4890"
   },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/eslint.config.mjs": {
@@ -15,77 +15,97 @@
     "mtime": 1776687711.6998348,
     "hash": "9b77af189a21a7a64e4bd7a426f64176"
   },
+  "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/app/robots.ts": {
+    "mtime": 1794591200.332395,
+    "hash": "92d0fcdff47ecc6c658554f846dd82de"
+  },
+  "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/app/apple-icon.tsx": {
+    "mtime": 1794600215.519116,
+    "hash": "1a5b0e34d8fe418dfc3be9b1dcd2f79f"
+  },
+  "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/app/opengraph-image.tsx": {
+    "mtime": 1794599104.6648371,
+    "hash": "ffc2acbed52a64686939e8bf6d1fc332"
+  },
+  "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/app/sitemap.ts": {
+    "mtime": 1794591200.3325007,
+    "hash": "9ea4a0bab6e124cf9775fa0a0fb4d2d9"
+  },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/app/layout.tsx": {
-    "mtime": 1781700524.5261757,
-    "hash": "26fe4280ee1cf4dfef7964ff0788a76b"
+    "mtime": 1794600529.2611196,
+    "hash": "b60aeb0986c28d88452ac8a060baaa51"
+  },
+  "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/app/manifest.ts": {
+    "mtime": 1794599104.8121448,
+    "hash": "1e84128f77c2b9fc383ae754c6b1dd26"
   },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/app/page.tsx": {
-    "mtime": 1781764190.9462008,
-    "hash": "61d3bfacec8b08fac500d15bddbcdd62"
+    "mtime": 1794599391.328016,
+    "hash": "99fee913dfbf952ba91c10f59f16512c"
   },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/app/not-found.tsx": {
-    "mtime": 1781700537.5982914,
-    "hash": "0b9fd76e0baacc31df87bf716ba04da0"
+    "mtime": 1794591200.3320198,
+    "hash": "151e12a7c5e65fa8bc84bd04dbdfc9ad"
   },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/app/chat/page.tsx": {
-    "mtime": 1781759674.466043,
-    "hash": "f9e62cd3b471e3ea0898e58ae60fe5df"
+    "mtime": 1794591200.3303382,
+    "hash": "91afc0f840c80ceeaf689e91e21cb4b8"
   },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/app/work/[slug]/page.tsx": {
-    "mtime": 1781759779.3729022,
-    "hash": "a0f65c659d29cf2e0277ee18bd712c16"
+    "mtime": 1794599421.9203184,
+    "hash": "10daac2ec967dc8e33dc66279d270af5"
   },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/app/api/chat/route.ts": {
-    "mtime": 1777958612.8929043,
-    "hash": "91a7040742f4ca7f75ad6e1e6d9bd242"
-  },
-  "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/components/hero.tsx": {
-    "mtime": 1781704436.7819443,
-    "hash": "7a620c70c07a765d146a71bb2e3021fd"
+    "mtime": 1794591200.3299274,
+    "hash": "3a704cdebc71aaa63229c5090f751cb9"
   },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/components/chat-full.tsx": {
-    "mtime": 1781759665.5529044,
-    "hash": "1e7f39b2c52c698a82078cfd342ace8e"
+    "mtime": 1794599421.9198174,
+    "hash": "b6193022d313ac89e6e7a26f5b6737be"
   },
-  "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/components/work-bento.tsx": {
-    "mtime": 1781702408.713884,
-    "hash": "b7124d559aa698d4b3ef1f4f9c678dea"
-  },
-  "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/components/hero-visual.tsx": {
-    "mtime": 1781704428.4002726,
-    "hash": "5be0fe411562bf3db5ea36a5788b2a51"
-  },
-  "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/components/capabilities.tsx": {
-    "mtime": 1781764175.471276,
-    "hash": "3bbbf89774fa249f24cb2ca02a957389"
+  "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/components/ornament.tsx": {
+    "mtime": 1794600215.5174744,
+    "hash": "bcaab71e7689dc80b42f3a42e84a41f2"
   },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/components/site-header.tsx": {
-    "mtime": 1781764171.1858327,
-    "hash": "aa3b70aef716c2b6ab5bca244f14cc40"
+    "mtime": 1794600395.4844923,
+    "hash": "fa2c319004d5eca6775595e174ea4b14"
+  },
+  "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/components/command-palette.tsx": {
+    "mtime": 1794599421.9201307,
+    "hash": "eefd162f2b81156991f0df89df64db3c"
   },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/components/site-footer.tsx": {
-    "mtime": 1781764200.7617402,
-    "hash": "4d694bda1fd553fb13a1b626326234f7"
+    "mtime": 1794599432.0911977,
+    "hash": "78825894dc304f4694d69ac65cfba25f"
   },
-  "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/components/reveal.tsx": {
-    "mtime": 1781700293.3063886,
-    "hash": "959ac323141d246d71ffe9a55027d05d"
+  "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/components/landing/landing.tsx": {
+    "mtime": 1794599455.9559999,
+    "hash": "68e60b39f170ebc82ff4de005017bcc1"
+  },
+  "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/components/landing/robot-scene.tsx": {
+    "mtime": 1794599812.963606,
+    "hash": "f7f79d676aaafa4a4e58d34cd4d843a9"
   },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/lib/content.ts": {
-    "mtime": 1781763996.6047745,
-    "hash": "5bbb63e669a3d004c4aecb92bd46d182"
+    "mtime": 1794598985.7473378,
+    "hash": "62a1f825d9b292516a38c780a3454242"
+  },
+  "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/lib/brand.tsx": {
+    "mtime": 1794600215.517839,
+    "hash": "19bb1a4f15021e26cea7a54959adeaba"
   },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/PRODUCT.md": {
-    "mtime": 1781699644.1790977,
-    "hash": "809fbedd2ffd570152e467ab5df2c09d"
+    "mtime": 1794600013.9815176,
+    "hash": "5291a7b78c2061fb12de93270aa30ea9"
   },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/README.md": {
     "mtime": 1776749473.0921369,
     "hash": "fe36462293408a86a1b168367c5aedc9"
   },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/DESIGN.md": {
-    "mtime": 1781699660.6522017,
-    "hash": "10deb55bf7abb1c64dccf2f7d1403854"
+    "mtime": 1794600589.6897917,
+    "hash": "0c850d69f99dce0b2e9a66211b669c90"
   },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/CLAUDE.md": {
     "mtime": 1777957241.0681865,
@@ -96,11 +116,11 @@
     "hash": "421f8f9d23ef9d6f537d7df366923ded"
   },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/app/api/chat/private/Akshay Maru Resume.txt": {
-    "mtime": 1781699311.899865,
-    "hash": "bfae6db5c4ac2b873e1021d2112faa89"
+    "mtime": 1794591200.3294344,
+    "hash": "f11ab8278a25e04a7383a216a9023437"
   },
-  "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/app/opengraph-image.png": {
-    "mtime": 1776687711.69906,
-    "hash": "927e4d2fad77da19c986cccdfb98d887"
+  "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/app/icon.svg": {
+    "mtime": 1794600215.5175881,
+    "hash": "40fe76f86443865f1ae86a50b6719595"
   }
 }

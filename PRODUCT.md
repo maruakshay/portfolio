@@ -6,33 +6,32 @@ brand
 
 ## Users
 
-Hiring managers and engineering leaders at AI companies. They scan dozens of portfolios back-to-back, most of which look identical. They want to feel, within 10 seconds, that the person behind this has opinions and taste. They're not only checking work history; they're evaluating how Akshay thinks about products and whether they'd want to work with him. Context: usually a laptop, during a focused hiring review or a casual browse between meetings.
+Two audiences, in this order:
 
-The first reader is often a recruiter or HR screener, not an engineer. Every headline, card and summary must make sense to a non-technical reader in plain English; technical detail lives in small "Built with" lines and the deep-dives' "full story, for engineers". The site should also show that Akshay thinks, designs and measures, not only codes (see the How I work section).
+1. **Freelance clients**: founders, startup teams and product leads who need an AI feature or product built (assistants, RAG on their docs, agents, LLM security reviews, the product UI around them). Often non-technical. They want to know within 10 seconds what Akshay builds, that he has shipped it before, and how to start a conversation.
+2. **Followers and brands**: people who find him through Instagram (@akshaay.ai for AI education, @akshaay.lifts for fitness) and brands looking for creator collabs.
 
-## Product Purpose
+Every headline must make sense in plain English. Technical detail lives in the work deep-dives.
 
-Akshay Maru's personal portfolio. It exists to get him hired at an AI company. Success means a hiring manager closes the tab thinking "I need to talk to this person", not because of the metrics listed, but because the portfolio itself reads like a product decision.
+## Product Purpose (2026-11 revamp)
 
-The work is the argument. The credibility is real and specific: a senior AI product engineer who leads the frontend of an enterprise AI assistant at a cybersecurity company (JupiterOne, AWS Bedrock), founded and exited an AI SaaS that reached 40K+ users across 25 countries, and ships a maintained open-source ecosystem of local-first AI tooling and LLM security (miii-cli, miii, mii-ai-security, plus copytap and react-jsx-skills-framework). The portfolio leads with that work and the open source, in his voice, with the decisions and tradeoffs made explicit.
+Make two things unmistakable: **Akshay is open for freelance AI projects**, and **he is a content creator**. Every path ends at one of three actions: book a 20-minute intro call, email, or follow on Instagram.
 
-The AI chat is a small part, not the centerpiece. It is one quiet, well-built interactive touch that lets a visitor ask about Akshay's work. It should feel considered and on-brand, but it does not carry the portfolio; the real shipped products and open source do.
+The proof is real and specific: an enterprise AI assistant on AWS Bedrock (JupiterOne), an AI SaaS founded, grown to 40K+ users and sold (Remote Leaps), and open-source AI tooling (miii-cli, miii, mii-ai-security). The Work section and the deep-dives carry it.
+
+The AI chat (/chat) stays a small supporting feature.
 
 ## Brand Personality
 
-Confident, fast, sharp, and fun to be around. The site should produce a feeling, not just a record: momentum ("this person ships"), clarity ("this person thinks well"), and a small hit of delight at every step that makes a visitor stay and then reach out.
-
-## Experience Goal (2026-10 revamp)
-
-A deliberate experiment in engagement: rewards (count-ups, achievements, confetti, games) keep visitors on the page longer and build conviction. Every reward path ends at one conversion: a 20-minute call. The games are built from real decisions and real work, so playing them is evaluating Akshay.
+Calm, crafted, a little playful. A friendly ceramic robot, warm paper, precise mono labels. Confident without shouting.
 
 ## Guardrails
 
-- Truth over hype. Every metric and game outcome must trace to the résumé, the deep-dives, or miii.in. No fake urgency, fake visitor counts, or invented quotes.
-- Rewards never block content. The work stays readable without playing anything.
-- Reduced motion is honoured everywhere. The page still works with no JavaScript storage.
-- The AI chat stays a supporting feature (it awards an achievement but never dominates).
+- Truth over hype. Every claim traces to the résumé, the deep-dives, or miii.in. No invented testimonials, client logos, follower counts or fake availability slots.
+- The robot is decoration: the page reads fully without WebGL or JavaScript motion.
+- Reduced motion is honoured (no typing loop, no tab auto-slide, no idle robot motion).
+- Personal details beyond what Akshay publishes on his channels stay off the page unless he adds them.
 
 ## Accessibility & Inclusion
 
-WCAG AA contrast on the dark canvas. Games are keyboard-operable (tabs with arrow keys, buttons for every action). Motion carries delight, never meaning.
+WCAG AA text contrast on paper. All controls keyboard-operable with visible focus. Motion carries delight, never meaning.

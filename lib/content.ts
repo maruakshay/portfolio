@@ -5,17 +5,18 @@ export const siteUrl = "https://akshay-portfolio-zeta.vercel.app";
 
 export const profile = {
   name: "Akshay Maru",
-  role: "Senior / Staff / Lead AI & Product Engineer",
+  role: "Freelance AI Engineer & Content Creator",
   statementLead:
     "Most AI demos die in production. I build the ones that don't.",
   statementRest:
     "End to end: the streaming interface and the model behind it. Right now, full-stack AI and security for SaaS products at Commotion. Before that, an enterprise AI assistant on AWS Bedrock at JupiterOne, and an AI SaaS I founded, grew past 40,000 users, and sold. Alongside it, local-first AI tooling I maintain in the open.",
   location: "India",
-  availability:
-    "Open to roles worldwide · remote or relocation",
+  availability: "Open for freelance projects · remote, worldwide",
   email: "maruakshay4@gmail.com",
   github: "https://github.com/maruakshay",
   linkedin: "https://linkedin.com/in/akshaymaru61",
+  instagramAi: "https://www.instagram.com/akshaay.ai/",
+  instagramLifts: "https://www.instagram.com/akshaay.lifts/",
   resume:
     "https://docs.google.com/document/d/1_CcUyc3-QAS77It1ttnfuSSbDVObDvKKjtnvpkNVnwg/export?format=pdf",
   // Paste a Cal.com / Calendly link here and every "Book a call" button
@@ -26,17 +27,73 @@ export const profile = {
 /** Every "Book a call" CTA points here: the scheduler if set, else a ready email. */
 export function callHref(context?: string) {
   if (profile.booking) return profile.booking;
-  const subject = "20-minute call with Akshay";
+  const subject = "Freelance project: 20-minute intro call";
   const body = [
     "Hi Akshay,",
     "",
-    context ?? "I went through your portfolio and would like to set up a 20-minute call this week.",
+    context ?? "I have a project I'd like your help with and would like to set up a 20-minute intro call.",
     "",
     "Times that work for me:",
     "",
   ].join("\n");
   return `mailto:${profile.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
+
+// ── Freelance landing ─────────────────────────────────────────────────────
+
+/** Client briefs the intro prompt box types out, one after another. */
+export const briefs = [
+  "Build an AI assistant that answers from our help docs.",
+  "Add streaming AI chat to our Next.js SaaS dashboard.",
+  "Audit our LLM app for prompt injection and data leaks.",
+  "Turn this product idea into a working AI MVP.",
+];
+
+/** Freelance services, shown in the scrolling tab strip. */
+export const services = [
+  "AI assistants & chatbots",
+  "RAG on your own docs",
+  "AI agents & automation",
+  "LLM security review",
+  "AI MVP, idea to launch",
+  "Streaming AI interfaces",
+  "Evals & guardrails",
+  "React & Next.js frontends",
+  "Interactive 3D web",
+];
+
+/** Things already shipped, each traceable to the résumé or the work below. */
+export const shipped = [
+  { k: "Enterprise", v: "AI assistant on AWS Bedrock, JupiterOne" },
+  { k: "Founder", v: "AI SaaS grown to 40K+ users, then sold" },
+  { k: "Open source", v: "miii, a free AI coding agent" },
+];
+
+export interface Channel {
+  handle: string;
+  topic: string;
+  pitch: string;
+  href: string;
+  glyph: "ai" | "lifts";
+}
+
+/** Instagram channels. Kept to what each account is about, no follower claims. */
+export const channels: Channel[] = [
+  {
+    handle: "@akshaay.ai",
+    topic: "AI education · Instagram",
+    pitch: "AI, explained without the hype. What the new tools actually do, and how I use them every day as an engineer.",
+    href: profile.instagramAi,
+    glyph: "ai",
+  },
+  {
+    handle: "@akshaay.lifts",
+    topic: "Fitness · Instagram",
+    pitch: "The gym side of me. Training, progress, and the honest, unglamorous days of getting stronger.",
+    href: profile.instagramLifts,
+    glyph: "lifts",
+  },
+];
 
 // Real, sourced numbers only (résumé + miii.in). Shown as the hero proof wall.
 export const proof = [

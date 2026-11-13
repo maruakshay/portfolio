@@ -6,7 +6,6 @@ import { SectionRule } from "@/components/ornament";
 import { callHref, deepDives, getDeepDive, profile } from "@/lib/content";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import { Unlock } from "@/components/achievements";
 
 export function generateStaticParams() {
   return deepDives.map((d) => ({ slug: d.slug }));
@@ -70,13 +69,12 @@ export default async function WorkPage({
   return (
     <>
       <SiteHeader />
-      <Unlock id="deep-dive" />
       <main>
         {/* Masthead */}
         <section>
           <div className="mx-auto max-w-3xl px-5 pb-10 pt-16 md:px-8 md:pt-24">
             <Link
-              href="/"
+              href="/#work"
               className="label mb-10 inline-flex items-center gap-2 text-ink-faint transition-colors hover:text-volt"
             >
               <ArrowLeft className="size-3.5" /> All work

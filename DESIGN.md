@@ -1,62 +1,49 @@
 ---
 name: Akshay Maru Portfolio
-description: "Signal" — a dark, high-voltage stage for an engineer who ships fast. Every interaction pays out a small reward; every path ends at a call.
+description: "Paper Robot" — warm paper, thin dark guides, and a boxy ceramic robot built in three.js. Freelance-first, creator-second.
 colors:
-  canvas: "oklch(0.145 0.012 275)"
-  canvas-deep: "oklch(0.18 0.014 275)"
-  canvas-shade: "oklch(0.23 0.016 275)"
-  rule: "oklch(0.30 0.016 275)"
-  ink: "oklch(0.975 0.006 100)"
-  ink-muted: "oklch(0.80 0.012 275)"
-  ink-faint: "oklch(0.64 0.014 275)"
-  volt: "oklch(0.92 0.21 125)"
-  flare: "oklch(0.68 0.20 295)"
-  cyan: "oklch(0.82 0.12 210)"
-  hot: "oklch(0.70 0.20 25)"
+  paper: "#efece6"
+  ink: "#141414"
+  dim: "rgba(20,20,20,.5)"
+  guide: "rgba(20,20,20,.09)"
+  brand-gradient: "conic-gradient(from 200deg, #ffb347, #ff8a3d 18%, #ff5a5f 34%, #ff3d8b 50%, #ff5a5f 66%, #ff8a3d 82%, #ffb347)"
+  accent-text: "#c2410c (token: volt; AA on paper)"
 typography:
-  display: "Bricolage Grotesque, 700–800, tight tracking (-0.03 to -0.045em)"
-  serif: "Instrument Serif italic — the one human word per headline (h1/h2/h3 em)"
-  body: "Geist, 1.0625rem / 1.6"
-  label: "Geist Mono, 0.75rem, uppercase, 0.06em"
+  sans: "Schibsted Grotesk (variable), 400 for headlines"
+  mono: "IBM Plex Mono 300/400/500, uppercase, 0.04–0.06em, every small label"
+  serif: "Instrument Serif italic, inner pages only (taglines, the one human word)"
+  script: "Yellowtail, header wordmark only"
 ---
 
-# Design System: "Signal"
+# Design System: "Paper Robot"
 
 ## 1. North star
 
-The visitor should feel momentum within five seconds: this person is confident, fast, and thinks clearly.
-The site rewards attention (counters, achievements, games, confetti) and routes every reward toward one action: **book a 20-minute call**.
+Within five seconds a visitor knows: this person builds AI products, is open for freelance work, and makes content. The robot makes it memorable; the copy makes it clear.
 
-**Truth rule:** dopamine is allowed; fabrication is not. Every number, outcome, and game answer traces to the résumé, the deep-dives, or miii.in. No fake scarcity, fake viewers, or invented testimonials.
+## 2. Layout
 
-## 2. Colour
+- Three fixed 1px guides at 17%, 50%, 83% (`--col: 17%`). Outer guides hide under 900px.
+- Fixed chrome (`components/site-header.tsx`, styles in `app/globals.css`): 30px announcement bar that slides away after 40px of scroll or on ×, plus a 52px blurred-paper nav (`17% 1fr 12% 17%`).
+- Home (`components/landing/`): Intro → Services → Content are transparent 100vh stages over the robot; Work and Contact are solid paper sheets that cover it. A right rail labels the current section; its MENU opens the ⌘K palette.
 
-- **Volt** (acid lime) is the reward colour: primary CTAs, the emphasis word, unlocked states, scores. When volt appears, something good happened.
-- **Flare** (violet) is energy: open-source badges, game kickers, ambient glow.
-- **Hot** (coral) means wrong or danger: bugs, missed answers, the last 5 seconds.
-- **Cyan** is for code only.
-- Ambient glows (blurred volt/flare circles) are allowed behind the hero, arcade, and contact sections only.
+## 3. The robot (`components/landing/robot-scene.tsx`)
 
-## 3. Type
+three.js 0.160 (pinned), RoundedBoxGeometry + RoomEnvironment. Scroll (`p = scrollY / innerHeight`, 0–2, smoothed 8%/frame) blends Intro (full body on a pedestal, head tilted left) to a head close-up for Services and Content. The face shows two blinking eyes, then a play mark once p > 1.55 (Content). Pointer adds parallax and head tracking. Rendering stops once the solid sheets cover the stage.
 
-- Bricolage Grotesque, extra-bold, does the talking.
-- One Instrument Serif italic `<em>` per headline is the human counterweight. Never synthesize italics on the grotesk.
-- Geist Mono annotates: labels, buttons, meta, scores.
+## 4. Colour
 
-## 4. Brand mark
+Paper and ink do almost all the work. The brand gradient is decorative only: headline box outlines, the logo, the Hire me border, the robot's face ring. Never put text in gradient except the tiny "Now:" label. Text accents use `volt` (#c2410c), which passes AA on paper.
 
-`A_`: a rounded volt tile with a hand-cut A and a blinking terminal cursor ("A, shipping"). Source in `components/ornament.tsx` (`Monogram`), with matching copies in `app/icon.svg` and `lib/brand.tsx` (used by the OG and apple icons). Change all three together.
+## 5. Type
 
-## 5. Page flow (home)
+Schibsted Grotesk 400 for headlines, set large and quiet. IBM Plex Mono uppercase for labels, buttons, meta. Headline lines sit in 2px gradient-outlined boxes; the first has its bottom-right corner cut at 45°.
 
-Hero (claim, rotator, two CTAs, proof wall with count-up) → Marquee → **01 Shipped** (bento cards with cursor spotlight) → **02 Arcade** (3 games) → miii lab → **03 Track record** → **04 Your move** (call CTA plus letter composer). A floating "Book a 20-min call" pill appears after the hero and hides at the contact section.
+## 6. Brand mark
 
-## 6. Engagement systems
-
-- **Achievements** (`components/achievements.tsx`): 10 achievements with XP, a header meter, and a slide-over panel. Each unlock fires a toast and confetti. At 100%, the panel opens with a call CTA. Progress lives in localStorage only.
-- **Arcade** (`components/arcade/`): *Make the call* (real product decisions), *Bug Rush* (20-second reflex game with combos), *Spot the injection* (LLM guardrail quiz). Every result screen ends with "Talk to the real thing" and a pre-filled call request that includes the score.
-- **Booking:** set `profile.booking` in `lib/content.ts` to a Cal.com or Calendly URL. Until then, every call CTA opens a pre-written email.
+- **Header wordmark:** "Akshay" in Yellowtail (ink, 34px) with "MARU" in IBM Plex Mono (11px, 0.42em tracking, brand gradient) tucked under its baseline. The script has a paper-coloured stroke painted behind its fill, so any crossing cuts a clean gap. Styles: `.wordmark*` in `app/globals.css`; markup in `components/site-header.tsx`.
+- **Icon mark:** an "@" stroked with the brand gradient. Used for the favicon (`app/icon.svg`), OG + apple icons (`lib/brand.tsx`) and the inner-page footer (`Monogram` in `components/ornament.tsx`). Change those three together.
 
 ## 7. Motion
 
-Spring for rewards (`--ease-spring`), quart for UI. Pops ≤ 420ms, shakes ≤ 300ms. Everything respects `prefers-reduced-motion`: confetti, count-ups, rotator, and marquee all stand still.
+Reveal: `.rv` blocks rise 26px and fade in over 1s (`cubic-bezier(.2,.7,.2,1)`), staggered .1s. Tab strip slides every 2.4s. Channel swap fades out with a 10px drop over .45s. Everything respects `prefers-reduced-motion`.

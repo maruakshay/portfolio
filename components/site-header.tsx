@@ -1,85 +1,118 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import Link from "next/link";
-import { motion, useScroll, useSpring } from "framer-motion";
-import { Sparkles, Phone } from "lucide-react";
-import { callHref } from "@/lib/content";
-import { Monogram } from "./ornament";
-import { PaletteButton } from "./command-palette";
-import { XpMeter, useAchievements } from "./achievements";
+import { callHref, profile } from "@/lib/content";
 
 const NAV = [
-  { href: "/#approach", label: "How I work" },
+  { href: "/#services", label: "Services" },
+  { href: "/#content", label: "Content" },
   { href: "/#work", label: "Work" },
-  { href: "/#arcade", label: "Arcade" },
-  { href: "/#miii", label: "miii" },
-  { href: "/#career", label: "Career" },
+  { href: "/chat", label: "Ask AI" },
+  { href: "/#contact", label: "Contact" },
 ];
 
-export function SiteHeader() {
-  const { unlock } = useAchievements();
-  const { scrollYProgress } = useScroll();
-  const progress = useSpring(scrollYProgress, { stiffness: 140, damping: 24, mass: 0.3 });
-  const taps = useRef<number[]>([]);
+const KEY = "am:topbar-closed";
 
-  // Five quick taps on the logo is the touch-friendly easter egg.
-  function onLogo() {
-    const now = Date.now();
-    taps.current = [...taps.current.filter((t) => now - t < 2000), now];
-    if (taps.current.length >= 5) unlock("secret");
+function readClosed() {
+  try {
+    return sessionStorage.getItem(KEY) === "1";
+  } catch {
+    return false;
+  }
+}
+const noSubscribe = () => () => {};
+
+/**
+ * Fixed chrome: a 30px announcement bar plus a 52px nav. The bar slides away
+ * after 40px of scroll or when closed. `overlay` (home) skips the spacer so the
+ * first section can sit under the chrome.
+ */
+export function SiteHeader({ overlay = false }: { overlay?: boolean }) {
+  const stored = useSyncExternalStore(noSubscribe, readClosed, () => false);
+  const [dismissed, setDismissed] = useState(false);
+  const closed = stored || dismissed;
+  const [scrolled, setScrolled] = useState(false);
+  const external = callHref().startsWith("http");
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    document.documentElement.style.setProperty("--chrome-h", closed ? "52px" : "82px");
+  }, [closed]);
+
+  function close() {
+    setDismissed(true);
+    try {
+      sessionStorage.setItem(KEY, "1");
+    } catch {}
   }
 
+  const hidden = closed || scrolled;
+
   return (
-    <header className="sticky top-0 z-40 border-b border-rule/70 bg-canvas/80 backdrop-blur-md">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 md:px-8">
-        <Link href="/" onClick={onLogo} className="group flex items-center gap-2.5">
-          <Monogram className="size-8 transition-transform duration-300 ease-[var(--ease-spring)] group-hover:-rotate-6 group-hover:scale-110 group-active:scale-95" />
-          <span className="hidden leading-none sm:block">
-            <span className="block font-display text-lg font-bold tracking-tight text-ink">Akshay Maru</span>
-            <span className="block font-mono text-[0.625rem] uppercase tracking-[0.12em] text-ink-faint transition-colors group-hover:text-volt">
-              AI product engineer
-            </span>
-          </span>
-        </Link>
-
-        <nav aria-label="Primary" className="hidden items-center gap-7 lg:flex">
-          {NAV.map((n) => (
-            <Link key={n.href} href={n.href} className="label transition-colors hover:text-volt">
-              {n.label}
-            </Link>
-          ))}
-        </nav>
-
-        <div className="flex items-center gap-1.5 sm:gap-2">
-          <XpMeter />
-          <PaletteButton />
-          <Link
-            href="/chat"
-            aria-label="Ask AI about Akshay"
-            className="inline-flex items-center gap-1.5 rounded-full border border-rule px-2.5 py-1.5 font-mono text-xs text-ink transition-colors hover:border-volt hover:text-volt md:px-3"
-          >
-            <Sparkles className="size-3.5" strokeWidth={1.75} aria-hidden />
-            <span className="hidden md:inline">Ask AI</span>
-          </Link>
+    <>
+      <header className="chrome" data-bar={hidden ? "off" : "on"}>
+        <div className="chrome-bar" aria-hidden={hidden}>
           <a
             href={callHref()}
-            target={callHref().startsWith("http") ? "_blank" : undefined}
+            target={external ? "_blank" : undefined}
             rel="noopener noreferrer"
-            onClick={() => unlock("contact")}
-            className="inline-flex items-center gap-1.5 rounded-full bg-volt px-3.5 py-1.5 font-mono text-xs font-semibold text-canvas transition-transform hover:-translate-y-px"
+            tabIndex={hidden ? -1 : undefined}
+            className="chrome-bar-link"
           >
-            <Phone className="size-3.5" strokeWidth={2} aria-hidden />
-            <span className="hidden sm:inline">Book a call</span>
-            <span className="sm:hidden">Call</span>
+            <b>Now:</b> Open for freelance AI projects.
+            <span className="chrome-bar-more"> Book a 20-min intro call</span> ↗
           </a>
+          <button
+            type="button"
+            onClick={close}
+            tabIndex={hidden ? -1 : undefined}
+            className="chrome-bar-x"
+            aria-label="Dismiss announcement"
+          >
+            ×
+          </button>
         </div>
-      </div>
-      <motion.div
-        aria-hidden
-        className="absolute inset-x-0 bottom-0 h-[2px] origin-left bg-gradient-to-r from-volt via-cyan to-flare"
-        style={{ scaleX: progress }}
-      />
-    </header>
+
+        <nav className="chrome-nav" aria-label="Primary">
+          <Link href="/" className="chrome-logo" aria-label="Akshay Maru, home">
+            <span className="wordmark" aria-hidden>
+              <span className="wordmark-maru">Maru</span>
+              <span className="wordmark-akshay">Akshay</span>
+            </span>
+          </Link>
+          <ul className="chrome-menu">
+            {NAV.map((n) => (
+              <li key={n.href}>
+                <Link href={n.href}>{n.label}</Link>
+              </li>
+            ))}
+          </ul>
+          <a className="chrome-pad" href={profile.instagramAi} target="_blank" rel="noopener noreferrer">
+            @akshaay.ai ↗
+          </a>
+          <div className="chrome-cta-cell">
+            <a
+              href={callHref()}
+              target={external ? "_blank" : undefined}
+              rel="noopener noreferrer"
+              className="chrome-cta"
+            >
+              <span aria-hidden className="chrome-cta-dots">
+                ••
+              </span>
+              Hire me
+            </a>
+          </div>
+        </nav>
+      </header>
+      {!overlay && <div className="chrome-spacer" aria-hidden />}
+    </>
   );
 }

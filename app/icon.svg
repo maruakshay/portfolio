@@ -1,8 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
-  <rect x="1" y="1" width="30" height="30" rx="9" fill="#C8F53A"/>
-  <path d="M6 23.5 12.1 8.5h1.3l6.1 15" stroke="#121218" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M8.9 18.4h7.6" stroke="#121218" stroke-width="3" stroke-linecap="round"/>
-  <rect x="21.2" y="21" width="6.4" height="2.8" rx="1.2" fill="#121218">
-    <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="1.2s" repeatCount="indefinite"/>
-  </rect>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <defs>
+    <linearGradient id="g" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffb347"/>
+      <stop offset="0.45" stop-color="#ff8a3d"/>
+      <stop offset="1" stop-color="#ff3d8b"/>
+    </linearGradient>
+  </defs>
+  <rect width="24" height="24" rx="6" fill="#efece6"/>
+  <g stroke="url(#g)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" transform="translate(1.8 1.8) scale(0.85)">
+    <circle cx="12" cy="12" r="4"/>
+    <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8"/>
+  </g>
 </svg>

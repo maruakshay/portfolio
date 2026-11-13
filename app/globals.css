@@ -1,29 +1,36 @@
 @import "tailwindcss";
 
 /*
-  Design System: "Signal"
-  A dark, high-voltage stage for someone who ships fast. Near-black canvas,
-  volt (acid lime) as the reward colour, flare (violet) for energy, cyan for
-  code. Bold grotesk display, a serif italic for the one human word.
-  Tokens mirror DESIGN.md. OKLCH throughout.
+  Design System: "Paper Robot"
+  Warm paper, near-black ink, thin dark guides, and one brand gradient
+  (amber → orange → coral → pink). Schibsted Grotesk speaks, IBM Plex Mono
+  annotates. Token names are kept from the previous system so every page
+  re-themes from here: "volt" is now the deep accent, "flare" the pink.
+  Tokens mirror DESIGN.md.
 */
 
 @theme {
-  /* Color — canvas & ink */
-  --color-canvas: oklch(0.145 0.012 275);
-  --color-canvas-deep: oklch(0.18 0.014 275);
-  --color-canvas-shade: oklch(0.23 0.016 275);
-  --color-rule: oklch(0.3 0.016 275);
-  --color-ink: oklch(0.975 0.006 100);
-  --color-ink-muted: oklch(0.8 0.012 275);
-  --color-ink-faint: oklch(0.64 0.014 275);
+  /* Color — paper & ink */
+  --color-canvas: #efece6;
+  --color-canvas-deep: #e8e4dc;
+  --color-canvas-shade: #dfd9cf;
+  --color-rule: rgba(20, 20, 20, 0.16);
+  --color-ink: #141414;
+  --color-ink-muted: rgba(20, 20, 20, 0.74);
+  --color-ink-faint: rgba(20, 20, 20, 0.58);
 
-  /* Color — signals */
-  --color-volt: oklch(0.92 0.21 125);
-  --color-volt-deep: oklch(0.82 0.2 128);
-  --color-flare: oklch(0.68 0.2 295);
-  --color-cyan: oklch(0.82 0.12 210);
-  --color-hot: oklch(0.7 0.2 25);
+  /* Color — signals (AA on paper for text use) */
+  --color-volt: #c2410c;
+  --color-volt-deep: #9a3412;
+  --color-flare: #c0265e;
+  --color-cyan: #0e6e7e;
+  --color-hot: #b91c1c;
+
+  /* Brand gradient (decorative only, never for text) */
+  --color-amber: #ffb347;
+  --color-orange: #ff8a3d;
+  --color-coral: #ff5a5f;
+  --color-pink: #ff3d8b;
 
   /* Type */
   --font-display: var(--font-display), ui-sans-serif, system-ui, sans-serif;
@@ -119,10 +126,12 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    color-scheme: dark;
+    color-scheme: light;
   }
 
   body {
+    /* One grotesk for display and body; next/font sets --font-display here. */
+    --font-body: var(--font-display);
     background-color: var(--color-canvas);
     color: var(--color-ink-muted);
     font-family: var(--font-body);
@@ -137,8 +146,8 @@
   h4 {
     font-family: var(--font-display);
     color: var(--color-ink);
-    font-weight: 700;
-    letter-spacing: -0.03em;
+    font-weight: 500;
+    letter-spacing: -0.025em;
     text-wrap: balance;
   }
 
@@ -153,7 +162,7 @@
   }
 
   ::selection {
-    background-color: var(--color-volt);
+    background-color: var(--color-ink);
     color: var(--color-canvas);
   }
 
@@ -249,8 +258,8 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    border-radius: 999px;
-    background-color: var(--color-volt);
+    border-radius: 0;
+    background-color: var(--color-ink);
     color: var(--color-canvas);
     padding: 0.8rem 1.4rem;
     font-family: var(--font-mono);
@@ -263,7 +272,7 @@
   }
   .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 30px -8px color-mix(in oklch, var(--color-volt), transparent 45%);
+    box-shadow: 0 10px 24px -12px rgba(20, 20, 20, 0.5);
   }
   .btn-primary:active {
     transform: translateY(0) scale(0.98);
@@ -273,8 +282,8 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    border-radius: 999px;
-    border: 1px solid var(--color-rule);
+    border-radius: 0;
+    border: 1px solid var(--color-ink);
     color: var(--color-ink);
     padding: 0.8rem 1.4rem;
     font-family: var(--font-mono);
@@ -342,6 +351,256 @@
     width: 8px;
     height: 2px;
     background-color: var(--color-volt);
+  }
+}
+
+
+/* ── Site chrome: announcement bar + nav (every page) ─────────────────── */
+
+.chrome {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  color: #141414;
+}
+.chrome-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 40px;
+  background: #141414;
+  color: #efece6;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  transition: transform 0.5s cubic-bezier(0.6, 0, 0.2, 1);
+}
+.chrome[data-bar="off"] .chrome-bar {
+  transform: translateY(-100%);
+}
+.chrome-bar-link {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.chrome-bar-link b {
+  font-weight: 500;
+  background: linear-gradient(90deg, #ffb347, #ff5a5f, #ff3d8b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.chrome-bar-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.chrome-bar-x {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  height: 30px;
+  width: 28px;
+  border: 0;
+  background: none;
+  color: inherit;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+}
+.chrome-nav {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  right: 0;
+  height: 52px;
+  display: grid;
+  grid-template-columns: 17% 1fr 12% 17%;
+  background: rgba(239, 236, 230, 0.86);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(20, 20, 20, 0.12);
+  transition: top 0.5s cubic-bezier(0.6, 0, 0.2, 1);
+}
+.chrome[data-bar="off"] .chrome-nav {
+  top: 0;
+}
+.chrome-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  padding-left: 20px;
+  font-family: var(--font-display), ui-sans-serif, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+/* Wordmark: "Akshay" in a logo script, "MARU" tucked underneath. The script
+   sits on top with a paper-coloured stroke behind its fill, so where the "y"
+   tail crosses MARU it cuts a clean gap instead of colliding. */
+.wordmark {
+  position: relative;
+  display: inline-block;
+  width: 96px;
+  height: 46px;
+}
+.wordmark-akshay {
+  position: absolute;
+  left: 0;
+  top: 1px;
+  z-index: 1;
+  font-family: var(--font-script), cursive;
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+  text-transform: none;
+  white-space: nowrap;
+  color: #141414;
+  -webkit-text-stroke: 4px rgba(239, 236, 230, 1);
+  paint-order: stroke fill;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transform-origin: 15% 80%;
+}
+.wordmark-maru {
+  position: absolute;
+  left: 22px;
+  bottom: 5px;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #f07a2a, #ff3d8b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.chrome-logo:hover .wordmark-akshay {
+  transform: rotate(-3deg);
+}
+
+.chrome-menu {
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 2vw, 30px);
+  margin: 0;
+  padding: 0 0 0 24px;
+  list-style: none;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.chrome-menu a {
+  padding: 4px 0;
+  background: linear-gradient(90deg, #ff8a3d, #ff3d8b) left bottom / 0 1px no-repeat;
+  transition: background-size 0.3s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.chrome-menu a:hover {
+  background-size: 100% 1px;
+}
+.chrome-pad {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid rgba(20, 20, 20, 0.12);
+  border-right: 1px solid rgba(20, 20, 20, 0.12);
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: background-color 0.25s;
+}
+.chrome-pad:hover {
+  background: rgba(20, 20, 20, 0.04);
+}
+.chrome-cta-cell {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 20px;
+}
+.chrome-cta {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 30px;
+  padding: 0 14px;
+  border: 1px solid #141414;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition:
+    background-color 0.25s,
+    color 0.25s;
+}
+/* Gradient border along part of the top edge and down the left edge. */
+.chrome-cta::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background: conic-gradient(from 200deg, #ffb347, #ff8a3d 18%, #ff5a5f 34%, #ff3d8b 50%, #ff5a5f 66%, #ff8a3d 82%, #ffb347);
+  clip-path: polygon(0 0, 58% 0, 58% 2px, 2px 2px, 2px 100%, 0 100%);
+  pointer-events: none;
+}
+.chrome-cta-dots {
+  color: #ff5a5f;
+  letter-spacing: 0.1em;
+}
+.chrome-cta:hover {
+  background: #141414;
+  color: #efece6;
+}
+.chrome-spacer {
+  height: var(--chrome-h, 82px);
+}
+.chrome a:focus-visible,
+.chrome button:focus-visible {
+  outline: 2px solid #ff5a5f;
+  outline-offset: 2px;
+}
+
+@media (max-width: 900px) {
+  .chrome-nav {
+    grid-template-columns: 1fr auto;
+  }
+  .chrome-menu,
+  .chrome-pad {
+    display: none;
+  }
+  .chrome-logo {
+    padding-left: 16px;
+    font-size: 16px;
+  }
+  .chrome-cta-cell {
+    padding-right: 16px;
+  }
+  .chrome-bar {
+    padding: 0 36px 0 12px;
+    font-size: 10.5px;
+  }
+}
+@media (max-width: 560px) {
+  .chrome-bar-more {
+    display: none;
   }
 }
 
