@@ -26,7 +26,6 @@ export function CommandPalette() {
   }, []);
 
   const items = useMemo<Item[]>(() => {
-    const go = (hash: string) => () => router.push(`/${hash}`);
     const ext = (url: string) => () => window.open(url, "_blank", "noopener,noreferrer");
     return [
       {
@@ -38,11 +37,7 @@ export function CommandPalette() {
           else window.location.href = callHref();
         },
       },
-      { group: "Go to", label: "Intro", hint: "01", run: go("#intro") },
-      { group: "Go to", label: "Services", hint: "02", run: go("#services") },
-      { group: "Go to", label: "Content", hint: "03", run: go("#content") },
-      { group: "Go to", label: "Selected work", hint: "04", run: go("#work") },
-      { group: "Go to", label: "Contact", hint: "05", run: go("#contact") },
+      { group: "Go to", label: "Play the town", hint: "home", run: () => router.push("/") },
       { group: "Go to", label: "Ask AI about Akshay", hint: "/chat", run: () => router.push("/chat") },
       ...deepDives.map((d) => ({
         group: "Deep-dives",

@@ -74,10 +74,10 @@ export default async function WorkPage({
         <section>
           <div className="mx-auto max-w-3xl px-5 pb-10 pt-16 md:px-8 md:pt-24">
             <Link
-              href="/#work"
+              href="/"
               className="label mb-10 inline-flex items-center gap-2 text-ink-faint transition-colors hover:text-volt"
             >
-              <ArrowLeft className="size-3.5" /> All work
+              <ArrowLeft className="size-3.5" /> Back to the town
             </Link>
 
             <p className="label mb-5 text-volt">{"// "}open source</p>

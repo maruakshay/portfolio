@@ -21,6 +21,10 @@ The proof is real and specific: an enterprise AI assistant on AWS Bedrock (Jupit
 
 The AI chat (/chat) stays a small supporting feature.
 
+## The town (2026-11-16 rebuild)
+
+Home is now a walkable 3D town (`components/game/`). Buildings on the left are career stops in chronological order, shops on the right are skills, and the AI Core at the end of the street opens after all 14 medals and hosts the AI chat plus the freelance CTAs. Each medal evolves the character (Newcomer → AI Master) and teaches the companion AI orb a true fact about Akshay. Day/night follows the visitor's local clock. Desktop only: phones and no-WebGL browsers get a short "open on desktop" card with the CTAs. Book a call and Ask AI stay in the HUD the whole time, so recruiters and clients never have to play to act.
+
 ## Brand Personality
 
 Calm, crafted, a little playful. A friendly ceramic robot, warm paper, precise mono labels. Confident without shouting.

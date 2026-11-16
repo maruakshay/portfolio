@@ -3,13 +3,12 @@
 import { useEffect, useState, useSyncExternalStore } from "react";
 import Link from "next/link";
 import { callHref, profile } from "@/lib/content";
+import { MarkSvg } from "@/lib/brand";
 
 const NAV = [
-  { href: "/#services", label: "Services" },
-  { href: "/#content", label: "Content" },
-  { href: "/#work", label: "Work" },
+  { href: "/", label: "Play the town" },
+  { href: "/work/miii-cli", label: "Work" },
   { href: "/chat", label: "Ask AI" },
-  { href: "/#contact", label: "Contact" },
 ];
 
 const KEY = "am:topbar-closed";
@@ -82,10 +81,7 @@ export function SiteHeader({ overlay = false }: { overlay?: boolean }) {
 
         <nav className="chrome-nav" aria-label="Primary">
           <Link href="/" className="chrome-logo" aria-label="Akshay Maru, home">
-            <span className="wordmark" aria-hidden>
-              <span className="wordmark-maru">Maru</span>
-              <span className="wordmark-akshay">Akshay</span>
-            </span>
+            <MarkSvg size={34} id="am-head" />
           </Link>
           <ul className="chrome-menu">
             {NAV.map((n) => (

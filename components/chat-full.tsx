@@ -26,7 +26,7 @@ const PROMPTS = [
   "Why should I hire Akshay?",
 ];
 
-export function ChatFull() {
+export function ChatFull({ embedded = false }: { embedded?: boolean } = {}) {
   const [messages, setMessages] = useState<Message[]>([INITIAL]);
   const [input, setInput] = useState("");
   const [status, setStatus] = useState<Status>("idle");
@@ -91,10 +91,10 @@ export function ChatFull() {
   }
 
   return (
-    <div className="flex h-[calc(100dvh-var(--chrome-h,82px))] flex-col">
+    <div className={embedded ? "flex h-full min-h-0 flex-col" : "flex h-[calc(100dvh-var(--chrome-h,82px))] flex-col"}>
       {/* Log */}
       <div className="flex-1 overflow-y-auto">
-        <div className="mx-auto max-w-2xl space-y-6 px-5 py-10 text-[1.0625rem] leading-[1.65] md:px-8">
+        <div className={`mx-auto max-w-2xl space-y-6 px-5 text-[1.0625rem] leading-[1.65] md:px-8 ${embedded ? "py-6" : "py-10"}`}>
           <div className="text-center">
             <p className="label text-volt">{"// "}ask_akshay.ai</p>
             <p className="mt-1 font-serif text-xl italic text-ink-muted">
