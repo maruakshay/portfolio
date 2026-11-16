@@ -339,6 +339,8 @@ export interface Pose {
   /** Gun raised 0..1, with recoil kick 0..1 */
   aim?: number;
   recoil?: number;
+  /** Up/down angle of the aim in radians (+ = up). */
+  aimPitch?: number;
 }
 
 /**
@@ -452,14 +454,16 @@ export function animateCharacter(c: Character, p: Pose) {
     // Two-handed aim: right arm straight out, left hand under the grip
     const k = p.aim;
     const kick = (p.recoil ?? 0) * 0.18;
-    c.shR.rotation.x = THREE.MathUtils.lerp(c.shR.rotation.x, -1.5 + kick, k);
+    const up = THREE.MathUtils.clamp(p.aimPitch ?? 0, -0.9, 0.9);
+    c.shR.rotation.x = THREE.MathUtils.lerp(c.shR.rotation.x, -1.5 - up + kick, k);
     c.shR.rotation.z = THREE.MathUtils.lerp(c.shR.rotation.z, 0.12, k);
     c.elR.rotation.x = THREE.MathUtils.lerp(c.elR.rotation.x, -0.05 - kick, k);
-    c.shL.rotation.x = THREE.MathUtils.lerp(c.shL.rotation.x, -1.25 + kick, k);
+    c.shL.rotation.x = THREE.MathUtils.lerp(c.shL.rotation.x, -1.25 - up + kick, k);
     c.shL.rotation.z = THREE.MathUtils.lerp(c.shL.rotation.z, -0.32, k);
     c.elL.rotation.x = THREE.MathUtils.lerp(c.elL.rotation.x, -0.55, k);
     c.spine.rotation.y = THREE.MathUtils.lerp(c.spine.rotation.y, 0.18, k);
     c.head.rotation.y = -0.15 * k;
+    c.head.rotation.x = -up * 0.5 * k;
   } else c.head.rotation.y = 0;
 
   c.cape.rotation.x = 0.1 + a * 0.55 + Math.sin(p.t * 6) * 0.05 * a + (p.air ? 0.6 : 0);

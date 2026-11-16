@@ -1,4 +1,5 @@
 import * as THREE from "three";
+import { rayCylinder } from "./ray";
 import { RoundedBoxGeometry } from "three/examples/jsm/geometries/RoundedBoxGeometry.js";
 import { BOSS, FIGHT_SPAN, FIGHTS, FOES, type FoeKind } from "@/lib/game-data";
 import { BOUNDS, type Fonts } from "./world";
@@ -637,48 +638,74 @@ export class Combat {
   }
 
   /**
-   * A bullet: a flat ray from `o` along `dir` (unit, xz) up to `range`.
-   * Hits the first foe or the Box in its path. Returns how far it went and
-   * the height to draw the tracer to.
+   * First bug (or the Box) a 3D ray passes through within `max`, without
+   * hurting anything yet. Bugs are upright cylinders as tall as they look.
    */
-  shoot(o: THREE.Vector3, dir: THREE.Vector3, range: number, dmg: number) {
-    let best = range;
-    let target: Foe | "boss" | null = null;
-    const test = (cx: number, cz: number, r: number) => {
-      const wx = cx - o.x;
-      const wz = cz - o.z;
-      const t = wx * dir.x + wz * dir.z;
-      if (t < 0) return -1;
-      const perp2 = wx * wx + wz * wz - t * t;
-      if (perp2 > r * r) return -1;
-      return Math.max(0, t - Math.sqrt(r * r - perp2));
-    };
+  rayHit(o: THREE.Vector3, d: THREE.Vector3, max: number): { t: number; foe: Foe | null } | null {
+    let best = max;
+    let hit: { t: number; foe: Foe | null } | null = null;
     for (const f of this.foes) {
       if (f.dead || f.spawn > 0 || (f.kind === "flaky" && f.mode === "blink")) continue;
-      const t = test(f.root.position.x, f.root.position.z, f.r + 0.25);
+      const y0 = f.root.position.y + f.model.position.y;
+      const top = y0 + HEAD[f.kind] * (f.kind === "creep" ? f.model.scale.y : 1) + 0.1;
+      const t = rayCylinder(o, d, f.root.position.x, f.root.position.z, f.r + 0.12, Math.max(0, y0 - 0.1), top, best);
       if (t >= 0 && t < best) {
         best = t;
-        target = f;
+        hit = { t, foe: f };
       }
     }
     const b = this.boss;
-    if (this.active === "boss" && b.alive && b.mode !== "dormant" && b.y < 4.5) {
-      const t = test(b.pos.x, b.pos.z, 1.9);
-      if (t >= 0 && t < best) {
-        best = t;
-        target = "boss";
+    if (this.active === "boss" && b.alive && b.mode !== "dormant") {
+      const t = rayCylinder(o, d, b.pos.x, b.pos.z, 1.8, b.y - 1.7, b.y + 1.7, best);
+      if (t >= 0 && t < best) hit = { t, foe: null };
+    }
+    return hit;
+  }
+
+  /** Apply a bullet that `rayHit` found. Returns false if it bounced off armour. */
+  applyShot(hit: { t: number; foe: Foe | null }, o: THREE.Vector3, d: THREE.Vector3, dmg: number) {
+    if (hit.foe) {
+      this.damageFoe(hit.foe, dmg, o, 0.3);
+      return true;
+    }
+    if (this.boss.vulnerable) {
+      this.damageBoss(dmg, o, true);
+      return true;
+    }
+    this.host.burst(o.clone().addScaledVector(d, hit.t), "#9a9aa8", 4);
+    return false;
+  }
+
+  /** Centres of every bug you could shoot right now (and the Box). */
+  centers() {
+    const out: THREE.Vector3[] = [];
+    for (const f of this.foes) {
+      if (f.dead || f.spawn > 0 || (f.kind === "flaky" && f.mode === "blink")) continue;
+      const y0 = f.root.position.y + f.model.position.y;
+      out.push(f.root.position.clone().setY(y0 + HEAD[f.kind] * (f.kind === "creep" ? f.model.scale.y : 1) * 0.5));
+    }
+    if (this.active === "boss" && this.boss.alive && this.boss.mode !== "dormant") out.push(this.boss.pos.clone().setY(this.boss.y));
+    return out;
+  }
+
+  /** Centre of the nearest bug (or the Box), for hip-fire without the mouse. */
+  nearestCenter(p: THREE.Vector3, maxD: number) {
+    let best: THREE.Vector3 | null = null;
+    let bd = maxD;
+    for (const f of this.foes) {
+      if (f.dead || f.spawn > 0) continue;
+      const d = Math.hypot(f.root.position.x - p.x, f.root.position.z - p.z) - f.r;
+      if (d < bd) {
+        bd = d;
+        const y0 = f.root.position.y + f.model.position.y;
+        best = f.root.position.clone().setY(y0 + HEAD[f.kind] * (f.kind === "creep" ? f.model.scale.y : 1) * 0.5);
       }
     }
-    let y = o.y;
-    if (target === "boss") {
-      y = b.y;
-      if (b.vulnerable) this.damageBoss(dmg, o, true);
-      else this.host.burst(o.clone().addScaledVector(dir, best).setY(b.y), "#9a9aa8", 4);
-    } else if (target) {
-      y = 0.4 + HEAD[target.kind] * 0.5 + target.model.position.y;
-      this.damageFoe(target, dmg, o, 0.3);
+    if (this.active === "boss" && this.boss.alive && this.boss.mode !== "dormant") {
+      const d = Math.hypot(this.boss.pos.x - p.x, this.boss.pos.z - p.z) - 1.7;
+      if (d < bd) best = this.boss.pos.clone().setY(this.boss.y);
     }
-    return { dist: best, hit: target !== null, y };
+    return best;
   }
 
   /** Nudge an aim direction onto a foe inside a small cone. */

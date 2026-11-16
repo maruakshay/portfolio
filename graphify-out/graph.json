@@ -123,7 +123,7 @@
       "source_file": "app/apple-icon.tsx",
       "source_location": "L1",
       "id": "app_apple_icon_tsx",
-      "community": 0,
+      "community": 1,
       "norm_label": "apple-icon.tsx"
     },
     {
@@ -132,7 +132,7 @@
       "source_file": "app/apple-icon.tsx",
       "source_location": "L8",
       "id": "app_apple_icon_appleicon",
-      "community": 0,
+      "community": 1,
       "norm_label": "appleicon()"
     },
     {
@@ -141,7 +141,7 @@
       "source_file": "app/opengraph-image.tsx",
       "source_location": "L1",
       "id": "app_opengraph_image_tsx",
-      "community": 0,
+      "community": 1,
       "norm_label": "opengraph-image.tsx"
     },
     {
@@ -204,7 +204,7 @@
       "source_file": "app/page.tsx",
       "source_location": "L1",
       "id": "app_page_tsx",
-      "community": 0,
+      "community": 1,
       "norm_label": "page.tsx"
     },
     {
@@ -231,7 +231,7 @@
       "source_file": "app/chat/page.tsx",
       "source_location": "L1",
       "id": "app_chat_page_tsx",
-      "community": 0,
+      "community": 1,
       "norm_label": "page.tsx"
     },
     {
@@ -240,7 +240,7 @@
       "source_file": "app/chat/page.tsx",
       "source_location": "L12",
       "id": "chat_page_chatpage",
-      "community": 0,
+      "community": 1,
       "norm_label": "chatpage()"
     },
     {
@@ -249,7 +249,7 @@
       "source_file": "app/work/[slug]/page.tsx",
       "source_location": "L1",
       "id": "app_work_slug_page_tsx",
-      "community": 0,
+      "community": 1,
       "norm_label": "page.tsx"
     },
     {
@@ -258,7 +258,7 @@
       "source_file": "app/work/[slug]/page.tsx",
       "source_location": "L10",
       "id": "slug_page_generatestaticparams",
-      "community": 0,
+      "community": 1,
       "norm_label": "generatestaticparams()"
     },
     {
@@ -267,7 +267,7 @@
       "source_file": "app/work/[slug]/page.tsx",
       "source_location": "L14",
       "id": "slug_page_generatemetadata",
-      "community": 0,
+      "community": 1,
       "norm_label": "generatemetadata()"
     },
     {
@@ -321,7 +321,7 @@
       "source_file": "components/ornament.tsx",
       "source_location": "L1",
       "id": "components_ornament_tsx",
-      "community": 0,
+      "community": 1,
       "norm_label": "ornament.tsx"
     },
     {
@@ -330,7 +330,7 @@
       "source_file": "components/ornament.tsx",
       "source_location": "L6",
       "id": "components_ornament_sectionrule",
-      "community": 0,
+      "community": 1,
       "norm_label": "sectionrule()"
     },
     {
@@ -339,7 +339,7 @@
       "source_file": "components/ornament.tsx",
       "source_location": "L27",
       "id": "components_ornament_monogram",
-      "community": 0,
+      "community": 1,
       "norm_label": "monogram()"
     },
     {
@@ -348,7 +348,7 @@
       "source_file": "components/site-header.tsx",
       "source_location": "L1",
       "id": "components_site_header_tsx",
-      "community": 0,
+      "community": 1,
       "norm_label": "site-header.tsx"
     },
     {
@@ -357,7 +357,7 @@
       "source_file": "components/site-header.tsx",
       "source_location": "L16",
       "id": "components_site_header_readclosed",
-      "community": 0,
+      "community": 1,
       "norm_label": "readclosed()"
     },
     {
@@ -366,7 +366,7 @@
       "source_file": "components/site-header.tsx",
       "source_location": "L23",
       "id": "components_site_header_nosubscribe",
-      "community": 0,
+      "community": 1,
       "norm_label": "nosubscribe()"
     },
     {
@@ -375,7 +375,7 @@
       "source_file": "components/site-header.tsx",
       "source_location": "L30",
       "id": "components_site_header_siteheader",
-      "community": 0,
+      "community": 1,
       "norm_label": "siteheader()"
     },
     {
@@ -384,7 +384,7 @@
       "source_file": "components/command-palette.tsx",
       "source_location": "L1",
       "id": "components_command_palette_tsx",
-      "community": 0,
+      "community": 1,
       "norm_label": "command-palette.tsx"
     },
     {
@@ -393,7 +393,7 @@
       "source_file": "components/command-palette.tsx",
       "source_location": "L76",
       "id": "components_command_palette_onkey",
-      "community": 0,
+      "community": 1,
       "norm_label": "onkey()"
     },
     {
@@ -402,7 +402,7 @@
       "source_file": "components/command-palette.tsx",
       "source_location": "L87",
       "id": "components_command_palette_onopen",
-      "community": 0,
+      "community": 1,
       "norm_label": "onopen()"
     },
     {
@@ -411,7 +411,7 @@
       "source_file": "components/command-palette.tsx",
       "source_location": "L106",
       "id": "components_command_palette_run",
-      "community": 0,
+      "community": 1,
       "norm_label": "run()"
     },
     {
@@ -420,7 +420,7 @@
       "source_file": "components/command-palette.tsx",
       "source_location": "L111",
       "id": "components_command_palette_onkeydown",
-      "community": 0,
+      "community": 1,
       "norm_label": "onkeydown()"
     },
     {
@@ -429,7 +429,7 @@
       "source_file": "components/site-footer.tsx",
       "source_location": "L1",
       "id": "components_site_footer_tsx",
-      "community": 0,
+      "community": 1,
       "norm_label": "site-footer.tsx"
     },
     {
@@ -438,7 +438,7 @@
       "source_file": "components/site-footer.tsx",
       "source_location": "L13",
       "id": "components_site_footer_sitefooter",
-      "community": 0,
+      "community": 1,
       "norm_label": "sitefooter()"
     },
     {
@@ -447,7 +447,7 @@
       "source_file": "components/game/town.tsx",
       "source_location": "L1",
       "id": "components_game_town_tsx",
-      "community": 6,
+      "community": 7,
       "norm_label": "town.tsx"
     },
     {
@@ -456,7 +456,7 @@
       "source_file": "components/game/town.tsx",
       "source_location": "L35",
       "id": "game_town_usemedia",
-      "community": 6,
+      "community": 7,
       "norm_label": "usemedia()"
     },
     {
@@ -465,7 +465,7 @@
       "source_file": "components/game/town.tsx",
       "source_location": "L48",
       "id": "game_town_haswebgl",
-      "community": 6,
+      "community": 7,
       "norm_label": "haswebgl()"
     },
     {
@@ -474,7 +474,7 @@
       "source_file": "components/game/town.tsx",
       "source_location": "L58",
       "id": "game_town_nosubscribe",
-      "community": 6,
+      "community": 7,
       "norm_label": "nosubscribe()"
     },
     {
@@ -483,7 +483,7 @@
       "source_file": "components/game/town.tsx",
       "source_location": "L61",
       "id": "game_town_uselocalhour",
-      "community": 6,
+      "community": 7,
       "norm_label": "uselocalhour()"
     },
     {
@@ -492,7 +492,7 @@
       "source_file": "components/game/town.tsx",
       "source_location": "L75",
       "id": "game_town_isnight",
-      "community": 6,
+      "community": 7,
       "norm_label": "isnight()"
     },
     {
@@ -501,7 +501,7 @@
       "source_file": "components/game/town.tsx",
       "source_location": "L77",
       "id": "game_town_town",
-      "community": 6,
+      "community": 7,
       "norm_label": "town()"
     },
     {
@@ -510,7 +510,7 @@
       "source_file": "components/game/character.ts",
       "source_location": "L1",
       "id": "components_game_character_ts",
-      "community": 5,
+      "community": 6,
       "norm_label": "character.ts"
     },
     {
@@ -519,7 +519,7 @@
       "source_file": "components/game/character.ts",
       "source_location": "L54",
       "id": "game_character_mat",
-      "community": 5,
+      "community": 6,
       "norm_label": "mat()"
     },
     {
@@ -528,7 +528,7 @@
       "source_file": "components/game/character.ts",
       "source_location": "L57",
       "id": "game_character_mesh",
-      "community": 5,
+      "community": 6,
       "norm_label": "mesh()"
     },
     {
@@ -537,7 +537,7 @@
       "source_file": "components/game/character.ts",
       "source_location": "L64",
       "id": "game_character_pivot",
-      "community": 5,
+      "community": 6,
       "norm_label": "pivot()"
     },
     {
@@ -546,7 +546,7 @@
       "source_file": "components/game/character.ts",
       "source_location": "L70",
       "id": "game_character_buildcharacter",
-      "community": 5,
+      "community": 6,
       "norm_label": "buildcharacter()"
     },
     {
@@ -555,25 +555,25 @@
       "source_file": "components/game/character.ts",
       "source_location": "L287",
       "id": "game_character_applystage",
-      "community": 5,
+      "community": 6,
       "norm_label": "applystage()"
     },
     {
       "label": "attachGun()",
       "file_type": "code",
       "source_file": "components/game/character.ts",
-      "source_location": "L348",
+      "source_location": "L350",
       "id": "game_character_attachgun",
-      "community": 5,
+      "community": 6,
       "norm_label": "attachgun()"
     },
     {
       "label": "animateCharacter()",
       "file_type": "code",
       "source_file": "components/game/character.ts",
-      "source_location": "L377",
+      "source_location": "L379",
       "id": "game_character_animatecharacter",
-      "community": 5,
+      "community": 4,
       "norm_label": "animatecharacter()"
     },
     {
@@ -582,53 +582,62 @@
       "source_file": "components/game/vehicles.ts",
       "source_location": "L1",
       "id": "components_game_vehicles_ts",
-      "community": 5,
+      "community": 4,
       "norm_label": "vehicles.ts"
     },
     {
       "label": "buildCar()",
       "file_type": "code",
       "source_file": "components/game/vehicles.ts",
-      "source_location": "L70",
+      "source_location": "L71",
       "id": "game_vehicles_buildcar",
-      "community": 5,
+      "community": 4,
       "norm_label": "buildcar()"
     },
     {
       "label": "Vehicles",
       "file_type": "code",
       "source_file": "components/game/vehicles.ts",
-      "source_location": "L118",
+      "source_location": "L119",
       "id": "game_vehicles_vehicles",
-      "community": 8,
+      "community": 4,
       "norm_label": "vehicles"
     },
     {
       "label": ".constructor()",
       "file_type": "code",
       "source_file": "components/game/vehicles.ts",
-      "source_location": "L125",
+      "source_location": "L126",
       "id": "game_vehicles_vehicles_constructor",
-      "community": 5,
+      "community": 6,
       "norm_label": ".constructor()"
     },
     {
       "label": ".addCar()",
       "file_type": "code",
       "source_file": "components/game/vehicles.ts",
-      "source_location": "L158",
+      "source_location": "L159",
       "id": "game_vehicles_vehicles_addcar",
-      "community": 5,
+      "community": 4,
       "norm_label": ".addcar()"
     },
     {
       "label": ".raycast()",
       "file_type": "code",
       "source_file": "components/game/vehicles.ts",
-      "source_location": "L181",
+      "source_location": "L180",
       "id": "game_vehicles_vehicles_raycast",
-      "community": 8,
+      "community": 4,
       "norm_label": ".raycast()"
+    },
+    {
+      "label": ".targets()",
+      "file_type": "code",
+      "source_file": "components/game/vehicles.ts",
+      "source_location": "L212",
+      "id": "game_vehicles_vehicles_targets",
+      "community": 4,
+      "norm_label": ".targets()"
     },
     {
       "label": ".hitCar()",
@@ -636,7 +645,7 @@
       "source_file": "components/game/vehicles.ts",
       "source_location": "L220",
       "id": "game_vehicles_vehicles_hitcar",
-      "community": 8,
+      "community": 4,
       "norm_label": ".hitcar()"
     },
     {
@@ -645,7 +654,7 @@
       "source_file": "components/game/vehicles.ts",
       "source_location": "L237",
       "id": "game_vehicles_vehicles_hitped",
-      "community": 8,
+      "community": 4,
       "norm_label": ".hitped()"
     },
     {
@@ -654,7 +663,7 @@
       "source_file": "components/game/vehicles.ts",
       "source_location": "L247",
       "id": "game_vehicles_vehicles_panic",
-      "community": 8,
+      "community": 4,
       "norm_label": ".panic()"
     },
     {
@@ -663,7 +672,7 @@
       "source_file": "components/game/vehicles.ts",
       "source_location": "L258",
       "id": "game_vehicles_vehicles_repair",
-      "community": 8,
+      "community": 4,
       "norm_label": ".repair()"
     },
     {
@@ -672,7 +681,7 @@
       "source_file": "components/game/vehicles.ts",
       "source_location": "L279",
       "id": "game_vehicles_vehicles_setlight",
-      "community": 8,
+      "community": 4,
       "norm_label": ".setlight()"
     },
     {
@@ -681,7 +690,7 @@
       "source_file": "components/game/vehicles.ts",
       "source_location": "L284",
       "id": "game_vehicles_vehicles_hitscar",
-      "community": 8,
+      "community": 4,
       "norm_label": ".hitscar()"
     },
     {
@@ -690,7 +699,7 @@
       "source_file": "components/game/vehicles.ts",
       "source_location": "L297",
       "id": "game_vehicles_vehicles_pushout",
-      "community": 8,
+      "community": 4,
       "norm_label": ".pushout()"
     },
     {
@@ -699,7 +708,7 @@
       "source_file": "components/game/vehicles.ts",
       "source_location": "L323",
       "id": "game_vehicles_vehicles_nearestfree",
-      "community": 8,
+      "community": 4,
       "norm_label": ".nearestfree()"
     },
     {
@@ -708,7 +717,7 @@
       "source_file": "components/game/vehicles.ts",
       "source_location": "L341",
       "id": "game_vehicles_vehicles_overlap",
-      "community": 8,
+      "community": 4,
       "norm_label": ".overlap()"
     },
     {
@@ -717,7 +726,7 @@
       "source_file": "components/game/vehicles.ts",
       "source_location": "L364",
       "id": "game_vehicles_vehicles_intocar",
-      "community": 8,
+      "community": 4,
       "norm_label": ".intocar()"
     },
     {
@@ -726,7 +735,7 @@
       "source_file": "components/game/vehicles.ts",
       "source_location": "L369",
       "id": "game_vehicles_vehicles_carblocked",
-      "community": 8,
+      "community": 4,
       "norm_label": ".carblocked()"
     },
     {
@@ -735,7 +744,7 @@
       "source_file": "components/game/vehicles.ts",
       "source_location": "L382",
       "id": "game_vehicles_vehicles_drive",
-      "community": 8,
+      "community": 4,
       "norm_label": ".drive()"
     },
     {
@@ -744,7 +753,7 @@
       "source_file": "components/game/vehicles.ts",
       "source_location": "L419",
       "id": "game_vehicles_vehicles_pose",
-      "community": 8,
+      "community": 4,
       "norm_label": ".pose()"
     },
     {
@@ -753,7 +762,7 @@
       "source_file": "components/game/vehicles.ts",
       "source_location": "L429",
       "id": "game_vehicles_vehicles_update",
-      "community": 8,
+      "community": 4,
       "norm_label": ".update()"
     },
     {
@@ -762,7 +771,7 @@
       "source_file": "components/game/engine.ts",
       "source_location": "L1",
       "id": "components_game_engine_ts",
-      "community": 5,
+      "community": 6,
       "norm_label": "engine.ts"
     },
     {
@@ -778,7 +787,7 @@
       "label": ".constructor()",
       "file_type": "code",
       "source_file": "components/game/engine.ts",
-      "source_location": "L124",
+      "source_location": "L125",
       "id": "game_engine_towngame_constructor",
       "community": 3,
       "norm_label": ".constructor()"
@@ -787,16 +796,16 @@
       "label": ".init()",
       "file_type": "code",
       "source_file": "components/game/engine.ts",
-      "source_location": "L158",
+      "source_location": "L159",
       "id": "game_engine_towngame_init",
-      "community": 5,
+      "community": 6,
       "norm_label": ".init()"
     },
     {
       "label": ".setPaused()",
       "file_type": "code",
       "source_file": "components/game/engine.ts",
-      "source_location": "L276",
+      "source_location": "L277",
       "id": "game_engine_towngame_setpaused",
       "community": 3,
       "norm_label": ".setpaused()"
@@ -805,7 +814,7 @@
       "label": ".converse()",
       "file_type": "code",
       "source_file": "components/game/engine.ts",
-      "source_location": "L283",
+      "source_location": "L284",
       "id": "game_engine_towngame_converse",
       "community": 3,
       "norm_label": ".converse()"
@@ -814,7 +823,7 @@
       "label": ".setSpeaker()",
       "file_type": "code",
       "source_file": "components/game/engine.ts",
-      "source_location": "L301",
+      "source_location": "L302",
       "id": "game_engine_towngame_setspeaker",
       "community": 3,
       "norm_label": ".setspeaker()"
@@ -823,7 +832,7 @@
       "label": ".setCollected()",
       "file_type": "code",
       "source_file": "components/game/engine.ts",
-      "source_location": "L306",
+      "source_location": "L307",
       "id": "game_engine_towngame_setcollected",
       "community": 3,
       "norm_label": ".setcollected()"
@@ -832,7 +841,7 @@
       "label": ".setProgress()",
       "file_type": "code",
       "source_file": "components/game/engine.ts",
-      "source_location": "L338",
+      "source_location": "L339",
       "id": "game_engine_towngame_setprogress",
       "community": 3,
       "norm_label": ".setprogress()"
@@ -841,7 +850,7 @@
       "label": ".refreshCore()",
       "file_type": "code",
       "source_file": "components/game/engine.ts",
-      "source_location": "L345",
+      "source_location": "L346",
       "id": "game_engine_towngame_refreshcore",
       "community": 3,
       "norm_label": ".refreshcore()"
@@ -850,7 +859,7 @@
       "label": ".onCombat()",
       "file_type": "code",
       "source_file": "components/game/engine.ts",
-      "source_location": "L354",
+      "source_location": "L355",
       "id": "game_engine_towngame_oncombat",
       "community": 3,
       "norm_label": ".oncombat()"
@@ -859,7 +868,7 @@
       "label": ".hurt()",
       "file_type": "code",
       "source_file": "components/game/engine.ts",
-      "source_location": "L369",
+      "source_location": "L370",
       "id": "game_engine_towngame_hurt",
       "community": 3,
       "norm_label": ".hurt()"
@@ -868,7 +877,7 @@
       "label": ".respawn()",
       "file_type": "code",
       "source_file": "components/game/engine.ts",
-      "source_location": "L391",
+      "source_location": "L392",
       "id": "game_engine_towngame_respawn",
       "community": 3,
       "norm_label": ".respawn()"
@@ -877,7 +886,7 @@
       "label": ".teleport()",
       "file_type": "code",
       "source_file": "components/game/engine.ts",
-      "source_location": "L407",
+      "source_location": "L408",
       "id": "game_engine_towngame_teleport",
       "community": 3,
       "norm_label": ".teleport()"
@@ -886,16 +895,16 @@
       "label": ".dispose()",
       "file_type": "code",
       "source_file": "components/game/engine.ts",
-      "source_location": "L411",
+      "source_location": "L412",
       "id": "game_engine_towngame_dispose",
-      "community": 5,
+      "community": 6,
       "norm_label": ".dispose()"
     },
     {
       "label": ".enterCar()",
       "file_type": "code",
       "source_file": "components/game/engine.ts",
-      "source_location": "L495",
+      "source_location": "L496",
       "id": "game_engine_towngame_entercar",
       "community": 3,
       "norm_label": ".entercar()"
@@ -904,7 +913,7 @@
       "label": ".exitCar()",
       "file_type": "code",
       "source_file": "components/game/engine.ts",
-      "source_location": "L506",
+      "source_location": "L507",
       "id": "game_engine_towngame_exitcar",
       "community": 3,
       "norm_label": ".exitcar()"
@@ -913,25 +922,43 @@
       "label": ".reload()",
       "file_type": "code",
       "source_file": "components/game/engine.ts",
-      "source_location": "L527",
+      "source_location": "L528",
       "id": "game_engine_towngame_reload",
       "community": 3,
       "norm_label": ".reload()"
     },
     {
-      "label": ".aimYaw()",
+      "label": ".aimPoint()",
       "file_type": "code",
       "source_file": "components/game/engine.ts",
-      "source_location": "L534",
-      "id": "game_engine_towngame_aimyaw",
+      "source_location": "L540",
+      "id": "game_engine_towngame_aimpoint",
       "community": 3,
-      "norm_label": ".aimyaw()"
+      "norm_label": ".aimpoint()"
+    },
+    {
+      "label": ".trace()",
+      "file_type": "code",
+      "source_file": "components/game/engine.ts",
+      "source_location": "L593",
+      "id": "game_engine_towngame_trace",
+      "community": 3,
+      "norm_label": ".trace()"
+    },
+    {
+      "label": ".angleDiff()",
+      "file_type": "code",
+      "source_file": "components/game/engine.ts",
+      "source_location": "L610",
+      "id": "game_engine_towngame_anglediff",
+      "community": 3,
+      "norm_label": ".anglediff()"
     },
     {
       "label": ".fire()",
       "file_type": "code",
       "source_file": "components/game/engine.ts",
-      "source_location": "L546",
+      "source_location": "L615",
       "id": "game_engine_towngame_fire",
       "community": 3,
       "norm_label": ".fire()"
@@ -940,7 +967,7 @@
       "label": ".rayToWalls()",
       "file_type": "code",
       "source_file": "components/game/engine.ts",
-      "source_location": "L587",
+      "source_location": "L655",
       "id": "game_engine_towngame_raytowalls",
       "community": 3,
       "norm_label": ".raytowalls()"
@@ -949,7 +976,7 @@
       "label": ".explode()",
       "file_type": "code",
       "source_file": "components/game/engine.ts",
-      "source_location": "L612",
+      "source_location": "L680",
       "id": "game_engine_towngame_explode",
       "community": 3,
       "norm_label": ".explode()"
@@ -958,7 +985,7 @@
       "label": ".tracer()",
       "file_type": "code",
       "source_file": "components/game/engine.ts",
-      "source_location": "L635",
+      "source_location": "L703",
       "id": "game_engine_towngame_tracer",
       "community": 3,
       "norm_label": ".tracer()"
@@ -967,7 +994,7 @@
       "label": ".fireBlast()",
       "file_type": "code",
       "source_file": "components/game/engine.ts",
-      "source_location": "L654",
+      "source_location": "L722",
       "id": "game_engine_towngame_fireblast",
       "community": 3,
       "norm_label": ".fireblast()"
@@ -976,16 +1003,16 @@
       "label": ".updateDaylight()",
       "file_type": "code",
       "source_file": "components/game/engine.ts",
-      "source_location": "L684",
+      "source_location": "L752",
       "id": "game_engine_towngame_updatedaylight",
-      "community": 5,
+      "community": 6,
       "norm_label": ".updatedaylight()"
     },
     {
       "label": ".burst()",
       "file_type": "code",
       "source_file": "components/game/engine.ts",
-      "source_location": "L720",
+      "source_location": "L788",
       "id": "game_engine_towngame_burst",
       "community": 3,
       "norm_label": ".burst()"
@@ -994,7 +1021,7 @@
       "label": ".evolveFx()",
       "file_type": "code",
       "source_file": "components/game/engine.ts",
-      "source_location": "L753",
+      "source_location": "L821",
       "id": "game_engine_towngame_evolvefx",
       "community": 3,
       "norm_label": ".evolvefx()"
@@ -1003,7 +1030,7 @@
       "label": ".updateOrb()",
       "file_type": "code",
       "source_file": "components/game/engine.ts",
-      "source_location": "L782",
+      "source_location": "L850",
       "id": "game_engine_towngame_updateorb",
       "community": 3,
       "norm_label": ".updateorb()"
@@ -1012,7 +1039,7 @@
       "label": ".step()",
       "file_type": "code",
       "source_file": "components/game/engine.ts",
-      "source_location": "L814",
+      "source_location": "L882",
       "id": "game_engine_towngame_step",
       "community": 3,
       "norm_label": ".step()"
@@ -1021,7 +1048,7 @@
       "label": ".talkFocus()",
       "file_type": "code",
       "source_file": "components/game/engine.ts",
-      "source_location": "L1137",
+      "source_location": "L1215",
       "id": "game_engine_towngame_talkfocus",
       "community": 3,
       "norm_label": ".talkfocus()"
@@ -1030,7 +1057,7 @@
       "label": ".blockedStatic()",
       "file_type": "code",
       "source_file": "components/game/engine.ts",
-      "source_location": "L1143",
+      "source_location": "L1221",
       "id": "game_engine_towngame_blockedstatic",
       "community": 3,
       "norm_label": ".blockedstatic()"
@@ -1039,7 +1066,7 @@
       "label": ".blocked()",
       "file_type": "code",
       "source_file": "components/game/engine.ts",
-      "source_location": "L1150",
+      "source_location": "L1228",
       "id": "game_engine_towngame_blocked",
       "community": 3,
       "norm_label": ".blocked()"
@@ -1050,7 +1077,7 @@
       "source_file": "components/game/dialogue.tsx",
       "source_location": "L1",
       "id": "components_game_dialogue_tsx",
-      "community": 6,
+      "community": 7,
       "norm_label": "dialogue.tsx"
     },
     {
@@ -1059,8 +1086,26 @@
       "source_file": "components/game/dialogue.tsx",
       "source_location": "L24",
       "id": "game_dialogue_dialogue",
-      "community": 6,
+      "community": 7,
       "norm_label": "dialogue()"
+    },
+    {
+      "label": "ray.ts",
+      "file_type": "code",
+      "source_file": "components/game/ray.ts",
+      "source_location": "L1",
+      "id": "components_game_ray_ts",
+      "community": 4,
+      "norm_label": "ray.ts"
+    },
+    {
+      "label": "rayCylinder()",
+      "file_type": "code",
+      "source_file": "components/game/ray.ts",
+      "source_location": "L8",
+      "id": "game_ray_raycylinder",
+      "community": 4,
+      "norm_label": "raycylinder()"
     },
     {
       "label": "combat.ts",
@@ -1068,367 +1113,394 @@
       "source_file": "components/game/combat.ts",
       "source_location": "L1",
       "id": "components_game_combat_ts",
-      "community": 1,
+      "community": 0,
       "norm_label": "combat.ts"
     },
     {
       "label": "glitchMat()",
       "file_type": "code",
       "source_file": "components/game/combat.ts",
-      "source_location": "L41",
+      "source_location": "L42",
       "id": "game_combat_glitchmat",
-      "community": 1,
+      "community": 0,
       "norm_label": "glitchmat()"
     },
     {
       "label": "textSprite()",
       "file_type": "code",
       "source_file": "components/game/combat.ts",
-      "source_location": "L83",
+      "source_location": "L84",
       "id": "game_combat_textsprite",
-      "community": 1,
+      "community": 0,
       "norm_label": "textsprite()"
     },
     {
       "label": "foeMats()",
       "file_type": "code",
       "source_file": "components/game/combat.ts",
-      "source_location": "L173",
+      "source_location": "L174",
       "id": "game_combat_foemats",
-      "community": 1,
+      "community": 0,
       "norm_label": "foemats()"
     },
     {
       "label": "part()",
       "file_type": "code",
       "source_file": "components/game/combat.ts",
-      "source_location": "L181",
+      "source_location": "L182",
       "id": "game_combat_part",
-      "community": 1,
+      "community": 0,
       "norm_label": "part()"
     },
     {
       "label": "buildFoe()",
       "file_type": "code",
       "source_file": "components/game/combat.ts",
-      "source_location": "L189",
+      "source_location": "L190",
       "id": "game_combat_buildfoe",
-      "community": 1,
+      "community": 0,
       "norm_label": "buildfoe()"
     },
     {
       "label": "BlackBox",
       "file_type": "code",
       "source_file": "components/game/combat.ts",
-      "source_location": "L334",
+      "source_location": "L335",
       "id": "game_combat_blackbox",
-      "community": 1,
+      "community": 0,
       "norm_label": "blackbox"
     },
     {
       "label": ".constructor()",
       "file_type": "code",
       "source_file": "components/game/combat.ts",
-      "source_location": "L354",
+      "source_location": "L355",
       "id": "game_combat_blackbox_constructor",
-      "community": 1,
+      "community": 0,
       "norm_label": ".constructor()"
     },
     {
       "label": ".place()",
       "file_type": "code",
       "source_file": "components/game/combat.ts",
-      "source_location": "L408",
+      "source_location": "L409",
       "id": "game_combat_blackbox_place",
-      "community": 1,
+      "community": 0,
       "norm_label": ".place()"
     },
     {
       "label": ".alive()",
       "file_type": "code",
       "source_file": "components/game/combat.ts",
-      "source_location": "L416",
+      "source_location": "L417",
       "id": "game_combat_blackbox_alive",
-      "community": 1,
+      "community": 0,
       "norm_label": ".alive()"
     },
     {
       "label": ".vulnerable()",
       "file_type": "code",
       "source_file": "components/game/combat.ts",
-      "source_location": "L419",
+      "source_location": "L420",
       "id": "game_combat_blackbox_vulnerable",
-      "community": 1,
+      "community": 0,
       "norm_label": ".vulnerable()"
     },
     {
       "label": "Combat",
       "file_type": "code",
       "source_file": "components/game/combat.ts",
-      "source_location": "L426",
+      "source_location": "L427",
       "id": "game_combat_combat",
-      "community": 1,
+      "community": 0,
       "norm_label": "combat"
     },
     {
       "label": ".constructor()",
       "file_type": "code",
       "source_file": "components/game/combat.ts",
-      "source_location": "L449",
+      "source_location": "L450",
       "id": "game_combat_combat_constructor",
-      "community": 1,
+      "community": 0,
       "norm_label": ".constructor()"
     },
     {
       "label": ".setState()",
       "file_type": "code",
       "source_file": "components/game/combat.ts",
-      "source_location": "L488",
+      "source_location": "L489",
       "id": "game_combat_combat_setstate",
-      "community": 1,
+      "community": 0,
       "norm_label": ".setstate()"
     },
     {
       "label": ".fighting()",
       "file_type": "code",
       "source_file": "components/game/combat.ts",
-      "source_location": "L514",
+      "source_location": "L515",
       "id": "game_combat_combat_fighting",
-      "community": 1,
+      "community": 0,
       "norm_label": ".fighting()"
     },
     {
       "label": ".bossFight()",
       "file_type": "code",
       "source_file": "components/game/combat.ts",
-      "source_location": "L517",
+      "source_location": "L518",
       "id": "game_combat_combat_bossfight",
-      "community": 1,
+      "community": 0,
       "norm_label": ".bossfight()"
     },
     {
       "label": ".safeSpot()",
       "file_type": "code",
       "source_file": "components/game/combat.ts",
-      "source_location": "L521",
+      "source_location": "L522",
       "id": "game_combat_combat_safespot",
-      "community": 1,
+      "community": 0,
       "norm_label": ".safespot()"
     },
     {
       "label": ".blocks()",
       "file_type": "code",
       "source_file": "components/game/combat.ts",
-      "source_location": "L528",
+      "source_location": "L529",
       "id": "game_combat_combat_blocks",
-      "community": 1,
+      "community": 0,
       "norm_label": ".blocks()"
     },
     {
       "label": ".solidWalls()",
       "file_type": "code",
       "source_file": "components/game/combat.ts",
-      "source_location": "L547",
+      "source_location": "L548",
       "id": "game_combat_combat_solidwalls",
-      "community": 1,
+      "community": 0,
       "norm_label": ".solidwalls()"
     },
     {
       "label": ".ram()",
       "file_type": "code",
       "source_file": "components/game/combat.ts",
-      "source_location": "L554",
+      "source_location": "L555",
       "id": "game_combat_combat_ram",
-      "community": 1,
+      "community": 0,
       "norm_label": ".ram()"
     },
     {
       "label": ".outsideArena()",
       "file_type": "code",
       "source_file": "components/game/combat.ts",
-      "source_location": "L570",
+      "source_location": "L571",
       "id": "game_combat_combat_outsidearena",
-      "community": 1,
+      "community": 0,
       "norm_label": ".outsidearena()"
     },
     {
       "label": ".reset()",
       "file_type": "code",
       "source_file": "components/game/combat.ts",
-      "source_location": "L576",
+      "source_location": "L577",
       "id": "game_combat_combat_reset",
-      "community": 1,
+      "community": 0,
       "norm_label": ".reset()"
     },
     {
       "label": ".nearest()",
       "file_type": "code",
       "source_file": "components/game/combat.ts",
-      "source_location": "L595",
+      "source_location": "L596",
       "id": "game_combat_combat_nearest",
-      "community": 1,
+      "community": 0,
       "norm_label": ".nearest()"
     },
     {
       "label": ".strike()",
       "file_type": "code",
       "source_file": "components/game/combat.ts",
-      "source_location": "L614",
+      "source_location": "L615",
       "id": "game_combat_combat_strike",
-      "community": 1,
+      "community": 0,
       "norm_label": ".strike()"
     },
     {
-      "label": ".shoot()",
+      "label": ".rayHit()",
       "file_type": "code",
       "source_file": "components/game/combat.ts",
       "source_location": "L644",
-      "id": "game_combat_combat_shoot",
-      "community": 1,
-      "norm_label": ".shoot()"
+      "id": "game_combat_combat_rayhit",
+      "community": 4,
+      "norm_label": ".rayhit()"
+    },
+    {
+      "label": ".applyShot()",
+      "file_type": "code",
+      "source_file": "components/game/combat.ts",
+      "source_location": "L666",
+      "id": "game_combat_combat_applyshot",
+      "community": 0,
+      "norm_label": ".applyshot()"
+    },
+    {
+      "label": ".centers()",
+      "file_type": "code",
+      "source_file": "components/game/combat.ts",
+      "source_location": "L680",
+      "id": "game_combat_combat_centers",
+      "community": 0,
+      "norm_label": ".centers()"
+    },
+    {
+      "label": ".nearestCenter()",
+      "file_type": "code",
+      "source_file": "components/game/combat.ts",
+      "source_location": "L692",
+      "id": "game_combat_combat_nearestcenter",
+      "community": 0,
+      "norm_label": ".nearestcenter()"
     },
     {
       "label": ".aimAssist()",
       "file_type": "code",
       "source_file": "components/game/combat.ts",
-      "source_location": "L685",
+      "source_location": "L712",
       "id": "game_combat_combat_aimassist",
-      "community": 1,
+      "community": 0,
       "norm_label": ".aimassist()"
     },
     {
       "label": ".blast()",
       "file_type": "code",
       "source_file": "components/game/combat.ts",
-      "source_location": "L705",
+      "source_location": "L732",
       "id": "game_combat_combat_blast",
-      "community": 1,
+      "community": 0,
       "norm_label": ".blast()"
     },
     {
       "label": ".damageFoe()",
       "file_type": "code",
       "source_file": "components/game/combat.ts",
-      "source_location": "L724",
+      "source_location": "L751",
       "id": "game_combat_combat_damagefoe",
-      "community": 1,
+      "community": 0,
       "norm_label": ".damagefoe()"
     },
     {
       "label": ".damageBoss()",
       "file_type": "code",
       "source_file": "components/game/combat.ts",
-      "source_location": "L738",
+      "source_location": "L765",
       "id": "game_combat_combat_damageboss",
-      "community": 1,
+      "community": 0,
       "norm_label": ".damageboss()"
     },
     {
       "label": ".emitBoss()",
       "file_type": "code",
       "source_file": "components/game/combat.ts",
-      "source_location": "L761",
+      "source_location": "L788",
       "id": "game_combat_combat_emitboss",
-      "community": 1,
+      "community": 0,
       "norm_label": ".emitboss()"
     },
     {
       "label": ".removeFoe()",
       "file_type": "code",
       "source_file": "components/game/combat.ts",
-      "source_location": "L766",
+      "source_location": "L793",
       "id": "game_combat_combat_removefoe",
-      "community": 1,
+      "community": 0,
       "norm_label": ".removefoe()"
     },
     {
       "label": ".spawnFoe()",
       "file_type": "code",
       "source_file": "components/game/combat.ts",
-      "source_location": "L781",
+      "source_location": "L808",
       "id": "game_combat_combat_spawnfoe",
-      "community": 1,
+      "community": 0,
       "norm_label": ".spawnfoe()"
     },
     {
       "label": ".startFight()",
       "file_type": "code",
       "source_file": "components/game/combat.ts",
-      "source_location": "L791",
+      "source_location": "L818",
       "id": "game_combat_combat_startfight",
-      "community": 1,
+      "community": 0,
       "norm_label": ".startfight()"
     },
     {
       "label": ".startBoss()",
       "file_type": "code",
       "source_file": "components/game/combat.ts",
-      "source_location": "L805",
+      "source_location": "L832",
       "id": "game_combat_combat_startboss",
-      "community": 1,
+      "community": 0,
       "norm_label": ".startboss()"
     },
     {
       "label": ".update()",
       "file_type": "code",
       "source_file": "components/game/combat.ts",
-      "source_location": "L819",
+      "source_location": "L846",
       "id": "game_combat_combat_update",
-      "community": 1,
+      "community": 0,
       "norm_label": ".update()"
     },
     {
       "label": ".updateFoes()",
       "file_type": "code",
       "source_file": "components/game/combat.ts",
-      "source_location": "L891",
+      "source_location": "L918",
       "id": "game_combat_combat_updatefoes",
-      "community": 1,
+      "community": 0,
       "norm_label": ".updatefoes()"
     },
     {
       "label": ".confine()",
       "file_type": "code",
       "source_file": "components/game/combat.ts",
-      "source_location": "L1089",
+      "source_location": "L1116",
       "id": "game_combat_combat_confine",
-      "community": 1,
+      "community": 0,
       "norm_label": ".confine()"
     },
     {
       "label": ".clearProjectiles()",
       "file_type": "code",
       "source_file": "components/game/combat.ts",
-      "source_location": "L1104",
+      "source_location": "L1131",
       "id": "game_combat_combat_clearprojectiles",
-      "community": 1,
+      "community": 0,
       "norm_label": ".clearprojectiles()"
     },
     {
       "label": ".fireOrb()",
       "file_type": "code",
       "source_file": "components/game/combat.ts",
-      "source_location": "L1114",
+      "source_location": "L1141",
       "id": "game_combat_combat_fireorb",
-      "community": 1,
+      "community": 0,
       "norm_label": ".fireorb()"
     },
     {
       "label": ".updateProjectiles()",
       "file_type": "code",
       "source_file": "components/game/combat.ts",
-      "source_location": "L1121",
+      "source_location": "L1148",
       "id": "game_combat_combat_updateprojectiles",
-      "community": 1,
+      "community": 0,
       "norm_label": ".updateprojectiles()"
     },
     {
       "label": ".animateBoss()",
       "file_type": "code",
       "source_file": "components/game/combat.ts",
-      "source_location": "L1180",
+      "source_location": "L1207",
       "id": "game_combat_combat_animateboss",
-      "community": 1,
+      "community": 0,
       "norm_label": ".animateboss()"
     },
     {
@@ -1437,7 +1509,7 @@
       "source_file": "components/game/world.ts",
       "source_location": "L1",
       "id": "components_game_world_ts",
-      "community": 4,
+      "community": 5,
       "norm_label": "world.ts"
     },
     {
@@ -1446,7 +1518,7 @@
       "source_file": "components/game/world.ts",
       "source_location": "L44",
       "id": "game_world_readfonts",
-      "community": 5,
+      "community": 6,
       "norm_label": "readfonts()"
     },
     {
@@ -1455,7 +1527,7 @@
       "source_file": "components/game/world.ts",
       "source_location": "L54",
       "id": "game_world_rng",
-      "community": 4,
+      "community": 5,
       "norm_label": "rng()"
     },
     {
@@ -1464,7 +1536,7 @@
       "source_file": "components/game/world.ts",
       "source_location": "L61",
       "id": "game_world_canvastex",
-      "community": 4,
+      "community": 5,
       "norm_label": "canvastex()"
     },
     {
@@ -1473,7 +1545,7 @@
       "source_file": "components/game/world.ts",
       "source_location": "L73",
       "id": "game_world_repeat",
-      "community": 4,
+      "community": 5,
       "norm_label": "repeat()"
     },
     {
@@ -1482,7 +1554,7 @@
       "source_file": "components/game/world.ts",
       "source_location": "L82",
       "id": "game_world_speckle",
-      "community": 4,
+      "community": 5,
       "norm_label": "speckle()"
     },
     {
@@ -1491,7 +1563,7 @@
       "source_file": "components/game/world.ts",
       "source_location": "L91",
       "id": "game_world_bricktexture",
-      "community": 4,
+      "community": 5,
       "norm_label": "bricktexture()"
     },
     {
@@ -1500,7 +1572,7 @@
       "source_file": "components/game/world.ts",
       "source_location": "L111",
       "id": "game_world_plastertexture",
-      "community": 4,
+      "community": 5,
       "norm_label": "plastertexture()"
     },
     {
@@ -1509,7 +1581,7 @@
       "source_file": "components/game/world.ts",
       "source_location": "L122",
       "id": "game_world_asphalttexture",
-      "community": 4,
+      "community": 5,
       "norm_label": "asphalttexture()"
     },
     {
@@ -1518,7 +1590,7 @@
       "source_file": "components/game/world.ts",
       "source_location": "L145",
       "id": "game_world_pavingtexture",
-      "community": 4,
+      "community": 5,
       "norm_label": "pavingtexture()"
     },
     {
@@ -1527,7 +1599,7 @@
       "source_file": "components/game/world.ts",
       "source_location": "L160",
       "id": "game_world_grasstexture",
-      "community": 4,
+      "community": 5,
       "norm_label": "grasstexture()"
     },
     {
@@ -1536,7 +1608,7 @@
       "source_file": "components/game/world.ts",
       "source_location": "L174",
       "id": "game_world_curtainwall",
-      "community": 4,
+      "community": 5,
       "norm_label": "curtainwall()"
     },
     {
@@ -1545,7 +1617,7 @@
       "source_file": "components/game/world.ts",
       "source_location": "L206",
       "id": "game_world_signtexture",
-      "community": 4,
+      "community": 5,
       "norm_label": "signtexture()"
     },
     {
@@ -1554,7 +1626,7 @@
       "source_file": "components/game/world.ts",
       "source_location": "L229",
       "id": "game_world_logotexture",
-      "community": 4,
+      "community": 5,
       "norm_label": "logotexture()"
     },
     {
@@ -1563,7 +1635,7 @@
       "source_file": "components/game/world.ts",
       "source_location": "L261",
       "id": "game_world_stripes",
-      "community": 4,
+      "community": 5,
       "norm_label": "stripes()"
     },
     {
@@ -1572,7 +1644,7 @@
       "source_file": "components/game/world.ts",
       "source_location": "L270",
       "id": "game_world_radialtex",
-      "community": 4,
+      "community": 5,
       "norm_label": "radialtex()"
     },
     {
@@ -1581,7 +1653,7 @@
       "source_file": "components/game/world.ts",
       "source_location": "L280",
       "id": "game_world_makemedal",
-      "community": 4,
+      "community": 5,
       "norm_label": "makemedal()"
     },
     {
@@ -1590,7 +1662,7 @@
       "source_file": "components/game/world.ts",
       "source_location": "L305",
       "id": "game_world_batch",
-      "community": 4,
+      "community": 5,
       "norm_label": "batch"
     },
     {
@@ -1599,7 +1671,7 @@
       "source_file": "components/game/world.ts",
       "source_location": "L309",
       "id": "game_world_batch_add",
-      "community": 4,
+      "community": 5,
       "norm_label": ".add()"
     },
     {
@@ -1608,7 +1680,7 @@
       "source_file": "components/game/world.ts",
       "source_location": "L317",
       "id": "game_world_batch_build",
-      "community": 4,
+      "community": 5,
       "norm_label": ".build()"
     },
     {
@@ -1617,7 +1689,7 @@
       "source_file": "components/game/world.ts",
       "source_location": "L343",
       "id": "game_world_buildtown",
-      "community": 4,
+      "community": 5,
       "norm_label": "buildtown()"
     },
     {
@@ -1626,7 +1698,7 @@
       "source_file": "components/game/world.ts",
       "source_location": "L852",
       "id": "game_world_buildsky",
-      "community": 4,
+      "community": 5,
       "norm_label": "buildsky()"
     },
     {
@@ -1635,7 +1707,7 @@
       "source_file": "components/game/world.ts",
       "source_location": "L909",
       "id": "game_world_c",
-      "community": 4,
+      "community": 5,
       "norm_label": "c()"
     },
     {
@@ -1644,7 +1716,7 @@
       "source_file": "components/game/world.ts",
       "source_location": "L928",
       "id": "game_world_smooth",
-      "community": 5,
+      "community": 6,
       "norm_label": "smooth()"
     },
     {
@@ -1653,7 +1725,7 @@
       "source_file": "components/game/world.ts",
       "source_location": "L934",
       "id": "game_world_daylightat",
-      "community": 5,
+      "community": 6,
       "norm_label": "daylightat()"
     },
     {
@@ -1662,7 +1734,7 @@
       "source_file": "lib/game-data.ts",
       "source_location": "L1",
       "id": "lib_game_data_ts",
-      "community": 6,
+      "community": 7,
       "norm_label": "game-data.ts"
     },
     {
@@ -1671,7 +1743,7 @@
       "source_file": "lib/game-data.ts",
       "source_location": "L40",
       "id": "lib_game_data_ledgerlink",
-      "community": 6,
+      "community": 7,
       "norm_label": "ledgerlink()"
     },
     {
@@ -1680,7 +1752,7 @@
       "source_file": "lib/game-data.ts",
       "source_location": "L45",
       "id": "lib_game_data_byorg",
-      "community": 6,
+      "community": 7,
       "norm_label": "byorg()"
     },
     {
@@ -1689,7 +1761,7 @@
       "source_file": "lib/game-data.ts",
       "source_location": "L51",
       "id": "lib_game_data_exp",
-      "community": 6,
+      "community": 7,
       "norm_label": "exp()"
     },
     {
@@ -1698,7 +1770,7 @@
       "source_file": "lib/game-data.ts",
       "source_location": "L108",
       "id": "lib_game_data_skill",
-      "community": 6,
+      "community": 7,
       "norm_label": "skill()"
     },
     {
@@ -1707,7 +1779,7 @@
       "source_file": "lib/game-data.ts",
       "source_location": "L276",
       "id": "lib_game_data_footprint",
-      "community": 6,
+      "community": 7,
       "norm_label": "footprint()"
     },
     {
@@ -1716,7 +1788,7 @@
       "source_file": "lib/game-data.ts",
       "source_location": "L328",
       "id": "lib_game_data_stagefor",
-      "community": 3,
+      "community": 6,
       "norm_label": "stagefor()"
     },
     {
@@ -1725,7 +1797,7 @@
       "source_file": "lib/game-data.ts",
       "source_location": "L397",
       "id": "lib_game_data_h",
-      "community": 6,
+      "community": 7,
       "norm_label": "h()"
     },
     {
@@ -1734,7 +1806,7 @@
       "source_file": "lib/game-data.ts",
       "source_location": "L399",
       "id": "lib_game_data_scriptfor",
-      "community": 6,
+      "community": 7,
       "norm_label": "scriptfor()"
     },
     {
@@ -1743,7 +1815,7 @@
       "source_file": "lib/content.ts",
       "source_location": "L1",
       "id": "lib_content_ts",
-      "community": 0,
+      "community": 1,
       "norm_label": "content.ts"
     },
     {
@@ -1752,7 +1824,7 @@
       "source_file": "lib/content.ts",
       "source_location": "L28",
       "id": "lib_content_callhref",
-      "community": 0,
+      "community": 1,
       "norm_label": "callhref()"
     },
     {
@@ -1761,7 +1833,7 @@
       "source_file": "lib/content.ts",
       "source_location": "L482",
       "id": "lib_content_getdeepdive",
-      "community": 0,
+      "community": 1,
       "norm_label": "getdeepdive()"
     },
     {
@@ -1770,7 +1842,7 @@
       "source_file": "lib/brand.tsx",
       "source_location": "L1",
       "id": "lib_brand_tsx",
-      "community": 0,
+      "community": 1,
       "norm_label": "brand.tsx"
     },
     {
@@ -1779,8 +1851,26 @@
       "source_file": "lib/brand.tsx",
       "source_location": "L24",
       "id": "lib_brand_marksvg",
-      "community": 0,
+      "community": 1,
       "norm_label": "marksvg()"
+    },
+    {
+      "label": ".aimYaw()",
+      "file_type": "code",
+      "source_file": "components/game/engine.ts",
+      "source_location": "L534",
+      "community": 3,
+      "norm_label": ".aimyaw()",
+      "id": "game_engine_towngame_aimyaw"
+    },
+    {
+      "label": ".shoot()",
+      "file_type": "code",
+      "source_file": "components/game/combat.ts",
+      "source_location": "L644",
+      "community": 0,
+      "norm_label": ".shoot()",
+      "id": "game_combat_combat_shoot"
     },
     {
       "label": ".attack()",
@@ -1814,7 +1904,7 @@
       "file_type": "code",
       "source_file": "components/game/platforming.ts",
       "source_location": "L1",
-      "community": 7,
+      "community": 8,
       "norm_label": "platforming.ts",
       "id": "components_game_platforming_ts"
     },
@@ -1823,7 +1913,7 @@
       "file_type": "code",
       "source_file": "components/game/platforming.ts",
       "source_location": "L39",
-      "community": 7,
+      "community": 8,
       "norm_label": "canvas()",
       "id": "game_platforming_canvas"
     },
@@ -1832,7 +1922,7 @@
       "file_type": "code",
       "source_file": "components/game/platforming.ts",
       "source_location": "L50",
-      "community": 7,
+      "community": 8,
       "norm_label": "cratetexture()",
       "id": "game_platforming_cratetexture"
     },
@@ -1841,7 +1931,7 @@
       "file_type": "code",
       "source_file": "components/game/platforming.ts",
       "source_location": "L77",
-      "community": 7,
+      "community": 8,
       "norm_label": "blocktexture()",
       "id": "game_platforming_blocktexture"
     },
@@ -1850,7 +1940,7 @@
       "file_type": "code",
       "source_file": "components/game/platforming.ts",
       "source_location": "L109",
-      "community": 7,
+      "community": 8,
       "norm_label": "coingeometry()",
       "id": "game_platforming_coingeometry"
     },
@@ -1859,7 +1949,7 @@
       "file_type": "code",
       "source_file": "components/game/platforming.ts",
       "source_location": "L116",
-      "community": 7,
+      "community": 8,
       "norm_label": "clearofwalls()",
       "id": "game_platforming_clearofwalls"
     },
@@ -1868,7 +1958,7 @@
       "file_type": "code",
       "source_file": "components/game/platforming.ts",
       "source_location": "L120",
-      "community": 7,
+      "community": 8,
       "norm_label": "platforming",
       "id": "game_platforming_platforming"
     },
@@ -1877,7 +1967,7 @@
       "file_type": "code",
       "source_file": "components/game/platforming.ts",
       "source_location": "L133",
-      "community": 7,
+      "community": 8,
       "norm_label": ".constructor()",
       "id": "game_platforming_platforming_constructor"
     },
@@ -1886,7 +1976,7 @@
       "file_type": "code",
       "source_file": "components/game/platforming.ts",
       "source_location": "L211",
-      "community": 7,
+      "community": 8,
       "norm_label": ".solidat()",
       "id": "game_platforming_platforming_solidat"
     },
@@ -1895,7 +1985,7 @@
       "file_type": "code",
       "source_file": "components/game/platforming.ts",
       "source_location": "L216",
-      "community": 7,
+      "community": 8,
       "norm_label": ".groundat()",
       "id": "game_platforming_platforming_groundat"
     },
@@ -1904,7 +1994,7 @@
       "file_type": "code",
       "source_file": "components/game/platforming.ts",
       "source_location": "L225",
-      "community": 7,
+      "community": 8,
       "norm_label": ".hits()",
       "id": "game_platforming_platforming_hits"
     },
@@ -1913,7 +2003,7 @@
       "file_type": "code",
       "source_file": "components/game/platforming.ts",
       "source_location": "L233",
-      "community": 7,
+      "community": 8,
       "norm_label": ".blocksfoe()",
       "id": "game_platforming_platforming_blocksfoe"
     },
@@ -1922,7 +2012,7 @@
       "file_type": "code",
       "source_file": "components/game/platforming.ts",
       "source_location": "L241",
-      "community": 7,
+      "community": 8,
       "norm_label": ".ceiling()",
       "id": "game_platforming_platforming_ceiling"
     },
@@ -1931,7 +2021,7 @@
       "file_type": "code",
       "source_file": "components/game/platforming.ts",
       "source_location": "L253",
-      "community": 7,
+      "community": 8,
       "norm_label": ".bump()",
       "id": "game_platforming_platforming_bump"
     },
@@ -1940,7 +2030,7 @@
       "file_type": "code",
       "source_file": "components/game/platforming.ts",
       "source_location": "L271",
-      "community": 7,
+      "community": 8,
       "norm_label": ".collect()",
       "id": "game_platforming_platforming_collect"
     },
@@ -1949,7 +2039,7 @@
       "file_type": "code",
       "source_file": "components/game/platforming.ts",
       "source_location": "L285",
-      "community": 7,
+      "community": 8,
       "norm_label": ".reset()",
       "id": "game_platforming_platforming_reset"
     },
@@ -1958,7 +2048,7 @@
       "file_type": "code",
       "source_file": "components/game/platforming.ts",
       "source_location": "L295",
-      "community": 7,
+      "community": 8,
       "norm_label": ".update()",
       "id": "game_platforming_platforming_update"
     },
@@ -1967,7 +2057,7 @@
       "file_type": "code",
       "source_file": "components/game/platforming.ts",
       "source_location": "L330",
-      "community": 7,
+      "community": 8,
       "norm_label": ".total()",
       "id": "game_platforming_platforming_total"
     },
@@ -1976,7 +2066,7 @@
       "file_type": "code",
       "source_file": "components/game/town.tsx",
       "source_location": "L286",
-      "community": 6,
+      "community": 7,
       "norm_label": "on()",
       "id": "game_town_on"
     },
@@ -1994,7 +2084,7 @@
       "file_type": "code",
       "source_file": "components/game/character.ts",
       "source_location": "L21",
-      "community": 5,
+      "community": 6,
       "norm_label": "std()",
       "id": "game_character_std"
     },
@@ -2003,7 +2093,7 @@
       "file_type": "code",
       "source_file": "components/game/character.ts",
       "source_location": "L24",
-      "community": 5,
+      "community": 6,
       "norm_label": "box()",
       "id": "game_character_box"
     },
@@ -2012,7 +2102,7 @@
       "file_type": "code",
       "source_file": "components/game/character.ts",
       "source_location": "L31",
-      "community": 5,
+      "community": 6,
       "norm_label": "limb()",
       "id": "game_character_limb"
     },
@@ -2021,7 +2111,7 @@
       "file_type": "code",
       "source_file": "components/game/world.ts",
       "source_location": "L58",
-      "community": 4,
+      "community": 5,
       "norm_label": "windowtextures()",
       "id": "game_world_windowtextures"
     },
@@ -2030,7 +2120,7 @@
       "file_type": "code",
       "source_file": "app/page.tsx",
       "source_location": "L3",
-      "community": 0,
+      "community": 1,
       "norm_label": "home()",
       "id": "app_page_home"
     },
@@ -2039,7 +2129,7 @@
       "file_type": "code",
       "source_file": "components/landing/landing.tsx",
       "source_location": "L1",
-      "community": 0,
+      "community": 1,
       "norm_label": "landing.tsx",
       "id": "components_landing_landing_tsx"
     },
@@ -2048,7 +2138,7 @@
       "file_type": "code",
       "source_file": "components/landing/landing.tsx",
       "source_location": "L21",
-      "community": 0,
+      "community": 1,
       "norm_label": "delay()",
       "id": "landing_landing_delay"
     },
@@ -2057,7 +2147,7 @@
       "file_type": "code",
       "source_file": "components/landing/landing.tsx",
       "source_location": "L24",
-      "community": 0,
+      "community": 1,
       "norm_label": "subscribereduced()",
       "id": "landing_landing_subscribereduced"
     },
@@ -2066,7 +2156,7 @@
       "file_type": "code",
       "source_file": "components/landing/landing.tsx",
       "source_location": "L29",
-      "community": 0,
+      "community": 1,
       "norm_label": "useprefersreducedmotion()",
       "id": "landing_landing_useprefersreducedmotion"
     },
@@ -2075,7 +2165,7 @@
       "file_type": "code",
       "source_file": "components/landing/landing.tsx",
       "source_location": "L38",
-      "community": 0,
+      "community": 1,
       "norm_label": "brackets()",
       "id": "landing_landing_brackets"
     },
@@ -2084,7 +2174,7 @@
       "file_type": "code",
       "source_file": "components/landing/landing.tsx",
       "source_location": "L59",
-      "community": 0,
+      "community": 1,
       "norm_label": "usetypewriter()",
       "id": "landing_landing_usetypewriter"
     },
@@ -2183,7 +2273,7 @@
       "file_type": "code",
       "source_file": "components/hero.tsx",
       "source_location": "L1",
-      "community": 0,
+      "community": 1,
       "norm_label": "hero.tsx",
       "id": "components_hero_tsx"
     },
@@ -2192,7 +2282,7 @@
       "file_type": "code",
       "source_file": "components/hero.tsx",
       "source_location": "L4",
-      "community": 0,
+      "community": 1,
       "norm_label": "hero()",
       "id": "components_hero_hero"
     },
@@ -2219,7 +2309,7 @@
       "file_type": "code",
       "source_file": "components/hero-visual.tsx",
       "source_location": "L1",
-      "community": 0,
+      "community": 1,
       "norm_label": "hero-visual.tsx",
       "id": "components_hero_visual_tsx"
     },
@@ -2228,7 +2318,7 @@
       "file_type": "code",
       "source_file": "components/hero-visual.tsx",
       "source_location": "L28",
-      "community": 0,
+      "community": 1,
       "norm_label": "herovisual()",
       "id": "components_hero_visual_herovisual"
     },
@@ -2309,7 +2399,7 @@
       "file_type": "code",
       "source_file": "app/chat/page.tsx",
       "source_location": "L5",
-      "community": 0,
+      "community": 1,
       "norm_label": "chatdemo()",
       "id": "chat_page_chatdemo"
     },
@@ -2336,7 +2426,7 @@
       "file_type": "code",
       "source_file": "components/hero-section.tsx",
       "source_location": "L1",
-      "community": 0,
+      "community": 1,
       "norm_label": "hero-section.tsx",
       "id": "components_hero_section_tsx"
     },
@@ -2345,7 +2435,7 @@
       "file_type": "code",
       "source_file": "components/hero-section.tsx",
       "source_location": "L9",
-      "community": 0,
+      "community": 1,
       "norm_label": "herosection()",
       "id": "components_hero_section_herosection"
     },
@@ -2471,7 +2561,7 @@
       "file_type": "code",
       "source_file": "components/ui/highlighter.tsx",
       "source_location": "L1",
-      "community": 0,
+      "community": 1,
       "norm_label": "highlighter.tsx",
       "id": "components_ui_highlighter_tsx"
     },
@@ -2480,7 +2570,7 @@
       "file_type": "code",
       "source_file": "components/ui/highlighter.tsx",
       "source_location": "L30",
-      "community": 0,
+      "community": 1,
       "norm_label": "highlighter()",
       "id": "ui_highlighter_highlighter"
     },
@@ -4102,6 +4192,17 @@
       "target": "game_character_animatecharacter"
     },
     {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "components/game/vehicles.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "components_game_vehicles_ts",
+      "target": "game_ray_raycylinder",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "components/game/vehicles.ts",
@@ -4158,9 +4259,19 @@
       "source_file": "components/game/vehicles.ts",
       "source_location": "L181",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_vehicles_vehicles",
-      "target": "game_vehicles_vehicles_raycast",
-      "confidence_score": 1.0
+      "target": "game_vehicles_vehicles_raycast"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "components/game/vehicles.ts",
+      "source_location": "L222",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "game_vehicles_vehicles",
+      "target": "game_vehicles_vehicles_targets"
     },
     {
       "relation": "method",
@@ -4168,9 +4279,9 @@
       "source_file": "components/game/vehicles.ts",
       "source_location": "L220",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_vehicles_vehicles",
-      "target": "game_vehicles_vehicles_hitcar",
-      "confidence_score": 1.0
+      "target": "game_vehicles_vehicles_hitcar"
     },
     {
       "relation": "method",
@@ -4178,9 +4289,9 @@
       "source_file": "components/game/vehicles.ts",
       "source_location": "L237",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_vehicles_vehicles",
-      "target": "game_vehicles_vehicles_hitped",
-      "confidence_score": 1.0
+      "target": "game_vehicles_vehicles_hitped"
     },
     {
       "relation": "method",
@@ -4188,9 +4299,9 @@
       "source_file": "components/game/vehicles.ts",
       "source_location": "L247",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_vehicles_vehicles",
-      "target": "game_vehicles_vehicles_panic",
-      "confidence_score": 1.0
+      "target": "game_vehicles_vehicles_panic"
     },
     {
       "relation": "method",
@@ -4198,9 +4309,9 @@
       "source_file": "components/game/vehicles.ts",
       "source_location": "L258",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_vehicles_vehicles",
-      "target": "game_vehicles_vehicles_repair",
-      "confidence_score": 1.0
+      "target": "game_vehicles_vehicles_repair"
     },
     {
       "relation": "method",
@@ -4248,9 +4359,9 @@
       "source_file": "components/game/vehicles.ts",
       "source_location": "L341",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_vehicles_vehicles",
-      "target": "game_vehicles_vehicles_overlap",
-      "confidence_score": 1.0
+      "target": "game_vehicles_vehicles_overlap"
     },
     {
       "relation": "method",
@@ -4258,9 +4369,9 @@
       "source_file": "components/game/vehicles.ts",
       "source_location": "L364",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_vehicles_vehicles",
-      "target": "game_vehicles_vehicles_intocar",
-      "confidence_score": 1.0
+      "target": "game_vehicles_vehicles_intocar"
     },
     {
       "relation": "method",
@@ -4316,13 +4427,24 @@
     {
       "relation": "calls",
       "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "components/game/vehicles.ts",
+      "source_location": "L190",
+      "weight": 1.0,
+      "source": "game_vehicles_vehicles_raycast",
+      "target": "game_ray_raycylinder"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "components/game/vehicles.ts",
       "source_location": "L270",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_vehicles_vehicles_repair",
-      "target": "game_vehicles_vehicles_overlap",
-      "confidence_score": 1.0
+      "target": "game_vehicles_vehicles_overlap"
     },
     {
       "relation": "calls",
@@ -4331,9 +4453,9 @@
       "source_file": "components/game/vehicles.ts",
       "source_location": "L446",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_vehicles_vehicles_update",
-      "target": "game_vehicles_vehicles_repair",
-      "confidence_score": 1.0
+      "target": "game_vehicles_vehicles_repair"
     },
     {
       "relation": "calls",
@@ -4364,9 +4486,9 @@
       "source_file": "components/game/vehicles.ts",
       "source_location": "L365",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_vehicles_vehicles_intocar",
-      "target": "game_vehicles_vehicles_overlap",
-      "confidence_score": 1.0
+      "target": "game_vehicles_vehicles_overlap"
     },
     {
       "relation": "calls",
@@ -4375,9 +4497,9 @@
       "source_file": "components/game/vehicles.ts",
       "source_location": "L470",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_vehicles_vehicles_update",
-      "target": "game_vehicles_vehicles_overlap",
-      "confidence_score": 1.0
+      "target": "game_vehicles_vehicles_overlap"
     },
     {
       "relation": "calls",
@@ -4386,9 +4508,9 @@
       "source_file": "components/game/vehicles.ts",
       "source_location": "L378",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_vehicles_vehicles_carblocked",
-      "target": "game_vehicles_vehicles_intocar",
-      "confidence_score": 1.0
+      "target": "game_vehicles_vehicles_intocar"
     },
     {
       "relation": "calls",
@@ -4397,9 +4519,9 @@
       "source_file": "components/game/vehicles.ts",
       "source_location": "L465",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_vehicles_vehicles_update",
-      "target": "game_vehicles_vehicles_intocar",
-      "confidence_score": 1.0
+      "target": "game_vehicles_vehicles_intocar"
     },
     {
       "relation": "calls",
@@ -4685,11 +4807,31 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "components/game/engine.ts",
-      "source_location": "L534",
+      "source_location": "L540",
+      "weight": 1.0,
+      "source": "game_engine_towngame",
+      "target": "game_engine_towngame_aimpoint",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "components/game/engine.ts",
+      "source_location": "L593",
+      "weight": 1.0,
+      "source": "game_engine_towngame",
+      "target": "game_engine_towngame_trace",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "components/game/engine.ts",
+      "source_location": "L566",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "game_engine_towngame",
-      "target": "game_engine_towngame_aimyaw"
+      "target": "game_engine_towngame_anglediff"
     },
     {
       "relation": "method",
@@ -4717,9 +4859,9 @@
       "source_file": "components/game/engine.ts",
       "source_location": "L612",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_engine_towngame",
-      "target": "game_engine_towngame_explode",
-      "confidence_score": 1.0
+      "target": "game_engine_towngame_explode"
     },
     {
       "relation": "method",
@@ -4820,6 +4962,16 @@
       "confidence_score": 1.0,
       "source": "game_engine_towngame",
       "target": "game_engine_towngame_blocked"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "components/game/engine.ts",
+      "source_location": "L534",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "game_engine_towngame",
+      "target": "game_engine_towngame_aimyaw"
     },
     {
       "relation": "method",
@@ -5045,9 +5197,9 @@
       "source_file": "components/game/engine.ts",
       "source_location": "L631",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_engine_towngame_explode",
-      "target": "game_engine_towngame_hurt",
-      "confidence_score": 1.0
+      "target": "game_engine_towngame_hurt"
     },
     {
       "relation": "calls",
@@ -5098,22 +5250,66 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "components/game/engine.ts",
-      "source_location": "L549",
+      "source_location": "L548",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "game_engine_towngame_fire",
-      "target": "game_engine_towngame_aimyaw"
+      "source": "game_engine_towngame_aimpoint",
+      "target": "game_engine_towngame_trace",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "components/game/engine.ts",
-      "source_location": "L558",
+      "source_location": "L580",
+      "weight": 1.0,
+      "source": "game_engine_towngame_aimpoint",
+      "target": "game_engine_towngame_anglediff",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "components/game/engine.ts",
+      "source_location": "L621",
+      "weight": 1.0,
+      "source": "game_engine_towngame_fire",
+      "target": "game_engine_towngame_aimpoint",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "components/game/engine.ts",
+      "source_location": "L594",
+      "weight": 1.0,
+      "source": "game_engine_towngame_trace",
+      "target": "game_engine_towngame_raytowalls",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "components/game/engine.ts",
+      "source_location": "L631",
+      "weight": 1.0,
+      "source": "game_engine_towngame_fire",
+      "target": "game_engine_towngame_trace",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "components/game/engine.ts",
+      "source_location": "L543",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "game_engine_towngame_fire",
-      "target": "game_engine_towngame_raytowalls"
+      "source": "game_engine_towngame_aimyaw",
+      "target": "game_engine_towngame_anglediff"
     },
     {
       "relation": "calls",
@@ -5122,9 +5318,9 @@
       "source_file": "components/game/engine.ts",
       "source_location": "L566",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_engine_towngame_fire",
-      "target": "game_engine_towngame_explode",
-      "confidence_score": 1.0
+      "target": "game_engine_towngame_explode"
     },
     {
       "relation": "calls",
@@ -5164,11 +5360,33 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "components/game/engine.ts",
+      "source_location": "L549",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "game_engine_towngame_fire",
+      "target": "game_engine_towngame_aimyaw"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "components/game/engine.ts",
+      "source_location": "L558",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "game_engine_towngame_fire",
+      "target": "game_engine_towngame_raytowalls"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "components/game/engine.ts",
       "source_location": "L613",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_engine_towngame_explode",
-      "target": "game_engine_towngame_burst",
-      "confidence_score": 1.0
+      "target": "game_engine_towngame_burst"
     },
     {
       "relation": "calls",
@@ -5267,6 +5485,38 @@
       "confidence_score": 1.0,
       "source": "components_game_dialogue_tsx",
       "target": "game_dialogue_dialogue"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/game/ray.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "components_game_ray_ts",
+      "target": "game_ray_raycylinder",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "components/game/combat.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "components_game_combat_ts",
+      "target": "game_ray_raycylinder",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "components/game/combat.ts",
+      "source_location": "L651",
+      "weight": 1.0,
+      "source": "game_combat_combat_rayhit",
+      "target": "game_ray_raycylinder"
     },
     {
       "relation": "contains",
@@ -5603,9 +5853,39 @@
       "source_file": "components/game/combat.ts",
       "source_location": "L644",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "game_combat_combat",
-      "target": "game_combat_combat_shoot"
+      "target": "game_combat_combat_rayhit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "components/game/combat.ts",
+      "source_location": "L666",
+      "weight": 1.0,
+      "source": "game_combat_combat",
+      "target": "game_combat_combat_applyshot",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "components/game/combat.ts",
+      "source_location": "L680",
+      "weight": 1.0,
+      "source": "game_combat_combat",
+      "target": "game_combat_combat_centers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "components/game/combat.ts",
+      "source_location": "L692",
+      "weight": 1.0,
+      "source": "game_combat_combat",
+      "target": "game_combat_combat_nearestcenter",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -5768,6 +6048,16 @@
       "target": "game_combat_combat_animateboss"
     },
     {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "components/game/combat.ts",
+      "source_location": "L644",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "game_combat_combat",
+      "target": "game_combat_combat_shoot"
+    },
+    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -5838,22 +6128,22 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "components/game/combat.ts",
-      "source_location": "L675",
+      "source_location": "L668",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "game_combat_combat_shoot",
-      "target": "game_combat_combat_damageboss"
+      "source": "game_combat_combat_applyshot",
+      "target": "game_combat_combat_damagefoe",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "components/game/combat.ts",
-      "source_location": "L679",
+      "source_location": "L672",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "game_combat_combat_shoot",
-      "target": "game_combat_combat_damagefoe"
+      "source": "game_combat_combat_applyshot",
+      "target": "game_combat_combat_damageboss",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -5875,6 +6165,17 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "game_combat_combat_updateprojectiles",
+      "target": "game_combat_combat_damagefoe"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "components/game/combat.ts",
+      "source_location": "L679",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "game_combat_combat_shoot",
       "target": "game_combat_combat_damagefoe"
     },
     {
@@ -5930,6 +6231,17 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "game_combat_combat_updateprojectiles",
+      "target": "game_combat_combat_damageboss"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "components/game/combat.ts",
+      "source_location": "L675",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "game_combat_combat_shoot",
       "target": "game_combat_combat_damageboss"
     },
     {
@@ -8178,5 +8490,5 @@
       "source_file": "app/opengraph-image.png"
     }
   ],
-  "built_at_commit": "a040fe54fa7fd46621dec7967a00688c9b725ac4"
+  "built_at_commit": "77cee725c8c0e074e729e57bf270f4cbdf919dbc"
 }

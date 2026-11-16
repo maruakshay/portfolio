@@ -40,7 +40,7 @@
     "hash": "1e84128f77c2b9fc383ae754c6b1dd26"
   },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/app/page.tsx": {
-    "mtime": 1794809480.026645,
+    "mtime": 1794821765.193677,
     "hash": "09ba73a62b8821967009c2a334ccded2"
   },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/app/not-found.tsx": {
@@ -52,7 +52,7 @@
     "hash": "91afc0f840c80ceeaf689e91e21cb4b8"
   },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/app/work/[slug]/page.tsx": {
-    "mtime": 1794809483.790644,
+    "mtime": 1794821765.1939743,
     "hash": "19dd9b619070a52a0bf74397090c10cc"
   },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/app/api/chat/route.ts": {
@@ -60,19 +60,19 @@
     "hash": "3a704cdebc71aaa63229c5090f751cb9"
   },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/components/chat-full.tsx": {
-    "mtime": 1794809332.9239042,
+    "mtime": 1794821765.1943202,
     "hash": "03668f2ac49fbba95c00172bab396224"
   },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/components/ornament.tsx": {
-    "mtime": 1794810289.449637,
+    "mtime": 1794821765.197646,
     "hash": "31f014bd97fedc42514093276b6c5b07"
   },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/components/site-header.tsx": {
-    "mtime": 1794810289.4497924,
+    "mtime": 1794821765.1979456,
     "hash": "64bb2c4ddafb40133c5bac15998ed1ff"
   },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/components/command-palette.tsx": {
-    "mtime": 1794809480.1749487,
+    "mtime": 1794821765.1946776,
     "hash": "70dbaa59609fa01be79d512d80dac133"
   },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/components/site-footer.tsx": {
@@ -80,35 +80,39 @@
     "hash": "78825894dc304f4694d69ac65cfba25f"
   },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/components/game/town.tsx": {
-    "mtime": 1794821104.7513278,
+    "mtime": 1794821765.196632,
     "hash": "23c8b763686f13648256f66a237d52cd"
   },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/components/game/character.ts": {
-    "mtime": 1794820974.8938549,
-    "hash": "4355f02cffa864cb03d705943335c17f"
+    "mtime": 1794825846.582512,
+    "hash": "ef5bb4f4e9c62c103c7d219e1607cd58"
   },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/components/game/vehicles.ts": {
-    "mtime": 1794821613.3623626,
-    "hash": "7e5316dd8d3522fa670b00ef067151c0"
+    "mtime": 1794825749.6696336,
+    "hash": "f725888fa20f82bf1e71851efa702461"
   },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/components/game/engine.ts": {
-    "mtime": 1794821449.5823247,
-    "hash": "127fe20096efbaabf17dd09bd26f19b2"
+    "mtime": 1794825982.4639533,
+    "hash": "e6ad2401d84ddfe7d7d1dde431a9d209"
   },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/components/game/dialogue.tsx": {
-    "mtime": 1794810872.3468702,
+    "mtime": 1794821765.1955554,
     "hash": "fa3b9d7a1e544b72a18d25b148bbfdad"
   },
+  "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/components/game/ray.ts": {
+    "mtime": 1794825747.8964212,
+    "hash": "ef47f64aba7ce1ca147610c5f2f55ee1"
+  },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/components/game/combat.ts": {
-    "mtime": 1794820800.284158,
-    "hash": "6cf4d337408162f322ac22bb5d94561c"
+    "mtime": 1794825982.4662614,
+    "hash": "bcc0d9790f8363cca0ae3fdba9ae7cce"
   },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/components/game/world.ts": {
-    "mtime": 1794820409.1411614,
+    "mtime": 1794821765.1973486,
     "hash": "1eafece0ec873b7020158fbb03f04850"
   },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/lib/game-data.ts": {
-    "mtime": 1794820974.8921103,
+    "mtime": 1794821765.2114153,
     "hash": "0cba5b0984f11f22015fde2abc293536"
   },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/lib/content.ts": {
@@ -116,11 +120,11 @@
     "hash": "62a1f825d9b292516a38c780a3454242"
   },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/lib/brand.tsx": {
-    "mtime": 1794810289.3040578,
+    "mtime": 1794821765.2111459,
     "hash": "ff88fdf0bf5cef79bd17477233d62178"
   },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/PRODUCT.md": {
-    "mtime": 1794809951.2732563,
+    "mtime": 1794821765.1931472,
     "hash": "ef408a7ee9f0429aac7a73e652e9d8a6"
   },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/README.md": {
@@ -128,8 +132,8 @@
     "hash": "fe36462293408a86a1b168367c5aedc9"
   },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/DESIGN.md": {
-    "mtime": 1794821708.911488,
-    "hash": "50a2bbeaab07183e93a056b6eaab2294"
+    "mtime": 1794826017.3206282,
+    "hash": "417998d2a06b640e390aea8cb67d092c"
   },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/CLAUDE.md": {
     "mtime": 1777957241.0681865,
@@ -144,7 +148,7 @@
     "hash": "f11ab8278a25e04a7383a216a9023437"
   },
   "/Users/akshay/Desktop/essentials/akshay-workspace/portfolio/app/icon.svg": {
-    "mtime": 1794810289.3067346,
+    "mtime": 1794821765.1934276,
     "hash": "c04695b4be832fa9f616136e6b15a98c"
   }
 }

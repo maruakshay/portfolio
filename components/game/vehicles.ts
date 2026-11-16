@@ -1,4 +1,5 @@
 import * as THREE from "three";
+import { rayCylinder } from "./ray";
 import { RoundedBoxGeometry } from "three/examples/jsm/geometries/RoundedBoxGeometry.js";
 import { BOSS, stages } from "@/lib/game-data";
 import { animateCharacter, applyStage, buildCharacter, type Character } from "./character";
@@ -175,28 +176,18 @@ export class Vehicles {
     });
   }
 
-  /**
-   * First car or pedestrian along a flat ray from `o` (unit `d`, xz) within `max`.
-   */
+  /** First car or pedestrian along a 3D ray from `o` (unit `d`) within `max`. */
   raycast(o: THREE.Vector3, d: THREE.Vector3, max: number, skip?: Car | null) {
     let best = max;
     let car: Car | null = null;
     let ped: Ped | null = null;
-    const test = (cx: number, cz: number, r: number) => {
-      const wx = cx - o.x;
-      const wz = cz - o.z;
-      const t = wx * d.x + wz * d.z;
-      if (t < 0) return -1;
-      const perp2 = wx * wx + wz * wz - t * t;
-      if (perp2 > r * r) return -1;
-      return Math.max(0, t - Math.sqrt(r * r - perp2));
-    };
     for (const c of this.cars) {
       if (c === skip) continue;
       const fx = Math.sin(c.yaw);
       const fz = Math.cos(c.yaw);
+      // Bonnet and boot are low; the cabin in the middle is taller
       for (const a of CAR_PTS) {
-        const t = test(c.group.position.x + fx * a, c.group.position.z + fz * a, 0.95);
+        const t = rayCylinder(o, d, c.group.position.x + fx * a, c.group.position.z + fz * a, 0.92, 0, a === 0 ? 1.48 : 0.95, best);
         if (t >= 0 && t < best) {
           best = t;
           car = c;
@@ -206,7 +197,8 @@ export class Vehicles {
     }
     for (const p of this.peds) {
       if (p.down > 0) continue;
-      const t = test(p.c.root.position.x, p.c.root.position.z, 0.42);
+      const q = p.c.root.position;
+      const t = rayCylinder(o, d, q.x, q.z, 0.36, q.y, q.y + 1.82, best);
       if (t >= 0 && t < best) {
         best = t;
         ped = p;
@@ -214,6 +206,14 @@ export class Vehicles {
       }
     }
     return car || ped ? { dist: best, car, ped } : null;
+  }
+
+  /** Positions of people and cars you could aim at (wrecks and downed people excluded). */
+  targets() {
+    const out: { x: number; y: number; z: number; car: boolean }[] = [];
+    for (const p of this.peds) if (p.down <= 0) out.push({ x: p.c.root.position.x, y: 1.15, z: p.c.root.position.z, car: false });
+    for (const c of this.cars) if (c.wreck <= 0) out.push({ x: c.group.position.x, y: 0.8, z: c.group.position.z, car: true });
+    return out;
   }
 
   /** A bullet hit a car. Returns true if that shot blew it up. */

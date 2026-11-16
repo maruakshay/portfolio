@@ -93,6 +93,7 @@ export class TownGame {
   private aiming = false;
   private aimBlend = 0;
   private faceAimT = 0;
+  private aimPitch = 0;
   // Open world: cars, mouse-look camera, mission markers
   private vehicles!: Vehicles;
   private driving: Car | null = null;
@@ -488,7 +489,7 @@ export class TownGame {
   private onMouseMove = (e: MouseEvent) => {
     if (document.pointerLockElement !== this.canvas) return;
     this.camYaw -= e.movementX * 0.0026;
-    this.camPitch = THREE.MathUtils.clamp(this.camPitch + e.movementY * 0.0018, -0.35, 0.7);
+    this.camPitch = THREE.MathUtils.clamp(this.camPitch + e.movementY * 0.0018, -0.6, 0.7);
     this.mouseIdle = 0;
   };
 
@@ -531,53 +532,120 @@ export class TownGame {
   }
 
   /** Which way the gun points: the camera's forward when you're using the mouse, else the nearest bug. */
-  private aimYaw() {
+  /**
+   * Where the shot should land. With the mouse: whatever is under the
+   * crosshair (a ray from the camera through the screen centre). Without it:
+   * the centre of the nearest bug, else the nearest person or car ahead.
+   */
+  private aimPoint(muzzle: THREE.Vector3): THREE.Vector3 {
     const p = this.player.root.position;
-    const locked = document.pointerLockElement === this.canvas;
-    let yaw = locked ? this.camYaw + Math.PI : this.yaw;
-    if (!locked) {
-      const tgt = this.combat.nearest(p, 20);
-      if (tgt) yaw = Math.atan2(tgt.x - p.x, tgt.z - p.z);
+    if (document.pointerLockElement === this.canvas) {
+      const co = this.camera.position.clone();
+      const cd = this.camera.getWorldDirection(new THREE.Vector3());
+      // Start the camera ray level with you, so nothing behind you gets picked
+      const skip = Math.max(0, this.tmp.set(p.x, 1.3, p.z).sub(co).dot(cd) - 0.6);
+      co.addScaledVector(cd, skip);
+      const hit = this.trace(co, cd, 90);
+      if (hit.foe || hit.veh) return co.addScaledVector(cd, hit.t);
+      // Soft aim: a target just off the crosshair (~4°) still counts, and
+      // anything at your feet in front of you gets shot at by tilting the gun down
+      let best: THREE.Vector3 | null = null;
+      let bestA = 0.07;
+      const camYawFwd = this.camYaw + Math.PI;
+      const consider = (x: number, y: number, z: number, bonus: number) => {
+        const v = new THREE.Vector3(x - co.x, y - co.y, z - co.z);
+        const dist = v.length();
+        if (dist > hit.t + 1) return; // behind a wall
+        let a = v.normalize().angleTo(cd);
+        const flat = Math.hypot(x - p.x, z - p.z);
+        if (flat < 2.6 && this.angleDiff(Math.atan2(x - p.x, z - p.z), camYawFwd) < 0.6) a = Math.min(a, 0.05 * flat / 2.6);
+        a -= bonus;
+        if (a < bestA) {
+          bestA = a;
+          best = new THREE.Vector3(x, y, z);
+        }
+      };
+      for (const c of this.combat.centers()) consider(c.x, c.y, c.z, 0.01);
+      for (const c of this.vehicles.targets()) consider(c.x, c.y, c.z, 0);
+      return best ?? co.addScaledVector(cd, hit.t);
     }
-    const assist = this.combat.aimAssist(p, yaw, locked ? 0.1 : 0.35, RANGE);
-    return assist ?? yaw;
+    const look = this.yaw;
+    const foe = this.combat.nearestCenter(p, 22);
+    if (foe) return foe;
+    let best: THREE.Vector3 | null = null;
+    let bestScore = Infinity;
+    for (const t of this.vehicles.targets()) {
+      const d = Math.hypot(t.x - p.x, t.z - p.z);
+      if (d > 18 || d < 0.01) continue;
+      const da = this.angleDiff(Math.atan2(t.x - p.x, t.z - p.z), look);
+      const cone = d < 3 ? 1.6 : d < 8 ? 0.7 : 0.35;
+      if (da > cone) continue;
+      const score = d + da * 6 + (t.car ? 1.5 : 0);
+      if (score < bestScore) {
+        bestScore = score;
+        best = new THREE.Vector3(t.x, t.y, t.z);
+      }
+    }
+    return best ?? muzzle.clone().add(this.tmp.set(Math.sin(look) * 20, 0, Math.cos(look) * 20));
+  }
+
+  /** First thing a 3D ray meets: a bug, the Box, a car, a person, a wall or the ground. */
+  private trace(o: THREE.Vector3, d: THREE.Vector3, max: number) {
+    let t = this.rayToWalls(o, d, max);
+    let what: "wall" | "ground" | "none" = t < max ? "wall" : "none";
+    if (d.y < -1e-4) {
+      const g = -o.y / d.y;
+      if (g >= 0 && g < t) {
+        t = g;
+        what = "ground";
+      }
+    }
+    const veh = this.vehicles.raycast(o, d, t);
+    if (veh) t = veh.dist;
+    const foe = this.combat.rayHit(o, d, t);
+    if (foe) t = foe.t;
+    return { t, what, foe, veh: foe ? null : veh };
+  }
+
+  private angleDiff(a: number, b: number) {
+    const d = a - b;
+    return Math.abs(Math.atan2(Math.sin(d), Math.cos(d)));
   }
 
   private fire() {
     this.tap = false;
     const p = this.player.root.position;
-    const yaw = this.aimYaw();
-    this.yaw = yaw;
+    const from = this.gun.muzzle.getWorldPosition(new THREE.Vector3());
+    // Shots leave from your body at gun height, so point-blank targets still count
+    const o = new THREE.Vector3(p.x, THREE.MathUtils.clamp(from.y, 1.1, 1.6), p.z);
+    const target = this.aimPoint(o);
+    const dir = target.clone().sub(o);
+    if (dir.lengthSq() < 0.04) dir.set(Math.sin(this.yaw), 0, Math.cos(this.yaw));
+    dir.normalize();
+    this.yaw = Math.atan2(dir.x, dir.z);
+    this.aimPitch = Math.asin(THREE.MathUtils.clamp(dir.y, -1, 1));
     this.faceAimT = 0.7;
     this.ammo--;
     this.fireCd = FIRE_GAP;
-    const dir = this.tmp2.set(Math.sin(yaw), 0, Math.cos(yaw));
-    const from = this.gun.muzzle.getWorldPosition(new THREE.Vector3());
-    // Snap the muzzle to the aim line so tracers look right even mid-animation
-    const o = new THREE.Vector3(p.x, from.y, p.z).addScaledVector(dir, 0.55);
-    const range = this.rayToWalls(o, dir, RANGE);
-    // Cars and people on the street catch bullets too
-    const veh = this.vehicles.raycast(o, dir, range);
-    const res = this.combat.shoot(o, dir, veh ? veh.dist : range, 0.55 * this.power);
-    let y = res.hit ? res.y : o.y;
-    if (!res.hit && veh?.car) {
-      y = 0.9;
-      const at = o.clone().addScaledVector(dir, veh.dist).setY(y);
-      if (this.vehicles.hitCar(veh.car, 1)) this.explode(veh.car.group.position.clone().setY(1));
-      else this.burst(at, "#ffe9a8", 6);
-      this.cb.onHitMarker();
-    } else if (!res.hit && veh?.ped) {
-      y = 1.2;
-      this.vehicles.hitPed(veh.ped, p);
-      this.burst(o.clone().addScaledVector(dir, veh.dist).setY(y), "#ffffff", 8);
-      this.cb.onHitMarker();
-    }
-    const end = o.clone().addScaledVector(dir, res.dist).setY(y);
-    this.tracer(o, end);
+
+    const hit = this.trace(o, dir, RANGE);
+    const end = o.clone().addScaledVector(dir, hit.t);
+    let landed = false;
+    if (hit.foe) landed = this.combat.applyShot(hit.foe, o, dir, 0.55 * this.power);
+    else if (hit.veh?.car) {
+      if (this.vehicles.hitCar(hit.veh.car, 1)) this.explode(hit.veh.car.group.position.clone().setY(1));
+      else this.burst(end, "#ffe9a8", 6);
+      landed = true;
+    } else if (hit.veh?.ped) {
+      this.vehicles.hitPed(hit.veh.ped, p);
+      this.burst(end, "#ffffff", 8);
+      landed = true;
+    } else if (hit.what !== "none") this.burst(end, hit.what === "ground" ? "#cfc6b8" : "#ffd27a", 5);
+    if (landed) this.cb.onHitMarker();
+    // Draw the tracer from the gun's muzzle line (not from inside your body)
+    this.tracer(o.clone().addScaledVector(dir, Math.min(0.55, hit.t)), end);
     this.flash.intensity = 6;
     this.vehicles.panic(p);
-    if (res.hit) this.cb.onHitMarker();
-    else if (!veh && range < RANGE) this.burst(end, "#ffd27a", 5);
     this.shakeAmt = Math.max(this.shakeAmt, 0.035);
     this.cb.onAmmo(this.ammo, MAG, false);
     if (this.ammo <= 0) this.reload();
@@ -935,6 +1003,10 @@ export class TownGame {
     if (live && !this.driving && (this.trigger || this.tap) && this.fireCd <= 0 && this.ammo > 0 && this.reloadT <= 0 && this.stun <= 0) this.fire();
     if (this.fireCd <= 0 || this.reloadT > 0) this.tap = false;
     this.flash.intensity *= Math.exp(-dt * 30);
+    if (document.pointerLockElement === this.canvas && (this.aiming || this.trigger)) {
+      const cd = this.camera.getWorldDirection(this.tmp);
+      this.aimPitch = THREE.MathUtils.lerp(this.aimPitch, Math.asin(THREE.MathUtils.clamp(cd.y, -1, 1)) + 0.06, 1 - Math.exp(-dt * 12));
+    } else if (this.faceAimT <= 0) this.aimPitch *= Math.exp(-dt * 6);
     this.aimBlend = THREE.MathUtils.lerp(this.aimBlend, !talking && (this.aiming || this.faceAimT > 0 || this.trigger) ? 1 : 0, 1 - Math.exp(-dt * 14));
     if (this.blastCd > 0) this.blastCd -= dt;
     if (this.iframes > 0) this.iframes -= dt;
@@ -972,6 +1044,7 @@ export class TownGame {
       talk: this.speaking === "you" ? 1 : 0,
       stumble: this.downT > 0 ? 1 : this.stun > 0 ? Math.min(1, this.stun / 0.3) : 0,
       aim: this.reloadT > 0 ? this.aimBlend * 0.4 : this.aimBlend,
+      aimPitch: this.aimPitch,
       recoil: this.fireCd / FIRE_GAP,
     });
     if (this.downT > 0) {
@@ -1048,6 +1121,10 @@ export class TownGame {
       // Out of the two-shot: hover above and behind the player, away from the camera
       const away = this.tmp2.set(p.x - this.camera.position.x, 0, p.z - this.camera.position.z).normalize().multiplyScalar(1.4);
       orbWant = this.tmp.copy(p).add(away).setY(2.9);
+    } else if (this.aimBlend > 0.3 && document.pointerLockElement === this.canvas) {
+      // Aiming: drift up over your left shoulder, out of the crosshair's way
+      const left = this.tmp2.set(-Math.cos(this.camYaw), 0, Math.sin(this.camYaw)).multiplyScalar(1.7);
+      orbWant = this.tmp.copy(p).add(left).setY(p.y + 2.9 + Math.sin(t * 2.2) * 0.08);
     } else {
       const side = this.tmp2.set(Math.cos(this.yaw), 0, -Math.sin(this.yaw)).multiplyScalar(-0.85);
       orbWant = this.tmp.copy(p).add(side).setY(p.y + 2.25 * this.player.root.scale.y + Math.sin(t * 2.2) * 0.1);
@@ -1087,14 +1164,15 @@ export class TownGame {
       const z = this.zoom * (bf ? 1.3 : car ? 1.15 : 1);
       const sx = Math.sin(this.camYaw);
       const cz = Math.cos(this.camYaw);
-      const shoulder = !car && this.aiming && document.pointerLockElement === this.canvas;
+      const shoulder = !car && !talking && (this.aiming || this.trigger || this.faceAimT > 0.2) && document.pointerLockElement === this.canvas;
       if (shoulder) {
         // Over the right shoulder, looking down the gun
         const rx = cz;
         const rz = -sx;
-        this.camPos.set(p.x + sx * 3.6 + rx * 0.95, 2.3 + this.camPitch * 1.5, p.z + cz * 3.6 + rz * 0.95);
+        this.camPos.set(p.x + sx * 3.4 + rx * 0.9, 1.95 + this.camPitch * 1.6, p.z + cz * 3.4 + rz * 0.9);
         this.camera.position.lerp(this.camPos, 1 - Math.exp(-dt * 12));
-        this.camTarget.lerp(this.tmp.set(p.x - sx * 12 + rx * 0.95, 1.4 - this.camPitch * 3, p.z - cz * 12 + rz * 0.95), 1 - Math.exp(-dt * 14));
+        // Mouse up/down tilts the aim properly: up to ~25° up and ~30° down
+        this.camTarget.lerp(this.tmp.set(p.x - sx * 12 + rx * 0.9, 1.55 - this.camPitch * 9, p.z - cz * 12 + rz * 0.9), 1 - Math.exp(-dt * 14));
       } else {
         const dist = (bf ? 6.6 : 8.4) * z;
         const h = ((bf ? 8.6 : car ? 3.6 : 5.4) * z + 1.3) * (1 + this.camPitch);
