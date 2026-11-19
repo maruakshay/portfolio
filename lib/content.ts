@@ -7,7 +7,7 @@ export const profile = {
   name: "Akshay Maru",
   role: "Freelance AI Engineer & Content Creator",
   statementLead:
-    "Most AI demos die in production. I build the ones that don't.",
+    "I don't build demos. I build AI your customers rely on for years.",
   statementRest:
     "End to end: the streaming interface and the model behind it. Right now, full-stack AI and security for SaaS products at Commotion. Before that, an enterprise AI assistant on AWS Bedrock at JupiterOne, and an AI SaaS I founded, grew past 40,000 users, and sold. Alongside it, local-first AI tooling I maintain in the open.",
   location: "India",

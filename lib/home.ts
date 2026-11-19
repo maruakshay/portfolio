@@ -2,7 +2,7 @@
 // (résumé, deep-dives, miii.in). Keep it that way: no invented numbers.
 
 export const hero = {
-  headline: "Most AI demos die in production. I build the ones that don't.",
+  headline: "I don't build demos. I build AI your customers rely on for years.",
   // One quiet line: who, plus the strongest proof. Everything else lives below.
   line: ["Freelance AI engineer", "ex-JupiterOne", "sold my AI SaaS"],
 };

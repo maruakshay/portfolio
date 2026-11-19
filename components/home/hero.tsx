@@ -18,10 +18,10 @@ export function Hero() {
       <div className="relative mx-auto flex w-full max-w-7xl flex-1 flex-col justify-start px-4 pb-48 pt-36 sm:justify-center sm:px-6 sm:pb-56 sm:pt-24 lg:px-10 lg:pb-16 lg:pt-16">
         <h1
           id="hero-title"
-          className="max-w-[14ch] text-[clamp(2.5rem,min(5.2vw,8.5vh),4.75rem)] leading-[1] tracking-[-0.045em]"
+          className="max-w-[17ch] text-[clamp(2.5rem,min(5.2vw,8.5vh),4.75rem)] leading-[1] tracking-[-0.045em]"
         >
-          <StaggerWords text="Most AI demos die in production." />{" "}
-          <StaggerWords text="I build the ones that don't." className="hl" delay={0.25} />
+          <StaggerWords text="I don't build demos." />{" "}
+          <StaggerWords text="I build AI your customers rely on for years." className="hl" delay={0.2} />
         </h1>
 
         <Reveal delay={0.45}>

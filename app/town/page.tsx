@@ -6,6 +6,7 @@ import { skills } from "@/lib/game-data";
 export const metadata: Metadata = {
   title: "The 3D town",
   alternates: { canonical: "/town" },
+  openGraph: { url: "/town", title: "Walk through Akshay Maru's career as a 3D town" },
   description:
     "Walk through Akshay Maru's career as a small 3D town: buildings are past roles, shops are skills, and the AI Core at the end hosts his AI.",
 };

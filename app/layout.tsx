@@ -35,12 +35,12 @@ export const viewport: Viewport = {
 };
 
 const DESCRIPTION =
-  "Akshay Maru is a freelance AI engineer and content creator. He builds AI products end to end (assistants, RAG, agents, LLM security) and makes fitness content on Instagram as @akshaay.lifts.";
+  "Akshay Maru is a freelance AI engineer. He doesn't build demos: he builds AI products your customers rely on for years, end to end (assistants, RAG, agents, LLM security). Ex-JupiterOne; founded and sold an AI SaaS with 40K+ users.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Akshay Maru — Freelance AI Engineer & Content Creator",
+    default: "Akshay Maru — Freelance AI Engineer",
     template: "%s · Akshay Maru",
   },
   description: DESCRIPTION,
@@ -65,9 +65,9 @@ export const metadata: Metadata = {
   category: "technology",
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Akshay Maru — Freelance AI Engineer & Creator",
+    title: "Akshay Maru — I don't build demos. I build AI that lasts.",
     description:
-      "Open for freelance AI projects: assistants, RAG, agents and LLM security, built end to end. Also making AI and fitness content on Instagram.",
+      "Freelance AI engineer, open for projects. Ex-JupiterOne, founded and sold an AI SaaS (40K+ users). Book a free 20-min call.",
     url: "/",
     siteName: "Akshay Maru",
     locale: "en_US",
@@ -77,9 +77,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Akshay Maru — Freelance AI Engineer & Creator",
+    title: "Akshay Maru — I don't build demos. I build AI that lasts.",
     description:
-      "Open for freelance AI projects. Fitness content on Instagram as @akshaay.lifts.",
+      "Freelance AI engineer, open for projects. Ex-JupiterOne, founded and sold an AI SaaS (40K+ users).",
   },
   robots: {
     index: true,
@@ -103,7 +103,7 @@ const JSON_LD = {
     "@type": "Person",
     name: profile.name,
     url: siteUrl,
-    jobTitle: "Freelance AI Engineer & Content Creator",
+    jobTitle: "Freelance AI Engineer",
     description: DESCRIPTION,
     email: `mailto:${profile.email}`,
     image: `${siteUrl}/opengraph-image`,
