@@ -234,14 +234,12 @@ export const skills: Spot[] = [
     "Creator Studio",
     "Making content on Instagram",
     [
-      "@akshaay.ai: AI explained without the hype, and how he uses it every day.",
       "@akshaay.lifts: training, progress, and the honest days of getting stronger.",
     ],
     [
-      { label: "@akshaay.ai", href: profile.instagramAi },
       { label: "@akshaay.lifts", href: profile.instagramLifts },
     ],
-    "He is also a creator: AI education on @akshaay.ai and fitness on @akshaay.lifts.",
+    "He is also a creator: training and fitness on @akshaay.lifts.",
     { color: "#ffb3d9", accent: "#be185d" },
   ),
 ];

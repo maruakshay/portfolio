@@ -1,49 +1,41 @@
 import type { Metadata, Viewport } from "next";
-import { IBM_Plex_Mono, Instrument_Serif, Schibsted_Grotesk, Yellowtail } from "next/font/google";
+import { IBM_Plex_Mono, Inter_Tight, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
 import { Toaster } from "sonner";
 import { CommandPalette } from "@/components/command-palette";
 import { profile, siteUrl } from "@/lib/content";
 
-// Schibsted Grotesk speaks, IBM Plex Mono annotates (all small labels),
-// and a serif italic is kept for the one human word in long-form headlines.
-// Variable font: the full weight axis, so inner-page headings never fake bold.
-const schibsted = Schibsted_Grotesk({
+// Claude-style pairing with free near-matches: Inter Tight (for Styrene) sets
+// all normal text and headlines; Source Serif 4 bold italic (for Tiempos) is
+// reserved for highlighted words that make the point. Plex Mono annotates.
+const sans = Inter_Tight({
   variable: "--font-display",
   subsets: ["latin"],
   display: "swap",
 });
 
-const instrument = Instrument_Serif({
+const serif = Source_Serif_4({
   variable: "--font-serif",
   subsets: ["latin"],
-  weight: "400",
-  style: ["normal", "italic"],
-  display: "swap",
-});
-
-// Signature script, used only for "Akshay" in the header wordmark.
-const script = Yellowtail({
-  variable: "--font-script",
-  subsets: ["latin"],
-  weight: "400",
+  weight: ["600", "700"],
+  style: ["italic"],
   display: "swap",
 });
 
 const plexMono = IBM_Plex_Mono({
   variable: "--font-mono",
   subsets: ["latin"],
-  weight: ["300", "400", "500"],
+  weight: ["400", "500"],
   display: "swap",
 });
 
 export const viewport: Viewport = {
-  themeColor: "#efece6",
+  themeColor: "#0b0b0c",
 };
 
 const DESCRIPTION =
-  "Akshay Maru is a freelance AI engineer and content creator. He builds AI products end to end (assistants, RAG, agents, LLM security) and makes AI and fitness content on Instagram as @akshaay.ai and @akshaay.lifts.";
+  "Akshay Maru is a freelance AI engineer and content creator. He builds AI products end to end (assistants, RAG, agents, LLM security) and makes fitness content on Instagram as @akshaay.lifts.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -66,9 +58,7 @@ export const metadata: Metadata = {
     "Next.js",
     "React",
     "Content creator",
-    "akshaay.ai",
     "akshaay.lifts",
-    "AI education",
   ],
   authors: [{ name: profile.name, url: siteUrl }],
   creator: profile.name,
@@ -89,7 +79,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Akshay Maru — Freelance AI Engineer & Creator",
     description:
-      "Open for freelance AI projects. AI and fitness content on Instagram as @akshaay.ai and @akshaay.lifts.",
+      "Open for freelance AI projects. Fitness content on Instagram as @akshaay.lifts.",
   },
   robots: {
     index: true,
@@ -118,7 +108,7 @@ const JSON_LD = {
     email: `mailto:${profile.email}`,
     image: `${siteUrl}/opengraph-image`,
     homeLocation: { "@type": "Country", name: profile.location },
-    sameAs: [profile.github, profile.linkedin, profile.instagramAi, profile.instagramLifts, "https://miii.in/"],
+    sameAs: [profile.github, profile.linkedin, profile.instagramLifts, "https://miii.in/"],
     knowsAbout: [
       "Large language models",
       "Retrieval-augmented generation",
@@ -141,9 +131,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="bg-[#0b0b0c]">
       <body
-        className={`${schibsted.variable} ${instrument.variable} ${script.variable} ${plexMono.variable} antialiased`}
+        className={`${sans.variable} ${serif.variable} ${plexMono.variable} antialiased`}
       >
         <script
           type="application/ld+json"
@@ -151,7 +141,7 @@ export default function RootLayout({
         />
         {children}
         <CommandPalette />
-        <Toaster position="bottom-right" />
+        <Toaster position="bottom-right" theme="dark" />
         <Analytics />
       </body>
     </html>

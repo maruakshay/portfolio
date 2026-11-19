@@ -91,20 +91,20 @@ export function ChatFull({ embedded = false }: { embedded?: boolean } = {}) {
   }
 
   return (
-    <div className={embedded ? "flex h-full min-h-0 flex-col" : "flex h-[calc(100dvh-var(--chrome-h,82px))] flex-col"}>
+    <div className={embedded ? "flex h-full min-h-0 flex-col" : "flex h-[calc(100dvh-var(--chrome-h,64px))] flex-col"}>
       {/* Log */}
       <div className="flex-1 overflow-y-auto">
         <div className={`mx-auto max-w-2xl space-y-6 px-5 text-[1.0625rem] leading-[1.65] md:px-8 ${embedded ? "py-6" : "py-10"}`}>
           <div className="text-center">
-            <p className="label text-volt">{"// "}ask_akshay.ai</p>
-            <p className="mt-1 font-serif text-xl italic text-ink-muted">
+            <p className="label">{"// "}ask_akshay.ai</p>
+            <p className="mt-1 hl text-xl">
               A conversation with the portfolio
             </p>
           </div>
           {messages.map((m, i) =>
             m.role === "User" ? (
-              <p key={i} className="border-l-2 border-volt pl-4 text-ink">
-                <span className="label mb-1 block text-volt">You</span>
+              <p key={i} className="border-l-2 border-ink/30 pl-4 text-ink">
+                <span className="label mb-1 block">You</span>
                 {m.content}
               </p>
             ) : m.content ? (

@@ -1,114 +1,83 @@
 "use client";
 
-import { useEffect, useState, useSyncExternalStore } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
-import { callHref, profile } from "@/lib/content";
-import { MarkSvg } from "@/lib/brand";
+import { usePathname } from "next/navigation";
+import { callHref } from "@/lib/content";
 
 const NAV = [
-  { href: "/", label: "Play the town" },
-  { href: "/work/miii-cli", label: "Work" },
-  { href: "/chat", label: "Ask AI" },
+  { hash: "work", label: "Work" },
+  { hash: "experience", label: "Experience" },
+  { hash: "about", label: "About" },
 ];
 
-const KEY = "am:topbar-closed";
-
-function readClosed() {
-  try {
-    return sessionStorage.getItem(KEY) === "1";
-  } catch {
-    return false;
-  }
-}
-const noSubscribe = () => () => {};
-
 /**
- * Fixed chrome: a 30px announcement bar plus a 52px nav. The bar slides away
- * after 40px of scroll or when closed. `overlay` (home) skips the spacer so the
- * first section can sit under the chrome.
+ * Sticky minimal nav: AM logo · Work · Experience · About · Book a call.
+ * Transparent over the hero, a blurred bar once the page scrolls. On inner
+ * pages the section links point back to the home page anchors.
  */
-export function SiteHeader({ overlay = false }: { overlay?: boolean }) {
-  const stored = useSyncExternalStore(noSubscribe, readClosed, () => false);
-  const [dismissed, setDismissed] = useState(false);
-  const closed = stored || dismissed;
+export function SiteHeader() {
+  const pathname = usePathname();
+  const home = pathname === "/";
   const [scrolled, setScrolled] = useState(false);
   const external = callHref().startsWith("http");
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
+    const onScroll = () => setScrolled(window.scrollY > 24);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => {
-    document.documentElement.style.setProperty("--chrome-h", closed ? "52px" : "82px");
-  }, [closed]);
-
-  function close() {
-    setDismissed(true);
-    try {
-      sessionStorage.setItem(KEY, "1");
-    } catch {}
-  }
-
-  const hidden = closed || scrolled;
-
   return (
     <>
-      <header className="chrome" data-bar={hidden ? "off" : "on"}>
-        <div className="chrome-bar" aria-hidden={hidden}>
-          <a
-            href={callHref()}
-            target={external ? "_blank" : undefined}
-            rel="noopener noreferrer"
-            tabIndex={hidden ? -1 : undefined}
-            className="chrome-bar-link"
+      <header
+        className={`fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,backdrop-filter] duration-300 ${
+          scrolled || !home
+            ? "border-b border-rule bg-canvas/75 backdrop-blur-md"
+            : "border-b border-transparent bg-transparent"
+        }`}
+      >
+        <nav
+          aria-label="Primary"
+          className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-10"
+        >
+          <Link
+            href="/"
+            aria-label="Akshay Maru, home"
+            className="group flex items-center gap-2.5 hl text-[1.6rem] leading-none"
           >
-            <b>Now:</b> Open for freelance AI projects.
-            <span className="chrome-bar-more"> Book a 20-min intro call</span> ↗
-          </a>
-          <button
-            type="button"
-            onClick={close}
-            tabIndex={hidden ? -1 : undefined}
-            className="chrome-bar-x"
-            aria-label="Dismiss announcement"
-          >
-            ×
-          </button>
-        </div>
-
-        <nav className="chrome-nav" aria-label="Primary">
-          <Link href="/" className="chrome-logo" aria-label="Akshay Maru, home">
-            <MarkSvg size={34} id="am-head" />
+            AM
+            <span className="hidden font-mono text-[0.7rem] font-normal not-italic tracking-normal uppercase tracking-[0.08em] text-ink-faint transition-colors group-hover:text-ink-muted sm:inline">
+              Akshay Maru
+            </span>
           </Link>
-          <ul className="chrome-menu">
-            {NAV.map((n) => (
-              <li key={n.href}>
-                <Link href={n.href}>{n.label}</Link>
-              </li>
-            ))}
-          </ul>
-          <a className="chrome-pad" href={profile.instagramAi} target="_blank" rel="noopener noreferrer">
-            @akshaay.ai ↗
-          </a>
-          <div className="chrome-cta-cell">
+
+          <div className="flex items-center gap-1 sm:gap-2">
+            <ul className="mr-1 hidden items-center gap-1 md:flex">
+              {NAV.map((n) => (
+                <li key={n.hash}>
+                  <a
+                    href={home ? `#${n.hash}` : `/#${n.hash}`}
+                    className="rounded-full px-3.5 py-2 font-mono text-[0.75rem] uppercase tracking-[0.08em] text-ink-muted transition-colors hover:text-ink"
+                  >
+                    {n.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
             <a
               href={callHref()}
               target={external ? "_blank" : undefined}
               rel="noopener noreferrer"
-              className="chrome-cta"
+              className="inline-flex h-10 items-center rounded-full bg-volt px-4 text-[0.9rem] font-semibold text-[#0b0b0c] transition-colors hover:bg-[#ff6d38]"
             >
-              <span aria-hidden className="chrome-cta-dots">
-                ••
-              </span>
-              Hire me
+              Book a call
             </a>
           </div>
         </nav>
       </header>
-      {!overlay && <div className="chrome-spacer" aria-hidden />}
+      {!home && <div className="h-16" aria-hidden />}
     </>
   );
 }

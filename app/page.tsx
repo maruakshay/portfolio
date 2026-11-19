@@ -1,41 +1,33 @@
-import { Town } from "@/components/game/town";
-import { callHref, career, profile } from "@/lib/content";
-import { skills } from "@/lib/game-data";
+import { SiteHeader } from "@/components/site-header";
+import { Hero } from "@/components/home/hero";
+import { Proof } from "@/components/home/proof";
+import { Work } from "@/components/home/work";
+import { Experience } from "@/components/home/experience";
+import { Services } from "@/components/home/services";
+import { Lab } from "@/components/home/lab";
+import { Creator } from "@/components/home/creator";
+import { FinalCta } from "@/components/home/final-cta";
 
 export default function Home() {
   return (
-    <>
-      {/* Plain-text version of the town, for screen readers and search engines. */}
-      <div className="sr-only">
-        <h1>
-          {profile.name}: {profile.role}
-        </h1>
-        <p>
-          {profile.statementLead} {profile.statementRest}
-        </p>
-        <p>{profile.availability}.</p>
-        <h2>Experience</h2>
-        <ul>
-          {career.map((c) => (
-            <li key={c.org}>
-              {c.org}, {c.title} ({c.years}). {c.points.join(" ")} {c.lead}
-            </li>
-          ))}
-        </ul>
-        <h2>Skills</h2>
-        <ul>
-          {skills.map((s) => (
-            <li key={s.id}>
-              {s.name}: {s.points.join(" ")}
-            </li>
-          ))}
-        </ul>
-        <p>
-          <a href={callHref()}>Book a 20-minute intro call</a> · <a href="/chat">Ask my AI about me</a> ·{" "}
-          <a href={`mailto:${profile.email}`}>Email</a>
-        </p>
-      </div>
-      <Town />
-    </>
+    <div className="grain">
+      <a
+        href="#work"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-20 focus:z-[70] focus:rounded-full focus:bg-ink focus:px-4 focus:py-2 focus:text-canvas"
+      >
+        Skip to work
+      </a>
+      <SiteHeader />
+      <main>
+        <Hero />
+        <Proof />
+        <Work />
+        <Experience />
+        <Services />
+        <Lab />
+        <Creator />
+      </main>
+      <FinalCta />
+    </div>
   );
 }

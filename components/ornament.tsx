@@ -14,8 +14,7 @@ export function SectionRule({
 }) {
   return (
     <div className={`flex items-center gap-4 ${className}`}>
-      <span className="label whitespace-nowrap text-volt">
-        <span className="text-ink-faint">{"// "}</span>
+      <span className="label whitespace-nowrap">
         {n} — {label}
       </span>
       <span className="h-px flex-1 bg-gradient-to-r from-rule to-transparent" aria-hidden />

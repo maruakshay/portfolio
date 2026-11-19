@@ -37,7 +37,8 @@ export function CommandPalette() {
           else window.location.href = callHref();
         },
       },
-      { group: "Go to", label: "Play the town", hint: "home", run: () => router.push("/") },
+      { group: "Go to", label: "Home", hint: "/", run: () => router.push("/") },
+      { group: "Go to", label: "Walk through the 3D town", hint: "/town", run: () => router.push("/town") },
       { group: "Go to", label: "Ask AI about Akshay", hint: "/chat", run: () => router.push("/chat") },
       ...deepDives.map((d) => ({
         group: "Deep-dives",
@@ -57,7 +58,6 @@ export function CommandPalette() {
         hint: miii.install,
         run: () => void navigator.clipboard?.writeText(miii.install).catch(() => {}),
       },
-      { group: "Links", label: "Instagram · @akshaay.ai", run: ext(profile.instagramAi) },
       { group: "Links", label: "Instagram · @akshaay.lifts", run: ext(profile.instagramLifts) },
       { group: "Links", label: "Résumé (PDF)", run: ext(profile.resume) },
       { group: "Links", label: "GitHub", run: ext(profile.github) },
@@ -134,7 +134,7 @@ export function CommandPalette() {
         aria-modal="true"
         aria-label="Command palette"
         onKeyDown={onKeyDown}
-        className="frame w-full max-w-xl bg-canvas shadow-[0_30px_80px_-20px_rgba(20,20,20,0.35)]"
+        className="frame w-full max-w-xl bg-canvas shadow-[0_30px_80px_-20px_rgba(0,0,0,0.7)]"
       >
         <div className="flex items-center gap-3 border-b border-rule px-4">
           <Search className="size-4 shrink-0 text-ink-faint" aria-hidden />

@@ -1,36 +1,30 @@
 @import "tailwindcss";
 
 /*
-  Design System: "Paper Robot"
-  Warm paper, near-black ink, thin dark guides, and one brand gradient
-  (amber → orange → coral → pink). Schibsted Grotesk speaks, IBM Plex Mono
-  annotates. Token names are kept from the previous system so every page
-  re-themes from here: "volt" is now the deep accent, "flare" the pink.
-  Tokens mirror DESIGN.md.
+  Design System: "Night Edition"
+  Near-black page, warm off-white type, one electric orange used only on
+  CTAs and key numbers. Inter Tight sets all normal text and headlines;
+  Source Serif 4 bold italic (<em>, .hl) highlights the words that make the
+  point. IBM Plex Mono annotates. Token names are kept from the
+  previous system so every inner page re-themes from here ("volt" = accent).
 */
 
 @theme {
-  /* Color — paper & ink */
-  --color-canvas: #efece6;
-  --color-canvas-deep: #e8e4dc;
-  --color-canvas-shade: #dfd9cf;
-  --color-rule: rgba(20, 20, 20, 0.16);
-  --color-ink: #141414;
-  --color-ink-muted: rgba(20, 20, 20, 0.74);
-  --color-ink-faint: rgba(20, 20, 20, 0.58);
+  /* Color — night & paper */
+  --color-canvas: #0b0b0c;
+  --color-canvas-deep: #121214;
+  --color-canvas-shade: #19191c;
+  --color-rule: rgba(242, 236, 226, 0.12);
+  --color-ink: #f2ece2;
+  --color-ink-muted: rgba(242, 236, 226, 0.72);
+  --color-ink-faint: rgba(242, 236, 226, 0.52);
 
-  /* Color — signals (AA on paper for text use) */
-  --color-volt: #c2410c;
-  --color-volt-deep: #9a3412;
-  --color-flare: #c0265e;
-  --color-cyan: #0e6e7e;
-  --color-hot: #b91c1c;
-
-  /* Brand gradient (decorative only, never for text) */
-  --color-amber: #ffb347;
-  --color-orange: #ff8a3d;
-  --color-coral: #ff5a5f;
-  --color-pink: #ff3d8b;
+  /* Accent — CTAs and key numbers only */
+  --color-volt: #ff5a1f;
+  --color-volt-deep: #e8470e;
+  --color-flare: #ff5a1f;
+  --color-cyan: #f6b38f;
+  --color-hot: #ff6b6b;
 
   /* Type */
   --font-display: var(--font-display), ui-sans-serif, system-ui, sans-serif;
@@ -69,56 +63,7 @@
       box-shadow: 0 0 0 0 color-mix(in oklch, var(--color-volt), transparent 40%);
     }
     100% {
-      box-shadow: 0 0 0 14px color-mix(in oklch, var(--color-volt), transparent 100%);
-    }
-  }
-
-  @keyframes pop {
-    0% {
-      transform: scale(0.4);
-      opacity: 0;
-    }
-    70% {
-      transform: scale(1.12);
-      opacity: 1;
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-
-  @keyframes shake {
-    0%,
-    100% {
-      transform: translateX(0);
-    }
-    25% {
-      transform: translateX(-4px);
-    }
-    75% {
-      transform: translateX(4px);
-    }
-  }
-
-  @keyframes slide-in {
-    from {
-      transform: translateX(24px);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-
-  @keyframes float-up {
-    from {
-      transform: translateY(0);
-      opacity: 1;
-    }
-    to {
-      transform: translateY(-36px);
-      opacity: 0;
+      box-shadow: 0 0 0 10px color-mix(in oklch, var(--color-volt), transparent 100%);
     }
   }
 }
@@ -126,11 +71,12 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    color-scheme: light;
+    scroll-padding-top: 72px;
+    color-scheme: dark;
+    background-color: var(--color-canvas);
   }
 
   body {
-    /* One grotesk for display and body; next/font sets --font-display here. */
     --font-body: var(--font-display);
     background-color: var(--color-canvas);
     color: var(--color-ink-muted);
@@ -138,6 +84,7 @@
     font-size: 1.0625rem;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   h1,
@@ -147,22 +94,22 @@
     font-family: var(--font-display);
     color: var(--color-ink);
     font-weight: 500;
-    letter-spacing: -0.025em;
+    letter-spacing: -0.04em;
     text-wrap: balance;
   }
 
-  /* The one human word in a headline: a serif italic, not a synthesized slant. */
-  h1 em,
-  h2 em,
-  h3 em {
+  /* The highlight: serif bold italic, a different voice from the sans. */
+  em,
+  .hl {
     font-family: var(--font-serif);
-    font-weight: 400;
+    font-weight: 700;
     font-style: italic;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
+    color: var(--color-ink);
   }
 
   ::selection {
-    background-color: var(--color-ink);
+    background-color: var(--color-volt);
     color: var(--color-canvas);
   }
 
@@ -175,6 +122,19 @@
     color: inherit;
     text-decoration: none;
   }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
 }
 
 @layer components {
@@ -183,7 +143,7 @@
     font-family: var(--font-mono);
     font-size: 0.75rem;
     font-weight: 500;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--color-ink-faint);
   }
@@ -202,77 +162,43 @@
 
   .live-dot {
     display: inline-block;
-    width: 8px;
-    height: 8px;
+    width: 7px;
+    height: 7px;
     border-radius: 999px;
     background-color: var(--color-volt);
-    animation: pulse-ring 1.6s var(--ease-out-quart) infinite;
+    animation: pulse-ring 2s var(--ease-out-quart) infinite;
   }
 
-  /* A raised panel with a hairline and a faint inner light. */
+  /* A raised panel with a hairline */
   .frame {
     border: 1px solid var(--color-rule);
-    border-radius: var(--radius-sm);
-    background-image: linear-gradient(
-      180deg,
-      color-mix(in oklch, var(--color-ink), transparent 96%),
-      transparent 40%
-    );
-  }
-
-  /* Cursor-follow spotlight. Set --mx / --my from JS (see useSpotlight). */
-  .spotlight {
-    position: relative;
-    isolation: isolate;
-  }
-  .spotlight::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    border-radius: inherit;
-    opacity: 0;
-    transition: opacity 220ms var(--ease-out-quart);
-    background: radial-gradient(
-      420px circle at var(--mx, 50%) var(--my, 50%),
-      color-mix(in oklch, var(--color-volt), transparent 88%),
-      transparent 60%
-    );
-  }
-  .spotlight:hover::before {
-    opacity: 1;
-  }
-
-  /* Faint engineering grid, used behind the hero and arcade */
-  .drafting {
-    --grid-line: color-mix(in oklch, var(--color-rule), transparent 50%);
-    background-image:
-      linear-gradient(var(--grid-line) 1px, transparent 1px),
-      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
-    background-size: 48px 48px;
-    background-position: -1px -1px;
-    mask-image: radial-gradient(ellipse at 50% 0%, black 30%, transparent 75%);
+    border-radius: 6px;
+    background-color: var(--color-canvas-deep);
   }
 
   .btn-primary {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
-    border-radius: 0;
-    background-color: var(--color-ink);
-    color: var(--color-canvas);
-    padding: 0.8rem 1.4rem;
-    font-family: var(--font-mono);
-    font-size: 0.8125rem;
+    min-height: 48px;
+    border-radius: 999px;
+    background-color: var(--color-volt);
+    color: #0b0b0c;
+    padding: 0.8rem 1.5rem;
+    font-family: var(--font-display);
+    font-size: 0.975rem;
     font-weight: 600;
-    letter-spacing: 0.02em;
+    letter-spacing: -0.005em;
     transition:
-      transform 180ms var(--ease-spring),
+      transform 180ms var(--ease-out-quart),
+      background-color 180ms var(--ease-out-quart),
       box-shadow 180ms var(--ease-out-quart);
   }
   .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 24px -12px rgba(20, 20, 20, 0.5);
+    background-color: #ff6d38;
+    transform: translateY(-1px);
+    box-shadow: 0 12px 32px -12px rgba(255, 90, 31, 0.6);
   }
   .btn-primary:active {
     transform: translateY(0) scale(0.98);
@@ -281,32 +207,46 @@
   .btn-ghost {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
-    border-radius: 0;
-    border: 1px solid var(--color-ink);
+    min-height: 48px;
+    border-radius: 999px;
+    border: 1px solid var(--color-rule);
     color: var(--color-ink);
-    padding: 0.8rem 1.4rem;
-    font-family: var(--font-mono);
-    font-size: 0.8125rem;
+    padding: 0.8rem 1.5rem;
+    font-family: var(--font-display);
+    font-size: 0.975rem;
     font-weight: 500;
-    letter-spacing: 0.02em;
+    background-color: rgba(242, 236, 226, 0.03);
     transition:
       border-color 180ms var(--ease-out-quart),
-      color 180ms var(--ease-out-quart);
+      background-color 180ms var(--ease-out-quart);
   }
   .btn-ghost:hover {
-    border-color: var(--color-volt);
-    color: var(--color-volt);
+    border-color: rgba(242, 236, 226, 0.4);
+    background-color: rgba(242, 236, 226, 0.07);
+  }
+
+  .link-underline {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 1px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 260ms var(--ease-out-quart);
+  }
+  .link-underline:hover {
+    background-size: 100% 1px;
   }
 
   .initial::first-letter {
     float: left;
     font-family: var(--font-serif);
+    font-weight: 700;
     font-style: italic;
     font-size: 3.6em;
     line-height: 0.85;
     padding: 0.06em 0.12em 0 0;
-    color: var(--color-volt);
+    color: var(--color-ink);
   }
 
   .prose-folio {
@@ -316,11 +256,10 @@
     color: var(--color-ink-muted);
   }
   .prose-folio a {
-    color: var(--color-volt);
+    color: var(--color-ink);
     text-underline-offset: 3px;
     text-decoration: underline;
-    text-decoration-color: color-mix(in oklch, var(--color-volt), transparent 55%);
-    transition: text-decoration-color 180ms var(--ease-out-quart);
+    text-decoration-color: color-mix(in oklch, var(--color-volt), transparent 40%);
   }
   .prose-folio a:hover {
     text-decoration-color: var(--color-volt);
@@ -328,8 +267,8 @@
   .prose-folio code {
     font-family: var(--font-mono);
     font-size: 0.82em;
-    color: var(--color-cyan);
-    background-color: var(--color-canvas-deep);
+    color: var(--color-ink);
+    background-color: var(--color-canvas-shade);
     border: 1px solid var(--color-rule);
     border-radius: 4px;
     padding: 0.1em 0.35em;
@@ -347,270 +286,117 @@
     content: "";
     position: absolute;
     left: 0;
-    top: 0.68em;
+    top: 0.72em;
     width: 8px;
-    height: 2px;
-    background-color: var(--color-volt);
+    height: 1px;
+    background-color: var(--color-ink-faint);
+  }
+
+  /* Subtle film grain over the page, decorative only */
+  .grain::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 60;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
   }
 }
 
+/* ── Skill icons (components/home/services.tsx) ─────────────────────── */
+@keyframes ico-scan {
+  0% { transform: translateY(0); opacity: 0; }
+  15% { opacity: 0.55; }
+  85% { opacity: 0.55; }
+  100% { transform: translateY(31px); opacity: 0; }
+}
+.ico-scan { animation: ico-scan 2.8s var(--ease-out-quart) infinite; }
 
-/* ── Site chrome: announcement bar + nav (every page) ─────────────────── */
-
-.chrome {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 50;
-  color: #141414;
-}
-.chrome-bar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 40px;
-  background: #141414;
-  color: #efece6;
-  font-family: var(--font-mono), ui-monospace, monospace;
-  font-size: 11px;
-  letter-spacing: 0.04em;
-  transition: transform 0.5s cubic-bezier(0.6, 0, 0.2, 1);
-}
-.chrome[data-bar="off"] .chrome-bar {
-  transform: translateY(-100%);
-}
-.chrome-bar-link {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-.chrome-bar-link b {
-  font-weight: 500;
-  background: linear-gradient(90deg, #ffb347, #ff5a5f, #ff3d8b);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-.chrome-bar-link:hover {
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-.chrome-bar-x {
-  position: absolute;
-  right: 10px;
-  top: 0;
-  height: 30px;
-  width: 28px;
-  border: 0;
-  background: none;
-  color: inherit;
-  font-size: 16px;
-  line-height: 1;
-  cursor: pointer;
-}
-.chrome-nav {
-  position: absolute;
-  top: 30px;
-  left: 0;
-  right: 0;
-  height: 52px;
-  display: grid;
-  grid-template-columns: 17% 1fr 12% 17%;
-  background: rgba(239, 236, 230, 0.86);
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(20, 20, 20, 0.12);
-  transition: top 0.5s cubic-bezier(0.6, 0, 0.2, 1);
-}
-.chrome[data-bar="off"] .chrome-nav {
-  top: 0;
-}
-.chrome-logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  min-width: 0;
-  padding-left: 20px;
-  font-family: var(--font-display), ui-sans-serif, sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  letter-spacing: -0.005em;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-/* Wordmark: "Akshay" in a logo script, "MARU" tucked underneath. The script
-   sits on top with a paper-coloured stroke behind its fill, so where the "y"
-   tail crosses MARU it cuts a clean gap instead of colliding. */
-.wordmark {
-  position: relative;
-  display: inline-block;
-  width: 96px;
-  height: 46px;
-}
-.wordmark-akshay {
-  position: absolute;
-  left: 0;
-  top: 1px;
-  z-index: 1;
-  font-family: var(--font-script), cursive;
-  font-size: 34px;
-  font-weight: 400;
-  line-height: 1;
-  letter-spacing: 0;
-  text-transform: none;
-  white-space: nowrap;
-  color: #141414;
-  -webkit-text-stroke: 4px rgba(239, 236, 230, 1);
-  paint-order: stroke fill;
-  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
-  transform-origin: 15% 80%;
-}
-.wordmark-maru {
-  position: absolute;
-  left: 22px;
-  bottom: 5px;
-  font-family: var(--font-mono), ui-monospace, monospace;
-  font-size: 11px;
-  font-weight: 500;
-  line-height: 1;
-  letter-spacing: 0.42em;
-  text-transform: uppercase;
-  background: linear-gradient(90deg, #f07a2a, #ff3d8b);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-.chrome-logo:hover .wordmark-akshay {
-  transform: rotate(-3deg);
+@keyframes ico-orbit { to { offset-distance: 100%; } }
+.ico-orbit {
+  offset-path: path("M28 12 L44 40 L12 40 Z");
+  offset-rotate: 0deg;
+  animation: ico-orbit 3.6s linear infinite;
 }
 
-.chrome-menu {
-  display: flex;
-  align-items: center;
-  gap: clamp(16px, 2vw, 30px);
-  margin: 0;
-  padding: 0 0 0 24px;
-  list-style: none;
-  font-family: var(--font-mono), ui-monospace, monospace;
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+@keyframes ico-tick {
+  0%, 10% { opacity: 0; }
+  20%, 85% { opacity: 1; }
+  100% { opacity: 0; }
 }
-.chrome-menu a {
-  padding: 4px 0;
-  background: linear-gradient(90deg, #ff8a3d, #ff3d8b) left bottom / 0 1px no-repeat;
-  transition: background-size 0.3s cubic-bezier(0.2, 0.7, 0.2, 1);
-}
-.chrome-menu a:hover {
-  background-size: 100% 1px;
-}
-.chrome-pad {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-left: 1px solid rgba(20, 20, 20, 0.12);
-  border-right: 1px solid rgba(20, 20, 20, 0.12);
-  font-family: var(--font-mono), ui-monospace, monospace;
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  white-space: nowrap;
-  transition: background-color 0.25s;
-}
-.chrome-pad:hover {
-  background: rgba(20, 20, 20, 0.04);
-}
-.chrome-cta-cell {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding-right: 20px;
-}
-.chrome-cta {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  height: 30px;
-  padding: 0 14px;
-  border: 1px solid #141414;
-  font-family: var(--font-mono), ui-monospace, monospace;
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  white-space: nowrap;
-  transition:
-    background-color 0.25s,
-    color 0.25s;
-}
-/* Gradient border along part of the top edge and down the left edge. */
-.chrome-cta::before {
-  content: "";
-  position: absolute;
-  inset: -2px;
-  background: conic-gradient(from 200deg, #ffb347, #ff8a3d 18%, #ff5a5f 34%, #ff3d8b 50%, #ff5a5f 66%, #ff8a3d 82%, #ffb347);
-  clip-path: polygon(0 0, 58% 0, 58% 2px, 2px 2px, 2px 100%, 0 100%);
-  pointer-events: none;
-}
-.chrome-cta-dots {
-  color: #ff5a5f;
-  letter-spacing: 0.1em;
-}
-.chrome-cta:hover {
-  background: #141414;
-  color: #efece6;
-}
-.chrome-spacer {
-  height: var(--chrome-h, 82px);
-}
-.chrome a:focus-visible,
-.chrome button:focus-visible {
-  outline: 2px solid #ff5a5f;
-  outline-offset: 2px;
-}
+.ico-tick { opacity: 0; animation: ico-tick 3.2s ease-out infinite; }
 
-@media (max-width: 900px) {
-  .chrome-nav {
-    grid-template-columns: 1fr auto;
-  }
-  .chrome-menu,
-  .chrome-pad {
-    display: none;
-  }
-  .chrome-logo {
-    padding-left: 16px;
-    font-size: 16px;
-  }
-  .chrome-cta-cell {
-    padding-right: 16px;
-  }
-  .chrome-bar {
-    padding: 0 36px 0 12px;
-    font-size: 10.5px;
-  }
+@keyframes ico-bar {
+  0%, 10% { stroke-dasharray: 0 60; }
+  35%, 85% { stroke-dasharray: 60 0; }
+  100% { stroke-dasharray: 0 60; }
 }
-@media (max-width: 560px) {
-  .chrome-bar-more {
-    display: none;
-  }
+.ico-bar { animation: ico-bar 3.2s var(--ease-out-quart) infinite; }
+
+@keyframes ico-sweep {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(44px); }
 }
+.ico-sweep { animation: ico-sweep 2.4s ease-in-out infinite alternate; }
+
+@keyframes ico-type {
+  0%, 5% { stroke-dasharray: 0 1; }
+  30%, 80% { stroke-dasharray: 1 0; }
+  100% { stroke-dasharray: 1 0; opacity: 0; }
+}
+.ico-type { stroke-dasharray: 0 1; animation: ico-type 3.6s steps(12, end) infinite; }
+
+@keyframes ico-spin {
+  0%, 100% { transform: scaleX(1); }
+  50% { transform: scaleX(0.12); }
+}
+.ico-spin { animation: ico-spin 4s ease-in-out infinite; }
 
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+  .ico-tick { opacity: 1; }
+  .ico-type { stroke-dasharray: 1 0; }
+}
+
+/* ── Lab previews (components/home/lab.tsx) ─────────────────────────── */
+@keyframes lab-line {
+  0% { opacity: 0; transform: translateX(-4px); }
+  8%, 80% { opacity: 1; transform: none; }
+  100% { opacity: 0; }
+}
+.lab-line { opacity: 0; animation: lab-line 4.2s var(--ease-out-quart) infinite; }
+
+@keyframes lab-cell {
+  0%, 100% { opacity: 0.12; }
+  30% { opacity: 0.85; }
+}
+.lab-cell { opacity: 0.12; animation: lab-cell 3.2s ease-in-out infinite; }
+
+@keyframes lab-axon {
+  0% { stroke-dasharray: 0.08 1; stroke-dashoffset: 0.08; opacity: 0; }
+  10% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { stroke-dasharray: 0.08 1; stroke-dashoffset: -1; opacity: 0; }
+}
+.lab-axon { animation: lab-axon 1.8s ease-in infinite; }
+
+@keyframes lab-soma {
+  0% { opacity: 0.6; transform: scale(0.7); }
+  100% { opacity: 0; transform: scale(1.6); }
+}
+.lab-soma { transform-origin: 60px 60px; animation: lab-soma 1.8s ease-out infinite; }
+
+@keyframes lab-iris { to { transform: rotate(360deg); } }
+.lab-iris { animation: lab-iris 18s linear infinite; }
+
+@keyframes lab-pupil {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(0.6); }
+}
+.lab-pupil { animation: lab-pupil 4s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .lab-line { opacity: 1; }
+  .lab-cell { opacity: 0.5; }
+  .lab-axon { opacity: 0; }
 }

@@ -98,7 +98,7 @@ function DesktopOnly({ reason }: { reason: "small" | "webgl" }) {
           <MarkSvg size={44} id="am-mobile" />
           <p className="town-label">{profile.role}</p>
         </div>
-        <h1>This portfolio is a game you walk through.</h1>
+        <h1>The town is built for a big screen.</h1>
         <p className="town-mobile-lead">
           {reason === "small"
             ? "It's a small 3D town built for a keyboard and a big screen. Open this page on a laptop or desktop to play it."
@@ -109,13 +109,12 @@ function DesktopOnly({ reason }: { reason: "small" | "webgl" }) {
           <a className="town-btn town-btn-primary" href={callHref()} {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}>
             Book a 20-min call
           </a>
-          <Link className="town-btn" href="/chat">
-            Ask my AI about me
+          <Link className="town-btn" href="/">
+            Back to the main site
           </Link>
         </div>
         <ul className="town-mobile-links">
           <li><a href={`mailto:${profile.email}`}>Email</a></li>
-          <li><a href={profile.instagramAi} target="_blank" rel="noopener noreferrer">@akshaay.ai</a></li>
           <li><a href={profile.instagramLifts} target="_blank" rel="noopener noreferrer">@akshaay.lifts</a></li>
           <li><a href={profile.github} target="_blank" rel="noopener noreferrer">GitHub</a></li>
           <li><a href={profile.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
@@ -576,7 +575,9 @@ function TownGameView() {
       {/* HUD: identity + progress */}
       <header className="town-hud town-hud-left" data-dim={talk ? "" : undefined}>
         <div className="town-brand">
-          <MarkSvg size={40} id="am-hud" />
+          <Link href="/" aria-label="Back to the main site" title="Back to the main site">
+            <MarkSvg size={40} id="am-hud" />
+          </Link>
           <p className="town-label">{profile.role}</p>
         </div>
         <div className="town-progress">

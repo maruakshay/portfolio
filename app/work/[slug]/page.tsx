@@ -28,7 +28,7 @@ export async function generateMetadata({
 }
 
 // Render the markdown-lite body: paragraphs split on blank lines, "- " => list.
-// The first paragraph of the article opens with a large italic initial.
+// The first paragraph of the article opens with a large serif initial.
 function Body({ text, illuminate }: { text: string; illuminate?: boolean }) {
   const blocks = text.split("\n\n");
   return (
@@ -75,23 +75,23 @@ export default async function WorkPage({
           <div className="mx-auto max-w-3xl px-5 pb-10 pt-16 md:px-8 md:pt-24">
             <Link
               href="/"
-              className="label mb-10 inline-flex items-center gap-2 text-ink-faint transition-colors hover:text-volt"
+              className="label mb-10 inline-flex items-center gap-2 text-ink-faint transition-colors hover:text-ink"
             >
-              <ArrowLeft className="size-3.5" /> Back to the town
+              <ArrowLeft className="size-3.5" /> Back home
             </Link>
 
-            <p className="label mb-5 text-volt">{"// "}open source</p>
-            <h1 className="font-display text-[clamp(3rem,9vw,6rem)] font-extrabold leading-[0.9] text-ink">
+            <p className="label mb-5">Open source</p>
+            <h1 className="text-[clamp(3rem,9vw,6rem)] leading-[0.9] text-ink">
               {dive.name}
             </h1>
-            <p className="prose-folio mt-6 font-serif text-[1.75rem] italic leading-[1.3] text-ink-muted">
+            <p className="prose-folio mt-6 text-[1.6rem] leading-[1.3] tracking-[-0.02em] text-ink-muted">
               {dive.tagline}
             </p>
 
             <dl className="mt-10 grid grid-cols-1 gap-px overflow-hidden rounded-sm border border-rule bg-rule sm:grid-cols-3">
               {dive.meta.map((m) => (
                 <div key={m.label} className="bg-canvas-deep px-4 py-3">
-                  <dt className="label mb-1 text-volt">{m.label}</dt>
+                  <dt className="label mb-1">{m.label}</dt>
                   <dd className="text-base text-ink">{m.value}</dd>
                 </div>
               ))}
@@ -104,7 +104,7 @@ export default async function WorkPage({
                   href={l.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-primary"
+                  className="btn-ghost"
                 >
                   {l.label}
                   <ArrowUpRight className="size-3.5" />
@@ -117,7 +117,7 @@ export default async function WorkPage({
         {/* In plain words + my part */}
         <section className="mx-auto max-w-3xl px-5 pb-14 md:px-8">
           <div className="frame bg-canvas-deep/60 p-6 md:p-7">
-            <p className="label text-volt">In plain words</p>
+            <p className="label">In plain words</p>
             <p className="mt-3 text-[1.1875rem] leading-[1.6] text-ink">{dive.inShort}</p>
           </div>
           <dl className="mt-4 grid grid-cols-1 gap-px overflow-hidden rounded-sm border border-rule bg-rule sm:grid-cols-3">
@@ -129,7 +129,7 @@ export default async function WorkPage({
               ] as const
             ).map(([k, v]) => (
               <div key={k} className="bg-canvas-deep px-5 py-5">
-                <dt className="font-display text-xl font-extrabold text-ink">{k}</dt>
+                <dt className="hl text-2xl">{k}</dt>
                 <dd className="mt-2 text-base leading-snug text-ink-muted">{v}</dd>
               </div>
             ))}
@@ -141,8 +141,8 @@ export default async function WorkPage({
           <SectionRule n="00" label="The full story, for engineers" className="mb-12" />
           {dive.sections.map((s, i) => (
             <section key={s.heading} className="mb-14 last:mb-0">
-              <p className="label mb-2 text-volt">§ {String(i + 1).padStart(2, "0")}</p>
-              <h2 className="mb-5 font-display text-[2rem] font-extrabold leading-tight text-ink">
+              <p className="label mb-2">§ {String(i + 1).padStart(2, "0")}</p>
+              <h2 className="mb-5 text-[2.25rem] leading-tight text-ink">
                 {s.heading}
               </h2>
               <div className="prose-folio text-[1.1875rem] leading-[1.7] [&_li]:mb-2 [&_p]:mb-4 [&_ul]:mb-4">
@@ -152,8 +152,8 @@ export default async function WorkPage({
           ))}
 
           <div className="mt-16 border-t border-rule pt-8">
-            <p className="font-display text-2xl font-bold text-ink">
-              Want this kind of thinking on <em className="text-volt">your</em> product?
+            <p className="text-3xl font-medium tracking-[-0.03em] text-ink">
+              Want this kind of thinking on <em>your</em> product?
             </p>
             <a
               href={callHref(`I read your ${dive.name} deep-dive and want to talk.`)}

@@ -15,7 +15,6 @@ export const profile = {
   email: "maruakshay4@gmail.com",
   github: "https://github.com/maruakshay",
   linkedin: "https://linkedin.com/in/akshaymaru61",
-  instagramAi: "https://www.instagram.com/akshaay.ai/",
   instagramLifts: "https://www.instagram.com/akshaay.lifts/",
   resume:
     "https://docs.google.com/document/d/1_CcUyc3-QAS77It1ttnfuSSbDVObDvKKjtnvpkNVnwg/export?format=pdf",
@@ -74,21 +73,14 @@ export interface Channel {
   topic: string;
   pitch: string;
   href: string;
-  glyph: "ai" | "lifts";
+  glyph: "lifts";
 }
 
 /** Instagram channels. Kept to what each account is about, no follower claims. */
 export const channels: Channel[] = [
   {
-    handle: "@akshaay.ai",
-    topic: "AI education · Instagram",
-    pitch: "AI, explained without the hype. What the new tools actually do, and how I use them every day as an engineer.",
-    href: profile.instagramAi,
-    glyph: "ai",
-  },
-  {
     handle: "@akshaay.lifts",
-    topic: "Fitness · Instagram",
+    topic: "Training & progress · Instagram",
     pitch: "The gym side of me. Training, progress, and the honest, unglamorous days of getting stronger.",
     href: profile.instagramLifts,
     glyph: "lifts",

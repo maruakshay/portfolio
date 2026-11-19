@@ -1137,3 +1137,16 @@ kbd {
 .town-ammo .town-label {
   color: #ffd23f;
 }
+
+/* The embedded chat uses the site's Tailwind tokens; map them to the town's
+   day/night card palette so it stays readable on paper and at night. */
+.town-win-chat {
+  --color-canvas: var(--t-card-solid);
+  --color-canvas-deep: var(--t-card-solid);
+  --color-ink: var(--t-ink);
+  --color-ink-muted: var(--t-dim);
+  --color-ink-faint: var(--t-dim);
+  --color-rule: var(--t-rule);
+  --color-volt: var(--t-accent);
+  --color-volt-deep: var(--t-accent);
+}
