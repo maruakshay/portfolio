@@ -2,7 +2,7 @@ import { ArrowUpRight } from "lucide-react";
 import { callHref } from "@/lib/content";
 import { hero } from "@/lib/home";
 import { HeroField } from "./hero-field";
-import { Reveal, StaggerWords } from "./motion";
+import { StaggerWords } from "./motion";
 
 export function Hero() {
   const external = callHref().startsWith("http");
@@ -24,20 +24,18 @@ export function Hero() {
           <StaggerWords text="I build AI your customers rely on for years." className="hl" delay={0.2} />
         </h1>
 
-        <Reveal delay={0.45}>
-          <p className="mt-6 text-[1.05rem] text-ink">
-            {hero.line.map((t, i) => (
-              <span key={t}>
-                <span className="whitespace-nowrap">
-                  {t}
-                  {i < hero.line.length - 1 && " ·"}
-                </span>{" "}
-              </span>
-            ))}
-          </p>
-        </Reveal>
+        <p className="fade-rise mt-6 text-[1.05rem] text-ink" style={{ animationDelay: "0.45s" }}>
+          {hero.line.map((t, i) => (
+            <span key={t}>
+              <span className="whitespace-nowrap">
+                {t}
+                {i < hero.line.length - 1 && " ·"}
+              </span>{" "}
+            </span>
+          ))}
+        </p>
 
-        <Reveal delay={0.55}>
+        <div className="fade-rise" style={{ animationDelay: "0.55s" }}>
           <a
             href={callHref()}
             target={external ? "_blank" : undefined}
@@ -47,7 +45,7 @@ export function Hero() {
             Book a free 20-min call
             <ArrowUpRight className="size-4" aria-hidden />
           </a>
-        </Reveal>
+        </div>
       </div>
     </section>
   );

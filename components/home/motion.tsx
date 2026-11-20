@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useInView, useReducedMotion } from "motion/react";
-import { useEffect, useRef, type ReactNode } from "react";
+import { Fragment, useEffect, useRef, type ReactNode } from "react";
 
 const EASE = [0.25, 1, 0.5, 1] as const;
 
@@ -36,7 +36,11 @@ export function Reveal({
   );
 }
 
-/** Splits a line into words and staggers them in. */
+/**
+ * Splits a line into words that rise into place. Pure CSS (`.word-rise`), so
+ * the words are in the server HTML and visible even if JS is slow or fails;
+ * there is no opacity gate that could leave the headline blank.
+ */
 export function StaggerWords({
   text,
   className,
@@ -48,23 +52,19 @@ export function StaggerWords({
   delay?: number;
   step?: number;
 }) {
-  const reduce = useReducedMotion();
   const words = text.split(" ");
-  if (reduce) return <span className={className}>{text}</span>;
   return (
     <span className={className}>
       {words.map((w, i) => (
-        <span key={i} className="inline-block overflow-hidden pb-[0.08em] align-bottom">
-          <motion.span
-            className="inline-block"
-            initial={{ y: "100%", opacity: 0 }}
-            animate={{ y: "0%", opacity: 1 }}
-            transition={{ duration: 0.6, ease: EASE, delay: delay + i * step }}
-          >
-            {w}
-          </motion.span>
-          {i < words.length - 1 ? " " : null}
-        </span>
+        <Fragment key={i}>
+          <span className="inline-block overflow-hidden pb-[0.08em] pr-[0.06em] align-bottom">
+            <span className="word-rise inline-block" style={{ animationDelay: `${delay + i * step}s` }}>
+              {w}
+            </span>
+          </span>
+          {/* Space outside the inline-block, or it gets trimmed */}
+          {i < words.length - 1 ? " " : null}
+        </Fragment>
       ))}
     </span>
   );
