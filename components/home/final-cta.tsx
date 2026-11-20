@@ -67,8 +67,8 @@ export function FinalCta() {
           </p>
           <ul className="flex flex-wrap gap-x-6 gap-y-2">
             <li>
-              <Link href="/town" className="link-underline text-[0.9rem] text-ink-muted hover:text-ink">
-                Walk through my 3D town →
+              <Link href="/lab" className="link-underline text-[0.9rem] text-ink-muted hover:text-ink">
+                Lab: 3D projects &amp; a 3D town →
               </Link>
             </li>
             {LINKS.map((l) => (

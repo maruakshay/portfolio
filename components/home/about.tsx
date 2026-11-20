@@ -110,9 +110,21 @@ export function About() {
             </h2>
           </div>
           <p className="max-w-[48ch] text-ink-muted">
-            I&apos;m Akshay, a freelance AI engineer {profile.location === "India" ? "based in India" : ""}, working
+            I&apos;m Akshay, a production AI engineer {profile.location === "India" ? "based in India" : ""}, working
             remotely with teams worldwide. Most AI projects stall between the demo and production. I take them across:
             the retrieval, the agent, the evals and security, and the interface people actually use.
+            <span className="mt-4 block">
+              Off the keyboard, I train and share the honest side of getting stronger at{" "}
+              <a
+                href={profile.instagramLifts}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link-underline text-ink"
+              >
+                @akshaay.lifts
+              </a>
+              .
+            </span>
           </p>
         </Reveal>
 

@@ -1,6 +1,7 @@
 import Link from "next/link";
+import type { ReactNode } from "react";
 import { ArrowUpRight } from "lucide-react";
-import { lab, type LabPreview } from "@/lib/home";
+import type { LabItem, LabPreview } from "@/lib/home";
 import { Reveal } from "./motion";
 
 /* Tiny looping previews, pure SVG/CSS (keyframes in globals.css, .lab-*). */
@@ -63,22 +64,37 @@ function Preview({ kind }: { kind: LabPreview }) {
   );
 }
 
-export function Lab() {
+export function Lab({
+  items,
+  label,
+  title,
+  aside,
+  extra,
+}: {
+  items: LabItem[];
+  label: string;
+  title: ReactNode;
+  aside: string;
+  /** Extra grid cell after the items (e.g. the checklist sign-up). */
+  extra?: ReactNode;
+}) {
+  // A lone card spans the full row instead of leaving an empty half.
+  const solo = items.length + (extra ? 1 : 0) === 1;
   return (
     <section aria-labelledby="lab-title" className="border-t border-rule">
       <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 sm:py-32 lg:px-10">
         <Reveal className="mb-12 flex flex-col gap-4 sm:mb-16 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="label">Open source &amp; 3D lab</p>
+            <p className="label">{label}</p>
             <h2 id="lab-title" className="mt-4 text-[clamp(2.4rem,6vw,4.5rem)] leading-[0.95]">
-              Built in the open.
+              {title}
             </h2>
           </div>
-          <p className="max-w-[36ch] text-ink-muted">Tools and experiments I maintain publicly. Free to use, read and fork.</p>
+          <p className="max-w-[36ch] text-ink-muted">{aside}</p>
         </Reveal>
 
-        <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:gap-4">
-          {lab.map((l, i) => (
+        <ul className={`grid grid-cols-1 gap-3 lg:gap-4 ${solo ? "" : "sm:grid-cols-2"}`}>
+          {items.map((l, i) => (
             <Reveal
               as="li"
               key={l.slug}
@@ -115,6 +131,7 @@ export function Lab() {
               </div>
             </Reveal>
           ))}
+          {extra}
         </ul>
       </div>
     </section>

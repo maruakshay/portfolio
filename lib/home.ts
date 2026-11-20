@@ -48,14 +48,6 @@ export const risks = [
   },
 ];
 
-/** How an engagement runs, start to finish. */
-export const process = [
-  { n: "01", t: "20-min call", d: "Understand your app, users and risks." },
-  { n: "02", t: "Audit", d: "I review security, AI and cost; you get a scored report." },
-  { n: "03", t: "Fix", d: "Hardening sprint, highest risk first, with progress updates." },
-  { n: "04", t: "Stay safe", d: "Optional monthly monitoring and support." },
-];
-
 export const faq = [
   {
     q: "Do you work with apps built with Cursor, Lovable, Bolt or Replit?",
@@ -103,8 +95,8 @@ export const proofStrip: ProofItem[] = [
   { value: 40, suffix: "K+", label: "users on the AI SaaS I founded" },
   { word: "Sold", label: "that AI SaaS, Remote Leaps" },
   { value: 45, prefix: "~", suffix: "%", label: "AI cost cut on an enterprise assistant" },
-  { value: 35, suffix: "%", label: "more interviews for job seekers" },
-  { value: 14, suffix: "+", label: "AI providers in miii-cli" },
+  { word: "OWASP", label: "LLM Top 10 hardened, in a SOC2 / GDPR product" },
+  { value: 58, label: "open AI-security guides I maintain" },
 ];
 
 export type PreviewKind = "juno" | "leaps" | "miii";
@@ -134,7 +126,7 @@ export const selectedWork: WorkItem[] = [
     id: "juno",
     outcome: "Support cases solved 35% faster.",
     tags: ["Security", "Cost", "Enterprise trust"],
-    lead: "Made safe for SOC2 / GDPR enterprise customers, with ~45% less AI workload per question.",
+    lead: "Hardened for SOC2 / GDPR enterprise customers, with ~45% less AI workload per question.",
     index: "01",
     org: "JupiterOne · 2025–26",
     title: "Juno",
@@ -237,19 +229,13 @@ export const skills: Skill[] = [
     icon: "security",
     title: "AI Security",
     body: "Prompt injection and data-leak reviews mapped to the OWASP LLM Top 10.",
-    span: "narrow",
+    span: "wide",
   },
   {
     icon: "stream",
     title: "Streaming UIs",
     body: "React and Next.js interfaces where answers stream in word by word, with live tables and no spinners.",
     span: "wide",
-  },
-  {
-    icon: "three",
-    title: "3D Web",
-    body: "Lightweight interactive 3D in the browser: NeuroAtlas, Eye Atlas.",
-    span: "narrow",
   },
 ];
 

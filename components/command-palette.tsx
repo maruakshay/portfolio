@@ -38,6 +38,7 @@ export function CommandPalette() {
         },
       },
       { group: "Go to", label: "Home", hint: "/", run: () => router.push("/") },
+      { group: "Go to", label: "Lab: side projects", hint: "/lab", run: () => router.push("/lab") },
       { group: "Go to", label: "Walk through the 3D town", hint: "/town", run: () => router.push("/town") },
       { group: "Go to", label: "Ask AI about Akshay", hint: "/chat", run: () => router.push("/chat") },
       ...deepDives.map((d) => ({

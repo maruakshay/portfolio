@@ -20,7 +20,7 @@ export interface Plan {
 export const plans: Plan[] = [
   {
     name: "Production Trust Audit",
-    meta: "~1 week",
+    meta: "~1 week · Fixed price",
     includes: [
       "Web app security review: auth, permissions, data exposure, secrets, rate limits",
       "AI security review against the OWASP LLM Top 10 (prompt injection, data leakage, unsafe output)",
@@ -77,3 +77,17 @@ export const testimonials: Testimonial[] = [
 const isFilled = (s: string) => s.trim() !== "" && !/^\[.*\]$/.test(s.trim());
 
 export const realTestimonials = testimonials.filter((t) => isFilled(t.quote) && isFilled(t.name));
+
+/**
+ * "Get the AI App Production Checklist" card, shown next to the security
+ * playbook on the home page. Hidden until `endpoint` is set.
+ *
+ * TODO [CHECKLIST]: write the checklist itself (it can be distilled from the
+ * mii-ai-security playbook), then set up delivery.
+ * TODO [FORM ENDPOINT]: paste a Formspree / ConvertKit / Resend URL. The form
+ * POSTs JSON `{ email, source }` to it.
+ */
+export const leadMagnet = {
+  endpoint: "",
+  blurb: "[NUMBER] checks across security, AI cost and customer trust. The same list I use in my audits.",
+};
