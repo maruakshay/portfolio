@@ -68,6 +68,15 @@
   }
 }
 
+@keyframes pulse-ring-ok {
+  0% {
+    box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 0 10px rgba(52, 211, 153, 0);
+  }
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -167,6 +176,11 @@
     border-radius: 999px;
     background-color: var(--color-volt);
     animation: pulse-ring 2s var(--ease-out-quart) infinite;
+  }
+  /* Green variant: "available now" */
+  .live-dot-ok {
+    background-color: #34d399;
+    animation-name: pulse-ring-ok;
   }
 
   /* A raised panel with a hairline */
@@ -304,7 +318,7 @@
   }
 }
 
-/* ── Skill icons (components/home/services.tsx) ─────────────────────── */
+/* ── Skill icons (components/home/about.tsx) ─────────────────────── */
 @keyframes ico-scan {
   0% { transform: translateY(0); opacity: 0; }
   15% { opacity: 0.55; }

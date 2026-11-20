@@ -34,20 +34,25 @@ export const viewport: Viewport = {
   themeColor: "#0b0b0c",
 };
 
+const TITLE = "Akshay Maru, AI Production Engineer | Secure, cost-efficient AI apps";
 const DESCRIPTION =
-  "Akshay Maru is a freelance AI engineer. He doesn't build demos: he builds AI products your customers rely on for years, end to end (assistants, RAG, agents, LLM security). Ex-JupiterOne; founded and sold an AI SaaS with 40K+ users.";
+  "I take AI apps from demo to production: security hardening (OWASP LLM Top 10), AI cost cutting, and reliability your customers can trust. Ex-JupiterOne, founder of an acquired AI SaaS.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Akshay Maru — Freelance AI Engineer",
+    default: TITLE,
     template: "%s · Akshay Maru",
   },
   description: DESCRIPTION,
   applicationName: "Akshay Maru",
   keywords: [
     "Akshay Maru",
+    "AI production engineer",
     "Freelance AI engineer",
+    "AI app security audit",
+    "OWASP LLM Top 10",
+    "AI cost optimization",
     "Hire AI developer",
     "AI product engineer",
     "AI chatbot developer",
@@ -65,9 +70,8 @@ export const metadata: Metadata = {
   category: "technology",
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Akshay Maru — I don't build demos. I build AI that lasts.",
-    description:
-      "Freelance AI engineer, open for projects. Ex-JupiterOne, founded and sold an AI SaaS (40K+ users). Book a free 20-min call.",
+    title: TITLE,
+    description: DESCRIPTION,
     url: "/",
     siteName: "Akshay Maru",
     locale: "en_US",
@@ -77,9 +81,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Akshay Maru — I don't build demos. I build AI that lasts.",
-    description:
-      "Freelance AI engineer, open for projects. Ex-JupiterOne, founded and sold an AI SaaS (40K+ users).",
+    title: TITLE,
+    description: DESCRIPTION,
   },
   robots: {
     index: true,
@@ -103,7 +106,7 @@ const JSON_LD = {
     "@type": "Person",
     name: profile.name,
     url: siteUrl,
-    jobTitle: "Freelance AI Engineer",
+    jobTitle: "AI Production Engineer",
     description: DESCRIPTION,
     email: `mailto:${profile.email}`,
     image: `${siteUrl}/opengraph-image`,

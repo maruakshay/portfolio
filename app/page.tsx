@@ -3,7 +3,13 @@ import { Hero } from "@/components/home/hero";
 import { Proof } from "@/components/home/proof";
 import { Work } from "@/components/home/work";
 import { Experience } from "@/components/home/experience";
+import { Approach } from "@/components/home/approach";
+import { WhyBreak } from "@/components/home/why-break";
 import { Services } from "@/components/home/services";
+import { Process } from "@/components/home/process";
+import { Testimonials } from "@/components/home/testimonials";
+import { Faq } from "@/components/home/faq";
+import { About } from "@/components/home/about";
 import { Lab } from "@/components/home/lab";
 import { Creator } from "@/components/home/creator";
 import { FinalCta } from "@/components/home/final-cta";
@@ -21,9 +27,15 @@ export default function Home() {
       <main>
         <Hero />
         <Proof />
+        <Approach />
+        <WhyBreak />
         <Work />
-        <Experience />
         <Services />
+        <Process />
+        <Testimonials />
+        <Faq />
+        <Experience />
+        <About />
         <Lab />
         <Creator />
       </main>

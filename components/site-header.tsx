@@ -7,12 +7,13 @@ import { callHref } from "@/lib/content";
 
 const NAV = [
   { hash: "work", label: "Work" },
+  { hash: "services", label: "Services" },
   { hash: "experience", label: "Experience" },
   { hash: "about", label: "About" },
 ];
 
 /**
- * Sticky minimal nav: AM logo · Work · Experience · About · Book a call.
+ * Sticky minimal nav: AM logo · Work · Services · Experience · About · Book a call.
  * Transparent over the hero, a blurred bar once the page scrolls. On inner
  * pages the section links point back to the home page anchors.
  */

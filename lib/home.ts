@@ -2,10 +2,86 @@
 // (résumé, deep-dives, miii.in). Keep it that way: no invented numbers.
 
 export const hero = {
-  headline: "I don't build demos. I build AI your customers rely on for years.",
-  // One quiet line: who, plus the strongest proof. Everything else lives below.
-  line: ["Freelance AI engineer", "ex-JupiterOne", "sold my AI SaaS"],
+  eyebrow: ["Production AI engineer", "ex-JupiterOne", "sold my AI SaaS"],
+  headline: ["I take your AI app", "from demo to production."],
+  sub: "Secured, cheaper to run, and trusted by your customers. I harden the app, lock down the AI, and cut your AI bill, so you can say yes to real users and enterprise deals.",
 };
+
+/** How I work: trust first, then deep understanding of the client's customers. */
+export const approach = {
+  label: "How I work",
+  title: ["Trust first.", "Then we go deep."],
+  intro:
+    "Before I touch your code, we build trust. Then I go deeper: into your business, your customers and how they feel when they use your AI.",
+  steps: [
+    {
+      n: "01",
+      t: "Build trust",
+      d: "A small, clear first step. Honest findings, plain language, no surprises. You see exactly what I see.",
+    },
+    {
+      n: "02",
+      t: "Understand your customers",
+      d: "What they expect, what worries them, and where the AI lets them down. Their trust is what we are protecting.",
+    },
+    {
+      n: "03",
+      t: "Fix what matters to them",
+      d: "Every fix is chosen for the people using your product, not just to pass a checklist.",
+    },
+  ],
+};
+
+/** "Why AI apps break in production": the three risks the offer fixes. */
+export const risks = [
+  {
+    t: "Security",
+    d: "Prompt injection, data leaks, weak auth and exposed keys. One incident can cost you your biggest customer.",
+  },
+  {
+    t: "Cost",
+    d: "AI bills that grow faster than revenue. Wasted calls, oversized prompts, no caching.",
+  },
+  {
+    t: "Trust",
+    d: "Hallucinated answers, silent failures, no monitoring. Customers stop relying on it.",
+  },
+];
+
+/** How an engagement runs, start to finish. */
+export const process = [
+  { n: "01", t: "20-min call", d: "Understand your app, users and risks." },
+  { n: "02", t: "Audit", d: "I review security, AI and cost; you get a scored report." },
+  { n: "03", t: "Fix", d: "Hardening sprint, highest risk first, with progress updates." },
+  { n: "04", t: "Stay safe", d: "Optional monthly monitoring and support." },
+];
+
+export const faq = [
+  {
+    q: "Do you work with apps built with Cursor, Lovable, Bolt or Replit?",
+    a: "Yes. Many of my clients built fast with AI tools and now need it production-ready.",
+  },
+  {
+    q: "What stack do you work with?",
+    a: "React, Next.js, TypeScript, Node, AWS (including Bedrock), and most major AI providers, cloud or local.",
+  },
+  {
+    q: "Do you need access to my code?",
+    a: "For the audit, yes: read access to the repo and a staging environment. I sign an NDA before starting.",
+  },
+  {
+    q: "Will you test my live app for vulnerabilities?",
+    a: "Only with your written permission, and preferably on staging.",
+  },
+  {
+    q: "What time zones do you work in?",
+    a: "I'm based in India and work remotely with US and EU teams, with daily overlap hours.",
+  },
+  {
+    q: "What if I just want a feature built?",
+    a: "Happy to talk, but my focus is making AI apps secure, cheaper and reliable.",
+  },
+];
 
 /** What happens on the intro call. Removes the "what am I signing up for" doubt. */
 export const callSteps = [
@@ -37,6 +113,10 @@ export interface WorkItem {
   id: PreviewKind;
   /** The result, said first: the hook line of the card. */
   outcome: string;
+  /** Which production risks this project proves out. */
+  tags: string[];
+  /** One line on how it was hardened. */
+  lead: string;
   index: string;
   org: string;
   title: string;
@@ -53,6 +133,8 @@ export const selectedWork: WorkItem[] = [
   {
     id: "juno",
     outcome: "Support cases solved 35% faster.",
+    tags: ["Security", "Cost", "Enterprise trust"],
+    lead: "Made safe for SOC2 / GDPR enterprise customers, with ~45% less AI workload per question.",
     index: "01",
     org: "JupiterOne · 2025–26",
     title: "Juno",
@@ -72,6 +154,8 @@ export const selectedWork: WorkItem[] = [
   {
     id: "leaps",
     outcome: "40,000 users, then acquired.",
+    tags: ["Trust", "Scale"],
+    lead: "AI built to never invent experience, trusted by 40K+ users in 25 countries, then acquired.",
     index: "02",
     org: "Remote Leaps · founded & sold",
     title: "Remote Leaps",
@@ -91,6 +175,8 @@ export const selectedWork: WorkItem[] = [
   {
     id: "miii",
     outcome: "An agent that fixes its own mistakes.",
+    tags: ["Reliability"],
+    lead: "An agent that tests its own work and rolls back anything that breaks.",
     index: "03",
     org: "Open source · 56 releases",
     title: "miii-cli",

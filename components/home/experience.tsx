@@ -30,7 +30,7 @@ export function Experience() {
           </h2>
           <p className="mt-6 max-w-[38ch] text-ink-muted">
             From frontends to founding an AI company and selling it, then enterprise AI at a security company. I&apos;ve
-            led and mentored teams of 4 to 5 engineers.
+            led and mentored teams of 4 to 5 engineers. Today I help teams ship AI their customers can trust.
           </p>
         </Reveal>
 

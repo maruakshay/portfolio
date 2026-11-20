@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useInView, useReducedMotion } from "motion/react";
 import { ArrowUpRight } from "lucide-react";
-import { callHref } from "@/lib/content";
 import { selectedWork, type WorkItem } from "@/lib/home";
 import { Reveal } from "./motion";
 import { WorkPreview } from "./work-previews";
@@ -39,9 +38,20 @@ function WorkCard({ item, flip }: { item: WorkItem; flip: boolean }) {
           <span className="label">{item.org}</span>
           <span className="font-mono text-[0.75rem] text-ink-faint">{item.index}</span>
         </div>
+        <ul className="mt-4 flex flex-wrap gap-1.5" aria-label="Hardened for">
+          {item.tags.map((t) => (
+            <li
+              key={t}
+              className="rounded-full border border-volt/40 px-2.5 py-1 font-mono text-[0.68rem] uppercase tracking-[0.06em] text-volt"
+            >
+              {t}
+            </li>
+          ))}
+        </ul>
         <p className="hl mt-8 text-[clamp(1.6rem,3vw,2.2rem)] leading-tight">{item.outcome}</p>
         <h3 className="mt-5 text-[clamp(2rem,4vw,2.8rem)] leading-[0.95]">{item.title}</h3>
         <p className="mt-2 text-[1.1rem] text-ink-muted">{item.kicker}</p>
+        <p className="mt-6 max-w-[52ch] border-l-2 border-volt pl-4 text-[1.05rem] leading-snug text-ink">{item.lead}</p>
         <p className="mt-6 max-w-[52ch] text-ink-muted">{item.summary}</p>
         <ul className="mt-6 space-y-2.5">
           {item.points.map((p) => (
@@ -97,11 +107,11 @@ export function Work() {
         <div>
           <p className="label">Selected work</p>
           <h2 id="work-title" className="mt-4 text-[clamp(2.4rem,6vw,4.5rem)] leading-[0.95]">
-            Out of the demo, <em>into production.</em>
+            Proof, <em>not promises.</em>
           </h2>
         </div>
         <p className="max-w-[36ch] text-ink-muted">
-          Three products, each in front of real users: an enterprise assistant, a SaaS I sold, and an open-source agent.
+          Three AI products in front of real users, each hardened for security, cost and trust.
         </p>
       </Reveal>
       <div className="space-y-6 sm:space-y-8">
@@ -111,20 +121,6 @@ export function Work() {
           </Reveal>
         ))}
       </div>
-      <Reveal className="mt-10 flex flex-col items-start justify-between gap-6 rounded-xl border border-rule px-6 py-7 sm:flex-row sm:items-center sm:px-10">
-        <p className="text-[clamp(1.4rem,2.6vw,1.9rem)] font-medium leading-tight tracking-[-0.03em] text-ink">
-          Your AI feature could be <em>next on this list.</em>
-        </p>
-        <a
-          href={callHref("I saw your work and have an AI feature I'd like to get into production.")}
-          target={callHref().startsWith("http") ? "_blank" : undefined}
-          rel="noopener noreferrer"
-          className="btn-primary shrink-0"
-        >
-          Book a 20-min call
-          <ArrowUpRight className="size-4" aria-hidden />
-        </a>
-      </Reveal>
     </section>
   );
 }

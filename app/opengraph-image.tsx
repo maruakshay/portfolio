@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 import { C, OG_SIZE, OgFrame, ogFonts } from "@/lib/og";
 
 export const alt =
-  "Akshay Maru, freelance AI engineer: I don't build demos. I build AI your customers rely on for years.";
+  "Akshay Maru, AI production engineer: I take your AI app from demo to production.";
 export const size = OG_SIZE;
 export const contentType = "image/png";
 
@@ -15,14 +15,11 @@ const PROOF = [
 export default async function OpengraphImage() {
   return new ImageResponse(
     (
-      <OgFrame tag="OPEN FOR FREELANCE PROJECTS">
+      <OgFrame tag="SECURE · CHEAPER · TRUSTED">
         <div style={{ display: "flex", flexDirection: "column", fontSize: 84, lineHeight: 1.02, letterSpacing: -3.4 }}>
-          <span>I don&apos;t build demos.</span>
+          <span>I take your AI app</span>
           <span style={{ fontFamily: "Source Serif", fontStyle: "italic", fontWeight: 700, letterSpacing: -1.5, marginTop: 6 }}>
-            I build AI your customers
-          </span>
-          <span style={{ fontFamily: "Source Serif", fontStyle: "italic", fontWeight: 700, letterSpacing: -1.5 }}>
-            rely on for years.
+            from demo to production.
           </span>
         </div>
 
@@ -35,7 +32,7 @@ export default async function OpengraphImage() {
               </div>
             ))}
           </div>
-          <span style={{ fontFamily: "Plex Mono", fontSize: 18, letterSpacing: 2, color: C.faint }}>FREELANCE AI ENGINEER</span>
+          <span style={{ fontFamily: "Plex Mono", fontSize: 18, letterSpacing: 2, color: C.faint }}>AI PRODUCTION ENGINEER</span>
         </div>
       </OgFrame>
     ),

@@ -22,8 +22,12 @@ export function FinalCta() {
             {profile.availability}
           </p>
           <h2 className="mt-6 max-w-[16ch] text-[clamp(2.75rem,8vw,6.5rem)] leading-[0.95]">
-            Have an AI feature stuck in demo mode? <em>Let&apos;s ship it.</em>
+            Ready to make your AI app <em>production-ready?</em>
           </h2>
+          <p className="mt-6 max-w-[52ch] text-[1.1rem] text-ink-muted">
+            Book a free 20-min call. You&apos;ll leave with the top 3 risks I&apos;d fix first, whether we work together or
+            not.
+          </p>
           <div className="mt-10 flex flex-wrap items-center gap-3">
             <a
               href={callHref()}
@@ -31,7 +35,7 @@ export function FinalCta() {
               rel="noopener noreferrer"
               className="btn-primary"
             >
-              Book a 20-min call
+              Book a free 20-min call
               <ArrowUpRight className="size-4" aria-hidden />
             </a>
             <a href={`mailto:${profile.email}`} className="btn-ghost">
