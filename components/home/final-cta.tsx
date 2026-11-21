@@ -3,6 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import { callHref, profile } from "@/lib/content";
 import { callSteps } from "@/lib/home";
 import { Reveal } from "./motion";
+import { Wordmark } from "@/components/ornament";
 
 const LINKS = [
   { label: "GitHub", href: profile.github },
@@ -62,7 +63,7 @@ export function FinalCta() {
 
         <div className="mt-24 flex flex-col gap-6 border-t border-rule pt-8 sm:mt-32 sm:flex-row sm:items-center sm:justify-between">
           <p className="font-mono text-[0.72rem] uppercase tracking-[0.08em] text-ink-faint">
-            <span className="hl text-lg normal-case">AM</span>
+            <Wordmark className="text-lg" />
             <span className="ml-3">Akshay Maru · {new Date().getFullYear()}</span>
           </p>
           <ul className="flex flex-wrap gap-x-6 gap-y-2">

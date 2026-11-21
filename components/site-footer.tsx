@@ -1,5 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import { callHref, profile } from "@/lib/content";
+import { Wordmark } from "@/components/ornament";
 
 const LINKS = [
   { label: "@akshaay.lifts", href: profile.instagramLifts },
@@ -28,7 +29,7 @@ export function SiteFooter() {
             <ArrowUpRight className="size-4" aria-hidden />
           </a>
           <p className="mt-8 font-mono text-xs uppercase tracking-[0.08em] text-ink-faint">
-            <span className="hl text-lg normal-case">AM</span>
+            <Wordmark className="text-lg" />
             <span className="ml-3">Akshay Maru · {new Date().getFullYear()}</span>
           </p>
         </div>

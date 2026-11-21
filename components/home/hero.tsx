@@ -1,5 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
-import { callHref } from "@/lib/content";
+import { callHref, profile } from "@/lib/content";
 import { hero } from "@/lib/home";
 import { availability } from "@/lib/offer";
 import { HeroField } from "./hero-field";
@@ -18,6 +18,7 @@ export function Hero() {
 
       <div className="relative mx-auto flex w-full max-w-7xl flex-1 flex-col justify-start px-4 pb-48 pt-32 sm:justify-center sm:px-6 sm:pb-56 sm:pt-24 lg:px-10 lg:pb-16 lg:pt-16">
         <p className="label fade-rise mb-6">
+          <span className="whitespace-nowrap text-ink">{profile.name} ·</span>{" "}
           {hero.eyebrow.map((t, i) => (
             <span key={t}>
               <span className="whitespace-nowrap">

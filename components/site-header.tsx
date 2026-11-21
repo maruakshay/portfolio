@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { callHref } from "@/lib/content";
+import { Wordmark } from "@/components/ornament";
 
 const NAV = [
   { hash: "work", label: "Work" },
@@ -13,7 +14,7 @@ const NAV = [
 ];
 
 /**
- * Sticky minimal nav: AM logo · Work · Services · Experience · About · Book a call.
+ * Sticky minimal nav: "am." wordmark (name lives in the hero eyebrow) · Work · Services · Experience · About · Book a call.
  * Transparent over the hero, a blurred bar once the page scrolls. On inner
  * pages the section links point back to the home page anchors.
  */
@@ -46,12 +47,9 @@ export function SiteHeader() {
           <Link
             href="/"
             aria-label="Akshay Maru, home"
-            className="group flex items-center gap-2.5 hl text-[1.6rem] leading-none"
+            className="flex items-center text-[1.7rem] leading-none"
           >
-            AM
-            <span className="hidden font-mono text-[0.7rem] font-normal not-italic tracking-normal uppercase tracking-[0.08em] text-ink-faint transition-colors group-hover:text-ink-muted sm:inline">
-              Akshay Maru
-            </span>
+            <Wordmark />
           </Link>
 
           <div className="flex items-center gap-1 sm:gap-2">
