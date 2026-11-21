@@ -33,14 +33,27 @@ export function Hero() {
           className="max-w-[17ch] text-[clamp(2.5rem,min(5.2vw,8.5vh),4.75rem)] leading-[1] tracking-[-0.045em]"
         >
           <StaggerWords text={hero.headline[0]} />{" "}
-          <StaggerWords text={hero.headline[1]} className="hl" delay={0.2} />
+          <StaggerWords
+            text={hero.headline[1]}
+            className="hl"
+            delay={0.2}
+            marks={{ demo: "mark-strike", production: "mark-volt" }}
+          />
         </h1>
 
         <p
           className="fade-rise mt-6 max-w-[58ch] text-[1.05rem] leading-relaxed text-ink-muted sm:text-[1.15rem]"
           style={{ animationDelay: "0.45s" }}
         >
-          {hero.sub}
+          {hero.sub.split("**").map((part, i) =>
+            i % 2 ? (
+              <strong key={i} className="mark-sub">
+                {part}
+              </strong>
+            ) : (
+              part
+            ),
+          )}
         </p>
 
         <div className="fade-rise mt-10 flex flex-wrap items-center gap-3" style={{ animationDelay: "0.55s" }}>

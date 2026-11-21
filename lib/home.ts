@@ -4,7 +4,8 @@
 export const hero = {
   eyebrow: ["Production AI engineer", "ex-JupiterOne", "sold my AI SaaS"],
   headline: ["I take your AI app", "from demo to production."],
-  sub: "Secured, cheaper to run, and trusted by your customers. I harden the app, lock down the AI, and cut your AI bill, so you can say yes to real users and enterprise deals.",
+  /** **double-asterisks** mark the phrases the hero highlights. */
+  sub: "**Secured**, **cheaper to run**, and **trusted by your customers**. I harden the app, lock down the AI, and cut your AI bill, so you can say yes to real users and **enterprise deals**.",
 };
 
 /** How I work: trust first, then deep understanding of the client's customers. */

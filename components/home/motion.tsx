@@ -46,11 +46,14 @@ export function StaggerWords({
   className,
   delay = 0,
   step = 0.045,
+  marks,
 }: {
   text: string;
   className?: string;
   delay?: number;
   step?: number;
+  /** Extra class per word (punctuation ignored), e.g. { demo: "mark-strike" }. */
+  marks?: Record<string, string>;
 }) {
   const words = text.split(" ");
   return (
@@ -58,7 +61,10 @@ export function StaggerWords({
       {words.map((w, i) => (
         <Fragment key={i}>
           <span className="inline-block overflow-hidden pb-[0.08em] pr-[0.06em] align-bottom">
-            <span className="word-rise inline-block" style={{ animationDelay: `${delay + i * step}s` }}>
+            <span
+              className={`word-rise inline-block ${marks?.[w.replace(/[^\w-]/g, "").toLowerCase()] ?? ""}`}
+              style={{ animationDelay: `${delay + i * step}s` }}
+            >
               {w}
             </span>
           </span>
