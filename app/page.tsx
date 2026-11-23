@@ -14,6 +14,7 @@ import { ChecklistCard } from "@/components/home/checklist-card";
 import { lab } from "@/lib/home";
 import { leadMagnet } from "@/lib/offer";
 import { FinalCta } from "@/components/home/final-cta";
+import { BeyondWork } from "@/components/home/beyond-work";
 
 export default function Home() {
   return (
@@ -47,6 +48,7 @@ export default function Home() {
           aside="The AI-security playbook I maintain publicly. Free to use, read and fork."
           extra={leadMagnet.endpoint ? <ChecklistCard /> : undefined}
         />
+        <BeyondWork />
       </main>
       <FinalCta />
     </div>

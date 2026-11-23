@@ -301,3 +301,25 @@ export interface Reel {
 export const reels: Record<"lifts", Reel[]> = {
   lifts: [],
 };
+
+/** Beyond work: the awareness niche on Instagram. First-person, no follower claims. */
+export const beyondWork = {
+  label: "Beyond work",
+  title: ["Off the keyboard,", "I'm raising awareness."],
+  intro:
+    "On Instagram I share what I live every day: cerebral palsy, stammering, and training anyway. The aim is simple: more people understanding it, and more people with it feeling seen.",
+  pillars: [
+    {
+      t: "Cerebral palsy",
+      d: "What living with unilateral CP is really like, and how I adapt training, work and daily life around it.",
+    },
+    {
+      t: "Stammering",
+      d: "Talking openly about stammering, so it stops being something people hide or feel ashamed of.",
+    },
+    {
+      t: "Fitness",
+      d: "Getting stronger with a body that works differently. The honest, unglamorous days included.",
+    },
+  ],
+};

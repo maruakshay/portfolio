@@ -80,8 +80,8 @@ export interface Channel {
 export const channels: Channel[] = [
   {
     handle: "@akshaay.lifts",
-    topic: "Training & progress · Instagram",
-    pitch: "The gym side of me. Training, progress, and the honest, unglamorous days of getting stronger.",
+    topic: "CP, stammering & fitness · Instagram",
+    pitch: "Raising awareness for cerebral palsy and stammering, and training anyway. The honest, unglamorous days of getting stronger.",
     href: profile.instagramLifts,
     glyph: "lifts",
   },
