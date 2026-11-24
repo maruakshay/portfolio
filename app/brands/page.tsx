@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Play } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { Reveal } from "@/components/home/motion";
@@ -7,7 +7,7 @@ import { SectionHead } from "@/components/home/section-head";
 import { profile } from "@/lib/content";
 import { beyondWork } from "@/lib/home";
 import { brandFits, brandHref, brandsHero, offers, whyMe } from "@/lib/brands";
-import { instagram, instagramStats, reelEmbed, reelUrl } from "@/lib/instagram";
+import { instagram, instagramStats, reelUrl } from "@/lib/instagram";
 
 export const metadata: Metadata = {
   title: "Work with brands",
@@ -118,43 +118,63 @@ export default function BrandsPage() {
             <p className="label mt-14">Recent content</p>
             <ul className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-3 lg:gap-4">
               {instagram.recent.map((r, i) => (
-                <Reveal
-                  as="li"
-                  key={r.title}
-                  delay={i * 0.05}
-                  className="overflow-hidden rounded-xl border border-rule bg-canvas-deep transition-colors duration-300 hover:border-ink/25"
-                >
-                  {/* Official Instagram embed: real cover, plays inline. Cropped to hide the caption footer. */}
-                  <div className="relative h-[560px] overflow-hidden bg-white">
-                    <iframe
-                      src={reelEmbed(r.reel)}
-                      title={`Instagram reel: ${r.title}`}
-                      loading="lazy"
-                      allow="autoplay; encrypted-media; picture-in-picture"
-                      allowFullScreen
-                      className="absolute inset-0 h-[680px] w-full border-0"
-                    />
-                  </div>
+                <Reveal as="li" key={r.reel} delay={i * 0.05}>
                   <a
                     href={reelUrl(r.reel)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group block p-5 sm:p-6"
+                    aria-label={`Watch the reel: ${r.hook.join("")}`}
+                    className="group relative flex aspect-[4/5] flex-col justify-between overflow-hidden rounded-xl border border-rule bg-canvas-deep p-5 transition-colors duration-300 hover:border-ink/25 sm:p-6"
                   >
-                    <span className="font-mono text-[0.65rem] uppercase tracking-[0.08em] text-ink-faint">
-                      {r.tag}
-                    </span>
-                    <span className="mt-2 flex items-start justify-between gap-3">
-                      <span className="text-[1.2rem] font-medium leading-tight tracking-[-0.02em] text-ink">
-                        {r.title}
+                    {/* Warm glow that wakes up on hover */}
+                    <span
+                      aria-hidden
+                      className="pointer-events-none absolute -bottom-1/3 -right-1/4 size-[80%] rounded-full bg-volt/10 blur-3xl transition-opacity duration-500 group-hover:opacity-100 sm:opacity-60"
+                    />
+
+                    {/* Story-style progress bar + meta */}
+                    <span className="relative block">
+                      <span className="block h-[2px] overflow-hidden rounded-full bg-ink/15">
+                        <span
+                          className="reel-progress block h-full w-full origin-left bg-ink"
+                          style={{ animationDelay: `${i * 1.6}s` }}
+                        />
                       </span>
-                      <ArrowUpRight
-                        aria-hidden
-                        className="mt-1 size-4 shrink-0 text-ink-faint transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-ink"
-                      />
+                      <span className="mt-4 flex items-center justify-between font-mono text-[0.65rem] uppercase tracking-[0.08em] text-ink-faint">
+                        <span>{r.tag}</span>
+                        <span>Reel 0{i + 1}</span>
+                      </span>
                     </span>
-                    <span className="mt-2 block text-[0.95rem] leading-snug text-ink-muted">
-                      {r.line}
+
+                    {/* The hook, as it appears on screen */}
+                    <span className="relative block">
+                      <span className="block text-[clamp(1.7rem,2.6vw,2.4rem)] font-medium leading-[1.02] tracking-[-0.04em] text-ink">
+                        {r.hook[0]}
+                        <em className="text-volt">{r.hook[1]}</em>
+                        {r.hook[2]}
+                      </span>
+                      {r.caption && (
+                        <span className="mt-4 inline-flex items-center gap-1 font-mono text-[0.8rem] text-ink-muted">
+                          {r.caption}
+                          <span
+                            aria-hidden
+                            className="reel-caret inline-block h-[1em] w-[2px] bg-volt"
+                          />
+                        </span>
+                      )}
+                    </span>
+
+                    {/* Footer */}
+                    <span className="relative flex items-end justify-between gap-4">
+                      <span className="max-w-[28ch] text-[0.9rem] leading-snug text-ink-muted">
+                        {r.line}
+                      </span>
+                      <span className="flex size-10 shrink-0 items-center justify-center rounded-full border border-rule text-ink transition-colors duration-300 group-hover:border-volt group-hover:bg-volt group-hover:text-canvas">
+                        <Play
+                          aria-hidden
+                          className="size-4 translate-x-[1px] fill-current"
+                        />
+                      </span>
                     </span>
                   </a>
                 </Reveal>

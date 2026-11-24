@@ -460,3 +460,20 @@
   from { opacity: 0; transform: translateY(18px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* /brands hook cards: story-style progress bar and a stammer-style caret. */
+.reel-progress {
+  transform: scaleX(0);
+  animation: reel-progress 4.8s linear infinite;
+}
+@keyframes reel-progress {
+  0% { transform: scaleX(0); }
+  85%, 100% { transform: scaleX(1); }
+}
+.reel-caret {
+  animation: blink 1s steps(1) infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reel-progress { animation: none; transform: scaleX(1); }
+  .reel-caret { animation: none; }
+}
