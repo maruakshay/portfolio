@@ -2,7 +2,7 @@
 // (résumé, deep-dives, miii.in). Keep it that way: no invented numbers.
 
 export const hero = {
-  eyebrow: ["Production AI engineer", "ex-JupiterOne", "sold my AI SaaS"],
+  eyebrow: ["Production AI engineer", "sold my AI SaaS", "creator @akshaay.lifts"],
   headline: ["I take your AI app", "from demo to production."],
   /** **double-asterisks** mark the phrases the hero highlights. */
   sub: "**Secured**, **cheaper to run**, and **trusted by your customers**. I harden the app, lock down the AI, and cut your AI bill, so you can say yes to real users and **enterprise deals**.",
@@ -302,16 +302,18 @@ export const reels: Record<"lifts", Reel[]> = {
   lifts: [],
 };
 
-/** Beyond work: the awareness niche on Instagram. First-person, no follower claims. */
+/** Creator: the awareness side, ~40% of the site. First-person, numbers from lib/instagram.ts only. */
 export const beyondWork = {
-  label: "Beyond work",
-  title: ["Off the keyboard,", "I'm raising awareness."],
+  label: "Creator · @akshaay.lifts",
+  title: ["Off the keyboard,", "I make content people feel."],
   intro:
     "On Instagram I share what I live every day: cerebral palsy, stammering, and training anyway. The aim is simple: more people understanding it, and more people with it feeling seen.",
   pillars: [
     {
       t: "Cerebral palsy",
       d: "What living with unilateral CP is really like, and how I adapt training, work and daily life around it.",
+      href: "/cerebral-palsy",
+      cta: "Read the CP guide",
     },
     {
       t: "Stammering",
@@ -321,5 +323,5 @@ export const beyondWork = {
       t: "Fitness",
       d: "Getting stronger with a body that works differently. The honest, unglamorous days included.",
     },
-  ],
+  ] as { t: string; d: string; href?: string; cta?: string }[],
 };

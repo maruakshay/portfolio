@@ -46,6 +46,17 @@ export function FinalCta() {
               Ask my AI about me
             </Link>
           </div>
+          <p className="mt-8 text-ink-muted">
+            A brand that wants to work with me as a creator?{" "}
+            <Link href="/brands" className="link-underline text-ink">
+              See the media kit
+            </Link>{" "}
+            or{" "}
+            <a href={profile.instagramLifts} target="_blank" rel="noopener noreferrer" className="link-underline text-ink">
+              follow @akshaay.lifts
+            </a>
+            .
+          </p>
         </Reveal>
 
         <Reveal delay={0.1}>
@@ -70,6 +81,16 @@ export function FinalCta() {
             <li>
               <Link href="/lab" className="link-underline text-[0.9rem] text-ink-muted hover:text-ink">
                 Lab: 3D projects &amp; a 3D town →
+              </Link>
+            </li>
+            <li>
+              <Link href="/cerebral-palsy" className="link-underline text-[0.9rem] text-ink-muted hover:text-ink">
+                Cerebral palsy guide →
+              </Link>
+            </li>
+            <li>
+              <Link href="/brands" className="link-underline text-[0.9rem] text-ink-muted hover:text-ink">
+                For brands →
               </Link>
             </li>
             {LINKS.map((l) => (

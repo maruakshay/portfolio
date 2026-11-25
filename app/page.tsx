@@ -3,7 +3,6 @@ import { Hero } from "@/components/home/hero";
 import { Proof } from "@/components/home/proof";
 import { Work } from "@/components/home/work";
 import { Experience } from "@/components/home/experience";
-import { Approach } from "@/components/home/approach";
 import { WhyBreak } from "@/components/home/why-break";
 import { Services } from "@/components/home/services";
 import { Testimonials } from "@/components/home/testimonials";
@@ -29,10 +28,10 @@ export default function Home() {
       <main>
         <Hero />
         <Proof />
-        <Approach />
         <WhyBreak />
         <Work />
         <Services />
+        <BeyondWork />
         <Testimonials />
         <Faq />
         <Experience />
@@ -48,7 +47,6 @@ export default function Home() {
           aside="The AI-security playbook I maintain publicly. Free to use, read and fork."
           extra={leadMagnet.endpoint ? <ChecklistCard /> : undefined}
         />
-        <BeyondWork />
       </main>
       <FinalCta />
     </div>

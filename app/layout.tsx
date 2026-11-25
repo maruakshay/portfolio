@@ -36,7 +36,7 @@ export const viewport: Viewport = {
 
 const TITLE = "Akshay Maru, AI Production Engineer | Secure, cost-efficient AI apps";
 const DESCRIPTION =
-  "I take AI apps from demo to production: security hardening (OWASP LLM Top 10), AI cost cutting, and reliability your customers can trust. Ex-JupiterOne, founder of an acquired AI SaaS.";
+  "I take AI apps from demo to production: security hardening (OWASP LLM Top 10), AI cost cutting, and reliability your customers can trust. Ex-JupiterOne, founder of an acquired AI SaaS, and creator at @akshaay.lifts sharing life with cerebral palsy.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
